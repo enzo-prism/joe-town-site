@@ -148,6 +148,14 @@ Accordion (details/summary, styled, accessible), 5 items:
 - SEO/social: title "Joe Town — Build a Chicken Civilization", meta description from hero sub, canonical `https://www.design-prism.com/joetown/` (placeholder), OG/Twitter cards using `og.png` (1200×630, generated from kingdom screenshot + overlay), favicon from app icon (32/180/apple-touch), theme-color #060a14, JSON-LD `VideoGame` schema (name, operatingSystem macOS, applicationCategory GameApplication, genre Strategy/Simulation, offers price 0).
 - Files: `index.html`, `css/style.css`, `js/main.js`, `images/*`, `favicon` assets, `README.md` (how to open/serve locally: `python3 -m http.server`).
 
+## Addendum (v2, shipped)
+
+- New sections after Features: **Captains** (`#captains`, chip 03 — four named captains with rank pips + Renown note), **Coopconomy** (`#economy`, chip 04 — two supply-chain diagrams: Corn→Flour→Food, Iron+Coal→Ingots→Tools, with 100/125/150% output note), **Rivals** (`#rivals`, chip 05 — three faction cards with ATK/DEF bias bars + four terrain chips). Flock/Modes/FAQ renumbered to 06/07/08.
+- **Stats band** before the final CTA: count-up numbers (7 ages · 20 buildings · 12 doctrines · 3 rivals · 0 ads), cubic-ease 900ms, disabled under reduced motion.
+- Feature card 5 changed from Captains to Replayability ("Same seed, same town.") to avoid duplicating the new Captains section.
+- Mobile (≤720px): sections tightened to 72px padding, chains stack vertically with rotated arrows, captain grid 2-up, faction cards full-width, stats grid 3+2, safe-area bottom padding on CTA/footer, gold tap-highlight.
+- Nav (desktop + mobile overlay) gained a "Captains" link.
+
 ## Image derivations to produce (from images/raw, verify each visually after generating)
 1. `hero-kingdom.webp` ~1920w from shot-kingdom.png (q~82) + a 960w variant for srcset.
 2. `age-1..7.webp` — from age-N-*.png (2880×1800): crop to the isometric board region (roughly x 300–1900, y 140–1400 — VERIFY by viewing crops and adjusting so the board fills frame with a little cavern margin; consistent crop across all 7), resize ~1400w, WebP q82. Use `sips` (`-c`, `--cropOffset`) or Python PIL if available.

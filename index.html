@@ -71,6 +71,7 @@
       <nav class="nav-links" aria-label="Primary">
         <a href="#ages">Ages</a>
         <a href="#features">Features</a>
+        <a href="#captains">Captains</a>
         <a href="#flock">The Flock</a>
         <a href="#modes">Modes</a>
         <a href="#faq">FAQ</a>
@@ -89,6 +90,7 @@
     <nav aria-label="Mobile">
       <a href="#ages">Ages</a>
       <a href="#features">Features</a>
+      <a href="#captains">Captains</a>
       <a href="#flock">The Flock</a>
       <a href="#modes">Modes</a>
       <a href="#faq">FAQ</a>
@@ -220,10 +222,10 @@
             <p>Counter-raids arrive announced, three turns out. Walls, watchtowers, and guarded roads decide what survives the night.</p>
           </article>
           <article class="feature-card reveal">
-            <svg class="f-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 18h16M5 18l-1-9 5 3 3-7 3 7 5-3-1 9"/></svg>
-            <p class="f-kicker">COMMAND</p>
-            <h3>Captains with names.</h3>
-            <p>Cluck Aurelius. Henrietta Boldwing. Roost Marshal Pip. Sir Peckard. They earn Renown, rise through five ranks, and get exaggerated by historians.</p>
+            <svg class="f-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5h16M4 12h16M4 19h10"/><path d="M18 16l3 3-3 3"/></svg>
+            <p class="f-kicker">REPLAYABILITY</p>
+            <h3>Same seed, same town.</h3>
+            <p>Worlds, events, and Joe names are deterministic. Every campaign replays command-for-command — and no two seeds play alike.</p>
           </article>
           <article class="feature-card reveal">
             <svg class="f-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
@@ -235,11 +237,134 @@
       </div>
     </section>
 
+    <!-- ============ 4b. CAPTAINS ============ -->
+    <section class="section captains" id="captains">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="chip-row"><span class="chip">03</span> <span class="eyebrow">COMMAND</span></p>
+          <h2>Captains with names. And track records.</h2>
+          <p class="section-sub">Your first Captain is chosen by fate — one of four legends of the coop. They earn Renown on every deployment, rise through five ranks, and get exaggerated by historians.</p>
+        </header>
+
+        <div class="captain-grid">
+          <article class="captain-card reveal">
+            <div class="rank-pips" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+            <h3>Cluck Aurelius</h3>
+            <p class="captain-quip">“Meditations, but for sieges.”</p>
+          </article>
+          <article class="captain-card reveal">
+            <div class="rank-pips" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+            <h3>Henrietta Boldwing</h3>
+            <p class="captain-quip">“First through the Main Gate.”</p>
+          </article>
+          <article class="captain-card reveal">
+            <div class="rank-pips" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+            <h3>Roost Marshal Pip</h3>
+            <p class="captain-quip">“Small. Loud. Undefeated at dawn.”</p>
+          </article>
+          <article class="captain-card reveal">
+            <div class="rank-pips" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+            <h3>Sir Peckard</h3>
+            <p class="captain-quip">“Chivalry isn't dead. It's armed.”</p>
+          </article>
+        </div>
+
+        <p class="captain-note reveal">RENOWN — +3 RAID VICTORY · +2 SUCCESSFUL DEFENSE · +1 EVEN IN DEFEAT · EVERY RANK SHARPENS RAIDS AND HARDENS YOUR WALLS</p>
+      </div>
+    </section>
+
+    <!-- ============ 4c. THE COOPCONOMY ============ -->
+    <section class="section economy" id="economy">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="chip-row"><span class="chip">04</span> <span class="eyebrow">SUPPLY LINES</span></p>
+          <h2>Every loaf has a logistics chain.</h2>
+          <p class="section-sub">Commodities physically travel the roads you paint — as carts, on schedules. Break the road, break the bread.</p>
+        </header>
+
+        <div class="chain reveal">
+          <div class="chain-node">
+            <p class="chain-building">FUNGAL FARM</p>
+            <p class="chain-good">Corn</p>
+          </div>
+          <span class="chain-arrow" aria-hidden="true"></span>
+          <div class="chain-node">
+            <p class="chain-building">CORN MILL</p>
+            <p class="chain-good">Flour</p>
+          </div>
+          <span class="chain-arrow" aria-hidden="true"></span>
+          <div class="chain-node">
+            <p class="chain-building">BAKERY</p>
+            <p class="chain-good">Food</p>
+          </div>
+        </div>
+
+        <div class="chain reveal">
+          <div class="chain-node">
+            <p class="chain-building">ORE MINE</p>
+            <p class="chain-good">Iron + Coal</p>
+          </div>
+          <span class="chain-arrow" aria-hidden="true"></span>
+          <div class="chain-node">
+            <p class="chain-building">SMELTER</p>
+            <p class="chain-good">Iron Ingots</p>
+          </div>
+          <span class="chain-arrow" aria-hidden="true"></span>
+          <div class="chain-node">
+            <p class="chain-building">TOOL FACTORY</p>
+            <p class="chain-good">Tools</p>
+          </div>
+        </div>
+
+        <p class="chain-note reveal">ROAD-CONNECTED 100% OUTPUT · STOREHOUSE-SERVED 125% · WORKSHOP-BOOSTED 150%</p>
+      </div>
+    </section>
+
+    <!-- ============ 4d. RIVALS ============ -->
+    <section class="section rivals" id="rivals">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="chip-row"><span class="chip">05</span> <span class="eyebrow">INTELLIGENCE</span></p>
+          <h2>Three rivals. Four terrains.</h2>
+          <p class="section-sub">Scouts cost a little food and wood. They return with the weak entry, the guarded objective, and your excuse to plan a raid.</p>
+        </header>
+
+        <div class="faction-grid">
+          <article class="faction-card reveal">
+            <h3>Ember Claw Brood</h3>
+            <p class="faction-quip">“Hits first, asks never.”</p>
+            <div class="bias"><span class="bias-label">ATK</span><span class="bias-track"><span class="bias-fill bias-atk" style="--v: 80%"></span></span></div>
+            <div class="bias"><span class="bias-label">DEF</span><span class="bias-track"><span class="bias-fill bias-def" style="--v: 5%"></span></span></div>
+          </article>
+          <article class="faction-card reveal">
+            <h3>Mossfeather Commune</h3>
+            <p class="faction-quip">“Outlasts you, politely.”</p>
+            <div class="bias"><span class="bias-label">ATK</span><span class="bias-track"><span class="bias-fill bias-atk" style="--v: 10%"></span></span></div>
+            <div class="bias"><span class="bias-label">DEF</span><span class="bias-track"><span class="bias-fill bias-def" style="--v: 50%"></span></span></div>
+          </article>
+          <article class="faction-card reveal">
+            <h3>Ironbeak Dominion</h3>
+            <p class="faction-quip">“The wall that pecks back.”</p>
+            <div class="bias"><span class="bias-label">ATK</span><span class="bias-track"><span class="bias-fill bias-atk" style="--v: 50%"></span></span></div>
+            <div class="bias"><span class="bias-label">DEF</span><span class="bias-track"><span class="bias-fill bias-def" style="--v: 100%"></span></span></div>
+          </article>
+        </div>
+
+        <div class="terrain-row reveal">
+          <span class="terrain-chip">FUNGAL MARSH</span>
+          <span class="terrain-chip">BASALT RIDGE</span>
+          <span class="terrain-chip">FLOODED TUNNELS</span>
+          <span class="terrain-chip">CRYSTAL CAVERNS</span>
+        </div>
+        <p class="terrain-note reveal">RAMS TAKE THE MAIN GATE · SHIELDBEARERS TAKE THE ROOT TUNNELS · ARCHERS TAKE THE CLIFF PATH</p>
+      </div>
+    </section>
+
     <!-- ============ 5. THE FLOCK ============ -->
     <section class="section flock" id="flock">
       <div class="container">
         <header class="section-head reveal">
-          <p class="chip-row"><span class="chip">03</span> <span class="eyebrow">AFFECTIONATE SARCASM</span></p>
+          <p class="chip-row"><span class="chip">06</span> <span class="eyebrow">AFFECTIONATE SARCASM</span></p>
           <h2>The flock talks back.</h2>
           <p class="section-sub">Six confused Joes gathered beneath the mountain. They have notes.</p>
         </header>
@@ -264,7 +389,7 @@
     <section class="section modes" id="modes">
       <div class="container modes-split">
         <div class="modes-left reveal">
-          <p class="chip-row"><span class="chip">04</span> <span class="eyebrow">THREE WAYS TO PLAY</span></p>
+          <p class="chip-row"><span class="chip">07</span> <span class="eyebrow">THREE WAYS TO PLAY</span></p>
           <h2>Your pace, your pressure.</h2>
           <div class="mode-row">
             <p class="mode-name">COZY</p>
@@ -308,7 +433,7 @@
     <section class="section faq" id="faq">
       <div class="container container-narrow">
         <header class="section-head reveal">
-          <p class="chip-row"><span class="chip">05</span> <span class="eyebrow">QUESTIONS FROM THE COOP</span></p>
+          <p class="chip-row"><span class="chip">08</span> <span class="eyebrow">QUESTIONS FROM THE COOP</span></p>
           <h2>Asked beneath the mountain.</h2>
         </header>
 
@@ -336,6 +461,17 @@
         </div>
       </div>
     </section>
+
+    <!-- ============ STATS BAND ============ -->
+    <div class="stats-band reveal" aria-label="Joe Town by the numbers">
+      <div class="container stats-row">
+        <div class="stat"><p class="stat-num" data-count="7">0</p><p class="stat-label">AGES</p></div>
+        <div class="stat"><p class="stat-num" data-count="20">0</p><p class="stat-label">BUILDINGS</p></div>
+        <div class="stat"><p class="stat-num" data-count="12">0</p><p class="stat-label">DOCTRINES</p></div>
+        <div class="stat"><p class="stat-num" data-count="3">0</p><p class="stat-label">RIVALS</p></div>
+        <div class="stat"><p class="stat-num" data-count="0">0</p><p class="stat-label">ADS</p></div>
+      </div>
+    </div>
 
     <!-- ============ 8. FINAL CTA ============ -->
     <section class="section final-cta">

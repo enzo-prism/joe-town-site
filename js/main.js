@@ -45,7 +45,7 @@
       return;
     }
     // Stagger siblings inside grids/walls
-    document.querySelectorAll(".feature-grid, .quote-wall").forEach(function (grid) {
+    document.querySelectorAll(".feature-grid, .quote-wall, .captain-grid, .faction-grid").forEach(function (grid) {
       var i = 0;
       grid.querySelectorAll(".reveal").forEach(function (el) {
         el.style.setProperty("--reveal-delay", (i * 60) + "ms");
@@ -188,6 +188,37 @@
     // Initial slider position (after layout/fonts settle)
     requestAnimationFrame(function () { moveSlider(tabs[current - 1]); });
     window.addEventListener("load", function () { moveSlider(tabs[current - 1]); });
+  })();
+
+  /* ---------- Stats count-up ---------- */
+  (function countUp() {
+    var nums = document.querySelectorAll(".stat-num[data-count]");
+    if (!nums.length) return;
+    function setFinal(el) { el.textContent = el.getAttribute("data-count"); }
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      nums.forEach(setFinal);
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        io.unobserve(entry.target);
+        var el = entry.target;
+        var target = Number(el.getAttribute("data-count"));
+        if (target === 0) { el.textContent = "0"; return; }
+        var start = null;
+        var dur = 900;
+        function tick(ts) {
+          if (start === null) start = ts;
+          var p = Math.min(1, (ts - start) / dur);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = String(Math.round(target * eased));
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.6 });
+    nums.forEach(function (el) { io.observe(el); });
   })();
 
   /* ---------- Mobile menu ---------- */
