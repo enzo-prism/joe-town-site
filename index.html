@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joe Town — Build a Chicken Civilization</title>
+  <meta name="description" content="Lead an underground flock from a humble camp to an ascendant kingdom. Lay every road, choose every technology, and raise the first crown beneath the mountain.">
+  <link rel="canonical" href="https://www.design-prism.com/joetown/">
+  <meta name="theme-color" content="#060a14">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Joe Town">
+  <meta property="og:title" content="Joe Town — Build a Chicken Civilization">
+  <meta property="og:description" content="Lead an underground flock from a humble camp to an ascendant kingdom. Free on the Mac App Store — no ads, no in-app purchases, no tracking.">
+  <meta property="og:url" content="https://www.design-prism.com/joetown/">
+  <meta property="og:image" content="https://www.design-prism.com/joetown/images/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Joe Town — Build a Chicken Civilization">
+  <meta name="twitter:description" content="A premium strategy game for Mac. Seven ages, named captains, zero nonsense. Free — no ads, no IAP, no tracking.">
+  <meta name="twitter:image" content="https://www.design-prism.com/joetown/images/og.png">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- Preload hero -->
+  <link rel="preload" as="image" href="images/hero-kingdom-1920.webp" imagesrcset="images/hero-kingdom-960.webp 960w, images/hero-kingdom-1920.webp 1920w" imagesizes="(max-width: 720px) 92vw, 1080px" fetchpriority="high">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Joe Town",
+    "alternateName": "Joe Town — Build a Chicken Civilization",
+    "description": "Lead an underground flock from a humble camp to an ascendant kingdom. Lay every road, choose every technology, and raise the first crown beneath the mountain.",
+    "operatingSystem": "macOS",
+    "applicationCategory": "GameApplication",
+    "genre": ["Strategy", "Simulation"],
+    "url": "https://www.design-prism.com/joetown/",
+    "image": "https://www.design-prism.com/joetown/images/og.png",
+    "author": { "@type": "Organization", "name": "Design Prism", "url": "https://www.design-prism.com/" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://apps.apple.com/app/id6790244910" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Crystal particle field -->
+  <div class="crystal-field" aria-hidden="true"></div>
+
+  <!-- ============ 0. NAV ============ -->
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top" aria-label="Joe Town — home">
+        <img src="images/icon.png" alt="" width="32" height="32" class="nav-icon">
+        <span class="nav-wordmark">JOE TOWN</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#ages">Ages</a>
+        <a href="#features">Features</a>
+        <a href="#flock">The Flock</a>
+        <a href="#modes">Modes</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-right">
+        <a class="btn btn-gold btn-small" href="https://apps.apple.com/app/id6790244910" target="_blank" rel="noopener">Mac App Store</a>
+        <button class="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile overlay menu -->
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Mobile">
+      <a href="#ages">Ages</a>
+      <a href="#features">Features</a>
+      <a href="#flock">The Flock</a>
+      <a href="#modes">Modes</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-gold" href="https://apps.apple.com/app/id6790244910" target="_blank" rel="noopener">Mac App Store</a>
+    </nav>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ 1. HERO ============ -->
+    <section class="hero">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">A PREMIUM STRATEGY GAME FOR MAC</p>
+          <h1>Build a <em class="gold-italic">chicken</em> civilization.</h1>
+          <p class="hero-sub">Lead an underground flock from a humble camp to an ascendant kingdom. Lay every road, choose every technology, and raise the first crown beneath the mountain.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-gold" href="https://apps.apple.com/app/id6790244910" target="_blank" rel="noopener">
+              <svg class="apple-logo" viewBox="0 0 384 512" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.9-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              Download on the Mac App Store
+            </a>
+            <a class="btn btn-ghost" href="#ages">Watch the town grow ↓</a>
+          </div>
+          <p class="trust-row"><span>FREE&nbsp;·</span> <span>NO ADS&nbsp;·</span> <span>NO IN-APP PURCHASES&nbsp;·</span> <span>NO TRACKING&nbsp;·</span> <span>PLAYS OFFLINE</span></p>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-glow" aria-hidden="true"></div>
+          <figure class="mac-window hero-frame" id="hero-frame">
+            <div class="mac-chrome" aria-hidden="true">
+              <span class="dot dot-red"></span><span class="dot dot-gold"></span><span class="dot dot-teal"></span>
+            </div>
+            <img src="images/hero-kingdom-1920.webp"
+                 srcset="images/hero-kingdom-960.webp 960w, images/hero-kingdom-1920.webp 1920w"
+                 sizes="(max-width: 720px) 92vw, 1080px"
+                 width="1920" height="1200"
+                 alt="Joe Town in the Kingdom age — an isometric pixel-art underground city glowing gold and teal in a dark cavern"
+                 fetchpriority="high">
+          </figure>
+          <figcaption class="hero-caption">KINGDOM AGE — TURN 55 — THE FLOCK ADOPTS ROYAL GRANARIES</figcaption>
+          <div class="hero-diamonds" aria-hidden="true">
+            <span class="float-diamond d1"></span>
+            <span class="float-diamond d2"></span>
+            <span class="float-diamond d3"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>SEVEN AGES <i>✦</i> NAMED CAPTAINS <i>✦</i> DETERMINISTIC WORLDS <i>✦</i> 20 BUILDINGS <i>✦</i> 12 TECHNOLOGIES <i>✦</i> OFFLINE <i>✦</i> NO ADS <i>✦</i> CHICKENS <i>✦</i> </span><span>SEVEN AGES <i>✦</i> NAMED CAPTAINS <i>✦</i> DETERMINISTIC WORLDS <i>✦</i> 20 BUILDINGS <i>✦</i> 12 TECHNOLOGIES <i>✦</i> OFFLINE <i>✦</i> NO ADS <i>✦</i> CHICKENS <i>✦</i> </span>
+      </div>
+    </div>
+
+    <!-- ============ 3. SEVEN AGES ============ -->
+    <section class="section ages" id="ages">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="chip-row"><span class="chip">01</span> <span class="eyebrow">FROM CAMPFIRE TO CROWN</span></p>
+          <h2>Seven ages of civilization.</h2>
+          <p class="section-sub">Every age redraws your capital — new materials, new wardrobe, new machines. Same chickens.</p>
+        </header>
+
+        <div class="age-switcher reveal">
+          <div class="age-tabs" role="tablist" aria-label="The seven ages">
+            <button class="age-tab" role="tab" id="tab-1" aria-controls="age-panel" aria-selected="false" tabindex="-1" data-age="1"><span class="tab-marker"></span><span class="tab-label">Camp</span></button>
+            <button class="age-tab" role="tab" id="tab-2" aria-controls="age-panel" aria-selected="false" tabindex="-1" data-age="2"><span class="tab-marker"></span><span class="tab-label">Town</span></button>
+            <button class="age-tab" role="tab" id="tab-3" aria-controls="age-panel" aria-selected="false" tabindex="-1" data-age="3"><span class="tab-marker"></span><span class="tab-label">Citadel</span></button>
+            <button class="age-tab" role="tab" id="tab-4" aria-controls="age-panel" aria-selected="false" tabindex="-1" data-age="4"><span class="tab-marker"></span><span class="tab-label">Crown</span></button>
+            <button class="age-tab" role="tab" id="tab-5" aria-controls="age-panel" aria-selected="true" tabindex="0" data-age="5"><span class="tab-marker"></span><span class="tab-label">Kingdom</span></button>
+            <button class="age-tab" role="tab" id="tab-6" aria-controls="age-panel" aria-selected="false" tabindex="-1" data-age="6"><span class="tab-marker"></span><span class="tab-label">Empire</span></button>
+            <button class="age-tab" role="tab" id="tab-7" aria-controls="age-panel" aria-selected="false" tabindex="-1" data-age="7"><span class="tab-marker"></span><span class="tab-label">Ascendant</span></button>
+            <span class="tab-slider" aria-hidden="true"></span>
+          </div>
+
+          <div class="age-panel" id="age-panel" role="tabpanel" aria-live="polite" aria-labelledby="tab-5" tabindex="0">
+            <figure class="mac-window age-frame">
+              <div class="mac-chrome" aria-hidden="true">
+                <span class="dot dot-red"></span><span class="dot dot-gold"></span><span class="dot dot-teal"></span>
+              </div>
+              <img id="age-img" src="images/age-5.webp" width="1400" height="812" loading="lazy"
+                   alt="Joe Town capital in the Kingdom age — brick arches and glass on the isometric board">
+            </figure>
+            <div class="age-info">
+              <h3 id="age-name">Kingdom</h3>
+              <p id="age-desc">Brick arches and glass. Officer trim, formation drills, granaries fit for royalty.</p>
+              <p class="age-meta" id="age-meta">ROYAL GRANARIES · STANDING GUARD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. FEATURES ============ -->
+    <section class="section features" id="features">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="chip-row"><span class="chip">02</span> <span class="eyebrow">ECONOMY IS STRATEGY</span></p>
+          <h2>A town that runs like clockwork.</h2>
+          <p class="section-sub">Every military decision starts with a road, a cart, and a chicken with a job.</p>
+        </header>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <svg class="f-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17h13v-6h4l1 3v3h-2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M9 17h6M3 17V8h9v3"/></svg>
+            <p class="f-kicker">LOGISTICS</p>
+            <h3>Every road matters.</h3>
+            <p>Carts haul real cargo along roads you paint. Connected producers earn full output; storehouse routes and workshops push it to 150%.</p>
+          </article>
+          <article class="feature-card reveal">
+            <svg class="f-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.5"/></svg>
+            <p class="f-kicker">TECHNOLOGY</p>
+            <h3>Choose your civilization.</h3>
+            <p>Twelve permanent technologies, two per age, mutually exclusive. Granaries or garrisons — your flock, your doctrine.</p>
+          </article>
+          <article class="feature-card reveal">
+            <svg class="f-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M8 10.5h5M10.5 8v5"/></svg>
+            <p class="f-kicker">TACTICS</p>
+            <h3>Scout. Plan. Raid.</h3>
+            <p>Read rival terrain, pick the entry point, set your commitment. Probe, standard, or all-in — the relic vault won't raid itself.</p>
+          </article>
+          <article class="feature-card reveal">
+            <svg class="f-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+            <p class="f-kicker">DEFENSE</p>
+            <h3>Walls are a puzzle.</h3>
+            <p>Counter-raids arrive announced, three turns out. Walls, watchtowers, and guarded roads decide what survives the night.</p>
+          </article>
+          <article class="feature-card reveal">
+            <svg class="f-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 18h16M5 18l-1-9 5 3 3-7 3 7 5-3-1 9"/></svg>
+            <p class="f-kicker">COMMAND</p>
+            <h3>Captains with names.</h3>
+            <p>Cluck Aurelius. Henrietta Boldwing. Roost Marshal Pip. Sir Peckard. They earn Renown, rise through five ranks, and get exaggerated by historians.</p>
+          </article>
+          <article class="feature-card reveal">
+            <svg class="f-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            <p class="f-kicker">PERSISTENCE</p>
+            <h3>It lives while you're away.</h3>
+            <p>The simulation continues offline. Come back to a 'While You Were Away' report — stories first, no streaks, no guilt.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. THE FLOCK ============ -->
+    <section class="section flock" id="flock">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="chip-row"><span class="chip">03</span> <span class="eyebrow">AFFECTIONATE SARCASM</span></p>
+          <h2>The flock talks back.</h2>
+          <p class="section-sub">Six confused Joes gathered beneath the mountain. They have notes.</p>
+        </header>
+
+        <div class="quote-wall">
+          <blockquote class="bubble reveal tilt-l"><p>“The worms seem unionized.”</p><cite>— FARMER JOE</cite></blockquote>
+          <blockquote class="bubble reveal"><p>“Hoarding, but civic-minded.”</p><cite>— STOREHOUSE KEEPER</cite></blockquote>
+          <blockquote class="bubble reveal tilt-r"><p>“Trust issues, but structural.”</p><cite>— QUALITY CONTROL</cite></blockquote>
+          <blockquote class="bubble reveal"><p>“The timetable is aspirational.”</p><cite>— LOGISTICS DESK</cite></blockquote>
+          <blockquote class="bubble reveal tilt-l"><p>“Do not peck the glowing wire.”</p><cite>— SAFETY JOE</cite></blockquote>
+          <blockquote class="bubble reveal"><p>“Our spreadsheet has feathers.”</p><cite>— THE TREASURY</cite></blockquote>
+          <blockquote class="bubble reveal tilt-r"><p>“Bawk first, plan later.”</p><cite>— THE GARRISON</cite></blockquote>
+          <blockquote class="bubble reveal"><p>“Loot: ethically relocated.”</p><cite>— RAID COMMITTEE</cite></blockquote>
+          <blockquote class="bubble reveal tilt-l"><p>“Today: advanced counting to four.”</p><cite>— SCHOOL OF JOES</cite></blockquote>
+          <div class="pixel-chicken pc-1" aria-hidden="true"></div>
+          <div class="pixel-chicken pc-2" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. MODES + PROMISE ============ -->
+    <section class="section modes" id="modes">
+      <div class="container modes-split">
+        <div class="modes-left reveal">
+          <p class="chip-row"><span class="chip">04</span> <span class="eyebrow">THREE WAYS TO PLAY</span></p>
+          <h2>Your pace, your pressure.</h2>
+          <div class="mode-row">
+            <p class="mode-name">COZY</p>
+            <p>No disasters, no rival pressure. Just you, the flock, and the feng shui of roads.</p>
+          </div>
+          <div class="mode-row">
+            <p class="mode-name">STANDARD</p>
+            <p>The intended climb: raids, counter-raids, and events on a steady drumbeat.</p>
+          </div>
+          <div class="mode-row">
+            <p class="mode-name">SIMULATION</p>
+            <p>Denser events and logistics for players who read supply lines for fun.</p>
+          </div>
+
+          <figure class="mac-window modes-shot">
+            <div class="mac-chrome" aria-hidden="true">
+              <span class="dot dot-red"></span><span class="dot dot-gold"></span><span class="dot dot-teal"></span>
+            </div>
+            <img src="images/shot-choice.webp" width="1120" height="720"
+                 alt="Joe Town in the Ascendant age — a glowing pixel-art capital with a civilization choice between Harmonic Industry and Eternal Vigil">
+            <figcaption class="modes-shot-caption">CIVILIZATION CHOICE — TWO DOCTRINES, ONE FLOCK</figcaption>
+          </figure>
+        </div>
+
+        <aside class="promise-panel reveal">
+          <h3>Free. And free of nonsense.</h3>
+          <ul class="promise-list">
+            <li>No ads</li>
+            <li>No in-app purchases</li>
+            <li>No tracking</li>
+            <li>No energy meters or daily streaks</li>
+            <li>Saves locally, plays offline</li>
+            <li>Native macOS — Apple silicon &amp; Intel</li>
+          </ul>
+          <p class="promise-foot">MACOS 14+ · 60 FPS · MENUBAR APP · VOICEOVER &amp; REDUCE MOTION SUPPORT</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ 7. FAQ ============ -->
+    <section class="section faq" id="faq">
+      <div class="container container-narrow">
+        <header class="section-head reveal">
+          <p class="chip-row"><span class="chip">05</span> <span class="eyebrow">QUESTIONS FROM THE COOP</span></p>
+          <h2>Asked beneath the mountain.</h2>
+        </header>
+
+        <div class="accordion reveal">
+          <details>
+            <summary>How much does Joe Town cost?</summary>
+            <div class="answer"><p>It's free. No ads, no in-app purchases, no tracking — a premium game with premium manners.</p></div>
+          </details>
+          <details>
+            <summary>Does it play offline?</summary>
+            <div class="answer"><p>Entirely. Your town saves locally and the simulation even advances while you're away, capped at 24 hours.</p></div>
+          </details>
+          <details>
+            <summary>What Macs are supported?</summary>
+            <div class="answer"><p>macOS 14 or later, on Apple silicon and Intel. One universal download, 60 frames per second.</p></div>
+          </details>
+          <details>
+            <summary>Is it controller-friendly?</summary>
+            <div class="answer"><p>Joe Town is built for mouse and keyboard — paint roads with the road tool, train squads with hotkeys, command from the town panel.</p></div>
+          </details>
+          <details>
+            <summary>Do I have to raid?</summary>
+            <div class="answer"><p>No. The peaceful Charter path can carry your flock through the whole arc. Raiding is for chickens who want relics.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 8. FINAL CTA ============ -->
+    <section class="section final-cta">
+      <div class="container reveal">
+        <svg class="big-crown" viewBox="0 0 120 80" aria-hidden="true" fill="currentColor">
+          <path d="M10 62 L4 24 L32 40 L60 10 L88 40 L116 24 L110 62 Z"/>
+          <rect x="10" y="66" width="100" height="8" rx="3"/>
+        </svg>
+        <h2>The first crown is raised beneath the mountain.</h2>
+        <p class="section-sub">All that's missing is a chicken to wear it.</p>
+        <a class="btn btn-gold btn-big" href="https://apps.apple.com/app/id6790244910" target="_blank" rel="noopener">Download Joe Town — Free</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="pixel-chicken pc-footer" aria-hidden="true"></div>
+        <p class="nav-wordmark">JOE TOWN</p>
+        <p class="footer-tag">Build a chicken civilization.</p>
+      </div>
+      <nav class="footer-col" aria-label="Game">
+        <p class="footer-head">GAME</p>
+        <a href="#ages">Ages</a>
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <nav class="footer-col" aria-label="Studio">
+        <p class="footer-head">STUDIO</p>
+        <a href="https://www.design-prism.com/" target="_blank" rel="noopener">Design Prism</a>
+        <a href="https://www.design-prism.com/contact" target="_blank" rel="noopener">Support</a>
+        <a href="https://www.design-prism.com/privacy-policy" target="_blank" rel="noopener">Privacy</a>
+      </nav>
+    </div>
+    <div class="container">
+      <p class="legal">© 2026 DESIGN PRISM · JOE TOWN IS A TRADEMARK OF DESIGN PRISM · MADE BENEATH THE MOUNTAIN</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
