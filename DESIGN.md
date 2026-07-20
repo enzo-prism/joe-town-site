@@ -9,7 +9,7 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
 - Tagline (official subtitle): "Build a chicken civilization."
 - Fantasy: lead an underground chicken civilization ("the flock", citizens are "Joes") from a humble camp through **seven ages** to an ascendant kingdom.
 - Seven ages in order: **Camp, Town, Citadel, Crown, Kingdom, Empire, Ascendant**.
-- Price: **Free**. No ads, no in-app purchases, no tracking. Saves locally, plays fully offline.
+- Price: **$9.99 USD, one-time purchase**. No ads, no in-app purchases, no tracking. Saves locally, plays fully offline.
 - App Store link: `https://apps.apple.com/app/id6790244910` (App ID 6790244910, bundle com.designprism.joetown). Developer brand: **Design Prism** — support `https://www.design-prism.com/contact`, privacy `https://www.design-prism.com/privacy-policy`.
 - Features: 20 buildings; roads/logistics with visible carts hauling real cargo (connected producers 100% output, Storehouse-served 125%, Workshop-boosted 150%); 12 permanent mutually-exclusive civilization technologies (2 per age, e.g. Harmonic Industry / Eternal Vigil, Royal Granaries / Standing Guard); units Militia → Archer → Shieldbearer → Ram → Captain; **named Captains** (Cluck Aurelius, Henrietta Boldwing, Roost Marshal Pip, Sir Peckard) that earn Renown and ranks; scouting + raid planning (4 rival terrains: Fungal Marsh, Basalt Ridge, Flooded Tunnels, Crystal Caverns; entry points Main Gate / Root Tunnels / Cliff Path; objectives Seize Supplies / Raid Relic Vault / Break Command Post; commitment Probe / Standard / All-In); rival factions: Ember Claw Brood, Mossfeather Commune, Ironbeak Dominion; counter-raids announced 3 turns ahead; 3 game modes (Cozy / Standard / Simulation); deterministic seeded worlds + replay; autosave + "While You Were Away" report (offline sim up to 24h, no streaks/guilt); menu-bar status item; VoiceOver + Reduce Motion support.
 - Flavor quotes (verbatim from game chatter — use in "flock talks back" section):
@@ -76,8 +76,8 @@ The game is isometric pixel art in a dark cavern: deep navy-black, warm gold cro
 - Eyebrow (mono, gold): `A PREMIUM STRATEGY GAME FOR MAC`
 - H1 (Fraunces, ~clamp(3rem, 7vw, 6.5rem)): "Build a **chicken** civilization." — "chicken" in gold italic.
 - Sub (Inter, muted, max ~60ch): "Lead an underground flock from a humble camp to an ascendant kingdom. Lay every road, choose every technology, and raise the first crown beneath the mountain."
-- CTAs: primary gold "Download on the Mac App Store" (with  Apple logo SVG); secondary ghost "Watch the town grow ↓" (scrolls to Ages).
-- Micro-trust row (mono, tiny, muted): `FREE · NO ADS · NO IN-APP PURCHASES · NO TRACKING · PLAYS OFFLINE`
+- CTAs: primary gold "Buy on the Mac App Store — $9.99" (with Apple logo SVG); secondary ghost "Watch the town grow ↓" (scrolls to Ages).
+- Micro-trust row (mono, tiny, muted): `$9.99 ONCE · NO ADS · NO IN-APP PURCHASES · NO TRACKING · PLAYS OFFLINE`
 - Hero visual: `shot-kingdom.png` in Mac-window frame, slight 3D tilt (perspective, ~6deg, straightens subtly on scroll or hover), teal+gold ambient glow behind, a few floating pixel diamonds. Below/around: app icon + crown SVG accents.
 - Optional flourish: small caption under frame (mono, muted): `KINGDOM AGE — TURN 55 — THE FLOCK ADOPTS ROYAL GRANARIES`.
 
@@ -119,18 +119,18 @@ Two-column split:
   - **Cozy** — "No disasters, no rival pressure. Just you, the flock, and the feng shui of roads."
   - **Standard** — "The intended climb: raids, counter-raids, and events on a steady drumbeat."
   - **Simulation** — "Denser events and logistics for players who read supply lines for fun."
-- Right: promise panel (gold-bordered card): H3 "Free. And free of nonsense." + checklist (teal check SVGs): `No ads` `No in-app purchases` `No tracking` `No energy meters or daily streaks` `Saves locally, plays offline` `Native macOS — Apple silicon & Intel`. Footnote (mono, tiny, muted): `MACOS 14+ · 60 FPS · MENUBAR APP · VOICEOVER & REDUCE MOTION SUPPORT`
+- Right: promise panel (gold-bordered card): H3 "One purchase. No nonsense." + checklist (teal check SVGs): `No ads` `No in-app purchases` `No tracking` `No energy meters or daily streaks` `Saves locally, plays offline` `Native macOS — Apple silicon & Intel`. Footnote (mono, tiny, muted): `MACOS 14+ · 60 FPS · MENUBAR APP · VOICEOVER & REDUCE MOTION SUPPORT`
 
 ### 7. FAQ — `id="faq"`
 Accordion (details/summary, styled, accessible), 5 items:
-- "How much does Joe Town cost?" → "It's free. No ads, no in-app purchases, no tracking — a premium game with premium manners."
+- "How much does Joe Town cost?" → "Joe Town is $9.99 USD as a one-time purchase. No ads, no in-app purchases, no tracking — a premium game with premium manners."
 - "Does it play offline?" → "Entirely. Your town saves locally and the simulation even advances while you're away, capped at 24 hours."
 - "What Macs are supported?" → "macOS 14 or later, on Apple silicon and Intel. One universal download, 60 frames per second."
 - "Is it controller-friendly?" → "Joe Town is built for mouse and keyboard — paint roads with the road tool, train squads with hotkeys, command from the town panel."
 - "Do I have to raid?" → "No. The peaceful Charter path can carry your flock through the whole arc. Raiding is for chickens who want relics."
 
 ### 8. Final CTA + Footer
-- Full-bleed cavern section: huge gold crown SVG glowing, H2 (Fraunces): "The first crown is raised beneath the mountain." sub: "All that's missing is a chicken to wear it." Big gold CTA "Download Joe Town — Free".
+- Full-bleed cavern section: huge gold crown SVG glowing, H2 (Fraunces): "The first crown is raised beneath the mountain." sub: "All that's missing is a chicken to wear it." Big gold CTA "Buy Joe Town — $9.99".
 - Footer: pixel chicken (CSS box-shadow art) + "JOE TOWN" wordmark; columns: Game (Ages, Features, FAQ), Studio (Design Prism, Support, Privacy); legal line (mono, tiny): `© 2026 DESIGN PRISM · JOE TOWN IS A TRADEMARK OF DESIGN PRISM · MADE BENEATH THE MOUNTAIN`.
 
 ## Motion (all disabled under prefers-reduced-motion)
@@ -145,7 +145,7 @@ Accordion (details/summary, styled, accessible), 5 items:
 - Semantic HTML5, landmarks, skip link, focus-visible gold outlines, alt text, aria for tabs/accordion, color contrast AA (muted text ≥ #9aa4ba on dark).
 - Fully responsive: fluid clamp() type; breakpoints ~1120px and ~720px; hero stacks; ages timeline becomes horizontal scroll-snap on mobile; grids collapse to 1–2 cols. Test at 1440×900, 390×844.
 - Performance: hero image < 400KB (serve resized ~1920w PNG→ or high-quality JPEG/WebP; pixel-art UI screenshots compress well as WebP q80). Preload hero image. `loading="lazy"` below the fold, width/height attrs to avoid CLS. Fonts: only needed weights.
-- SEO/social: title "Joe Town — Build a Chicken Civilization", meta description from hero sub, canonical `https://www.design-prism.com/joetown/` (placeholder), OG/Twitter cards using `og.png` (1200×630, generated from kingdom screenshot + overlay), favicon from app icon (32/180/apple-touch), theme-color #060a14, JSON-LD `VideoGame` schema (name, operatingSystem macOS, applicationCategory GameApplication, genre Strategy/Simulation, offers price 0).
+- SEO/social: title "Joe Town — Build a Chicken Civilization", meta description from hero sub, canonical `https://joe-town-site.vercel.app/`, OG/Twitter cards using `og.png` (1200×630, generated from kingdom screenshot + overlay), favicon from app icon (32/180/apple-touch), theme-color #060a14, JSON-LD `VideoGame` schema (name, operatingSystem macOS, applicationCategory GameApplication, genre Strategy/Simulation, offers price 9.99 USD).
 - Files: `index.html`, `css/style.css`, `js/main.js`, `images/*`, `favicon` assets, `README.md` (how to open/serve locally: `python3 -m http.server`).
 
 ## Addendum (v3, shipped — full copy rewrite)
