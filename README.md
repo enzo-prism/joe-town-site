@@ -19,16 +19,16 @@ apart from Google Fonts.
 
 ## Structure
 
-- `index.html` — single page, all nine sections, SEO/OG/JSON-LD inline
+- `index.html` — single-page product site, SEO/OG/JSON-LD inline
 - `css/style.css` — full design system (cavern palette, Fraunces/Inter/JetBrains Mono/Press Start 2P)
 - `js/main.js` — vanilla JS (<15KB): crystal particle field, scroll reveals,
-  seven-ages tab switcher (WAI-ARIA, arrow keys), hero tilt-on-scroll, mobile menu
+  ten-age tab switcher (WAI-ARIA, arrow keys), hero tilt-on-scroll, mobile menu
 - `images/` — derived web assets (WebP + PNG favicons + `og.png`)
 - `images/raw/` — original Retina captures, kept out of the deployed markup
 
 ## Notes
 
 - All motion respects `prefers-reduced-motion`.
-- Hero is preloaded; the age-switcher preloads its seven frames on load
+- Hero is preloaded; the age-switcher preloads its ten frames on load
   so tab swaps are instant.
 - Copy and palette follow `DESIGN.md`.

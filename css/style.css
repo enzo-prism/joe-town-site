@@ -532,7 +532,7 @@ main, .footer { position: relative; z-index: 1; }
 }
 
 /* ==========================================================================
-   3. SEVEN AGES
+   3. TEN AGES
    ========================================================================== */
 
 .ages { background: linear-gradient(180deg, transparent, rgba(12, 18, 32, 0.5) 20%, rgba(12, 18, 32, 0.5) 80%, transparent); }
@@ -584,6 +584,9 @@ main, .footer { position: relative; z-index: 1; }
 .age-tab:nth-child(5) .tab-marker { transform: rotate(45deg) translateY(0); }
 .age-tab:nth-child(6) .tab-marker { transform: rotate(45deg) translateY(-3px); }
 .age-tab:nth-child(7) .tab-marker { transform: rotate(45deg) translateY(-6px); }
+.age-tab:nth-child(8) .tab-marker { transform: rotate(45deg) translateY(-9px); }
+.age-tab:nth-child(9) .tab-marker { transform: rotate(45deg) translateY(-12px); }
+.age-tab:nth-child(10) .tab-marker { transform: rotate(45deg) translateY(-15px); }
 
 .tab-label {
   font-family: var(--font-mono);
@@ -625,6 +628,9 @@ main, .footer { position: relative; z-index: 1; }
 }
 
 .age-frame img {
+  aspect-ratio: 14 / 9;
+  object-fit: cover;
+  object-position: center;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .age-frame.is-swapping img {
