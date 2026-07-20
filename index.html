@@ -83,16 +83,25 @@
   </header>
 
   <!-- Mobile overlay menu -->
-  <div class="mobile-menu" id="mobile-menu" hidden>
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Joe Town navigation" hidden>
     <nav aria-label="Mobile">
       <a href="#joes">Joes</a>
       <a href="#ages">Ages</a>
       <a href="#features">How It Plays</a>
       <a href="#world">World</a>
       <a href="#faq">FAQ</a>
-      <a class="btn btn-gold" href="https://apps.apple.com/app/id6790244910" target="_blank" rel="noopener">Mac App Store</a>
+      <a class="btn btn-gold" href="https://apps.apple.com/app/id6790244910" target="_blank" rel="noopener">Buy Joe Town — $9.99</a>
+      <p class="mobile-menu-note">ONE PURCHASE · PLAYS OFFLINE · NO ADS</p>
     </nav>
   </div>
+
+  <aside class="mobile-buy-bar" aria-label="Buy Joe Town for Mac">
+    <div class="mobile-buy-summary">
+      <img src="images/logo-mark.svg" alt="" width="40" height="40">
+      <span><strong>Joe Town</strong><small>$9.99 · one time</small></span>
+    </div>
+    <a class="btn btn-gold" href="https://apps.apple.com/app/id6790244910" target="_blank" rel="noopener">Buy</a>
+  </aside>
 
   <main id="main">
 
@@ -111,11 +120,11 @@
           <div class="hero-ctas">
             <a class="btn btn-gold" href="https://apps.apple.com/app/id6790244910" target="_blank" rel="noopener">
               <svg class="apple-logo" viewBox="0 0 384 512" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.9-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-              Buy on the Mac App Store — $9.99
+              Buy Joe Town — $9.99
             </a>
             <a class="btn btn-ghost" href="#joes">Meet the Joes ↓</a>
           </div>
-          <p class="trust-row"><span>$9.99 ONCE&nbsp;·</span> <span>NO ADS&nbsp;·</span> <span>NO IN-APP PURCHASES&nbsp;·</span> <span>NO TRACKING&nbsp;·</span> <span>PLAYS OFFLINE</span></p>
+          <p class="trust-row"><span>$9.99 ONCE&nbsp;·</span> <span>NO ADS&nbsp;·</span> <span>NO TRACKING&nbsp;·</span> <span>PLAYS OFFLINE&nbsp;·</span> <span>MACOS 14+</span></p>
         </div>
 
         <div class="hero-visual reveal">
@@ -157,6 +166,7 @@
         </header>
 
         <div class="age-switcher reveal">
+          <p class="age-rail-hint" id="age-progress">AGE 5 OF 10 · SWIPE THROUGH THE JOURNEY →</p>
           <div class="age-tabs" role="tablist" aria-label="The ten ages">
             <button class="age-tab" role="tab" id="tab-1" aria-controls="age-panel" aria-selected="false" tabindex="-1" data-age="1"><span class="tab-marker"></span><span class="tab-label">Camp</span></button>
             <button class="age-tab" role="tab" id="tab-2" aria-controls="age-panel" aria-selected="false" tabindex="-1" data-age="2"><span class="tab-marker"></span><span class="tab-label">Town</span></button>
@@ -257,7 +267,7 @@
           <p class="section-sub">No idle timers, no energy meters. Advancement means completing charters — civic goals that make your town measurably, visibly better.</p>
         </header>
 
-        <div class="progress-grid">
+        <div class="progress-grid mobile-story-rail" role="region" tabindex="0" aria-label="Joe Town progression highlights">
           <article class="progress-card reveal">
             <p class="f-kicker">TEN CHARTERS</p>
             <h3>Civic goals, not grind.</h3>
@@ -288,7 +298,7 @@
           <p class="section-sub">Every military decision starts with a road, a cart, and a chicken with a job.</p>
         </header>
 
-        <div class="feature-grid">
+        <div class="feature-grid mobile-story-rail" role="region" tabindex="0" aria-label="How Joe Town plays">
           <article class="feature-card reveal">
             <svg class="f-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17h13v-6h4l1 3v3h-2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M9 17h6M3 17V8h9v3"/></svg>
             <p class="f-kicker">LOGISTICS</p>
@@ -440,7 +450,7 @@
         </div>
         <p class="terrain-note reveal">GIFTS · ENVOYS · TRADE PACTS · FESTIVALS · JOINT EXPEDITIONS · ALLIANCES · WAR AND PEACE</p>
 
-        <div class="discovery-grid">
+        <div class="discovery-grid mobile-story-rail" role="region" tabindex="0" aria-label="Discoveries in the wider world">
           <article class="discovery-card reveal">
             <p class="f-kicker">ANCIENT CACHE</p>
             <p class="discovery-text">“Workers uncover a single relic in a sealed alcove.”</p>
@@ -480,7 +490,7 @@
           <p class="section-sub">Joe Town already reaches the Space Age. Future updates will deepen the living civilization without discarding the town—and history—you built.</p>
         </header>
 
-        <div class="roadmap-track">
+        <div class="roadmap-track mobile-story-rail" role="region" tabindex="0" aria-label="Joe Town development roadmap">
           <div class="roadmap-stage roadmap-now reveal">
             <p class="roadmap-version">1.1 <span class="roadmap-badge">NOW</span></p>
             <h3>Living Joes</h3>
@@ -514,7 +524,7 @@
           <p class="section-sub">The first Joes gathered beneath the mountain. Generations later, they still have notes.</p>
         </header>
 
-        <div class="quote-wall">
+        <div class="quote-wall" id="flock-quotes">
           <blockquote class="bubble reveal tilt-l"><p>“The worms seem unionized.”</p><cite>— FARMER JOE</cite></blockquote>
           <blockquote class="bubble reveal"><p>“I'm emotionally load-bearing.”</p><cite>— THE MASONRY</cite></blockquote>
           <blockquote class="bubble reveal tilt-r"><p>“Sunlight sounds fictional.”</p><cite>— THE MINES</cite></blockquote>
@@ -527,6 +537,7 @@
           <div class="pixel-chicken pc-1" aria-hidden="true"></div>
           <div class="pixel-chicken pc-2" aria-hidden="true"></div>
         </div>
+        <button class="flock-toggle" type="button" aria-expanded="false" aria-controls="flock-quotes">More flock chatter <span aria-hidden="true">↓</span></button>
       </div>
     </section>
 

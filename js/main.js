@@ -1,4 +1,4 @@
-/* Joe Town — vanilla JS: reveals, age switcher, subtle hero motion, mobile menu */
+/* Joe Town — vanilla JS: reveals, age switcher, subtle hero motion, mobile purchase UX */
 (function () {
   "use strict";
 
@@ -81,6 +81,7 @@
     var nameEl = document.getElementById("age-name");
     var descEl = document.getElementById("age-desc");
     var metaEl = document.getElementById("age-meta");
+    var progressEl = document.getElementById("age-progress");
     var slider = document.querySelector(".tab-slider");
     var tabsRail = document.querySelector(".age-tabs");
     if (!tabs.length || !img) return;
@@ -115,6 +116,7 @@
       if (age === current && !focus) { moveSlider(tabs[age - 1]); return; }
       current = age;
       var data = AGES[age - 1];
+      if (progressEl) progressEl.textContent = "AGE " + age + " OF 10 · SWIPE THROUGH THE JOURNEY →";
 
       tabs.forEach(function (tab) {
         var selected = Number(tab.getAttribute("data-age")) === age;
@@ -207,10 +209,67 @@
     nums.forEach(function (el) { io.observe(el); });
   })();
 
+  /* ---------- Mobile flock chatter disclosure ---------- */
+  (function flockDisclosure() {
+    var wall = document.querySelector(".quote-wall");
+    var toggle = document.querySelector(".flock-toggle");
+    if (!wall || !toggle) return;
+
+    toggle.addEventListener("click", function () {
+      var expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", expanded ? "false" : "true");
+      wall.classList.toggle("show-all", !expanded);
+      toggle.firstChild.nodeValue = expanded ? "More flock chatter " : "Less flock chatter ";
+    });
+  })();
+
+  /* ---------- Mobile purchase bar ---------- */
+  (function mobilePurchaseBar() {
+    var bar = document.querySelector(".mobile-buy-bar");
+    var hero = document.querySelector(".hero");
+    var finalCta = document.querySelector(".final-cta");
+    if (!bar || !hero || !finalCta) return;
+
+    var heroPassed = false;
+    var finalVisible = false;
+
+    function update() {
+      var show = window.innerWidth <= 720 && heroPassed && !finalVisible;
+      bar.classList.toggle("is-visible", show);
+    }
+
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          heroPassed = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+          update();
+        });
+      }, { threshold: 0 }).observe(hero);
+
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          finalVisible = entry.isIntersecting;
+          update();
+        });
+      }, { threshold: 0.08 }).observe(finalCta);
+    } else {
+      window.addEventListener("scroll", function () {
+        heroPassed = hero.getBoundingClientRect().bottom <= 0;
+        finalVisible = finalCta.getBoundingClientRect().top < window.innerHeight;
+        update();
+      }, { passive: true });
+    }
+
+    window.addEventListener("resize", update);
+    update();
+  })();
+
   /* ---------- Mobile menu ---------- */
   (function mobileMenu() {
     var burger = document.querySelector(".nav-burger");
     var menu = document.getElementById("mobile-menu");
+    var main = document.getElementById("main");
+    var footer = document.querySelector(".footer");
     if (!burger || !menu) return;
 
     var firstLink = menu.querySelector("a");
@@ -221,6 +280,9 @@
       burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
       menu.hidden = !open;
       document.body.style.overflow = open ? "hidden" : "";
+      document.body.classList.toggle("menu-open", open);
+      if (main) main.toggleAttribute("inert", open);
+      if (footer) footer.toggleAttribute("inert", open);
       if (open && firstLink) firstLink.focus();
       else if (restoreFocus) burger.focus();
     }
@@ -237,10 +299,14 @@
       } else if (e.key === "Tab" && burger.getAttribute("aria-expanded") === "true") {
         if (e.shiftKey && document.activeElement === firstLink) {
           e.preventDefault();
-          lastLink.focus();
+          burger.focus();
         } else if (!e.shiftKey && document.activeElement === lastLink) {
           e.preventDefault();
-          firstLink.focus();
+          burger.focus();
+        } else if (document.activeElement === burger) {
+          e.preventDefault();
+          if (e.shiftKey) lastLink.focus();
+          else firstLink.focus();
         }
       }
     });

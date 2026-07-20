@@ -15,6 +15,8 @@ The approved Founding Tile is the website's primary identity. This section super
 - **Motion:** retain scroll reveals and age crossfades. Avoid ambient crystal drift, marquee movement, large hero tilts, and decorative floating geometry.
 - **Page rhythm:** hero promise → static proof band → living world and age proof → systems and world depth → a calm purchase moment → play promise, roadmap, FAQ, and Founding Tile close.
 - **Responsive:** compact navigation begins at 980px; mobile purchase buttons can wrap; the selected age is centered on load; menu focus is contained and restored.
+- **Mobile conversion:** remove the duplicate hero lockup, put price and the primary action in the first phone viewport, reveal a safe-area purchase bar only after the hero, and hide it again at the final CTA or while navigation is open.
+- **Mobile pacing:** dense progression, feature, discovery, and roadmap grids become labeled horizontal story rails; flock chatter shows four quotes before an accessible disclosure. The mobile page should stay below 15,000 CSS pixels at 390px with no document-level overflow.
 
 ## Product facts (verified from source — do NOT invent beyond this)
 
