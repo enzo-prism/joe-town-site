@@ -3,6 +3,12 @@
 Static site. No build step. `index.html` + `css/style.css` + `js/main.js` + `images/`.
 Goal: convert Mac strategy/city-builder players into players. Charm + premium craft.
 
+> **Current decision boundary:** the shipped Founding Tile site and completed
+> mobile UX pass remain the production design. Three visual-first redesign
+> directions are documented in [`docs/VISUAL-FIRST-REDESIGN.md`](docs/VISUAL-FIRST-REDESIGN.md),
+> but no direction has been selected. Do not implement or combine them until an
+> explicit selection is made.
+
 ## Founding Tile visual system — current
 
 The approved Founding Tile is the website's primary identity. This section supersedes older decorative guidance below where the two conflict.
