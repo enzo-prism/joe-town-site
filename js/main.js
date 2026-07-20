@@ -45,7 +45,7 @@
       return;
     }
     // Stagger siblings inside grids/walls
-    document.querySelectorAll(".feature-grid, .quote-wall, .captain-grid, .faction-grid").forEach(function (grid) {
+    document.querySelectorAll(".feature-grid, .quote-wall, .captain-grid, .faction-grid, .progress-grid, .discovery-grid").forEach(function (grid) {
       var i = 0;
       grid.querySelectorAll(".reveal").forEach(function (el) {
         el.style.setProperty("--reveal-delay", (i * 60) + "ms");
@@ -94,13 +94,13 @@
   /* ---------- Seven Ages switcher ---------- */
   (function ageSwitcher() {
     var AGES = [
-      { name: "Camp",      desc: "Rough roots, rope, and baskets. Plain plumage, big dreams.",                                  meta: "FARM · QUARRY · MILITIA",              alt: "Joe Town capital in the Camp age — rough roots, rope and baskets on the isometric board" },
-      { name: "Town",      desc: "Timber frames and copper signs. Aprons, handcarts, and the first archers.",                   meta: "ORE MINE · BARRACKS · WATCHTOWER",     alt: "Joe Town capital in the Town age — timber frames and copper signs on the isometric board" },
-      { name: "Citadel",   desc: "Cut stone and iron bands. Chainmail, forges, and battering rams.",                            meta: "WORKSHOP · RAM · SMELTER",             alt: "Joe Town capital in the Citadel age — cut stone and iron bands on the isometric board" },
-      { name: "Crown",     desc: "Painted roofs, gold trim, royal banners. The first Captains take command.",                   meta: "CAPTAIN · TRAIN STATION · POWER PLANT", alt: "Joe Town capital in the Crown age — painted roofs and gold trim on the isometric board" },
-      { name: "Kingdom",   desc: "Brick arches and glass. Officer trim, formation drills, granaries fit for royalty.",          meta: "ROYAL GRANARIES · STANDING GUARD",     alt: "Joe Town capital in the Kingdom age — brick arches and glass on the isometric board" },
-      { name: "Empire",    desc: "Steel, rivets, and clockwork. Goggles optional. Ambition mandatory.",                         meta: "IMPERIAL FOUNDRIES · GRAND RAMPARTS",  alt: "Joe Town capital in the Empire age — steel, rivets and clockwork on the isometric board" },
-      { name: "Ascendant", desc: "Obsidian and radiant crystal. The flock, haloed in gold.",                                    meta: "HARMONIC INDUSTRY · ETERNAL VIGIL",    alt: "Joe Town capital in the Ascendant age — obsidian and radiant crystal on the isometric board" }
+      { name: "Camp",      desc: "Rough roots, rope, and baskets. Six founders, one communal hall, big dreams.",                    meta: "CAMP CHARTER · FARM · QUARRY · MILITIA",    alt: "Joe Town capital in the Camp age — rough roots, rope and baskets on the isometric board" },
+      { name: "Town",      desc: "Timber frames and copper signs. The first archers, the first doctrines, the first skyline.",      meta: "TOWN CHARTER · ORE MINE · BARRACKS",        alt: "Joe Town capital in the Town age — timber frames and copper signs on the isometric board" },
+      { name: "Citadel",   desc: "Cut stone and iron bands. Forges light up; the rams roll out.",                                   meta: "CITADEL CHARTER · WORKSHOP · RAMS",         alt: "Joe Town capital in the Citadel age — cut stone and iron bands on the isometric board" },
+      { name: "Crown",     desc: "Painted roofs and royal banners. A Captain takes command — and gets a name.",                     meta: "CROWN CHARTER · CAPTAINS · RAIL",           alt: "Joe Town capital in the Crown age — painted roofs and gold trim on the isometric board" },
+      { name: "Kingdom",   desc: "Brick arches and glass. Officers drill, granaries rise, and the chronicle thickens.",             meta: "KINGDOM CHARTER · ROYAL GRANARIES",         alt: "Joe Town capital in the Kingdom age — brick arches and glass on the isometric board" },
+      { name: "Empire",    desc: "Steel, rivets, clockwork. Goggles optional. Ambition mandatory.",                                 meta: "EMPIRE CHARTER · IMPERIAL FOUNDRIES",       alt: "Joe Town capital in the Empire age — steel, rivets and clockwork on the isometric board" },
+      { name: "Ascendant", desc: "Obsidian and radiant crystal. The flock, haloed in gold — one charter from legend.",              meta: "ASCENDANT LEGACY · CAMPAIGN COMPLETE",      alt: "Joe Town capital in the Ascendant age — obsidian and radiant crystal on the isometric board" }
     ];
 
     var tabs = Array.prototype.slice.call(document.querySelectorAll(".age-tab"));

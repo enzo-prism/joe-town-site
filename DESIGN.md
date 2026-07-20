@@ -148,6 +148,20 @@ Accordion (details/summary, styled, accessible), 5 items:
 - SEO/social: title "Joe Town — Build a Chicken Civilization", meta description from hero sub, canonical `https://www.design-prism.com/joetown/` (placeholder), OG/Twitter cards using `og.png` (1200×630, generated from kingdom screenshot + overlay), favicon from app icon (32/180/apple-touch), theme-color #060a14, JSON-LD `VideoGame` schema (name, operatingSystem macOS, applicationCategory GameApplication, genre Strategy/Simulation, offers price 0).
 - Files: `index.html`, `css/style.css`, `js/main.js`, `images/*`, `favicon` assets, `README.md` (how to open/serve locally: `python3 -m http.server`).
 
+## Addendum (v3, shipped — full copy rewrite)
+
+All copy rewritten around the "Stone Age to the stars" arc. New/expanded sections (chips renumbered 01–11):
+- Hero: "From the Stone Age to the stars." (official tagline "Build a chicken civilization" opens the sub).
+- **02 Joes** (`#joes`) — "Every Joe is somebody." Mock inspector card (★ Yolko Ono), 24-name founder library, 8 traits with visible behaviors, 16 professions / 13 skills, memories + 200-entry chronicle, Command-click favorites. Trait chips row.
+- **03 Progression** (`#progress`) — "Progress is a promise you keep." 7 charters, 6 era milestones, Ascendant Legacy (campaign completion), doctrine-pair note.
+- **07 World** (`#world`, was `#rivals`) — expanded: factions + terrains + scouting + three verbatim discovery events (Ancient Cache, Strange Object "bad sky corn", Fire Discovery) + peaceful-path note.
+- **08 Roadmap** (`#roadmap`) — "The road to the stars." 1.0 Ascendant (NOW badge) → 2.0 Modern & Information → 3.0 Space Age → 4.0 Interstellar Legacy. Explicitly labeled post-launch roadmap (not shipped content).
+- Flock quotes refreshed with profession chatter (verbatim from the game). FAQ gained "Can I boss the Joes around?" and "Does the campaign have an ending?".
+- Stats band now 6 numbers: 7 ages · 20 buildings · 16 professions · 12 doctrines · 3 rivals · 0 ads.
+- Nav: Ages · Joes · World · Features · The Flock · FAQ.
+
+Copy honesty rules (from deep code read): founder names are seeded (don't print a fixed cast); only Friend relationships ship; jobs are auto-staffed, not player-assigned; no world map/fog/diplomacy; Space/Interstellar eras are roadmap-only — always framed future-tense.
+
 ## Addendum (v2, shipped)
 
 - New sections after Features: **Captains** (`#captains`, chip 03 — four named captains with rank pips + Renown note), **Coopconomy** (`#economy`, chip 04 — two supply-chain diagrams: Corn→Flour→Food, Iron+Coal→Ingots→Tools, with 100/125/150% output note), **Rivals** (`#rivals`, chip 05 — three faction cards with ATK/DEF bias bars + four terrain chips). Flock/Modes/FAQ renumbered to 06/07/08.
