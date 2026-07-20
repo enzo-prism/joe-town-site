@@ -31,7 +31,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&amp;family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
 
   <!-- Preload hero -->
   <link rel="preload" as="image" href="images/hero-kingdom-1920.webp" imagesrcset="images/hero-kingdom-960.webp 960w, images/hero-kingdom-1920.webp 1920w" imagesizes="(max-width: 720px) 92vw, 1080px" fetchpriority="high">
@@ -59,9 +59,6 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Crystal particle field -->
-  <div class="crystal-field" aria-hidden="true"></div>
-
   <!-- ============ 0. NAV ============ -->
   <header class="nav" id="top">
     <div class="nav-inner">
@@ -70,11 +67,10 @@
         <span class="nav-wordmark">JOE TOWN</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#ages">Ages</a>
         <a href="#joes">Joes</a>
+        <a href="#ages">Ages</a>
+        <a href="#features">How It Plays</a>
         <a href="#world">World</a>
-        <a href="#features">Features</a>
-        <a href="#flock">The Flock</a>
         <a href="#faq">FAQ</a>
       </nav>
       <div class="nav-right">
@@ -89,11 +85,10 @@
   <!-- Mobile overlay menu -->
   <div class="mobile-menu" id="mobile-menu" hidden>
     <nav aria-label="Mobile">
-      <a href="#ages">Ages</a>
       <a href="#joes">Joes</a>
+      <a href="#ages">Ages</a>
+      <a href="#features">How It Plays</a>
       <a href="#world">World</a>
-      <a href="#features">Features</a>
-      <a href="#flock">The Flock</a>
       <a href="#faq">FAQ</a>
       <a class="btn btn-gold" href="https://apps.apple.com/app/id6790244910" target="_blank" rel="noopener">Mac App Store</a>
     </nav>
@@ -106,21 +101,24 @@
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="container">
         <div class="hero-copy reveal">
+          <div class="hero-brand-lockup" aria-label="Joe Town">
+            <img src="images/logo-mark.svg" alt="" width="60" height="60">
+            <span>JOE TOWN</span>
+          </div>
           <p class="eyebrow">A PREMIUM CIVILIZATION EPIC FOR MAC</p>
-          <h1>From the Stone Age to <em class="gold-italic">the stars</em>.</h1>
-          <p class="hero-sub">Build a chicken civilization. Guide a living flock through ten ages of roads, production, diplomacy, memories, and legends — from a humble camp to the Space Age.</p>
+          <h1>Build a <em class="gold-italic">chicken</em> civilization.</h1>
+          <p class="hero-sub">From the Stone Age to the stars, guide a living flock through ten ages of roads, production, diplomacy, memories, and legends.</p>
           <div class="hero-ctas">
             <a class="btn btn-gold" href="https://apps.apple.com/app/id6790244910" target="_blank" rel="noopener">
               <svg class="apple-logo" viewBox="0 0 384 512" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.9-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
               Buy on the Mac App Store — $9.99
             </a>
-            <a class="btn btn-ghost" href="#ages">Begin the climb ↓</a>
+            <a class="btn btn-ghost" href="#joes">Meet the Joes ↓</a>
           </div>
           <p class="trust-row"><span>$9.99 ONCE&nbsp;·</span> <span>NO ADS&nbsp;·</span> <span>NO IN-APP PURCHASES&nbsp;·</span> <span>NO TRACKING&nbsp;·</span> <span>PLAYS OFFLINE</span></p>
         </div>
 
         <div class="hero-visual reveal">
-          <div class="hero-glow" aria-hidden="true"></div>
           <figure class="mac-window hero-frame" id="hero-frame">
             <div class="mac-chrome" aria-hidden="true">
               <span class="dot dot-red"></span><span class="dot dot-gold"></span><span class="dot dot-teal"></span>
@@ -133,19 +131,19 @@
                  fetchpriority="high">
           </figure>
           <figcaption class="hero-caption">KINGDOM AGE — TURN 55 — THE FLOCK ADOPTS ROYAL GRANARIES</figcaption>
-          <div class="hero-diamonds" aria-hidden="true">
-            <span class="float-diamond d1"></span>
-            <span class="float-diamond d2"></span>
-            <span class="float-diamond d3"></span>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ 2. MARQUEE ============ -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>TEN AGES <i>✦</i> EVERY JOE HAS A NAME <i>✦</i> 24 BUILDINGS <i>✦</i> 13 ANIMAL CIVILIZATIONS <i>✦</i> 18 TECHNOLOGIES <i>✦</i> DETERMINISTIC WORLDS <i>✦</i> NO ADS <i>✦</i> CHICKENS <i>✦</i> </span><span>TEN AGES <i>✦</i> EVERY JOE HAS A NAME <i>✦</i> 24 BUILDINGS <i>✦</i> 13 ANIMAL CIVILIZATIONS <i>✦</i> 18 TECHNOLOGIES <i>✦</i> DETERMINISTIC WORLDS <i>✦</i> NO ADS <i>✦</i> CHICKENS <i>✦</i> </span>
+    <!-- ============ PROOF BAND ============ -->
+    <div class="stats-band reveal" aria-label="Joe Town by the numbers">
+      <div class="container stats-row">
+        <div class="stat"><p class="stat-num" data-count="10">0</p><p class="stat-label">AGES</p></div>
+        <div class="stat"><p class="stat-num" data-count="24">0</p><p class="stat-label">BUILDINGS</p></div>
+        <div class="stat"><p class="stat-num" data-count="5">0</p><p class="stat-label">JOE SKILLS</p></div>
+        <div class="stat"><p class="stat-num" data-count="18">0</p><p class="stat-label">TECHNOLOGIES</p></div>
+        <div class="stat"><p class="stat-num" data-count="13">0</p><p class="stat-label">CIVILIZATIONS</p></div>
+        <div class="stat"><p class="stat-num" data-count="0">0</p><p class="stat-label">ADS</p></div>
       </div>
     </div>
 
@@ -461,6 +459,18 @@
       </div>
     </section>
 
+    <aside class="mid-cta reveal" aria-label="Buy Joe Town">
+      <div class="container mid-cta-inner">
+        <img src="images/logo-mark.svg" alt="" width="64" height="64">
+        <div>
+          <p class="eyebrow">THE FLOCK IS READY</p>
+          <h2>Build your town for $9.99.</h2>
+          <p>One purchase · plays offline · no ads</p>
+        </div>
+        <a class="btn btn-gold" href="https://apps.apple.com/app/id6790244910" target="_blank" rel="noopener">Mac App Store</a>
+      </div>
+    </aside>
+
     <!-- ============ 10. ROADMAP ============ -->
     <section class="section roadmap" id="roadmap">
       <div class="container">
@@ -601,25 +611,10 @@
       </div>
     </section>
 
-    <!-- ============ STATS BAND ============ -->
-    <div class="stats-band reveal" aria-label="Joe Town by the numbers">
-      <div class="container stats-row">
-        <div class="stat"><p class="stat-num" data-count="10">0</p><p class="stat-label">AGES</p></div>
-        <div class="stat"><p class="stat-num" data-count="24">0</p><p class="stat-label">BUILDINGS</p></div>
-        <div class="stat"><p class="stat-num" data-count="5">0</p><p class="stat-label">JOE SKILLS</p></div>
-        <div class="stat"><p class="stat-num" data-count="18">0</p><p class="stat-label">TECHNOLOGIES</p></div>
-        <div class="stat"><p class="stat-num" data-count="13">0</p><p class="stat-label">CIVILIZATIONS</p></div>
-        <div class="stat"><p class="stat-num" data-count="0">0</p><p class="stat-label">ADS</p></div>
-      </div>
-    </div>
-
     <!-- ============ 14. FINAL CTA ============ -->
     <section class="section final-cta">
       <div class="container reveal">
-        <svg class="big-crown" viewBox="0 0 120 80" aria-hidden="true" fill="currentColor">
-          <path d="M10 62 L4 24 L32 40 L60 10 L88 40 L116 24 L110 62 Z"/>
-          <rect x="10" y="66" width="100" height="8" rx="3"/>
-        </svg>
+        <img class="final-mark" src="images/logo-mark.svg" alt="" width="120" height="120">
         <h2>A living flock is waiting beneath the mountain.</h2>
         <p class="section-sub">All that's missing is the civilization you build with them.</p>
         <a class="btn btn-gold btn-big" href="https://apps.apple.com/app/id6790244910" target="_blank" rel="noopener">Buy Joe Town — $9.99</a>
@@ -631,8 +626,10 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <div class="pixel-chicken pc-footer" aria-hidden="true"></div>
-        <p class="nav-wordmark">JOE TOWN</p>
+        <div class="footer-lockup">
+          <img src="images/logo-mark.svg" alt="" width="42" height="42">
+          <p class="nav-wordmark">JOE TOWN</p>
+        </div>
         <p class="footer-tag">Build a chicken civilization.</p>
       </div>
       <nav class="footer-col" aria-label="Game">

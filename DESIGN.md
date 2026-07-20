@@ -3,6 +3,19 @@
 Static site. No build step. `index.html` + `css/style.css` + `js/main.js` + `images/`.
 Goal: convert Mac strategy/city-builder players into players. Charm + premium craft.
 
+## Founding Tile visual system — current
+
+The approved Founding Tile is the website's primary identity. This section supersedes older decorative guidance below where the two conflict.
+
+- **Foundation:** ink `#080a0d`, coal `#101419`, raised panel `#161c23`, bone `#f5f1e8`, muted `#a7adb7`.
+- **Accents:** corn gold is reserved for purchase actions, advancement, and selected states; teal marks logistics and interactive information.
+- **Brand hierarchy:** Founding Tile first; game screenshots second; crowns, crystals, and pixel chickens stay inside the game-world story instead of acting as competing logos.
+- **Typography:** Fraunces keeps the warm editorial voice. Inter owns the wordmark, navigation, and interface. JetBrains Mono handles compact game facts. Press Start 2P is no longer part of the website lockup.
+- **Surfaces:** flat fills, neutral bone hairlines, 8–12px radii, restrained shadows. Avoid glossy gold gradients, universal gold borders, and decorative hover lift on non-interactive cards.
+- **Motion:** retain scroll reveals and age crossfades. Avoid ambient crystal drift, marquee movement, large hero tilts, and decorative floating geometry.
+- **Page rhythm:** hero promise → static proof band → living world and age proof → systems and world depth → a calm purchase moment → play promise, roadmap, FAQ, and Founding Tile close.
+- **Responsive:** compact navigation begins at 980px; mobile purchase buttons can wrap; the selected age is centered on load; menu focus is contained and restored.
+
 ## Product facts (verified from source — do NOT invent beyond this)
 
 > Canonical product snapshot — 2026-07-20. Older addenda below are retained as design history only; this section and the deployed copy take precedence.

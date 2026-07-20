@@ -1,41 +1,8 @@
-/* Joe Town — vanilla JS: crystal field, reveals, age switcher, hero tilt, mobile menu */
+/* Joe Town — vanilla JS: reveals, age switcher, subtle hero motion, mobile menu */
 (function () {
   "use strict";
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  /* ---------- Crystal particle field ---------- */
-  (function crystalField() {
-    if (reduceMotion) return;
-    var field = document.querySelector(".crystal-field");
-    if (!field) return;
-    var colors = ["#3fd8c2", "#8f7ee0", "#f2b64f"];
-    var frag = document.createDocumentFragment();
-    for (var i = 0; i < 14; i++) {
-      var c = document.createElement("span");
-      c.className = "crystal";
-      var size = 5 + Math.random() * 8;
-      c.style.setProperty("--s", size.toFixed(1) + "px");
-      c.style.setProperty("--c", colors[i % colors.length]);
-      c.style.setProperty("--dur", (16 + Math.random() * 18).toFixed(1) + "s");
-      c.style.left = (Math.random() * 100).toFixed(2) + "%";
-      c.style.top = (Math.random() * 100).toFixed(2) + "%";
-      c.style.animationDelay = (-Math.random() * 20).toFixed(1) + "s";
-      frag.appendChild(c);
-    }
-    field.appendChild(frag);
-
-    /* gentle scroll parallax */
-    var ticking = false;
-    window.addEventListener("scroll", function () {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(function () {
-        field.style.transform = "translate3d(0," + (window.scrollY * 0.06).toFixed(1) + "px,0)";
-        ticking = false;
-      });
-    }, { passive: true });
-  })();
 
   /* ---------- Scroll reveals (staggered 60ms in grids, once-only) ---------- */
   (function reveals() {
@@ -65,10 +32,10 @@
 
   /* ---------- Hero frame tilt: straightens on scroll & hover ---------- */
   (function heroTilt() {
-    if (reduceMotion) return;
+    if (reduceMotion || window.matchMedia("(hover: none), (pointer: coarse)").matches) return;
     var frame = document.getElementById("hero-frame");
     if (!frame) return;
-    var baseX = 4, baseY = -6;
+    var baseX = 1, baseY = -1.5;
     function apply(scrollFactor, hover) {
       var f = hover ? 0 : scrollFactor;
       frame.style.transform =
@@ -115,20 +82,33 @@
     var descEl = document.getElementById("age-desc");
     var metaEl = document.getElementById("age-meta");
     var slider = document.querySelector(".tab-slider");
+    var tabsRail = document.querySelector(".age-tabs");
     if (!tabs.length || !img) return;
 
     var current = 5; // default: Kingdom
 
-    // Preload all age images for instant swaps
-    AGES.forEach(function (_, i) {
-      var pre = new Image();
-      pre.src = "images/age-" + (i + 1) + ".webp";
-    });
+    // Warm the age gallery after the critical hero has settled.
+    var warmAges = function () {
+      AGES.forEach(function (_, i) {
+        var pre = new Image();
+        pre.src = "images/age-" + (i + 1) + ".webp";
+      });
+    };
+    if ("requestIdleCallback" in window) window.requestIdleCallback(warmAges, { timeout: 1800 });
+    else window.setTimeout(warmAges, 900);
 
     function moveSlider(tab) {
       if (!slider) return;
       slider.style.width = tab.offsetWidth + "px";
       slider.style.transform = "translateX(" + tab.offsetLeft + "px)";
+    }
+
+    function centerTab(tab, behavior) {
+      if (!tabsRail || !window.matchMedia("(max-width: 720px)").matches) return;
+      tabsRail.scrollTo({
+        left: tab.offsetLeft - (tabsRail.clientWidth - tab.offsetWidth) / 2,
+        behavior: behavior
+      });
     }
 
     function select(age, focus) {
@@ -145,7 +125,7 @@
           moveSlider(tab);
           if (focus) tab.focus();
           // keep the active tab visible in mobile scroll-snap rail
-          tab.scrollIntoView({ block: "nearest", inline: "center", behavior: reduceMotion ? "auto" : "smooth" });
+          centerTab(tab, reduceMotion ? "auto" : "smooth");
         }
       });
 
@@ -190,7 +170,10 @@
     window.addEventListener("resize", function () { moveSlider(tabs[current - 1]); });
     // Initial slider position (after layout/fonts settle)
     requestAnimationFrame(function () { moveSlider(tabs[current - 1]); });
-    window.addEventListener("load", function () { moveSlider(tabs[current - 1]); });
+    window.addEventListener("load", function () {
+      moveSlider(tabs[current - 1]);
+      centerTab(tabs[current - 1], "auto");
+    });
   })();
 
   /* ---------- Stats count-up ---------- */
@@ -230,23 +213,40 @@
     var menu = document.getElementById("mobile-menu");
     if (!burger || !menu) return;
 
-    function setOpen(open) {
+    var firstLink = menu.querySelector("a");
+    var lastLink = menu.querySelector("a:last-child");
+
+    function setOpen(open, restoreFocus) {
       burger.setAttribute("aria-expanded", open ? "true" : "false");
       burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
       menu.hidden = !open;
       document.body.style.overflow = open ? "hidden" : "";
+      if (open && firstLink) firstLink.focus();
+      else if (restoreFocus) burger.focus();
     }
 
     burger.addEventListener("click", function () {
-      setOpen(burger.getAttribute("aria-expanded") !== "true");
+      setOpen(burger.getAttribute("aria-expanded") !== "true", false);
     });
     menu.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () { setOpen(false); });
+      link.addEventListener("click", function () { setOpen(false, false); });
     });
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && burger.getAttribute("aria-expanded") === "true") {
-        setOpen(false);
-        burger.focus();
+        setOpen(false, true);
+      } else if (e.key === "Tab" && burger.getAttribute("aria-expanded") === "true") {
+        if (e.shiftKey && document.activeElement === firstLink) {
+          e.preventDefault();
+          lastLink.focus();
+        } else if (!e.shiftKey && document.activeElement === lastLink) {
+          e.preventDefault();
+          firstLink.focus();
+        }
+      }
+    });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 980 && burger.getAttribute("aria-expanded") === "true") {
+        setOpen(false, false);
       }
     });
   })();
