@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Joe Town Founding Tile</title>
+  <desc>A friendly chicken carved from a black isometric town tile.</desc>
+  <rect x="16" y="16" width="992" height="992" rx="220" fill="#ffffff"/>
+  <path
+    d="M516 132 C530 132 542 138 552 146 L892 426 C908 439 918 456 918 476
+       L918 570 C918 592 907 611 890 624 L550 878 C528 895 498 895 476 878
+       L135 624 C118 611 108 592 108 570 L108 476 C108 456 118 439 134 426
+       L476 146 C487 137 500 132 516 132Z"
+    fill="#000000"/>
+  <path
+    d="M304 676 C329 637 336 590 341 537 C348 462 373 418 412 390
+       C447 365 494 356 543 364 C608 374 658 407 720 451 L801 488
+       C812 493 812 501 801 506 L724 541 L724 676 L551 813
+       C528 831 496 831 473 813Z"
+    fill="#ffffff"/>
+  <ellipse cx="515" cy="382" rx="113" ry="56" fill="#ffffff"/>
+  <ellipse cx="451" cy="344" rx="54" ry="49" fill="#ffffff"/>
+  <ellipse cx="548" cy="309" rx="63" ry="60" fill="#ffffff"/>
+  <circle cx="631" cy="470" r="30" fill="#000000"/>
+</svg>

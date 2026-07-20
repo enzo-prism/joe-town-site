@@ -23,7 +23,7 @@ apart from Google Fonts.
 - `css/style.css` — full design system (cavern palette, Fraunces/Inter/JetBrains Mono/Press Start 2P)
 - `js/main.js` — vanilla JS (<15KB): crystal particle field, scroll reveals,
   ten-age tab switcher (WAI-ARIA, arrow keys), hero tilt-on-scroll, mobile menu
-- `images/` — derived web assets (WebP + PNG favicons + `og.png`)
+- `images/` — the Founding Tile SVG master, derived PNG icons/favicons, WebP captures, and `og.png`
 - `images/raw/` — original Retina captures, kept out of the deployed markup
 
 ## Notes

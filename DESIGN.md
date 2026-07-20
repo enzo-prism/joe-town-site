@@ -59,7 +59,8 @@ The game is isometric pixel art in a dark cavern: deep navy-black, warm gold cro
 
 ### Motifs & texture
 - Cavern backdrop: layered radial gradients (deep navy vignette), very subtle noise/grain (SVG feTurbulence data-URI, opacity ~0.05), and a **drifting crystal particle field** (small diamond shapes in teal/violet, few, slow float, CSS or lightweight canvas, `prefers-reduced-motion` disables).
-- Gold crown glyph (inline SVG, 3-point crown like the app icon) used as divider/section marks.
+- Gold crown glyph (inline SVG) remains a progression motif, separate from the app identity.
+- Brand mark: **The Founding Tile** — a friendly Joe carved from a black isometric town tile in bold negative space. Keep it monochrome, geometric, and legible at 16px; do not reintroduce crowns, scenery, or fine detail into the logo.
 - Isometric diamond shapes as decorative geometry (rotated squares with gold hairline borders).
 - Pixel-art details: tiny CSS box-shadow pixel chicken in footer/hero (crafted, crisp `image-rendering: pixelated` where raster is used); screenshots displayed in "Mac window" frames (traffic-light dots, gold hairline border, deep glow).
 - Hairline gold borders (1px, low alpha), generous radii on cards (14–18px) BUT pixel-corners motif option: small corner notches. Keep it tasteful — premium first, pixel second.
@@ -68,7 +69,7 @@ The game is isometric pixel art in a dark cavern: deep navy-black, warm gold cro
 ## Page structure & final copy
 
 ### 0. Nav (sticky, translucent blur, gold hairline bottom)
-- Left: app icon (32px, rounded) + pixel-font wordmark "JOE TOWN".
+- Left: Founding Tile app icon (32px, rounded) + pixel-font wordmark "JOE TOWN".
 - Links: Ages · Features · The Flock · Modes · FAQ.
 - Right: gold pill button "Mac App Store" → App Store link.
 - Mobile: hamburger → full overlay menu.
@@ -147,7 +148,7 @@ Accordion (details/summary, styled, accessible), 5 items:
 - Semantic HTML5, landmarks, skip link, focus-visible gold outlines, alt text, aria for tabs/accordion, color contrast AA (muted text ≥ #9aa4ba on dark).
 - Fully responsive: fluid clamp() type; breakpoints ~1120px and ~720px; hero stacks; ages timeline becomes horizontal scroll-snap on mobile; grids collapse to 1–2 cols. Test at 1440×900, 390×844.
 - Performance: hero image < 400KB (serve resized ~1920w PNG→ or high-quality JPEG/WebP; pixel-art UI screenshots compress well as WebP q80). Preload hero image. `loading="lazy"` below the fold, width/height attrs to avoid CLS. Fonts: only needed weights.
-- SEO/social: title "Joe Town — Build a Chicken Civilization", meta description from hero sub, canonical `https://joe-town-site.vercel.app/`, OG/Twitter cards using `og.png` (1200×630, generated from kingdom screenshot + overlay), favicon from app icon (32/180/apple-touch), theme-color #060a14, JSON-LD `VideoGame` schema (name, operatingSystem macOS, applicationCategory GameApplication, genre Strategy/Simulation, offers price 9.99 USD).
+- SEO/social: title "Joe Town — Build a Chicken Civilization", meta description from hero sub, canonical `https://gojoetown.com/`, OG/Twitter cards using `og.png` (1200×630, generated from kingdom screenshot + Founding Tile overlay), favicon from the Founding Tile SVG with PNG fallbacks (16/32/180), theme-color #060a14, JSON-LD `VideoGame` schema (name, operatingSystem macOS, applicationCategory GameApplication, genre Strategy/Simulation, offers price 9.99 USD).
 - Files: `index.html`, `css/style.css`, `js/main.js`, `images/*`, `favicon` assets, `README.md` (how to open/serve locally: `python3 -m http.server`).
 
 ## Legacy snapshot (v3, superseded)
@@ -179,6 +180,6 @@ Copy honesty rules: founder seating is seeded; friendships ship; work guidance a
 2. `age-1..10.webp` — current isometric board captures for all ten ages, consistently framed and visually verified.
 3. `shot-camp.webp` ~1600w from shot-camp.png (full window, for a secondary showcase if used).
 4. `shot-choice.webp` from shot-ascendant-choice.png ~1120w (could back the Modes section).
-5. `og.png` 1200×630: kingdom shot crop or board crop, darkened, with icon + "JOE TOWN — Build a chicken civilization" if tooling allows (HTML→screenshot is fine; otherwise a clean crop suffices).
-6. `icon.png` 512w from icon-1024.png; favicon-32.png; apple-touch-icon 180w.
+5. `og.png` 1200×630: kingdom shot crop or board crop, darkened, with the Founding Tile + "JOE TOWN — Build a chicken civilization".
+6. `logo-mark.svg` is the web master; derive `icon.png` / `icon-512.png`, favicon 16/32, and apple-touch 180 from it.
 Keep `images/raw/` out of the deployed paths (reference only derived files).
