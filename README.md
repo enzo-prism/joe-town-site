@@ -43,10 +43,11 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
 
 ## Release state
 
-- The current production-ready branch implements the selected Living Diorama
-  redesign, verified Joe Town 1.1 product facts, and the completed mobile UX pass.
-- Responsive QA targets are `320`, `390`, `768`, and `1440` CSS pixels with no
-  document-level horizontal overflow.
+- Production follows the selected Living Diorama redesign, verified Joe Town 1.1
+  product facts, and the mobile swipe-rail UX pass.
+- Responsive QA targets are `320`, `390`, `430`, `768`, and `1440` CSS pixels.
+  Source and interaction checks are complete; the latest device capture is tracked
+  transparently in `design-qa.md` as a post-release follow-up.
 - Direction 1, **The Living Diorama**, is selected and implemented. See
   [`docs/VISUAL-FIRST-REDESIGN.md`](docs/VISUAL-FIRST-REDESIGN.md) for the
   decision record and archived alternatives.
@@ -56,5 +57,7 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
 - Canonical site: <https://gojoetown.com/>
 - Production branch: `main`
 - Hosting: Vercel project `joe-town-site`
-- Deploy from a clean, verified `main` checkout with `vercel --prod` and verify
-  the canonical domain after deployment.
+- GitHub-connected updates to `main` deploy automatically. Do not also run a
+  manual production deploy unless the Git deployment fails.
+- Verify the released title, HTML hash, JavaScript, CSS, social image, favicons,
+  `robots.txt`, and `sitemap.xml` on the canonical domain after every release.

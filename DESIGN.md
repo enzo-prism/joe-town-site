@@ -41,9 +41,9 @@ The approved Founding Tile is the website's primary identity. This section super
 - **Brand hierarchy:** Founding Tile first; game screenshots second; crowns, crystals, and pixel chickens stay inside the game-world story instead of acting as competing logos.
 - **Typography:** Fraunces keeps the warm editorial voice. Mobile overrides interface and compact-fact type with native system sans and monospace faces for faster, more Apple-native rendering. Press Start 2P is no longer part of the website lockup.
 - **Surfaces:** flat fills, neutral bone hairlines, 8–12px radii, restrained shadows. Avoid glossy gold gradients, universal gold borders, and decorative hover lift on non-interactive cards.
-- **Motion:** retain scroll reveals and age crossfades. Avoid ambient crystal drift, marquee movement, large hero tilts, and decorative floating geometry.
-- **Page rhythm:** hero promise → static proof band → living world and age proof → systems and world depth → a calm purchase moment → play promise, roadmap, FAQ, and Founding Tile close.
-- **Responsive:** compact navigation begins at 980px; mobile purchase buttons can wrap; the selected age is centered on load; menu focus is contained and restored.
+- **Motion:** retain below-fold reveals, menu transitions, scroll progress, and restrained swipe-rail movement. Avoid ambient crystal drift, marquee movement, large hero tilts, and decorative floating geometry.
+- **Page rhythm:** hero promise → three-age journey → one Joe story → four visual systems → minimal FAQ → Founding Tile purchase close.
+- **Responsive:** compact navigation begins at 1040px; age/system rails and the contextual purchase bar begin at 780px; controls remain keyboard accessible and safe-area aware.
 - **Mobile conversion:** keep price and the primary action in the first phone viewport, reveal a safe-area purchase bar as soon as that action scrolls away, and hide it again at the final CTA or while navigation is open.
 - **Mobile pacing:** ages and systems become labeled horizontal story rails with counters, arrow controls, keyboard navigation, snap stops, and a visible next-card peek. Joe context precedes the portrait and FAQ items behave as a compact accordion.
 
@@ -78,7 +78,10 @@ The approved Founding Tile is the website's primary identity. This section super
 - Founding copy: "The first Joes gathered beneath the mountain."
 - Positioning (verbatim from design docs): explicitly avoids energy, streak, login-reward, and FOMO systems; "The city is the hero"; "Defense is a puzzle"; "Raids are scouting problems".
 
-## Art direction
+## Archived pre–Living Diorama art direction (superseded)
+
+Reference only. The current Living Diorama and Founding Tile sections above win
+whenever this archived direction conflicts with the shipped site.
 
 The game is isometric pixel art in a dark cavern: deep navy-black, warm gold crowns/light, teal logistics lines and crystals, violet crystals, cream text, red mushroom-cap accents. The site must feel like descending into that cavern: **dark, gilded, alive** — premium editorial layout (think award-winning indie game sites), not a SaaS template.
 
@@ -110,7 +113,7 @@ The game is isometric pixel art in a dark cavern: deep navy-black, warm gold cro
 - Hairline gold borders (1px, low alpha), generous radii on cards (14–18px) BUT pixel-corners motif option: small corner notches. Keep it tasteful — premium first, pixel second.
 - Screenshot treatment: `border-radius: 12px`, 1px gold hairline, `box-shadow: 0 30px 80px rgba(0,0,0,.6), 0 0 120px rgba(242,182,79,.07)`. Never stretch; preserve aspect.
 
-## Page structure & final copy
+## Archived pre–Living Diorama page structure and copy
 
 ### 0. Nav (sticky, translucent blur, gold hairline bottom)
 - Left: Founding Tile app icon (32px, rounded) + pixel-font wordmark "JOE TOWN".

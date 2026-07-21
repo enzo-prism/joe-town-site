@@ -6,7 +6,7 @@ Status: **Direction 1 selected and implemented on 2026-07-20.** Directions 2 and
 ## Objective
 
 Turn the marketing site into a concise visual journey from campfire to stars.
-The redesign should reduce the current long-form page to roughly 500–600 visible
+The redesign should reduce the current long-form page to roughly 300–400 visible
 words, place a meaningful visual in nearly every viewport, and keep one clear
 `$9.99` purchase path.
 
@@ -19,7 +19,7 @@ words, place a meaningful visual in nearly every viewport, and keep one clear
   purchases, no tracking, local saves, and offline play.
 - Keep the homepage focused on the product available now. Move roadmap material
   outside the primary purchase journey.
-- Design mobile-first, then verify at `320`, `390`, `768`, and `1440` CSS pixels.
+- Design mobile-first, then verify at `320`, `390`, `430`, `768`, and `1440` CSS pixels.
 - Respect reduced motion, keyboard navigation, VoiceOver structure, and safe areas.
 
 ## Direction 1 — The Living Diorama (selected)
@@ -28,9 +28,9 @@ A cinematic, gameplay-led page that makes the town itself the hero.
 
 - Full-bleed Kingdom scene with a small Founding Tile, one-line promise, price,
   and purchase action.
-- Camp, Kingdom, Fusion, and Space become large visual chapters with short captions.
-- A brief “Meet three Joes” portrait interlude adds character attachment.
-- Slow age crossfades and restrained crop reveals provide motion without clutter.
+- Camp, Kingdom, and Space become large visual chapters with short captions.
+- One focused Joe portrait/profile interlude adds character attachment.
+- Touch/keyboard scroll-snap rails and restrained crop reveals provide motion without clutter.
 - Target copy: 300–400 words.
 
 Why it leads: it shows the real game immediately, communicates progression with

@@ -7,7 +7,8 @@
 - Full-view comparison: `/Users/enzo/Documents/Codex/2026-07-16/let-s-update-and-improve-my/work/joe-town-site-qa/living-diorama-full-comparison.png`
 - Focused hero comparison: `/Users/enzo/Documents/Codex/2026-07-16/let-s-update-and-improve-my/work/joe-town-site-qa/living-diorama-hero-comparison.png`
 - Mobile implementation: `/Users/enzo/Documents/Codex/2026-07-16/let-s-update-and-improve-my/work/joe-town-site-qa/living-diorama-mobile-390-final.png`
-- Viewports checked: 320×844, 390×844, 768×900, and 1440×1000
+- Baseline viewports checked before the latest mobile polish: 320×844, 390×844,
+  768×900, and 1440×1000
 - State: default page, open mobile menu, open FAQ item, sticky purchase bar, and closing purchase section
 
 The source is an 869×1810 concept board rather than a browser-viewport capture.
@@ -18,7 +19,8 @@ at full viewport scale.
 
 ## Findings
 
-No actionable P0, P1, or P2 mismatch remains.
+No actionable P0, P1, or P2 mismatch remains from the source-comparison pass.
+The current mobile release follow-up is tracked below.
 
 - [P3] Authentic gameplay captures retain small pieces of shipped HUD chrome in
   some journey and feature crops. This intentionally favors truthful game imagery
@@ -67,7 +69,9 @@ No actionable P0, P1, or P2 mismatch remains.
 - All purchase links use the verified App Store URL and consistent accessible names.
 - Reveal content remains visible when JavaScript, IntersectionObserver, or motion
   animation is unavailable.
-- Browser console errors and warnings checked: none.
+- Baseline browser console errors and warnings checked: none. The latest source
+  pass completed JavaScript parsing and HTTP/MIME readback; fresh device-console
+  evidence remains a post-release follow-up.
 
 ## Comparison history
 
@@ -99,11 +103,12 @@ intentional or release-polish follow-ups.
 - [x] Selected visual hierarchy implemented
 - [x] All target image slots filled with authentic gameplay or labeled key art
 - [x] Primary navigation, purchase links, mobile menu, and FAQ functional
-- [ ] Fresh 320, 390, 430, and 768 browser recapture for the current mobile pass
-- [ ] Browser console recheck for the current mobile pass
+- [ ] Post-release 320, 390, 430, and 768 browser recapture for the current mobile pass
+- [ ] Post-release browser console recheck for the current mobile pass
 - [x] Documentation updated
 
-current result: source QA passed; visual release gate pending
+**Current result:** source QA passed; production release authorized; fresh visual
+evidence remains an explicitly documented follow-up.
 
 ## Mobile UX polish pass — 2026-07-20
 
@@ -113,9 +118,20 @@ current result: source QA passed; visual release gate pending
   pressed states, a scroll-progress hairline, and an animated menu close state.
 - Added notch-safe header/menu/bar spacing, 320px and short-height hero tuning,
   larger utility text, and 44px footer targets.
-- Removed the hero reveal delay and two nonessential web-font families; below-fold
-  WebP media remains lazy and asynchronously decoded.
+- Removed the hero reveal delay and switched mobile interface copy away from two
+  nonessential web-font families; below-fold WebP media remains lazy and
+  asynchronously decoded.
 - Source validation passed: balanced CSS, unique IDs, valid ARIA control targets,
   valid JavaScript, clean diffs, and HTTP 200/MIME checks for all touched assets.
-- A fresh browser viewport recapture at 320, 390, 430, and 768 remains the release
-  gate before this local pass is published.
+- The responsive browser capture surface was unavailable during this pass. The
+  explicit push-to-production request authorizes release on the completed source,
+  interaction, asset, and canonical readback gates; fresh captures remain follow-up.
+
+## Release verification — 2026-07-20
+
+- Release path: fast-forward the validated Living Diorama branch to `main`; the
+  existing GitHub-to-Vercel integration performs the production deployment.
+- Required live proof: expected Git commit reaches Vercel `READY`, canonical HTML
+  matches source, the short title is present, and all CSS/JS/OG/favicon/crawl assets
+  return successfully.
+- Do not run a second manual production deployment when the Git deployment succeeds.
