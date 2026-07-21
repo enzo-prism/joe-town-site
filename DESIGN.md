@@ -3,11 +3,32 @@
 Static site. No build step. `index.html` + `css/style.css` + `js/main.js` + `images/`.
 Goal: convert Mac strategy/city-builder players into players. Charm + premium craft.
 
-> **Current decision boundary:** the shipped Founding Tile site and completed
-> mobile UX pass remain the production design. Three visual-first redesign
-> directions are documented in [`docs/VISUAL-FIRST-REDESIGN.md`](docs/VISUAL-FIRST-REDESIGN.md),
-> but no direction has been selected. Do not implement or combine them until an
-> explicit selection is made.
+> **Current direction:** **The Living Diorama** was selected on 2026-07-20 and
+> is now the production-ready design. The page is a concise visual journey:
+> gameplay-led hero → Camp/Kingdom/Space → one Joe story → four visual systems →
+> minimal FAQ → purchase close. The other two directions remain archived in
+> [`docs/VISUAL-FIRST-REDESIGN.md`](docs/VISUAL-FIRST-REDESIGN.md).
+
+## Living Diorama implementation — current
+
+- **Visual hierarchy:** the town is the hero; authentic gameplay captures carry
+  all gameplay claims, while the Joe portrait is explicitly labeled key art.
+- **Copy budget:** roughly 350 visible words with one consistent `Buy for $9.99`
+  purchase label and a single verified App Store destination.
+- **Journey:** Camp, Kingdom, and Space are static semantic figures—not controls—
+  with all ten shipped ages named in a compact chronology.
+- **Character:** one editorial Joe portrait, semantic inspector data, and a short
+  verified flock quote create attachment without a long roster section.
+- **Systems:** Roads, Technology, Captains, and World use image-led cards with
+  minimal action labels.
+- **Responsive:** desktop hero and four-card system row collapse to a two-column
+  tablet grid and single-column mobile journey. Mobile includes focus-contained
+  navigation and a safe-area purchase bar that hides at the closing CTA.
+- **Motion:** reveal content is visible by default; animation is enabled only when
+  IntersectionObserver is available and reduced motion is not requested.
+- **Assets:** `hero-kingdom-world.webp` is an authentic gameplay crop sized for
+  the hero. `joe-builder-key-art.webp` is generated editorial art and is labeled
+  as such in the page.
 
 ## Founding Tile visual system — current
 

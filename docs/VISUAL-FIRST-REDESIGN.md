@@ -1,7 +1,7 @@
 # Joe Town — Visual-First Redesign Directions
 
-Status: **Awaiting a selected direction.** None of these concepts is part of the
-current production release.
+Status: **Direction 1 selected and implemented on 2026-07-20.** Directions 2 and
+3 remain archived alternatives, not blended into the current design.
 
 ## Objective
 
@@ -22,7 +22,7 @@ words, place a meaningful visual in nearly every viewport, and keep one clear
 - Design mobile-first, then verify at `320`, `390`, `768`, and `1440` CSS pixels.
 - Respect reduced motion, keyboard navigation, VoiceOver structure, and safe areas.
 
-## Direction 1 — The Living Diorama (recommended)
+## Direction 1 — The Living Diorama (selected)
 
 A cinematic, gameplay-led page that makes the town itself the hero.
 
@@ -61,13 +61,14 @@ A character-led page centered on memorable named Joes.
 Tradeoff: the warmest and most memorable direction, but new character art must
 match the shipped game closely enough to avoid creating a false expectation.
 
-## Approval and implementation gate
+## Decision record
 
-Do not blend or implement these directions by assumption. After one direction is
-selected:
+The Living Diorama was selected explicitly. Its implementation follows this gate:
 
-1. Lock the page sequence, copy budget, and authentic screenshot set.
-2. Produce the minimum editorial asset kit required by that direction.
-3. Implement the design using the existing dependency-free site architecture.
-4. Run accessibility, performance, keyboard, reduced-motion, and responsive QA.
-5. Publish a Vercel preview for approval before replacing production.
+1. The page sequence and sub-600-word copy budget are locked.
+2. Gameplay claims use authentic captures; the generated Joe portrait is labeled
+   editorial key art.
+3. The dependency-free architecture remains intact.
+4. Responsive, keyboard, interaction, and visual-comparison QA are recorded in
+   `design-qa.md`.
+5. Production publishing remains a separate, explicit release action.
