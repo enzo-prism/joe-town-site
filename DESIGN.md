@@ -39,7 +39,7 @@ The approved Founding Tile is the website's primary identity. This section super
 - **Foundation:** ink `#080a0d`, coal `#101419`, raised panel `#161c23`, bone `#f5f1e8`, muted `#a7adb7`.
 - **Accents:** corn gold is reserved for purchase actions, advancement, and selected states; teal marks logistics and interactive information.
 - **Brand hierarchy:** Founding Tile first; game screenshots second; crowns, crystals, and pixel chickens stay inside the game-world story instead of acting as competing logos.
-- **Typography:** Fraunces keeps the warm editorial voice. Mobile overrides interface and compact-fact type with native system sans and monospace faces for faster, more Apple-native rendering. Press Start 2P is no longer part of the website lockup.
+- **Typography:** Plus Jakarta Sans is the single site family. Display, body, labels, HUD text, navigation, and controls use its 400–800 weight range; scale, tracking, case, and color create hierarchy without mixing typefaces.
 - **Surfaces:** flat fills, neutral bone hairlines, 8–12px radii, restrained shadows. Avoid glossy gold gradients, universal gold borders, and decorative hover lift on non-interactive cards.
 - **Motion:** retain below-fold reveals, menu transitions, scroll progress, and restrained swipe-rail movement. Avoid ambient crystal drift, marquee movement, large hero tilts, and decorative floating geometry.
 - **Page rhythm:** hero promise → three-age journey → one Joe story → four visual systems → minimal FAQ → Founding Tile purchase close.
@@ -98,11 +98,12 @@ The game is isometric pixel art in a dark cavern: deep navy-black, warm gold cro
 - `--red: #d96a4f` sparing accent (mushroom caps)
 - `--violet: #8f7ee0` sparing accent (crystals)
 
-### Typography (editorial desktop + native mobile UI)
-- Display: **Fraunces** (variable, opsz + SOFT/WONK if available, weights 400–700). Headlines, big italic accents. It has the regal-but-slightly-absurd character the game needs.
-- Body/UI: **Inter** on desktop; **Apple system sans** (`-apple-system` / `BlinkMacSystemFont`) through the mobile breakpoint.
-- HUD echoes / eyebrows / labels / stats: **JetBrains Mono** on desktop; **system monospace** (`ui-monospace` / SF Mono) on mobile, uppercase, letter-spacing 0.14em.
-- Pixel accent: **Press Start 2P** — ONLY for the nav wordmark "JOE TOWN", tiny section index chips ("01"), and marquee separators. Never for long text.
+### Typography (single modern system)
+- Family: **Plus Jakarta Sans** everywhere, loaded with weights 400–800 and `font-display: swap`.
+- Display: 700 weight, tight `-0.05em` tracking, compact line height, and normal-style gold emphasis.
+- Body/UI: 400–700 weight with readable 1.58 leading.
+- HUD echoes / eyebrows / labels / stats: 600–700 weight, uppercase where useful, and restrained 0.05–0.10em tracking.
+- No secondary serif, monospace, pixel, or system-only family is part of the active website typography.
 
 ### Motifs & texture
 - Cavern backdrop: layered radial gradients (deep navy vignette), very subtle noise/grain (SVG feTurbulence data-URI, opacity ~0.05), and a **drifting crystal particle field** (small diamond shapes in teal/violet, few, slow float, CSS or lightweight canvas, `prefers-reduced-motion` disables).
@@ -123,22 +124,22 @@ The game is isometric pixel art in a dark cavern: deep navy-black, warm gold cro
 
 ### 1. Hero
 - Background: cavern gradient + crystal field + huge faint isometric diamond grid.
-- Eyebrow (mono, gold): `A PREMIUM STRATEGY GAME FOR MAC`
-- H1 (Fraunces, ~clamp(3rem, 7vw, 6.5rem)): "Build a **chicken** civilization." — "chicken" in gold italic.
-- Sub (Inter, muted, max ~60ch): "Lead an underground flock from a humble camp to an ascendant kingdom. Lay every road, choose every technology, and raise the first crown beneath the mountain."
+- Eyebrow (compact uppercase, gold): `A PREMIUM STRATEGY GAME FOR MAC`
+- H1 (legacy display concept): "Build a **chicken** civilization." — "chicken" in gold.
+- Sub (muted, max ~60ch): "Lead an underground flock from a humble camp to an ascendant kingdom. Lay every road, choose every technology, and raise the first crown beneath the mountain."
 - CTAs: primary gold "Buy on the Mac App Store — $9.99" (with Apple logo SVG); secondary ghost "Watch the town grow ↓" (scrolls to Ages).
-- Micro-trust row (mono, tiny, muted): `$9.99 ONCE · NO ADS · NO IN-APP PURCHASES · NO TRACKING · PLAYS OFFLINE`
+- Micro-trust row (compact, tiny, muted): `$9.99 ONCE · NO ADS · NO IN-APP PURCHASES · NO TRACKING · PLAYS OFFLINE`
 - Hero visual: `shot-kingdom.png` in Mac-window frame, slight 3D tilt (perspective, ~6deg, straightens subtly on scroll or hover), teal+gold ambient glow behind, a few floating pixel diamonds. Below/around: app icon + crown SVG accents.
-- Optional flourish: small caption under frame (mono, muted): `KINGDOM AGE — TURN 55 — THE FLOCK ADOPTS ROYAL GRANARIES`.
+- Optional flourish: small caption under frame (compact, muted): `KINGDOM AGE — TURN 55 — THE FLOCK ADOPTS ROYAL GRANARIES`.
 
 ### 2. Marquee divider
-Infinite loop, mono uppercase, gold on dark, separated by crown/pixel glyphs:
+Infinite loop, compact uppercase, gold on dark, separated by crown/pixel glyphs:
 `TEN AGES ✦ NAMED JOES ✦ 13 CIVILIZATIONS ✦ 24 BUILDINGS ✦ 18 TECHNOLOGIES ✦ OFFLINE ✦ NO ADS ✦ CHICKENS`
 (duplicate for seamless loop; slow; pause on hover; reduced-motion: static)
 
 ### 3. The Ten Ages — `id="ages"`
 - Section header: index chip `01`, eyebrow `FROM CAMPFIRE TO STARS`, H2 "Ten ages of civilization.", sub: "Every age redraws your capital — new materials, new wardrobe, new machines. Same chickens."
-- Interactive age switcher: 10 tabs (Camp / Town / Citadel / Crown / Kingdom / Empire / Ascendant / Fusion / Orbital / Space). Clicking swaps a large framed board image with a short description + mono meta line. Keyboard accessible (arrow keys, roving tabindex). Default: Kingdom.
+- Interactive age switcher: 10 tabs (Camp / Town / Citadel / Crown / Kingdom / Empire / Ascendant / Fusion / Orbital / Space). Clicking swaps a large framed board image with a short description + compact meta line. Keyboard accessible (arrow keys, roving tabindex). Default: Kingdom.
 - Per-age copy (condensed from the game's style bible):
   1. **Camp** — "Rough roots, rope, and baskets. Plain plumage, big dreams." meta: `FARM · QUARRY · MILITIA`
   2. **Town** — "Timber frames and copper signs. Aprons, handcarts, and the first archers." meta: `ORE MINE · BARRACKS · WATCHTOWER`
@@ -153,7 +154,7 @@ Infinite loop, mono uppercase, gold on dark, separated by crown/pixel glyphs:
 
 ### 4. Features — `id="features"`
 Header: chip `02`, eyebrow `ECONOMY IS STRATEGY`, H2 "A town that runs like clockwork.", sub: "Every military decision starts with a road, a cart, and a chicken with a job."
-Six cards (3×2 grid, bg2, gold hairline, hover lift + glow; each: small inline SVG icon in gold, mono kicker, Fraunces h3, 2–3 line body):
+Six cards (3×2 grid, bg2, gold hairline, hover lift + glow; each: small inline SVG icon in gold, compact kicker, legacy display h3, 2–3 line body):
 1. kicker `LOGISTICS` — "Every road matters." — "Carts haul real cargo along roads you paint. Connected producers earn full output; storehouse routes and workshops push it to 150%."
 2. kicker `TECHNOLOGY` — "Choose your civilization." — "Eighteen technologies turn new ideas into visible changes across the town."
 3. kicker `TACTICS` — "Scout. Plan. Raid." — "Read rival terrain, pick the entry point, set your commitment. Probe, standard, or all-in — the relic vault won't raid itself."
@@ -163,13 +164,13 @@ Six cards (3×2 grid, bg2, gold hairline, hover lift + glow; each: small inline 
 
 ### 5. The Flock Talks Back — `id="flock"`
 - Dark section alt bg. Header: chip `03`, eyebrow `AFFECTIONATE SARCASM`, H2 "The flock talks back.", sub: "The first Joes gathered beneath the mountain. Generations later, they still have notes."
-- Masonry/scattered wall of speech bubbles (cream bubbles, rounded, little tails; a couple rotated ±2deg) using 8–10 of the verbatim quotes above. Attribute some with mono sign-offs like `— FARMER JOE`, `— QUALITY CONTROL`, `— THE GARRISON`. Add 1–2 pixel chicken decorations.
+- Masonry/scattered wall of speech bubbles (cream bubbles, rounded, little tails; a couple rotated ±2deg) using 8–10 of the verbatim quotes above. Attribute some with compact sign-offs like `— FARMER JOE`, `— QUALITY CONTROL`, `— THE GARRISON`. Add 1–2 pixel chicken decorations.
 - This section sells charm — make it playful.
 
 ### 6. Ways to Play + Promise — `id="modes"`
 Two-column split:
 - Left: chip `04`, H2 "Your town, at your depth." Three play-style rows: **Observe**, **Shape**, and **Optimize**. These describe how players can engage with the same simulation; they are not separate difficulty settings.
-- Right: promise panel (gold-bordered card): H3 "One purchase. No nonsense." + checklist (teal check SVGs): `No ads` `No in-app purchases` `No tracking` `No energy meters or daily streaks` `Saves locally, plays offline` `Native macOS — Apple silicon & Intel`. Footnote (mono, tiny, muted): `MACOS 14+ · 60 FPS · MENUBAR APP · VOICEOVER & REDUCE MOTION SUPPORT`
+- Right: promise panel (gold-bordered card): H3 "One purchase. No nonsense." + checklist (teal check SVGs): `No ads` `No in-app purchases` `No tracking` `No energy meters or daily streaks` `Saves locally, plays offline` `Native macOS — Apple silicon & Intel`. Footnote (compact, tiny, muted): `MACOS 14+ · 60 FPS · MENUBAR APP · VOICEOVER & REDUCE MOTION SUPPORT`
 
 ### 7. FAQ — `id="faq"`
 Accordion (details/summary, styled, accessible), 5 items:
@@ -180,8 +181,8 @@ Accordion (details/summary, styled, accessible), 5 items:
 - "Do I have to raid?" → "No. The peaceful Charter path can carry your flock through the whole arc. Raiding is for chickens who want relics."
 
 ### 8. Final CTA + Footer
-- Full-bleed cavern section: huge gold crown SVG glowing, H2 (Fraunces): "The first crown is raised beneath the mountain." sub: "All that's missing is a chicken to wear it." Big gold CTA "Buy Joe Town — $9.99".
-- Footer: pixel chicken (CSS box-shadow art) + "JOE TOWN" wordmark; columns: Game (Ages, Features, FAQ), Studio (Design Prism, Support, Privacy); legal line (mono, tiny): `© 2026 DESIGN PRISM · JOE TOWN IS A TRADEMARK OF DESIGN PRISM · MADE BENEATH THE MOUNTAIN`.
+- Full-bleed cavern section: huge gold crown SVG glowing, H2 (legacy display): "The first crown is raised beneath the mountain." sub: "All that's missing is a chicken to wear it." Big gold CTA "Buy Joe Town — $9.99".
+- Footer: pixel chicken (CSS box-shadow art) + "JOE TOWN" wordmark; columns: Game (Ages, Features, FAQ), Studio (Design Prism, Support, Privacy); compact legal line: `© 2026 DESIGN PRISM · JOE TOWN IS A TRADEMARK OF DESIGN PRISM · MADE BENEATH THE MOUNTAIN`.
 
 ## Motion (all disabled under prefers-reduced-motion)
 - Scroll reveals: IntersectionObserver, fade+translateY(16px), staggered 60ms in grids, once-only.

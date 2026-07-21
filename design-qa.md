@@ -33,9 +33,9 @@ The current mobile release follow-up is tracked below.
 
 ## Required fidelity surfaces
 
-- **Fonts and typography:** Fraunces preserves the concept's high-contrast warm
-  editorial display voice; mobile swaps interface copy to native system sans and
-  monospace faces while desktop retains the established Inter/JetBrains pairing.
+- **Fonts and typography:** Plus Jakarta Sans now owns every display, body, label,
+  HUD, navigation, and control surface. Weight, scale, tracking, and color preserve
+  hierarchy within one modern geometric family.
 - **Spacing and layout rhythm:** the hero, three-age journey, balanced Joe split,
   four-card systems row, quiet FAQ, and emblem close reproduce the concept's visual
   sequence. Desktop content is constrained to 1280px. Mobile collapses cleanly.
@@ -118,8 +118,7 @@ evidence remains an explicitly documented follow-up.
   pressed states, a scroll-progress hairline, and an animated menu close state.
 - Added notch-safe header/menu/bar spacing, 320px and short-height hero tuning,
   larger utility text, and 44px footer targets.
-- Removed the hero reveal delay and switched mobile interface copy away from two
-  nonessential web-font families; below-fold WebP media remains lazy and
+- Removed the hero reveal delay; below-fold WebP media remains lazy and
   asynchronously decoded.
 - Source validation passed: balanced CSS, unique IDs, valid ARIA control targets,
   valid JavaScript, clean diffs, and HTTP 200/MIME checks for all touched assets.
@@ -135,3 +134,15 @@ evidence remains an explicitly documented follow-up.
   matches source, the short title is present, and all CSS/JS/OG/favicon/crawl assets
   return successfully.
 - Do not run a second manual production deployment when the Git deployment succeeds.
+
+## Modern typography pass — 2026-07-20
+
+- Replaced every active display, body, navigation, label, HUD, profile, card,
+  accordion, button, and footer typeface with Plus Jakarta Sans.
+- Removed the three-family desktop/mobile split and its mobile-only overrides.
+- Rebalanced headline size and measure, removed synthesized display italics,
+  tightened label tracking, and raised the smallest interface text.
+- Verified the live Google Fonts stylesheet and variable WOFF2 asset, all 27 CSS
+  font declarations, legacy-family removal, CSS structure, and local HTTP responses.
+- Fresh visual viewport evidence remains required before this typography branch is
+  approved for production.

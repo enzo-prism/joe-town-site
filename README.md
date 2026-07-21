@@ -21,7 +21,7 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
 ## Structure
 
 - `index.html` — single-page product site, SEO/OG/JSON-LD inline
-- `css/style.css` — full Founding Tile design system (ink/bone palette, Fraunces with native system UI type on mobile)
+- `css/style.css` — full Founding Tile design system (ink/bone palette, Plus Jakarta Sans across every type surface)
 - `js/main.js` — vanilla JS: resilient scroll reveals, accessible mobile menu,
   swipe-rail controls, scroll progress, compact FAQ behavior, and a
   context-aware mobile purchase bar
