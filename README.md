@@ -2,7 +2,7 @@
 
 Static marketing site for **Joe Town**, a premium macOS strategy game.
 The selected **Living Diorama** direction puts authentic gameplay in every major
-chapter, supported by the monochrome Founding Tile and warm editorial type — no
+chapter, supported by the monochrome Founding Tile and modern geometric type — no
 build step, no dependencies, no tracking.
 
 ## Run locally
@@ -44,7 +44,8 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
 ## Release state
 
 - Production follows the selected Living Diorama redesign, verified Joe Town 1.1
-  product facts, and the mobile swipe-rail UX pass.
+  product facts, the mobile swipe-rail UX pass, a unified Plus Jakarta Sans type
+  system, and source-backed founder profiles for John, Alex, Dawson, and Matt.
 - Responsive QA targets are `320`, `390`, `430`, `768`, and `1440` CSS pixels.
   Source and interaction checks are complete; the latest device capture is tracked
   transparently in `design-qa.md` as a post-release follow-up.

@@ -145,8 +145,8 @@ evidence remains an explicitly documented follow-up.
   tightened label tracking, and raised the smallest interface text.
 - Verified the live Google Fonts stylesheet and variable WOFF2 asset, all 27 CSS
   font declarations, legacy-family removal, CSS structure, and local HTTP responses.
-- Fresh visual viewport evidence remains required before this typography branch is
-  approved for production.
+- Fresh visual viewport evidence remains a transparent post-release follow-up; the
+  validated source and explicit production request clear the release gate.
 
 ## Founder roster pass — 2026-07-20
 

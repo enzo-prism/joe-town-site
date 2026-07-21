@@ -29,7 +29,8 @@ A cinematic, gameplay-led page that makes the town itself the hero.
 - Full-bleed Kingdom scene with a small Founding Tile, one-line promise, price,
   and purchase action.
 - Camp, Kingdom, and Space become large visual chapters with short captions.
-- One focused Joe portrait/profile interlude adds character attachment.
+- One labeled Joe portrait plus four compact founder profiles add character
+  attachment without turning the page into a roster.
 - Touch/keyboard scroll-snap rails and restrained crop reveals provide motion without clutter.
 - Target copy: 300–400 words.
 
