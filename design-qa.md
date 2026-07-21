@@ -158,3 +158,14 @@ evidence remains an explicitly documented follow-up.
   the section more representative of the wider flock.
 - The four-card roster uses a two-column desktop grid and a single-column mobile
   stack, keeping source order and screen-reader order aligned.
+
+## Production readback — 2026-07-20
+
+- GitHub `main` and the Vercel production deployment were verified on the same
+  release after the typography, founder roster, and documentation updates.
+- The canonical site returned HTTP 200 with Vercel `READY`, cache, and HSTS
+  headers present.
+- Live HTML, CSS, JavaScript, Open Graph image, favicon, `robots.txt`, and
+  `sitemap.xml` matched the validated `main` files byte-for-byte.
+- Live content confirmed Plus Jakarta Sans, John, Alex, Dawson, and Matt; the old
+  Enzo feature card was absent and the verified App Store destination remained.
