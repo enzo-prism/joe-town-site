@@ -21,9 +21,10 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
 ## Structure
 
 - `index.html` — single-page product site, SEO/OG/JSON-LD inline
-- `css/style.css` — full Founding Tile design system (ink/bone palette, Fraunces/Inter/JetBrains Mono)
+- `css/style.css` — full Founding Tile design system (ink/bone palette, Fraunces with native system UI type on mobile)
 - `js/main.js` — vanilla JS: resilient scroll reveals, accessible mobile menu,
-  FAQ behavior, and a context-aware mobile purchase bar
+  swipe-rail controls, scroll progress, compact FAQ behavior, and a
+  context-aware mobile purchase bar
 - `images/` — the Founding Tile SVG master, derived PNG icons/favicons, WebP captures, and `og.png`
 - `favicon.ico`, `robots.txt`, `sitemap.xml` — crawler and legacy browser fallbacks
 - `images/raw/` — original Retina captures, kept out of the deployed markup
@@ -33,8 +34,9 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
 ## Notes
 
 - All motion respects `prefers-reduced-motion`.
-- Mobile keeps the purchase action in the first viewport, stacks the visual
-  civilization journey, isolates modal navigation, and respects safe areas.
+- Mobile keeps the purchase action in the first viewport, turns the visual
+  civilization journey into swipe rails, isolates modal navigation, and
+  respects safe areas.
 - The gameplay-led hero is preloaded. All below-fold images lazy-load with
   explicit dimensions.
 - Copy and palette follow `DESIGN.md`.

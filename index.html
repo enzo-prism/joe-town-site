@@ -57,6 +57,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
   <header class="site-header" id="top">
     <div class="nav-shell">
@@ -87,26 +88,32 @@
     </nav>
   </div>
 
-  <aside class="mobile-buy" aria-label="Buy Joe Town">
-    <span><strong>Joe Town</strong><small>$9.99 · one time</small></span>
+  <aside class="mobile-buy" aria-label="Buy Joe Town" aria-hidden="true" inert>
+    <img src="images/logo-mark.svg" width="40" height="40" alt="">
+    <span><strong>Joe Town</strong><small>$9.99 · one time · Mac</small></span>
     <a class="button button-small" aria-label="Buy Joe Town for $9.99" href="https://apps.apple.com/app/id6790244910">Buy</a>
   </aside>
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <picture class="hero-media">
-        <img src="images/hero-kingdom-world.webp" width="1600" height="1297" alt="A busy Kingdom-era Joe Town connected by glowing roads" fetchpriority="high">
+        <img src="images/hero-kingdom-world.webp" width="1600" height="1297" alt="A busy Kingdom-era Joe Town connected by glowing roads" fetchpriority="high" decoding="async">
       </picture>
       <div class="hero-shade" aria-hidden="true"></div>
-      <div class="hero-inner reveal">
+      <div class="hero-hud" aria-hidden="true">
+        <span class="live-dot"></span><span>Town online</span><i></i><strong>12 Joes</strong><strong>Age V</strong>
+      </div>
+      <div class="hero-inner">
         <p class="eyebrow">A premium strategy game for Mac</p>
         <h1 id="hero-title">Build a <em>chicken</em> civilization.</h1>
-        <p class="hero-lede">Guide a living flock from a humble camp through ten ages to Space. Build roads, choose technologies, and watch named Joes turn a cavern into history.</p>
+        <p class="hero-lede">Guide a living flock from campfire to Space. <span>Build roads, choose technologies, and watch named Joes turn a cavern into history.</span></p>
         <div class="hero-actions">
           <a class="button" href="https://apps.apple.com/app/id6790244910">Buy for $9.99</a>
           <a class="text-link" href="#journey">See the journey <span aria-hidden="true">↓</span></a>
         </div>
-        <p class="trust">ONE PURCHASE · NO ADS · NO IN-APP PURCHASES · NO TRACKING · PLAYS OFFLINE</p>
+        <ul class="trust" aria-label="Purchase benefits">
+          <li>One purchase</li><li>No ads</li><li>No tracking</li><li>Plays offline</li>
+        </ul>
       </div>
     </section>
 
@@ -115,26 +122,32 @@
         <p class="eyebrow">Ten ages · one home</p>
         <h2 id="journey-title">Camp. Kingdom. Space.</h2>
       </div>
-      <div class="journey-grid">
+      <div class="journey-grid" id="journey-carousel" data-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="Civilization ages">
         <figure class="era-card reveal">
-          <img src="images/age-1.webp" width="1400" height="1102" loading="lazy" alt="A tiny Joe Town camp gathered around a fire in the cavern">
+          <img src="images/age-1.webp" width="1400" height="1102" loading="lazy" decoding="async" alt="A tiny Joe Town camp gathered around a fire in the cavern">
           <figcaption><strong>Camp</strong><span>Twelve founders gather beneath the mountain. Roads are short. Ambitions are not.</span></figcaption>
         </figure>
         <figure class="era-card era-card-featured reveal">
-          <img src="images/age-5.webp" width="1400" height="1102" loading="lazy" alt="A busy Kingdom-age Joe Town linked by glowing roads">
+          <img src="images/age-5.webp" width="1400" height="1102" loading="lazy" decoding="async" alt="A busy Kingdom-age Joe Town linked by glowing roads">
           <figcaption><strong>Kingdom</strong><span>Connected roads and visible logistics turn a settlement into a glowing capital.</span></figcaption>
         </figure>
         <figure class="era-card reveal">
-          <img src="images/age-10.webp" width="1400" height="900" loading="lazy" alt="Joe Town in the Space Age with a starport and advanced towers">
+          <img src="images/age-10.webp" width="1400" height="900" loading="lazy" decoding="async" alt="Joe Town in the Space Age with a starport and advanced towers">
           <figcaption><strong>Space</strong><span>Reach the Space Age while the original cavern—and its history—remain home.</span></figcaption>
         </figure>
+      </div>
+      <div class="carousel-controls" data-carousel-controls="journey-carousel">
+        <span class="carousel-hint">Swipe through history</span>
+        <span class="carousel-status" aria-live="polite" aria-atomic="true">1 / 3</span>
+        <button type="button" data-carousel-prev aria-controls="journey-carousel" aria-label="Previous age">←</button>
+        <button type="button" data-carousel-next aria-controls="journey-carousel" aria-label="Next age">→</button>
       </div>
       <p class="journey-note reveal">CAMP · TOWN · CITADEL · CROWN · KINGDOM · EMPIRE · ASCENDANT · FUSION · ORBITAL · SPACE</p>
     </section>
 
     <section class="joes section" id="joes" aria-labelledby="joes-title">
       <div class="joe-portrait reveal">
-        <img src="images/joe-builder-key-art.webp" width="1120" height="1400" loading="lazy" alt="Editorial key art of a Joe builder looking out over the cavern">
+        <img src="images/joe-builder-key-art.webp" width="1120" height="1400" loading="lazy" decoding="async" alt="Editorial key art of a Joe builder looking out over the cavern">
         <span class="art-label">JOE TOWN KEY ART</span>
       </div>
       <div class="joe-story reveal">
@@ -162,23 +175,29 @@
         <p class="eyebrow">Shape the world. Watch it answer.</p>
         <h2 id="systems-title">A civilization you can watch working.</h2>
       </div>
-      <div class="system-grid">
+      <div class="system-grid" id="systems-carousel" data-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="Joe Town game systems">
         <article class="system-card reveal">
-          <img src="images/age-5.webp" width="1400" height="1102" loading="lazy" alt="Glowing roads carry resources between Joe Town buildings">
+          <img src="images/age-5.webp" width="1400" height="1102" loading="lazy" decoding="async" alt="Glowing roads carry resources between Joe Town buildings">
           <div><h3>Roads</h3><p>Connect</p></div>
         </article>
         <article class="system-card reveal">
-          <img src="images/shot-choice.webp" width="1120" height="720" loading="lazy" alt="A Joe Town civilization choice between two technologies">
+          <img src="images/shot-choice.webp" width="1120" height="720" loading="lazy" decoding="async" alt="A Joe Town civilization choice between two technologies">
           <div><h3>Technology</h3><p>Choose</p></div>
         </article>
         <article class="system-card reveal">
-          <img src="images/age-4.webp" width="1400" height="1102" loading="lazy" alt="Crown-age Joe Town where named captains first take command">
+          <img src="images/age-4.webp" width="1400" height="1102" loading="lazy" decoding="async" alt="Crown-age Joe Town where named captains first take command">
           <div><h3>Captains</h3><p>Lead</p></div>
         </article>
         <article class="system-card reveal">
-          <img src="images/age-9.webp" width="1400" height="900" loading="lazy" alt="An Orbital-age Joe Town ready to explore beyond its cavern home">
+          <img src="images/age-9.webp" width="1400" height="900" loading="lazy" decoding="async" alt="An Orbital-age Joe Town ready to explore beyond its cavern home">
           <div><h3>World</h3><p>Explore</p></div>
         </article>
+      </div>
+      <div class="carousel-controls" data-carousel-controls="systems-carousel">
+        <span class="carousel-hint">Swipe through systems</span>
+        <span class="carousel-status" aria-live="polite" aria-atomic="true">1 / 4</span>
+        <button type="button" data-carousel-prev aria-controls="systems-carousel" aria-label="Previous system">←</button>
+        <button type="button" data-carousel-next aria-controls="systems-carousel" aria-label="Next system">→</button>
       </div>
       <p class="systems-copy reveal">Paint roads. Guide production. Choose permanent technologies. Meet rival civilizations. Leave for a while—the town keeps living, then tells you what happened.</p>
     </section>

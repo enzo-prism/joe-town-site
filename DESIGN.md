@@ -15,17 +15,19 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
   all gameplay claims, while the Joe portrait is explicitly labeled key art.
 - **Copy budget:** roughly 350 visible words with one consistent `Buy for $9.99`
   purchase label and a single verified App Store destination.
-- **Journey:** Camp, Kingdom, and Space are static semantic figures—not controls—
-  with all ten shipped ages named in a compact chronology.
+- **Journey:** Camp, Kingdom, and Space are semantic figures in a desktop grid
+  and a touch/keyboard scroll-snap rail on mobile, with all ten shipped ages
+  named in a compact chronology.
 - **Character:** one editorial Joe portrait, semantic inspector data, and a short
   verified flock quote create attachment without a long roster section.
 - **Systems:** Roads, Technology, Captains, and World use image-led cards with
   minimal action labels.
-- **Responsive:** desktop hero and four-card system row collapse to a two-column
-  tablet grid and single-column mobile journey. Mobile includes focus-contained
-  navigation and a safe-area purchase bar that hides at the closing CTA.
-- **Motion:** reveal content is visible by default; animation is enabled only when
-  IntersectionObserver is available and reduced motion is not requested.
+- **Responsive:** desktop keeps the cinematic grid while mobile and tablet use
+  edge-peeking swipe rails for ages and systems. Mobile includes focus-contained
+  navigation, notch-safe chrome, short-screen hero tuning, and a purchase bar
+  that appears when the hero action leaves view and hides at the closing CTA.
+- **Motion:** the hero is immediate; below-fold reveal, menu, HUD, carousel, and
+  FAQ motion all defer to reduced-motion preferences.
 - **Assets:** `hero-kingdom-world.webp` is an authentic gameplay crop sized for
   the hero. `joe-builder-key-art.webp` is generated editorial art and is labeled
   as such in the page.
@@ -37,13 +39,13 @@ The approved Founding Tile is the website's primary identity. This section super
 - **Foundation:** ink `#080a0d`, coal `#101419`, raised panel `#161c23`, bone `#f5f1e8`, muted `#a7adb7`.
 - **Accents:** corn gold is reserved for purchase actions, advancement, and selected states; teal marks logistics and interactive information.
 - **Brand hierarchy:** Founding Tile first; game screenshots second; crowns, crystals, and pixel chickens stay inside the game-world story instead of acting as competing logos.
-- **Typography:** Fraunces keeps the warm editorial voice. Inter owns the wordmark, navigation, and interface. JetBrains Mono handles compact game facts. Press Start 2P is no longer part of the website lockup.
+- **Typography:** Fraunces keeps the warm editorial voice. Mobile overrides interface and compact-fact type with native system sans and monospace faces for faster, more Apple-native rendering. Press Start 2P is no longer part of the website lockup.
 - **Surfaces:** flat fills, neutral bone hairlines, 8–12px radii, restrained shadows. Avoid glossy gold gradients, universal gold borders, and decorative hover lift on non-interactive cards.
 - **Motion:** retain scroll reveals and age crossfades. Avoid ambient crystal drift, marquee movement, large hero tilts, and decorative floating geometry.
 - **Page rhythm:** hero promise → static proof band → living world and age proof → systems and world depth → a calm purchase moment → play promise, roadmap, FAQ, and Founding Tile close.
 - **Responsive:** compact navigation begins at 980px; mobile purchase buttons can wrap; the selected age is centered on load; menu focus is contained and restored.
-- **Mobile conversion:** remove the duplicate hero lockup, put price and the primary action in the first phone viewport, reveal a safe-area purchase bar only after the hero, and hide it again at the final CTA or while navigation is open.
-- **Mobile pacing:** dense progression, feature, discovery, and roadmap grids become labeled horizontal story rails; flock chatter shows four quotes before an accessible disclosure. The mobile page should stay below 15,000 CSS pixels at 390px with no document-level overflow.
+- **Mobile conversion:** keep price and the primary action in the first phone viewport, reveal a safe-area purchase bar as soon as that action scrolls away, and hide it again at the final CTA or while navigation is open.
+- **Mobile pacing:** ages and systems become labeled horizontal story rails with counters, arrow controls, keyboard navigation, snap stops, and a visible next-card peek. Joe context precedes the portrait and FAQ items behave as a compact accordion.
 
 ## Product facts (verified from source — do NOT invent beyond this)
 
@@ -93,10 +95,10 @@ The game is isometric pixel art in a dark cavern: deep navy-black, warm gold cro
 - `--red: #d96a4f` sparing accent (mushroom caps)
 - `--violet: #8f7ee0` sparing accent (crystals)
 
-### Typography (Google Fonts, preconnect, display=swap)
+### Typography (editorial desktop + native mobile UI)
 - Display: **Fraunces** (variable, opsz + SOFT/WONK if available, weights 400–700). Headlines, big italic accents. It has the regal-but-slightly-absurd character the game needs.
-- Body/UI: **Inter** (400/500/600).
-- HUD echoes / eyebrows / labels / stats: **JetBrains Mono** (400/600), uppercase, letter-spacing 0.14em.
+- Body/UI: **Inter** on desktop; **Apple system sans** (`-apple-system` / `BlinkMacSystemFont`) through the mobile breakpoint.
+- HUD echoes / eyebrows / labels / stats: **JetBrains Mono** on desktop; **system monospace** (`ui-monospace` / SF Mono) on mobile, uppercase, letter-spacing 0.14em.
 - Pixel accent: **Press Start 2P** — ONLY for the nav wordmark "JOE TOWN", tiny section index chips ("01"), and marquee separators. Never for long text.
 
 ### Motifs & texture
