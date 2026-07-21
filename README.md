@@ -15,9 +15,8 @@ python3 -m http.server 8123
 
 Then open <http://localhost:8123>.
 
-Any static file server works (`npx serve`, etc.). Opening `index.html`
-directly from disk also works — everything is relative and self-contained
-apart from Google Fonts.
+Any static file server works (`npx serve`, etc.). Use a local server when
+checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
 
 ## Structure
 
@@ -26,6 +25,7 @@ apart from Google Fonts.
 - `js/main.js` — vanilla JS: resilient scroll reveals, accessible mobile menu,
   FAQ behavior, and a context-aware mobile purchase bar
 - `images/` — the Founding Tile SVG master, derived PNG icons/favicons, WebP captures, and `og.png`
+- `favicon.ico`, `robots.txt`, `sitemap.xml` — crawler and legacy browser fallbacks
 - `images/raw/` — original Retina captures, kept out of the deployed markup
 - `design-qa.md` — visual comparison history, interaction checks, and the final
   Product Design QA result
