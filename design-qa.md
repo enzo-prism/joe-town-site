@@ -249,3 +249,16 @@ evidence remains an explicitly documented follow-up.
 - Local browser QA confirmed a visible quote advances after 5.2 seconds, the pause
   control preserves the same quote beyond the next interval, the control is 44px
   tall, and the 390×844 layout has no horizontal overflow.
+
+## Art and chatter production readback — 2026-07-21
+
+- Release source commit `81ba744e8d4915df2675d11a88d5638aeecaa9cb`
+  reached Vercel production as deployment `dpl_Dyww1FKHkm7EV4gWGLXJ2JxBMumF`.
+- `gojoetown.com` returned the cleaner hero, Camp/Kingdom/Space icons, four founder
+  portraits, and rotating verified Joe chatter with its pause control.
+- Canonical homepage, privacy page, CSS, JavaScript, Apple mark, all three era
+  icons, and all four founder portraits matched the committed files byte-for-byte.
+- Live HTTP/MIME checks returned 200 for the homepage, privacy page, CSS,
+  JavaScript, SVG, every new WebP, `robots.txt`, and `sitemap.xml`. The homepage
+  retained exactly one GA4 loader and config call; the privacy page retained none.
+- Canonical response headers confirmed Vercel cache service and HSTS.

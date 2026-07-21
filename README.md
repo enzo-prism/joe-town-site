@@ -64,7 +64,7 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
   distinct Camp → Kingdom → Space sequence, uses truthful Logistics/Named Joes/World
   Map system screens, and places three additional labeled editorial scenes in the
   Systems, FAQ, and final purchase chapters.
-- The current release adds generated Camp/Kingdom/Space emblems, distinct founder
+- The 2026-07-21 enhancement release adds generated Camp/Kingdom/Space emblems, distinct founder
   chicken portraits, a cleaner Mac App Store hero action, and rotating verified
   Joe chatter with pause and reduced-motion support.
 - Desktop QA passed at 1440×1000 and mobile QA passed at 390×844 with no broken
