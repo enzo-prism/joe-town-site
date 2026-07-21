@@ -46,9 +46,10 @@ The current mobile release follow-up is tracked below.
   authentic Joe Town captures. The missing Joe portrait was produced as dedicated
   key art, optimized to a 1120×1400 WebP, and visibly labeled. The Founding Tile
   remains the supplied SVG master. No placeholder or code-drawn artwork ships.
-- **Copy and content:** approximately 350 visible words preserve the verified ten
-  ages, named Joes, $9.99 one-time price, offline play, supported Macs, and premium
-  purchase promises without roadmap or interstellar claims.
+- **Copy and content:** concise copy preserves the verified ten ages, source-backed
+  founders John, Alex, Dawson, and Matt, the $9.99 one-time price, offline play,
+  supported Macs, and premium purchase promises without roadmap or interstellar
+  claims. Founder activities are examples of evolving play, not fixed careers.
 - **Icons:** the supplied Founding Tile is the only visual icon required. Menu
   bars and disclosure signs are native control affordances, not asset substitutes.
 - **Responsiveness:** desktop keeps the visual grid; mobile/tablet use bounded
@@ -146,3 +147,14 @@ evidence remains an explicitly documented follow-up.
   font declarations, legacy-family removal, CSS structure, and local HTTP responses.
 - Fresh visual viewport evidence remains required before this typography branch is
   approved for production.
+
+## Founder roster pass — 2026-07-20
+
+- Replaced the invented Enzo profile with four source-backed founders: John, Alex,
+  Dawson, and Matt.
+- Removed fictional Craft/Guts/Luck bars and non-canonical traits; each card now
+  uses visible text for personality and an illustrative, changeable activity.
+- Preserved the labeled editorial portrait and verified flock quote while making
+  the section more representative of the wider flock.
+- The four-card roster uses a two-column desktop grid and a single-column mobile
+  stack, keeping source order and screen-reader order aligned.

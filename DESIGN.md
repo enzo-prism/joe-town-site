@@ -18,8 +18,10 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
 - **Journey:** Camp, Kingdom, and Space are semantic figures in a desktop grid
   and a touch/keyboard scroll-snap rail on mobile, with all ten shipped ages
   named in a compact chronology.
-- **Character:** one editorial Joe portrait, semantic inspector data, and a short
-  verified flock quote create attachment without a long roster section.
+- **Character:** one editorial Joe portrait, four compact source-backed founder
+  profiles, and a short verified flock quote create attachment without a long
+  roster section. John, Alex, Dawson, and Matt replace the earlier self-referential
+  Enzo card; evolving work states are written as examples, not permanent jobs.
 - **Systems:** Roads, Technology, Captains, and World use image-led cards with
   minimal action labels.
 - **Responsive:** desktop keeps the cinematic grid while mobile and tablet use
@@ -57,7 +59,7 @@ The approved Founding Tile is the website's primary identity. This section super
 - Ten ages in order: **Camp, Town, Citadel, Crown, Kingdom, Empire, Ascendant, Fusion, Orbital, Space**.
 - Price: **$9.99 USD, one-time purchase**. No ads, no in-app purchases, no tracking. Saves locally, plays fully offline.
 - App Store link: `https://apps.apple.com/app/id6790244910` (App ID 6790244910, bundle com.designprism.joetown). Developer brand: **Design Prism** — support `https://www.design-prism.com/contact`, privacy `https://www.design-prism.com/privacy-policy`.
-- Current source facts: 24 buildings; 18 technologies; ten ages; 13 animal civilizations; 12 named founders; five personalities; five skills; four career ranks; six earned traits; realm-local history and the Flock Chronicle. Roads, visible logistics, deterministic seeded worlds, autosave, offline progress summaries, VoiceOver, and Reduce Motion support are implemented. Difficulty modes, manually assigned jobs, a full world map, and interstellar play are not shipped features.
+- Current source facts: 24 buildings; 18 technologies; ten ages; 13 animal civilizations; 12 named founders (John, Alex, Michael, Dawson, Max, Matt, McTavish, Enzo, Will, Brandon, Jack, and Oliver); five personalities; five skills; four career ranks; six earned traits; realm-local history and the Flock Chronicle. Roads, visible logistics, deterministic seeded worlds, autosave, offline progress summaries, VoiceOver, and Reduce Motion support are implemented. Difficulty modes, manually assigned jobs, a full world map, and interstellar play are not shipped features.
 - Flavor quotes (verbatim from game chatter — use in "flock talks back" section):
   - "The worms seem unionized."
   - "Hoarding, but civic-minded."

@@ -545,21 +545,33 @@ h2 { margin-bottom: 18px; font-size: clamp(2.9rem, 5.2vw, 5.4rem); line-height: 
 
 .joe-story > p:not(.eyebrow) { max-width: 570px; color: var(--muted); font-size: 1.04rem; }
 
-.joe-card {
-  max-width: 520px;
+.joe-roster {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 580px;
   margin-top: 38px;
-  padding: 24px;
-  border: 1px solid var(--line-gold);
-  border-radius: 8px;
-  background: rgba(13, 20, 27, 0.88);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
 }
 
-.joe-card-title { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+.joe-card {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 92px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(13, 20, 27, 0.88);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.2);
+}
+
+.joe-card:nth-child(2) .joe-avatar,
+.joe-card:nth-child(3) .joe-avatar { border-color: var(--gold); color: var(--gold); }
 
 .joe-avatar {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   flex: 0 0 auto;
   display: grid;
   place-items: center;
@@ -570,30 +582,9 @@ h2 { margin-bottom: 18px; font-size: clamp(2.9rem, 5.2vw, 5.4rem); line-height: 
   font-weight: 600;
 }
 
-.joe-card-title strong { display: block; color: var(--gold); font-family: var(--type-modern); font-size: 0.84rem; }
-.joe-card-title small { display: block; margin-top: 3px; color: var(--muted); font-family: var(--type-modern); font-size: 0.68rem; }
-.joe-card dl { margin: 0; }
-
-.joe-card dl div {
-  display: grid;
-  grid-template-columns: 76px 1fr;
-  align-items: center;
-  gap: 14px;
-  margin-top: 10px;
-}
-
-.joe-card dt { color: #c8cdd2; font-family: var(--type-modern); font-size: 0.7rem; font-weight: 600; }
-.joe-card dd { height: 6px; margin: 0; overflow: hidden; background: #26313a; }
-.joe-card dd span { display: block; width: var(--score); height: 100%; background: var(--teal); }
-
-.joe-traits {
-  margin: 22px 0 0;
-  color: var(--gold);
-  font-family: var(--type-modern);
-  font-size: 0.66rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-}
+.joe-card h3 { margin: 0; color: var(--bone); font-size: 0.92rem; line-height: 1.2; }
+.joe-card p { margin: 5px 0 0; color: var(--muted); font-size: 0.71rem; line-height: 1.4; }
+.joe-card p strong { color: var(--gold); font-weight: 600; }
 
 blockquote {
   margin: 38px 0 0;
@@ -842,7 +833,7 @@ blockquote::after { content: "”"; color: var(--gold); }
   .joe-story > h2 { order: 2; }
   .joe-story > p:not(.eyebrow) { order: 3; margin-bottom: 28px; }
   .joe-portrait { order: 4; max-width: 620px; margin-inline: auto; }
-  .joe-card { order: 5; width: 100%; max-width: 620px; margin-top: 6px; }
+  .joe-roster { order: 5; width: 100%; max-width: 620px; margin-top: 6px; }
   blockquote { order: 6; }
   .system-card,
   .system-card img { min-height: 380px; border-radius: 13px; }
@@ -870,8 +861,8 @@ blockquote::after { content: "”"; color: var(--gold); }
   .hero-lede span { display: none; }
   .trust { margin-top: 20px; font-size: 0.68rem; }
   .trust li { padding: 6px 8px; }
-  .joe-card { padding: 20px; }
-  .joe-card dl div { grid-template-columns: 64px 1fr; }
+  .joe-roster { grid-template-columns: 1fr; }
+  .joe-card { min-height: 84px; padding: 15px; }
   .faq-list summary { min-height: 82px; font-size: 1.2rem; }
   .final-cta { min-height: 560px; }
   .final-mark { width: 104px; height: 104px; }
