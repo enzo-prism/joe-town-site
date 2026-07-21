@@ -114,16 +114,12 @@
         <span class="live-dot"></span><span>Town at work</span><i></i><strong>12 Joes</strong><strong>Kingdom Age</strong>
       </div>
       <div class="hero-inner">
-        <p class="eyebrow">Native strategy for Mac</p>
         <h1 id="hero-title">Build a <em>chicken</em> civilization.</h1>
         <p class="hero-lede">Lay roads, guide production, and lead twelve named Joes from one campfire to the Space Age. <span>Every town keeps its own history.</span></p>
         <div class="hero-actions">
-          <a class="button" href="https://apps.apple.com/app/id6790244910">Buy on the Mac App Store · $9.99</a>
+          <a class="button" href="https://apps.apple.com/app/id6790244910"><img class="button-icon" src="images/apple-mark.svg" width="18" height="18" alt="">Buy on the Mac App Store · $9.99</a>
           <a class="text-link" href="#systems">See how it plays <span aria-hidden="true">↓</span></a>
         </div>
-        <ul class="trust" aria-label="Purchase benefits">
-          <li>$9.99 once</li><li>No ads or in-app purchases</li><li>No gameplay tracking</li><li>Plays offline</li>
-        </ul>
       </div>
     </section>
 
@@ -138,21 +134,21 @@
             <source media="(max-width: 780px)" srcset="images/journey-camp-wide.webp" width="1200" height="800">
             <img src="images/journey-camp-square.webp" width="960" height="960" loading="lazy" decoding="async" alt="A sparse early Joe Town settlement with a founding hall, farm, root yard, and short road">
           </picture>
-          <figcaption><strong>Camp</strong><span>The first twelve Joes gather beneath the mountain. Corn first. Civic planning shortly after.</span></figcaption>
+          <figcaption><img class="era-icon" src="images/era-icon-camp.webp" width="576" height="576" loading="lazy" decoding="async" alt="" aria-hidden="true"><strong>Camp</strong><span>The first twelve Joes gather beneath the mountain. Corn first. Civic planning shortly after.</span></figcaption>
         </figure>
         <figure class="era-card era-card-featured reveal">
           <picture>
             <source media="(max-width: 780px)" srcset="images/journey-town-wide.webp" width="1200" height="800">
-            <img src="images/journey-town-square.webp" width="960" height="960" loading="lazy" decoding="async" alt="An expanded Joe Town settlement with a wider road network, more buildings, and a larger flock">
+            <img src="images/journey-town-square.webp" width="960" height="960" loading="lazy" decoding="async" alt="A busy Kingdom-age Joe Town linked by glowing roads">
           </picture>
-          <figcaption><strong>Town</strong><span>Roads spread. Workshops join the supply chain. The founding camp starts becoming a real town.</span></figcaption>
+          <figcaption><img class="era-icon" src="images/era-icon-kingdom.webp" width="576" height="576" loading="lazy" decoding="async" alt="" aria-hidden="true"><strong>Kingdom</strong><span>Roads carry resources. Workshops feed supply chains. The cavern starts looking like a capital.</span></figcaption>
         </figure>
         <figure class="era-card reveal">
           <picture>
             <source media="(max-width: 780px)" srcset="images/journey-space-wide.webp" width="1200" height="800">
-            <img src="images/journey-space-square.webp" width="960" height="960" loading="lazy" decoding="async" alt="A dense Space Age Joe Town with luminous towers, a launch complex, and a starport">
+            <img src="images/journey-space-square.webp" width="960" height="960" loading="lazy" decoding="async" alt="Joe Town in the Space Age with a starport and advanced towers">
           </picture>
-          <figcaption><strong>Space</strong><span>Reach the stars without leaving home behind. The first cavern remains part of the story.</span></figcaption>
+          <figcaption><img class="era-icon" src="images/era-icon-space.webp" width="576" height="576" loading="lazy" decoding="async" alt="" aria-hidden="true"><strong>Space</strong><span>Reach the stars without leaving home behind. The first cavern remains part of the story.</span></figcaption>
         </figure>
       </div>
       <div class="carousel-controls" data-carousel-controls="journey-carousel">
@@ -175,35 +171,38 @@
         <p>John, Alex, Dawson, and Matt are four of the original founders. Their work, skills, friendships, ranks, and earned traits change with the town. In one save, you might find them like this:</p>
         <div class="joe-roster" role="list" aria-label="Example Joe founders">
           <article class="joe-card" role="listitem">
-            <span class="joe-avatar" aria-hidden="true">J</span>
+            <img class="joe-avatar" src="images/joe-avatar-john.webp" width="256" height="256" loading="lazy" decoding="async" alt="">
             <div>
               <h3>John</h3>
               <p><strong>Bold</strong> · Working the farm today</p>
             </div>
           </article>
           <article class="joe-card" role="listitem">
-            <span class="joe-avatar" aria-hidden="true">A</span>
+            <img class="joe-avatar" src="images/joe-avatar-alex.webp" width="256" height="256" loading="lazy" decoding="async" alt="">
             <div>
               <h3>Alex</h3>
               <p><strong>Dreamy</strong> · Out scouting, for now</p>
             </div>
           </article>
           <article class="joe-card" role="listitem">
-            <span class="joe-avatar" aria-hidden="true">D</span>
+            <img class="joe-avatar" src="images/joe-avatar-dawson.webp" width="256" height="256" loading="lazy" decoding="async" alt="">
             <div>
               <h3>Dawson</h3>
               <p><strong>Crafty</strong> · Learning Craftsmanship</p>
             </div>
           </article>
           <article class="joe-card" role="listitem">
-            <span class="joe-avatar" aria-hidden="true">M</span>
+            <img class="joe-avatar" src="images/joe-avatar-matt.webp" width="256" height="256" loading="lazy" decoding="async" alt="">
             <div>
               <h3>Matt</h3>
               <p><strong>Earnest</strong> · Newly promoted</p>
             </div>
           </article>
         </div>
-        <blockquote>Our spreadsheet has feathers.</blockquote>
+        <div class="flock-chatter" data-flock-chatter>
+          <blockquote id="flock-quote" aria-live="off"><span class="flock-quote-text" data-chatter-quote>Our spreadsheet has feathers.</span></blockquote>
+          <button class="chatter-toggle" type="button" aria-controls="flock-quote" aria-pressed="false" data-chatter-toggle><span data-chatter-toggle-label>Pause Joe chatter</span></button>
+        </div>
       </div>
     </section>
 
@@ -305,6 +304,6 @@
     <p>© 2026 DESIGN PRISM · MADE BENEATH THE MOUNTAIN</p>
   </footer>
 
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=20260721-chatter" defer></script>
 </body>
 </html>

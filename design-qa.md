@@ -211,3 +211,41 @@ evidence remains an explicitly documented follow-up.
 - HTTP/MIME checks returned 200 for HTML, privacy, CSS, JavaScript, WebP, PNG,
   ICO, robots, and sitemap surfaces. Canonical response headers included Vercel
   cache confirmation and HSTS.
+
+## Generated era icon pass — 2026-07-21
+
+- Added three distinct generated pixel-art emblems for Camp, Kingdom, and Space
+  without replacing or obscuring the authentic gameplay captures.
+- Removed the flat chroma backgrounds locally, exported 576px lossless WebPs with
+  alpha, and placed them as decorative images at the screenshot/caption seam.
+- Updated the selected journey chapters to Camp, Kingdom, and Space, including the
+  user-provided Kingdom copy and clearer Kingdom/Space screenshot alternatives.
+- Verified 1440×900 and 390×844 layouts: all three assets loaded at their intrinsic
+  width, decorative alts remain empty, labels are correct, and neither viewport has
+  horizontal page overflow. This pass is included in the current release candidate.
+
+## Generated founder portrait pass — 2026-07-21
+
+- Replaced the John, Alex, Dawson, and Matt letter avatars with four distinct
+  generated pixel-art chickens tailored to each visible personality and activity.
+- Kept every founder name, personality, and activity as accessible live text. The
+  portraits use empty alternative text because they are decorative companions to
+  that adjacent content.
+- Verified the integrated roster at 1440×900 and 390×844: all four 256px WebPs
+  load, the two-column and single-column layouts remain balanced, and neither
+  viewport has horizontal page overflow.
+- This portrait pass is included in the current release candidate.
+
+## Joe chatter rotation — 2026-07-21
+
+- Replaced the static founder quote with a 16-line rotation sourced verbatim from
+  the verified in-game chatter list in `DESIGN.md`.
+- Quotes advance every 5.2 seconds with a short text fade, stop while the page is
+  hidden or the chatter block is offscreen, and include a visible 44px pause/resume
+  control.
+- Reduced-motion visitors keep the initial quote static and do not see an inactive
+  pause control. The current quote remains ordinary blockquote text rather than an
+  unsolicited live-region announcement.
+- Local browser QA confirmed a visible quote advances after 5.2 seconds, the pause
+  control preserves the same quote beyond the next interval, the control is 44px
+  tall, and the 390×844 layout has no horizontal overflow.

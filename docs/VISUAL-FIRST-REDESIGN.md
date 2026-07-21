@@ -29,7 +29,7 @@ A cinematic, gameplay-led page that makes the town itself the hero.
 
 - Full-bleed Kingdom scene with a small Founding Tile, one-line promise, price,
   and purchase action.
-- Camp, Town, and Space become large visual chapters with short captions and
+- Camp, Kingdom, and Space become large visual chapters with short captions and
   responsive crops that make the civilization growth unmistakable.
 - A cohesive family of labeled Joe editorial scenes plus four compact founder profiles add character
   attachment without turning the page into a roster.

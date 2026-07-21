@@ -297,10 +297,107 @@
     });
   }
 
+  function setupFlockChatter() {
+    var chatter = document.querySelector("[data-flock-chatter]");
+    if (!chatter) return;
+
+    var quote = chatter.querySelector("[data-chatter-quote]");
+    var toggle = chatter.querySelector("[data-chatter-toggle]");
+    var toggleLabel = chatter.querySelector("[data-chatter-toggle-label]");
+    var quotes = [
+      "The worms seem unionized.",
+      "Hoarding, but civic-minded.",
+      "Trust issues, but structural.",
+      "The town smells employable.",
+      "Nap time has been cancelled.",
+      "The timetable is aspirational.",
+      "Do not peck the glowing wire.",
+      "The coopconomy!",
+      "Our spreadsheet has feathers.",
+      "Loot: ethically relocated.",
+      "A tactical learning vacation.",
+      "THE COOP!",
+      "We're fasting for the economy.",
+      "Bawk first, plan later.",
+      "Today: advanced counting to four.",
+      "It hummed at Joebert."
+    ];
+    if (!quote || !toggle || !toggleLabel || quotes.length < 2) return;
+
+    var index = Math.max(0, quotes.indexOf(quote.textContent.trim()));
+    var userPaused = false;
+    var sectionVisible = true;
+    var rotationTimer = 0;
+    var swapTimer = 0;
+
+    function clearTimers() {
+      window.clearTimeout(rotationTimer);
+      window.clearTimeout(swapTimer);
+      rotationTimer = 0;
+      swapTimer = 0;
+      chatter.classList.remove("is-changing");
+    }
+
+    function schedule() {
+      window.clearTimeout(rotationTimer);
+      if (userPaused || motionQuery.matches || document.hidden || !sectionVisible) return;
+      rotationTimer = window.setTimeout(showNext, 5200);
+    }
+
+    function showNext() {
+      if (userPaused || motionQuery.matches || document.hidden || !sectionVisible) return;
+      chatter.classList.add("is-changing");
+      swapTimer = window.setTimeout(function () {
+        index = (index + 1) % quotes.length;
+        quote.textContent = quotes[index];
+        chatter.classList.remove("is-changing");
+        schedule();
+      }, 180);
+    }
+
+    function updateToggle() {
+      toggle.setAttribute("aria-pressed", String(userPaused));
+      toggleLabel.textContent = userPaused ? "Resume Joe chatter" : "Pause Joe chatter";
+    }
+
+    toggle.addEventListener("click", function () {
+      userPaused = !userPaused;
+      clearTimers();
+      updateToggle();
+      schedule();
+    });
+
+    document.addEventListener("visibilitychange", function () {
+      clearTimers();
+      schedule();
+    });
+
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          sectionVisible = entry.isIntersecting;
+          clearTimers();
+          schedule();
+        });
+      }, { threshold: 0.05 }).observe(chatter);
+    }
+
+    if (motionQuery.addEventListener) {
+      motionQuery.addEventListener("change", function () {
+        clearTimers();
+        schedule();
+      });
+    }
+
+    updateToggle();
+    schedule();
+  }
+
   setupViewportChrome();
   setupReveals();
   setupMenu();
   setupMobilePurchase();
   setupCarousels();
   setupMobileFaq();
+  setupFlockChatter();
 })();

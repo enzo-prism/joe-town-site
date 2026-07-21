@@ -5,7 +5,7 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
 
 > **Current direction:** **The Living Diorama** was selected on 2026-07-20 and
 > is now the production-ready design. The page is a concise visual journey:
-> gameplay-led hero → Camp/Town/Space → one Joe story → four visual systems →
+> gameplay-led hero → Camp/Kingdom/Space → one Joe story → four visual systems →
 > Night Logistics interlude → Archivist FAQ → Starfarer purchase close. The other two directions remain archived in
 > [`docs/VISUAL-FIRST-REDESIGN.md`](docs/VISUAL-FIRST-REDESIGN.md).
 
@@ -16,13 +16,16 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
   key art and never presented as gameplay.
 - **Copy budget:** roughly 350 visible words with one consistent `Buy for $9.99`
   purchase label and a single verified App Store destination.
-- **Journey:** Camp, Town, and Space are semantic figures in a desktop grid and a
+- **Journey:** Camp, Kingdom, and Space are semantic figures in a desktop grid and a
   touch/keyboard scroll-snap rail on mobile. Each stage has a square desktop crop
   and a 3:2 mobile crop, with all ten shipped ages named in a compact chronology.
 - **Character:** one editorial Joe portrait, four compact source-backed founder
-  profiles, and a short verified flock quote create attachment without a long
+  profiles with distinct generated pixel-art chickens, and a short verified flock
+  quote create attachment without a long
   roster section. John, Alex, Dawson, and Matt replace the earlier self-referential
-  Enzo card; evolving work states are written as examples, not permanent jobs.
+  Enzo card; evolving work states are written as examples, not permanent jobs. The
+  quote rotates through verified game chatter, includes a pause control, stops in a
+  hidden tab or while offscreen, and remains static when reduced motion is requested.
 - **Systems:** Roads, Technology, Named Joes, and World Map use truthful image-led
   cards with minimal action labels. The desktop grid is two columns so shipped UI
   remains legible instead of being forced into portrait crops.
@@ -33,7 +36,8 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
 - **Motion:** the hero is immediate; below-fold reveal, menu, HUD, carousel, and
   FAQ motion all defer to reduced-motion preferences.
 - **Assets:** `hero-kingdom-world.webp` is an authentic gameplay crop sized for
-  the hero. Journey pairs use `journey-{camp,town,space}-{square,wide}.webp`.
+  the hero. Journey pairs use `journey-{camp,town,space}-{square,wide}.webp`, while
+  generated decorative emblems use `era-icon-{camp,kingdom,space}.webp`.
   System truth comes from `system-{logistics,joes,world}.webp` plus the existing
   technology choice capture. Generated editorial art includes the Builder, Night
   Logistics, Archivist, and Starfarer scenes; every narrative scene is labeled.

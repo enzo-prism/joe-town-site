@@ -27,7 +27,8 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
   swipe-rail controls, scroll progress, compact FAQ behavior, and a
   context-aware mobile purchase bar
 - `images/` — the Founding Tile SVG master, derived PNG icons/favicons, responsive
-  Camp/Town/Space gameplay crops, system captures, labeled editorial key art, and
+  Camp/Kingdom/Space gameplay crops, generated era icons and founder portraits,
+  system captures, labeled editorial key art, and
   `og.png`
 - `privacy.html` — Joe Town-specific privacy notice separating the offline game
   from website analytics
@@ -45,9 +46,11 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
 - The gameplay-led hero is preloaded. All below-fold images lazy-load with
   explicit dimensions.
 - Civilization cards use square desktop and 3:2 mobile `<picture>` sources so the
-  Camp, Town, and Space stages remain clearly different at each breakpoint.
+  Camp, Kingdom, and Space stages remain clearly different at each breakpoint.
 - Generated scenes are labeled `EDITORIAL KEY ART · NOT GAMEPLAY`. The active art
   family includes the Builder, Night Logistics, Archivist, and Starfarer images.
+- The founder section rotates through verified in-game Joe chatter every few
+  seconds, with pause and reduced-motion safeguards.
 - The homepage loads Google Analytics 4 once with measurement ID
   `G-3XJQL5PVS1`. The privacy page intentionally does not load the analytics tag.
 - Copy and palette follow `DESIGN.md`.
@@ -58,9 +61,12 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
   product facts, the mobile swipe-rail UX pass, a unified Plus Jakarta Sans type
   system, and source-backed founder profiles for John, Alex, Dawson, and Matt.
 - The 2026-07-21 visual release replaces the repetitive journey boards with a
-  distinct Camp → Town → Space sequence, uses truthful Logistics/Named Joes/World
+  distinct Camp → Kingdom → Space sequence, uses truthful Logistics/Named Joes/World
   Map system screens, and places three additional labeled editorial scenes in the
   Systems, FAQ, and final purchase chapters.
+- The current release adds generated Camp/Kingdom/Space emblems, distinct founder
+  chicken portraits, a cleaner Mac App Store hero action, and rotating verified
+  Joe chatter with pause and reduced-motion support.
 - Desktop QA passed at 1440×1000 and mobile QA passed at 390×844 with no broken
   images, duplicate IDs, console errors, or horizontal overflow.
 - Responsive QA targets are `320`, `390`, `430`, `768`, and `1440` CSS pixels.
