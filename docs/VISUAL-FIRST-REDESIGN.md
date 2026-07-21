@@ -16,7 +16,8 @@ words, place a meaningful visual in nearly every viewport, and keep one clear
 - Use authentic game captures whenever the page makes a gameplay claim.
 - Label generated editorial art as key art; never present it as shipped gameplay.
 - Preserve verified promises: native macOS, one-time purchase, no ads, no in-app
-  purchases, no tracking, local saves, and offline play.
+  purchases, no gameplay tracking in the Mac game, local saves, and offline play.
+  Website analytics must be disclosed separately.
 - Keep the homepage focused on the product available now. Move roadmap material
   outside the primary purchase journey.
 - Design mobile-first, then verify at `320`, `390`, `430`, `768`, and `1440` CSS pixels.
@@ -28,8 +29,9 @@ A cinematic, gameplay-led page that makes the town itself the hero.
 
 - Full-bleed Kingdom scene with a small Founding Tile, one-line promise, price,
   and purchase action.
-- Camp, Kingdom, and Space become large visual chapters with short captions.
-- One labeled Joe portrait plus four compact founder profiles add character
+- Camp, Town, and Space become large visual chapters with short captions and
+  responsive crops that make the civilization growth unmistakable.
+- A cohesive family of labeled Joe editorial scenes plus four compact founder profiles add character
   attachment without turning the page into a roster.
 - Touch/keyboard scroll-snap rails and restrained crop reveals provide motion without clutter.
 - Target copy: 300–400 words.
@@ -67,8 +69,8 @@ match the shipped game closely enough to avoid creating a false expectation.
 The Living Diorama was selected explicitly. Its implementation follows this gate:
 
 1. The page sequence and sub-600-word copy budget are locked.
-2. Gameplay claims use authentic captures; the generated Joe portrait is labeled
-   editorial key art.
+2. Gameplay claims use authentic captures; the Builder, Night Logistics,
+   Archivist, and Starfarer scenes are labeled editorial key art.
 3. The dependency-free architecture remains intact.
 4. Responsive, keyboard, interaction, and visual-comparison QA are recorded in
    `design-qa.md`.

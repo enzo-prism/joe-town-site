@@ -43,9 +43,10 @@ The current mobile release follow-up is tracked below.
   concept. Gold is reserved for progression and purchase actions; teal remains an
   information accent. Contrast and focus rings are clear.
 - **Image quality and asset fidelity:** the hero and all gameplay claims use
-  authentic Joe Town captures. The missing Joe portrait was produced as dedicated
-  key art, optimized to a 1120×1400 WebP, and visibly labeled. The Founding Tile
-  remains the supplied SVG master. No placeholder or code-drawn artwork ships.
+  authentic Joe Town captures. Four generated editorial scenes—the Builder,
+  Night Logistics, Archivist, and Starfarer—form one visibly labeled art family.
+  The Founding Tile remains the supplied SVG master. No placeholder or code-drawn
+  artwork ships.
 - **Copy and content:** concise copy preserves the verified ten ages, source-backed
   founders John, Alex, Dawson, and Matt, the $9.99 one-time price, offline play,
   supported Macs, and premium purchase promises without roadmap or interstellar
@@ -73,6 +74,29 @@ The current mobile release follow-up is tracked below.
 - Baseline browser console errors and warnings checked: none. The latest source
   pass completed JavaScript parsing and HTTP/MIME readback; fresh device-console
   evidence remains a post-release follow-up.
+
+## Visual, copy, and analytics release — 2026-07-21
+
+- Replaced the near-identical journey boards with source-faithful Camp, Town, and
+  Space compositions. Desktop uses square crops; mobile uses 3:2 sources through
+  `<picture>`.
+- Replaced reused or misleading system images with real Logistics, Manage Joes,
+  and World Map screens. The system gallery is a two-column desktop grid and a
+  mobile swipe rail.
+- Added three new generated scenes matching the approved Builder image: Night
+  Logistics after the system explanation, Archivist Joe beside the FAQ, and a
+  Starfarer background behind the closing purchase action.
+- Labeled every narrative generated scene `EDITORIAL KEY ART · NOT GAMEPLAY` and
+  kept the gameplay-led hero authentic.
+- Rewrote the purchase journey around the real mechanics, canonical founders, and
+  a clearer Camp-to-Space promise.
+- Added GA4 measurement ID `G-3XJQL5PVS1` once on the homepage. Updated product
+  promises to `No gameplay tracking` and added a Joe Town-specific privacy notice.
+- Browser QA passed at 1440×1000 and 390×844: correct responsive sources, no
+  horizontal overflow, no missing alt attributes, no duplicate IDs, no broken
+  images, and no console errors. `git diff --check` also passed.
+- Production commit, Vercel readiness, and canonical readback are recorded only
+  after the deployment gates pass.
 
 ## Comparison history
 

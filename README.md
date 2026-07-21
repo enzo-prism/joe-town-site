@@ -3,7 +3,8 @@
 Static marketing site for **Joe Town**, a premium macOS strategy game.
 The selected **Living Diorama** direction puts authentic gameplay in every major
 chapter, supported by the monochrome Founding Tile and modern geometric type — no
-build step, no dependencies, no tracking.
+build step or dependencies. The Mac game has no ads, in-app purchases, or gameplay
+tracking. The marketing site uses Google Analytics 4 for aggregate website usage.
 
 ## Run locally
 
@@ -25,7 +26,11 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
 - `js/main.js` — vanilla JS: resilient scroll reveals, accessible mobile menu,
   swipe-rail controls, scroll progress, compact FAQ behavior, and a
   context-aware mobile purchase bar
-- `images/` — the Founding Tile SVG master, derived PNG icons/favicons, WebP captures, and `og.png`
+- `images/` — the Founding Tile SVG master, derived PNG icons/favicons, responsive
+  Camp/Town/Space gameplay crops, system captures, labeled editorial key art, and
+  `og.png`
+- `privacy.html` — Joe Town-specific privacy notice separating the offline game
+  from website analytics
 - `favicon.ico`, `robots.txt`, `sitemap.xml` — crawler and legacy browser fallbacks
 - `images/raw/` — original Retina captures, kept out of the deployed markup
 - `design-qa.md` — visual comparison history, interaction checks, and the final
@@ -39,6 +44,12 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
   respects safe areas.
 - The gameplay-led hero is preloaded. All below-fold images lazy-load with
   explicit dimensions.
+- Civilization cards use square desktop and 3:2 mobile `<picture>` sources so the
+  Camp, Town, and Space stages remain clearly different at each breakpoint.
+- Generated scenes are labeled `EDITORIAL KEY ART · NOT GAMEPLAY`. The active art
+  family includes the Builder, Night Logistics, Archivist, and Starfarer images.
+- The homepage loads Google Analytics 4 once with measurement ID
+  `G-3XJQL5PVS1`. The privacy page intentionally does not load the analytics tag.
 - Copy and palette follow `DESIGN.md`.
 
 ## Release state
@@ -46,6 +57,12 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
 - Production follows the selected Living Diorama redesign, verified Joe Town 1.1
   product facts, the mobile swipe-rail UX pass, a unified Plus Jakarta Sans type
   system, and source-backed founder profiles for John, Alex, Dawson, and Matt.
+- The 2026-07-21 visual release replaces the repetitive journey boards with a
+  distinct Camp → Town → Space sequence, uses truthful Logistics/Named Joes/World
+  Map system screens, and places three additional labeled editorial scenes in the
+  Systems, FAQ, and final purchase chapters.
+- Desktop QA passed at 1440×1000 and mobile QA passed at 390×844 with no broken
+  images, duplicate IDs, console errors, or horizontal overflow.
 - Responsive QA targets are `320`, `390`, `430`, `768`, and `1440` CSS pixels.
   Source and interaction checks are complete; the latest device capture is tracked
   transparently in `design-qa.md` as a post-release follow-up.
@@ -61,4 +78,5 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
 - GitHub-connected updates to `main` deploy automatically. Do not also run a
   manual production deploy unless the Git deployment fails.
 - Verify the released title, HTML hash, JavaScript, CSS, social image, favicons,
-  `robots.txt`, and `sitemap.xml` on the canonical domain after every release.
+  `privacy.html`, `robots.txt`, and `sitemap.xml` on the canonical domain after
+  every release. Confirm exactly one GA loader and one `G-3XJQL5PVS1` config call.

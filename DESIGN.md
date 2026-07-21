@@ -5,25 +5,27 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
 
 > **Current direction:** **The Living Diorama** was selected on 2026-07-20 and
 > is now the production-ready design. The page is a concise visual journey:
-> gameplay-led hero → Camp/Kingdom/Space → one Joe story → four visual systems →
-> minimal FAQ → purchase close. The other two directions remain archived in
+> gameplay-led hero → Camp/Town/Space → one Joe story → four visual systems →
+> Night Logistics interlude → Archivist FAQ → Starfarer purchase close. The other two directions remain archived in
 > [`docs/VISUAL-FIRST-REDESIGN.md`](docs/VISUAL-FIRST-REDESIGN.md).
 
 ## Living Diorama implementation — current
 
 - **Visual hierarchy:** the town is the hero; authentic gameplay captures carry
-  all gameplay claims, while the Joe portrait is explicitly labeled key art.
+  all gameplay claims, while generated scenes are explicitly labeled editorial
+  key art and never presented as gameplay.
 - **Copy budget:** roughly 350 visible words with one consistent `Buy for $9.99`
   purchase label and a single verified App Store destination.
-- **Journey:** Camp, Kingdom, and Space are semantic figures in a desktop grid
-  and a touch/keyboard scroll-snap rail on mobile, with all ten shipped ages
-  named in a compact chronology.
+- **Journey:** Camp, Town, and Space are semantic figures in a desktop grid and a
+  touch/keyboard scroll-snap rail on mobile. Each stage has a square desktop crop
+  and a 3:2 mobile crop, with all ten shipped ages named in a compact chronology.
 - **Character:** one editorial Joe portrait, four compact source-backed founder
   profiles, and a short verified flock quote create attachment without a long
   roster section. John, Alex, Dawson, and Matt replace the earlier self-referential
   Enzo card; evolving work states are written as examples, not permanent jobs.
-- **Systems:** Roads, Technology, Captains, and World use image-led cards with
-  minimal action labels.
+- **Systems:** Roads, Technology, Named Joes, and World Map use truthful image-led
+  cards with minimal action labels. The desktop grid is two columns so shipped UI
+  remains legible instead of being forced into portrait crops.
 - **Responsive:** desktop keeps the cinematic grid while mobile and tablet use
   edge-peeking swipe rails for ages and systems. Mobile includes focus-contained
   navigation, notch-safe chrome, short-screen hero tuning, and a purchase bar
@@ -31,8 +33,10 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
 - **Motion:** the hero is immediate; below-fold reveal, menu, HUD, carousel, and
   FAQ motion all defer to reduced-motion preferences.
 - **Assets:** `hero-kingdom-world.webp` is an authentic gameplay crop sized for
-  the hero. `joe-builder-key-art.webp` is generated editorial art and is labeled
-  as such in the page.
+  the hero. Journey pairs use `journey-{camp,town,space}-{square,wide}.webp`.
+  System truth comes from `system-{logistics,joes,world}.webp` plus the existing
+  technology choice capture. Generated editorial art includes the Builder, Night
+  Logistics, Archivist, and Starfarer scenes; every narrative scene is labeled.
 
 ## Founding Tile visual system — current
 
@@ -44,7 +48,7 @@ The approved Founding Tile is the website's primary identity. This section super
 - **Typography:** Plus Jakarta Sans is the single site family. Display, body, labels, HUD text, navigation, and controls use its 400–800 weight range; scale, tracking, case, and color create hierarchy without mixing typefaces.
 - **Surfaces:** flat fills, neutral bone hairlines, 8–12px radii, restrained shadows. Avoid glossy gold gradients, universal gold borders, and decorative hover lift on non-interactive cards.
 - **Motion:** retain below-fold reveals, menu transitions, scroll progress, and restrained swipe-rail movement. Avoid ambient crystal drift, marquee movement, large hero tilts, and decorative floating geometry.
-- **Page rhythm:** hero promise → three-age journey → one Joe story → four visual systems → minimal FAQ → Founding Tile purchase close.
+- **Page rhythm:** hero promise → three-age journey → one Joe story → four visual systems → Night Logistics key art → Archivist FAQ → Starfarer purchase close.
 - **Responsive:** compact navigation begins at 1040px; age/system rails and the contextual purchase bar begin at 780px; controls remain keyboard accessible and safe-area aware.
 - **Mobile conversion:** keep price and the primary action in the first phone viewport, reveal a safe-area purchase bar as soon as that action scrolls away, and hide it again at the final CTA or while navigation is open.
 - **Mobile pacing:** ages and systems become labeled horizontal story rails with counters, arrow controls, keyboard navigation, snap stops, and a visible next-card peek. Joe context precedes the portrait and FAQ items behave as a compact accordion.
@@ -57,7 +61,7 @@ The approved Founding Tile is the website's primary identity. This section super
 - Tagline (official subtitle): "Build a chicken civilization."
 - Fantasy: lead an underground chicken civilization ("the flock", citizens are "Joes") from a humble camp through **ten ages** to the Space Age.
 - Ten ages in order: **Camp, Town, Citadel, Crown, Kingdom, Empire, Ascendant, Fusion, Orbital, Space**.
-- Price: **$9.99 USD, one-time purchase**. No ads, no in-app purchases, no tracking. Saves locally, plays fully offline.
+- Price: **$9.99 USD, one-time purchase**. The Mac game has no ads, no in-app purchases, and no gameplay tracking. Saves locally, plays fully offline.
 - App Store link: `https://apps.apple.com/app/id6790244910` (App ID 6790244910, bundle com.designprism.joetown). Developer brand: **Design Prism** — support `https://www.design-prism.com/contact`, privacy `https://www.design-prism.com/privacy-policy`.
 - Current source facts: 24 buildings; 18 technologies; ten ages; 13 animal civilizations; 12 named founders (John, Alex, Michael, Dawson, Max, Matt, McTavish, Enzo, Will, Brandon, Jack, and Oliver); five personalities; five skills; four career ranks; six earned traits; realm-local history and the Flock Chronicle. Roads, visible logistics, deterministic seeded worlds, autosave, offline progress summaries, VoiceOver, and Reduce Motion support are implemented. Difficulty modes, manually assigned jobs, a full world map, and interstellar play are not shipped features.
 - Flavor quotes (verbatim from game chatter — use in "flock talks back" section):
@@ -79,6 +83,19 @@ The approved Founding Tile is the website's primary identity. This section super
   - "It hummed at Joebert."
 - Founding copy: "The first Joes gathered beneath the mountain."
 - Positioning (verbatim from design docs): explicitly avoids energy, streak, login-reward, and FOMO systems; "The city is the hero"; "Defense is a puzzle"; "Raids are scouting problems".
+
+## Website analytics and privacy — current
+
+- The homepage loads Google Analytics 4 once with measurement ID
+  `G-3XJQL5PVS1` to understand aggregate website visits.
+- Analytics is a website behavior, not a game behavior. Product copy must say
+  `No gameplay tracking` or explicitly name the Mac game; never use an unqualified
+  site-wide `No tracking` promise while GA is present.
+- `privacy.html` is the Joe Town-specific disclosure. It explains website
+  analytics, links to Google and Apple privacy information, and intentionally does
+  not load the GA tag itself.
+- Production QA must confirm one `gtag.js` loader, one matching config call, a
+  working Privacy link, and HTTP 200 for `/privacy.html`.
 
 ## Archived pre–Living Diorama art direction (superseded)
 
