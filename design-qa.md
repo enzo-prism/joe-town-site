@@ -193,3 +193,21 @@ evidence remains an explicitly documented follow-up.
   `sitemap.xml` matched the validated `main` files byte-for-byte.
 - Live content confirmed Plus Jakarta Sans, John, Alex, Dawson, and Matt; the old
   Enzo feature card was absent and the verified App Store destination remained.
+
+## Visual and analytics production readback — 2026-07-21
+
+- Release source commit `60fe01f732f2e71f05160860047847d25c94d47e`
+  reached Vercel production as deployment `dpl_BvSeNgB4JYKdoHv7KvZ35hYq3sDT`.
+- `gojoetown.com` returned the new Camp/Town/Space journey, three additional
+  labeled editorial-art placements, corrected system captures, GA4 measurement
+  ID `G-3XJQL5PVS1`, qualified `No gameplay tracking` language, and the local
+  Joe Town privacy notice.
+- Canonical HTML, privacy HTML, CSS, JavaScript, Open Graph image, favicon,
+  `robots.txt`, `sitemap.xml`, and all 12 new WebPs matched the committed source
+  byte-for-byte.
+- The live homepage contained exactly one GA loader and one matching config call;
+  `/privacy.html` intentionally contained neither. The privacy page was included
+  in the live sitemap.
+- HTTP/MIME checks returned 200 for HTML, privacy, CSS, JavaScript, WebP, PNG,
+  ICO, robots, and sitemap surfaces. Canonical response headers included Vercel
+  cache confirmation and HSTS.
