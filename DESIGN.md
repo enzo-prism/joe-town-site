@@ -50,7 +50,7 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
 
 The page grew from six chapters to twelve to showcase shipped feature depth.
 New page rhythm: hero → three-age journey + **ten-age gameplay rail**
-(`images/age-1..10.webp`, real captures, no editorial label) → **Origins**
+(`images/age-1..10.webp`, engine-rendered captures, no editorial label) → **Origins**
 (five faction cards + banner key art) → Joe story + lifecycle depth list →
 **Petitions** (four verbatim petition quotes + podium key art) → four systems →
 **World & diplomacy** (six of the 13 civilization cards + envoy key art) →
@@ -67,6 +67,21 @@ art) → FAQ (seven questions) → Starfarer close.
 - The ten-age rail and origin cards are `data-carousel` rails (the shared
   carousel JS is generic); their controls stay visible on desktop via
   `.ages-controls`.
+- **Age capture provenance (2026-07-21 refresh):** `age-1..10.webp` and the
+  three journey card pairs (`journey-{camp,town,space}-{square,wide}.webp`,
+  from ages 1/5/10) are rendered by the game's own offscreen snapshot pipeline:
+  `swift run JoeTown --snapshot out.png --visual-age N --no-hud --size 2000x1250`
+  in the game repo, with a decoration ladder so each age reads richer than the
+  last (age 3 `--monument foundation`, 4 `--monument frame`, 5-6 `+--joes-props`
+  with facade at 6, 7-10 `--monument crown --joes-props`; new building types
+  arrive on their own at 8/9/10). Frames are then auto-cropped to the largest
+  bright/saturated town cluster (see the capture notes in the game repo's
+  history) and exported at 1400×933 (rail) / 960×960 + 1200×800 (cards).
+  The `--no-hud` snapshot flag lives in the game repo (CavernScene
+  `debugHideChrome()`); captures are engine-rendered synthetic towns — real
+  game renderer, real sprites, not staged play sessions and not editorial art,
+  so they carry no editorial label but should not be captioned as a single
+  player's save either.
 - Shipped-feature gating: the 1.1 App Store release notes confirm named Joes,
   the Flock Chronicle, Workers' Council, colonies, and the visible production
   chain; the ten-age captures and the `Manage Joes` / `Ventures` /
