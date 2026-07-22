@@ -67,6 +67,11 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
 - The 2026-07-21 enhancement release adds generated Camp/Kingdom/Space emblems, distinct founder
   chicken portraits, a cleaner Mac App Store hero action, and rotating verified
   Joe chatter with pause and reduced-motion support.
+- The 2026-07-21 copy release rewrites all visible prose in the game's own voice
+  (deadpan municipal absurdity): every joke is sourced from shipped chatter,
+  away reports, or rival-civilization descriptions in the game code; product
+  facts, scoped "no gameplay tracking" language, and the gain-framing copy law
+  are unchanged. Voice rules live in `DESIGN.md` § "Copy voice — current".
 - Desktop QA passed at 1440×1000 and mobile QA passed at 390×844 with no broken
   images, duplicate IDs, console errors, or horizontal overflow.
 - Responsive QA targets are `320`, `390`, `430`, `768`, and `1440` CSS pixels.

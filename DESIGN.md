@@ -14,8 +14,11 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
 - **Visual hierarchy:** the town is the hero; authentic gameplay captures carry
   all gameplay claims, while generated scenes are explicitly labeled editorial
   key art and never presented as gameplay.
-- **Copy budget:** roughly 350 visible words with one consistent `Buy for $9.99`
-  purchase label and a single verified App Store destination.
+- **Copy budget:** roughly 450 visible words (the 2026-07-21 humor pass traded a
+  small budget increase for sourced game-voice jokes) with a single verified App
+  Store destination. Known deviation: the purchase label has three variants
+  (`Buy for $9.99` nav, `Buy on the Mac App Store · $9.99` hero/close, `Buy`
+  mobile bar with a complete aria-label).
 - **Journey:** Camp, Kingdom, and Space are semantic figures in a desktop grid and a
   touch/keyboard scroll-snap rail on mobile. Each stage has a square desktop crop
   and a 3:2 mobile crop, with all ten shipped ages named in a compact chronology.
@@ -41,6 +44,29 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
   System truth comes from `system-{logistics,joes,world}.webp` plus the existing
   technology choice capture. Generated editorial art includes the Builder, Night
   Logistics, Archivist, and Starfarer scenes; every narrative scene is labeled.
+
+## Copy voice — current (2026-07-21 humor pass)
+
+All visible prose was rewritten in the game's own house voice: **deadpan
+municipal absurdity, affectionate sarcasm, chicken physicality** (the game's
+style-bible definition). Rules for future copy edits:
+
+- **Every joke is sourced.** Quoted lines are verbatim from shipped game strings
+  ("The worms seem unionized." — farm chatter; "Everything grew; nothing
+  exploded. Probably." and "Productivity occurred without supervision." — away
+  reports, `AwayReportOverlay.swift`; "Hoarding, but civic-minded." — chatter);
+  paraphrased gags trace to real content (suggestion-box hole and "the rooster
+  quit" — Camp/Orbital idle chatter; "banquet is snacks with witnesses" —
+  Kingdom chatter; eggs "as residents, pending" — Kingdom census line; duck
+  parliament and goose volume-diplomacy — The Puddle Parliament and The Honking
+  Directorate in `WorldExploration.swift`). Do not invent game facts for a joke.
+- **Gain-framing is law** (game style bible, test-enforced in-app): never use
+  lost, lose, missed, expire, wasted, decay, wither, forfeit, penalty, hurry,
+  don't-miss, running-out, overflow, spoil, or rot in visible copy.
+- **Tracking language stays scoped:** "no gameplay tracking" or "the Mac game" —
+  never an unqualified "no tracking" while the site loads GA.
+- **Facts are fixed:** all claims must match "Product facts" below; humor rides
+  on top of verified claims, never replaces them.
 
 ## Founding Tile visual system — current
 
