@@ -67,6 +67,13 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
 - The 2026-07-21 enhancement release adds generated Camp/Kingdom/Space emblems, distinct founder
   chicken portraits, a cleaner Mac App Store hero action, and rotating verified
   Joe chatter with pause and reduced-motion support.
+- The 2026-07-21 depth expansion grows the page from six chapters to twelve:
+  a ten-age real-gameplay rail, Origins, Petitions, World & diplomacy, Raids,
+  Ventures, and Chronicle/away-play sections, each built from verbatim game
+  strings, plus six new labeled editorial key-art scenes generated in the
+  established cavern voxel style (Higgsfield `nano_banana_pro`, style-referenced
+  to the Archivist and Builder scenes). Section inventory and gating rules live
+  in `DESIGN.md` § "Depth expansion — current".
 - The 2026-07-21 copy release rewrites all visible prose in the game's own voice
   (deadpan municipal absurdity): every joke is sourced from shipped chatter,
   away reports, or rival-civilization descriptions in the game code; product

@@ -47,7 +47,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400..800&amp;display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="images/hero-kingdom-world.webp" fetchpriority="high">
-  <link rel="stylesheet" href="css/style.css?v=20260721-release2">
+  <link rel="stylesheet" href="css/style.css?v=20260721-release3">
 
   <script type="application/ld+json">
   {
@@ -79,6 +79,7 @@
         <a href="#journey">Ages</a>
         <a href="#joes">Joes</a>
         <a href="#systems">How it plays</a>
+        <a href="#world">World</a>
         <a href="#faq">FAQ</a>
       </nav>
       <a class="button button-small desktop-buy" href="https://apps.apple.com/app/id6790244910">Buy for $9.99</a>
@@ -93,6 +94,7 @@
       <a href="#journey">Ages</a>
       <a href="#joes">Joes</a>
       <a href="#systems">How it plays</a>
+      <a href="#world">World</a>
       <a href="#faq">FAQ</a>
       <a class="button" href="https://apps.apple.com/app/id6790244910">Buy for $9.99</a>
     </nav>
@@ -158,6 +160,69 @@
         <button type="button" data-carousel-next aria-controls="journey-carousel" aria-label="Next age">→</button>
       </div>
       <p class="journey-note reveal">CAMP · TOWN · CITADEL · CROWN · KINGDOM · EMPIRE · ASCENDANT · FUSION · ORBITAL · SPACE</p>
+      <div class="ages-strip reveal" id="ages-rail" data-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="All ten ages, captured in the actual game">
+        <figure class="age-tile"><img src="images/age-1.webp" width="1400" height="1102" loading="lazy" decoding="async" alt="A tiny Camp Age settlement around its first buildings"><figcaption><strong>01 · Camp</strong><span>Twelve chickens and a plan.</span></figcaption></figure>
+        <figure class="age-tile"><img src="images/age-2.webp" width="1400" height="1102" loading="lazy" decoding="async" alt="A Town Age settlement with early roads and workshops"><figcaption><strong>02 · Town</strong><span>The pothole has tenure and a name.</span></figcaption></figure>
+        <figure class="age-tile"><img src="images/age-3.webp" width="1400" height="1102" loading="lazy" decoding="async" alt="A fortified Citadel Age town with walls and watchtowers"><figcaption><strong>03 · Citadel</strong><span>The moat remains conceptually damp.</span></figcaption></figure>
+        <figure class="age-tile"><img src="images/age-4.webp" width="1400" height="1102" loading="lazy" decoding="async" alt="A Crown Age town with banners and richer rooftops"><figcaption><strong>04 · Crown</strong><span>Nobility is poultry with accessories.</span></figcaption></figure>
+        <figure class="age-tile"><img src="images/age-5.webp" width="1400" height="1102" loading="lazy" decoding="async" alt="A Kingdom Age capital with arches and granaries"><figcaption><strong>05 · Kingdom</strong><span>Granaries fit for royalty.</span></figcaption></figure>
+        <figure class="age-tile"><img src="images/age-6.webp" width="1400" height="1102" loading="lazy" decoding="async" alt="An Empire Age town of steel, rivets, and clockwork"><figcaption><strong>06 · Empire</strong><span>Goggles optional. Ambition mandatory.</span></figcaption></figure>
+        <figure class="age-tile"><img src="images/age-7.webp" width="1400" height="1102" loading="lazy" decoding="async" alt="An Ascendant Age town of obsidian and radiant crystal"><figcaption><strong>07 · Ascendant</strong><span>Worms reached enlightenment first. Typical.</span></figcaption></figure>
+        <figure class="age-tile"><img src="images/age-8.webp" width="1400" height="1102" loading="lazy" decoding="async" alt="A Fusion Age town glowing around its reactor"><figcaption><strong>08 · Fusion</strong><span>The corn near the core popped itself.</span></figcaption></figure>
+        <figure class="age-tile"><img src="images/age-9.webp" width="1400" height="1102" loading="lazy" decoding="async" alt="An Orbital Age town building the infrastructure to reach orbit"><figcaption><strong>09 · Orbital</strong><span>Zero-g roosting is technically hovering.</span></figcaption></figure>
+        <figure class="age-tile"><img src="images/age-10.webp" width="1400" height="900" loading="lazy" decoding="async" alt="The Space Age build menu and a starport town in the actual game interface"><figcaption><strong>10 · Space</strong><span>Lore drop: the universe hatched from an egg.</span></figcaption></figure>
+      </div>
+      <div class="carousel-controls ages-controls" data-carousel-controls="ages-rail">
+        <span class="carousel-hint">Every age, captured in-game</span>
+        <span class="carousel-status" aria-live="polite" aria-atomic="true">1 / 10</span>
+        <button type="button" data-carousel-prev aria-controls="ages-rail" aria-label="Previous age capture">←</button>
+        <button type="button" data-carousel-next aria-controls="ages-rail" aria-label="Next age capture">→</button>
+      </div>
+    </section>
+
+    <section class="origins section" id="origins" aria-labelledby="origins-title">
+      <div class="section-intro reveal">
+        <p class="eyebrow">Five flocks, five paths</p>
+        <h2 id="origins-title">Pick an origin. <em>Own its consequences.</em></h2>
+      </div>
+      <figure class="origins-art reveal">
+        <img src="images/key-art-origins.webp" width="1774" height="998" loading="lazy" decoding="async" alt="Editorial key art of five chickens standing beneath five faction banners">
+        <figcaption class="art-label">EDITORIAL KEY ART · NOT GAMEPLAY</figcaption>
+      </figure>
+      <div class="origin-grid" id="origins-rail" data-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="The five civilization origins">
+        <article class="origin-card reveal">
+          <h3>Talon Banner</h3>
+          <p class="origin-tagline">&ldquo;Peace through pecking order.&rdquo;</p>
+          <p>Cheaper soldiers, richer raids, and diplomats famous for carrying banners into other towns and leaving with the grain.</p>
+        </article>
+        <article class="origin-card reveal">
+          <h3>Moonmolt Covenant</h3>
+          <p class="origin-tagline">&ldquo;Read the omens in every molted feather.&rdquo;</p>
+          <p>Consults the moon before breakfast. The moon has surprisingly firm opinions about zoning.</p>
+        </article>
+        <article class="origin-card reveal">
+          <h3>Cogwing Guild</h3>
+          <p class="origin-tagline">&ldquo;Measure twice, cluck once.&rdquo;</p>
+          <p>Machines that run beautifully, provided nobody asks which gear is load-bearing.</p>
+        </article>
+        <article class="origin-card reveal">
+          <h3>Golden Peck Consortium</h3>
+          <p class="origin-tagline">&ldquo;Every sunrise is a market opening.&rdquo;</p>
+          <p>Discovered that grain left alone becomes more grain. Naps professionally &mdash; the ledger keeps counting either way.</p>
+        </article>
+        <article class="origin-card reveal">
+          <h3>Featherlight Communion</h3>
+          <p class="origin-tagline">&ldquo;A calm roost weathers every storm.&rdquo;</p>
+          <p>Holds that most wars end the moment somebody finally shares the snacks. Their enemies leave confused and faintly blessed.</p>
+        </article>
+      </div>
+      <div class="carousel-controls ages-controls origins-controls" data-carousel-controls="origins-rail">
+        <span class="carousel-hint">Swipe through the origins</span>
+        <span class="carousel-status" aria-live="polite" aria-atomic="true">1 / 5</span>
+        <button type="button" data-carousel-prev aria-controls="origins-rail" aria-label="Previous origin">←</button>
+        <button type="button" data-carousel-next aria-controls="origins-rail" aria-label="Next origin">→</button>
+      </div>
+      <p class="origins-copy reveal">Each origin owns one core system and one unique building, and you choose once per town. The town spends the rest of history being that town.</p>
     </section>
 
     <section class="joes section" id="joes" aria-labelledby="joes-title">
@@ -199,10 +264,34 @@
             </div>
           </article>
         </div>
+        <ul class="joe-depth reveal">
+          <li><strong>Four ranks, honestly earned.</strong> Worker to Foreman to Steward to Elder &mdash; promotions are paid for in corn and stone, and an Elder lifts the whole town.</li>
+          <li><strong>Perks are chosen. Traits are earned.</strong> You can respec what you picked for a Joe. You can never respec what they did.</li>
+          <li><strong>Moods with consequences.</strong> An Inspired Joe outworks a Weary one, and the ledger shows it.</li>
+        </ul>
         <div class="flock-chatter" data-flock-chatter>
           <blockquote id="flock-quote" aria-live="off"><span class="flock-quote-text" data-chatter-quote>Our spreadsheet has feathers.</span></blockquote>
           <button class="chatter-toggle" type="button" aria-controls="flock-quote" aria-pressed="false" data-chatter-toggle><span data-chatter-toggle-label>Pause Joe chatter</span></button>
         </div>
+      </div>
+    </section>
+
+    <section class="petitions section" id="petitions" aria-labelledby="petitions-title">
+      <div class="petitions-copy reveal">
+        <p class="eyebrow">The suggestion box got an upgrade</p>
+        <h2 id="petitions-title">The flock files <em>petitions.</em></h2>
+        <p class="petitions-lede">Named Joes bring the town&rsquo;s business to your desk &mdash; specific, sincere, and slightly absurd. Approve one and the town builds the spa, funds the dig, or settles the feud over a shared meal. Declining costs nothing. Nothing in Joe Town punishes you for saying &ldquo;not yet.&rdquo;</p>
+        <figure class="petition-art">
+          <img src="images/key-art-petition.webp" width="1000" height="1333" loading="lazy" decoding="async" alt="Editorial key art of a chicken presenting a glowing petition scroll from a stone podium">
+          <figcaption class="art-label">EDITORIAL KEY ART · NOT GAMEPLAY</figcaption>
+        </figure>
+      </div>
+      <div class="petition-list reveal">
+        <blockquote class="petition-quote"><p>&ldquo;Six worms run the entire under-soil trade. We buy in now, or we buy in later at their price.&rdquo;</p><footer>&mdash; the Worm Cartel</footer></blockquote>
+        <blockquote class="petition-quote"><p>&ldquo;There&rsquo;s a hole behind the quarry. It was not there yesterday. I want it on the record.&rdquo;</p><footer>&mdash; the Suspicious Hole</footer></blockquote>
+        <blockquote class="petition-quote"><p>&ldquo;The wind is right there, doing nothing at all. Let&rsquo;s put it on the payroll.&rdquo;</p><footer>&mdash; the Windmill Proposal</footer></blockquote>
+        <blockquote class="petition-quote"><p>&ldquo;Small wooden chickens, enormous wooden feelings. The roost is ready for a theatre.&rdquo;</p><footer>&mdash; the Puppet Theatre</footer></blockquote>
+        <p class="petitions-note">26 petition archetypes. Statues, spas, bell towers, libraries &mdash; and one Monument raised in four phases across the ages.</p>
       </div>
     </section>
 
@@ -242,6 +331,78 @@
       </figure>
     </section>
 
+    <section class="world section" id="world" aria-labelledby="world-title">
+      <div class="section-intro reveal">
+        <p class="eyebrow">Beyond the cavern</p>
+        <h2 id="world-title">The neighbors have <em>institutions.</em></h2>
+        <p class="world-lede">Send named scouts into the dark and chart a world that grows with every age. Out there: landmarks that pay rent forever, monsters with territorial opinions, and thirteen animal civilizations that would like to discuss terms.</p>
+      </div>
+      <div class="civ-grid">
+        <article class="civ-card reveal"><h3>The Puddle Parliament</h3><p class="civ-species">Ducks</p><p>&ldquo;Cheerful navigators with suspiciously strong opinions.&rdquo;</p></article>
+        <article class="civ-card reveal"><h3>The Honking Directorate</h3><p class="civ-species">Geese</p><p>&ldquo;Fearless diplomats who consider volume a negotiating skill.&rdquo;</p></article>
+        <article class="civ-card reveal"><h3>The Truffle Republic</h3><p class="civ-species">Pigs</p><p>&ldquo;Inventive traders who prize clever bargains.&rdquo;</p></article>
+        <article class="civ-card reveal"><h3>The Warren Synod</h3><p class="civ-species">Rabbits</p><p>&ldquo;Fast-growing scholars with an excellent tunnel network.&rdquo;</p></article>
+        <article class="civ-card reveal"><h3>The Grand Gobble</h3><p class="civ-species">Turkeys</p><p>&ldquo;Ceremonial strategists who never enter a room quietly.&rdquo;</p></article>
+        <article class="civ-card reveal"><h3>The Starweave Compact</h3><p class="civ-species">Llamas</p><p>&ldquo;Starward weavers with calm manners and improbable engines.&rdquo;</p></article>
+      </div>
+      <p class="world-copy reveal">Send envoys, sign trade pacts, host festivals, or demand tribute &mdash; each civilization has a temperament, and a Proud one goes to war over an insult a Gentle one shrugs off. Seven more nations wait past the fog, each with a capital, a favored resource, and a price.</p>
+      <figure class="world-art reveal">
+        <img src="images/key-art-envoy.webp" width="1400" height="933" loading="lazy" decoding="async" alt="Editorial key art of a chicken envoy negotiating with a honking goose diplomat across a stone table">
+        <figcaption class="art-label">EDITORIAL KEY ART · NOT GAMEPLAY</figcaption>
+      </figure>
+    </section>
+
+    <section class="raids section" id="raids" aria-labelledby="raids-title">
+      <div class="raids-copy reveal">
+        <p class="eyebrow">Defense is a puzzle. Raids are scouting problems.</p>
+        <h2 id="raids-title">Battles are won <em>in the planning.</em></h2>
+        <p class="raids-lede">Scout a rival and the report writes your battle plan: which gate is weak, which is guarded, what&rsquo;s worth carrying home. Pick an entry, an objective, and how much of the army to commit &mdash; then watch it play out on seeded dice.</p>
+        <ul class="raid-points">
+          <li><strong>Named captains earn renown.</strong> Captains like Sir Peckard or Henrietta Boldwing get better with every campaign, and it shows on the field.</li>
+          <li><strong>Three gates, three objectives.</strong> Rams love the Main Gate. Archers prefer the Cliff Path. Choose accordingly.</li>
+          <li><strong>Defeat is survivable.</strong> A failed raid comes home as &ldquo;a tactical learning vacation.&rdquo; The flock recovers. The story continues.</li>
+        </ul>
+      </div>
+      <figure class="raids-art reveal">
+        <img src="images/key-art-captain.webp" width="1000" height="1500" loading="lazy" decoding="async" alt="Editorial key art of an armored chicken captain holding a tattered banner on a rampart">
+        <figcaption class="art-label">EDITORIAL KEY ART · NOT GAMEPLAY</figcaption>
+      </figure>
+    </section>
+
+    <section class="ventures section" id="ventures" aria-labelledby="ventures-title">
+      <div class="ventures-art reveal">
+        <img src="images/key-art-egg.webp" width="1100" height="1375" loading="lazy" decoding="async" alt="Editorial key art of two chickens admiring a plain egg displayed on a museum pedestal">
+        <figcaption class="art-label">EDITORIAL KEY ART · NOT GAMEPLAY</figcaption>
+      </div>
+      <div class="ventures-copy reveal">
+        <p class="eyebrow">The coopconomy</p>
+        <h2 id="ventures-title">Twelve businesses. <em>One very proud egg.</em></h2>
+        <p class="ventures-lede">Found ventures that run themselves and pay in full whether you visit or not &mdash; the Market Stall fills in about twenty minutes, the Starship Prospectors in two days. Make the rounds when you&rsquo;re ready and the business you focus pays a bonus. Everything banks at full value and stays yours. Forever.</p>
+        <ul class="venture-list">
+          <li><strong>Worm Farm</strong> &mdash; &ldquo;Worms in, worms out. Mostly out.&rdquo;</li>
+          <li><strong>Market Stall</strong> &mdash; &ldquo;Two crates and an opinion about prices.&rdquo;</li>
+          <li><strong>Quarry Consortium</strong> &mdash; &ldquo;Several hens agree about a rock.&rdquo;</li>
+          <li><strong>Courier Run</strong> &mdash; &ldquo;Nothing travels faster than a chicken with a parcel.&rdquo;</li>
+          <li><strong>Shipping Fleet</strong> &mdash; &ldquo;Bulk. Simply bulk.&rdquo;</li>
+          <li><strong>Starship Prospectors</strong> &mdash; &ldquo;Somewhere out there is a very rich rock.&rdquo;</li>
+        </ul>
+        <p class="ventures-note">A traveling merchant rotates one-of-a-kind artifacts through town. Most do something remarkable. One is the Unremarkable Egg: &ldquo;It is an egg. Nothing happens. The flock is very proud of it.&rdquo; It still costs 120 food and 60 wood.</p>
+      </div>
+    </section>
+
+    <section class="chronicle section" id="chronicle" aria-labelledby="chronicle-title">
+      <figure class="chronicle-art reveal">
+        <img src="images/key-art-return.webp" width="1774" height="998" loading="lazy" decoding="async" alt="Editorial key art of a chicken with a glowing ledger waiting at the town gate at evening">
+        <figcaption class="art-label">EDITORIAL KEY ART · NOT GAMEPLAY</figcaption>
+      </figure>
+      <div class="chronicle-copy reveal">
+        <p class="eyebrow">Leave. It&rsquo;s fine.</p>
+        <h2 id="chronicle-title">The town takes notes <em>while you&rsquo;re gone.</em></h2>
+        <p>Close the lid mid-shift and the flock keeps working. Come back in an hour or a week and the town hands you a Welcome Back report &mdash; production, arrivals, and anything waiting at the gate. Raids never resolve without you: &ldquo;the walls will hold until you&rsquo;re ready to answer.&rdquo;</p>
+        <p>All of it lands in the Flock Chronicle &mdash; major events, Notable Joes, and the running history of a town that remembers whose idea the hole was.</p>
+      </div>
+    </section>
+
     <section class="faq section" id="faq" aria-labelledby="faq-title">
       <div class="faq-copy reveal">
         <p class="eyebrow">The practical matters</p>
@@ -262,7 +423,7 @@
         </details>
         <details>
           <summary>Is Joe Town an idle game?</summary>
-          <p>No. The town-defining choices wait for you. Offline progress is capped at 24 hours and arrives as a tidy summary &mdash; no streaks, no energy meters, no login rewards, no guilt. The chickens simply kept busy.</p>
+          <p>No. The town-defining choices wait for you. Offline progress is bounded and arrives as a tidy summary &mdash; no streaks, no energy meters, no login rewards, no guilt. The chickens simply kept busy.</p>
         </details>
         <details>
           <summary>Does it play offline?</summary>
@@ -271,6 +432,10 @@
         <details>
           <summary>Which Macs are supported?</summary>
           <p>macOS 14 or later, on Apple silicon or Intel &mdash; one native universal Mac app. The chickens cannot tell which chip you have and are at peace with that.</p>
+        </details>
+        <details>
+          <summary>Is every town the same?</summary>
+          <p>No two are. Worlds are seeded, the twelve founders take their seats in a different order every game, and towns diverge by what their Joes asked for. Two towns at the same age can disagree about nearly everything, including the theatre.</p>
         </details>
         <details>
           <summary>Does Joe Town collect data?</summary>

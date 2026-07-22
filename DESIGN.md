@@ -14,11 +14,12 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
 - **Visual hierarchy:** the town is the hero; authentic gameplay captures carry
   all gameplay claims, while generated scenes are explicitly labeled editorial
   key art and never presented as gameplay.
-- **Copy budget:** roughly 450 visible words (the 2026-07-21 humor pass traded a
-  small budget increase for sourced game-voice jokes) with a single verified App
-  Store destination. Known deviation: the purchase label has three variants
-  (`Buy for $9.99` nav, `Buy on the Mac App Store · $9.99` hero/close, `Buy`
-  mobile bar with a complete aria-label).
+- **Copy budget:** roughly 1,700 visible words after the 2026-07-21 depth
+  expansion (see "Depth expansion" below) — the page traded the old minimal
+  budget for a feature-depth showcase, still one claim per sentence and one
+  verified App Store destination. Known deviation: the purchase label has three
+  variants (`Buy for $9.99` nav, `Buy on the Mac App Store · $9.99` hero/close,
+  `Buy` mobile bar with a complete aria-label).
 - **Journey:** Camp, Kingdom, and Space are semantic figures in a desktop grid and a
   touch/keyboard scroll-snap rail on mobile. Each stage has a square desktop crop
   and a 3:2 mobile crop, with all ten shipped ages named in a compact chronology.
@@ -44,6 +45,36 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
   System truth comes from `system-{logistics,joes,world}.webp` plus the existing
   technology choice capture. Generated editorial art includes the Builder, Night
   Logistics, Archivist, and Starfarer scenes; every narrative scene is labeled.
+
+## Depth expansion — current (2026-07-21)
+
+The page grew from six chapters to twelve to showcase shipped feature depth.
+New page rhythm: hero → three-age journey + **ten-age gameplay rail**
+(`images/age-1..10.webp`, real captures, no editorial label) → **Origins**
+(five faction cards + banner key art) → Joe story + lifecycle depth list →
+**Petitions** (four verbatim petition quotes + podium key art) → four systems →
+**World & diplomacy** (six of the 13 civilization cards + envoy key art) →
+**Raids** (planning points + captain key art) → **Ventures** (six venture
+one-liners + Unremarkable Egg key art) → **Chronicle / away play** (gate key
+art) → FAQ (seven questions) → Starfarer close.
+
+- New editorial key art (generated 2026-07-21 via Higgsfield `nano_banana_pro`
+  with the Archivist + Builder scenes as style references; every piece labeled
+  `EDITORIAL KEY ART · NOT GAMEPLAY`): `key-art-origins.webp` (16:9),
+  `key-art-petition.webp` (3:4), `key-art-envoy.webp` (3:2),
+  `key-art-captain.webp` (2:3), `key-art-egg.webp` (4:5),
+  `key-art-return.webp` (16:9).
+- The ten-age rail and origin cards are `data-carousel` rails (the shared
+  carousel JS is generic); their controls stay visible on desktop via
+  `.ages-controls`.
+- Shipped-feature gating: the 1.1 App Store release notes confirm named Joes,
+  the Flock Chronicle, Workers' Council, colonies, and the visible production
+  chain; the ten-age captures and the `Manage Joes` / `Ventures` /
+  `Choose Origin` UI visible in `age-10.webp` confirm those systems in the
+  sold build. Interstellar play, difficulty modes, and manual job assignment
+  remain unclaimed. The FAQ intentionally says offline progress "is bounded"
+  with no hour figure (code says 12h base / 18h Golden Peck; older copy said
+  24h — do not reintroduce a number without re-verifying the shipped build).
 
 ## Copy voice — current (2026-07-21 humor pass)
 
@@ -93,7 +124,7 @@ The approved Founding Tile is the website's primary identity. This section super
 - Ten ages in order: **Camp, Town, Citadel, Crown, Kingdom, Empire, Ascendant, Fusion, Orbital, Space**.
 - Price: **$9.99 USD, one-time purchase**. The Mac game has no ads, no in-app purchases, and no gameplay tracking. Saves locally, plays fully offline.
 - App Store link: `https://apps.apple.com/app/id6790244910` (App ID 6790244910, bundle com.designprism.joetown). Developer brand: **Design Prism** — support `https://www.design-prism.com/contact`, privacy `https://www.design-prism.com/privacy-policy`.
-- Current source facts: 24 buildings; 18 technologies; ten ages; 13 animal civilizations; 12 named founders (John, Alex, Michael, Dawson, Max, Matt, McTavish, Enzo, Will, Brandon, Jack, and Oliver); five personalities; five skills; four career ranks; six earned traits; realm-local history and the Flock Chronicle. Roads, visible logistics, deterministic seeded worlds, autosave, offline progress summaries, VoiceOver, and Reduce Motion support are implemented. Difficulty modes, manually assigned jobs, a full world map, and interstellar play are not shipped features.
+- Current source facts: 24 buildings; 18 technologies; ten ages; 13 animal civilizations; 12 named founders (John, Alex, Michael, Dawson, Max, Matt, McTavish, Enzo, Will, Brandon, Jack, and Oliver); five personalities; five skills; four career ranks; six earned traits; realm-local history and the Flock Chronicle. Roads, visible logistics, deterministic seeded worlds, autosave, offline progress summaries, VoiceOver, and Reduce Motion support are implemented. The shipped world map is the scouting/exploration map: named scout parties, a world that grows each age, landmarks, monsters, and diplomacy with the 13 animal civilizations (verified in `WorldExploration.swift` and the 1.1-era build). Difficulty modes, manually assigned jobs, and interstellar play are not shipped features.
 - Flavor quotes (verbatim from game chatter — use in "flock talks back" section):
   - "The worms seem unionized."
   - "Hoarding, but civic-minded."
