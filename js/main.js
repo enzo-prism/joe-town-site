@@ -217,13 +217,41 @@
       var active = 0;
       var announced = -1;
       var scheduled = false;
+      var isCarousel = null;
 
-      items.forEach(function (item, index) {
-        item.setAttribute("role", "group");
-        item.setAttribute("aria-roledescription", "slide");
-        item.setAttribute("aria-label", (index + 1) + " of " + items.length);
-      });
+      /* A rail is a carousel only while it actually overflows. That depends on
+         the breakpoint for the journey/systems/origins grids and is true at
+         every width for the ten-age rail, so measure instead of guessing. */
+      function scrollable() {
+        return rail.scrollWidth - rail.clientWidth > 4;
+      }
 
+      function applySemantics(on) {
+        if (isCarousel === on) return;
+        isCarousel = on;
+        if (on) rail.setAttribute("aria-roledescription", "carousel");
+        else rail.removeAttribute("aria-roledescription");
+        items.forEach(function (item, index) {
+          if (on) {
+            item.setAttribute("role", "group");
+            item.setAttribute("aria-roledescription", "slide");
+            item.setAttribute("aria-label", (index + 1) + " of " + items.length);
+          } else {
+            item.removeAttribute("role");
+            item.removeAttribute("aria-roledescription");
+            item.removeAttribute("aria-label");
+            item.removeAttribute("aria-current");
+          }
+        });
+        if (!on) announced = -1;
+      }
+
+      function maxScroll() {
+        return rail.scrollWidth - rail.clientWidth;
+      }
+
+      /* Leftmost slide at the current offset. Drives movement, so it stays
+         geometric: stepping back from the end must land on a reachable offset. */
       function closestIndex() {
         var start = items[0] ? items[0].offsetLeft : 0;
         var best = 0;
@@ -238,20 +266,34 @@
         return best;
       }
 
+      /* Wide rails show several slides at once, so the trailing ones share one
+         final offset. Pin the ends for display, or the counter stalls short of
+         the total when the last slide is already fully on screen. */
+      function activeIndex() {
+        if (rail.scrollLeft >= maxScroll() - 2) return items.length - 1;
+        if (rail.scrollLeft <= 2) return 0;
+        return closestIndex();
+      }
+
       function update() {
-        var nextActive = closestIndex();
-        active = nextActive;
+        var on = scrollable();
+        applySemantics(on);
+        control.hidden = !on;
+        rail.tabIndex = on ? 0 : -1;
+        scheduled = false;
+        if (!on) return;
+
+        active = activeIndex();
         if (active !== announced) {
           status.textContent = (active + 1) + " / " + items.length;
           items.forEach(function (item, index) {
-            item.toggleAttribute("aria-current", index === active);
+            if (index === active) item.setAttribute("aria-current", "true");
+            else item.removeAttribute("aria-current");
           });
           announced = active;
         }
-        previous.disabled = active === 0;
-        next.disabled = active === items.length - 1;
-        rail.tabIndex = window.innerWidth <= 780 ? 0 : -1;
-        scheduled = false;
+        previous.disabled = rail.scrollLeft <= 2;
+        next.disabled = rail.scrollLeft >= maxScroll() - 2;
       }
 
       function requestUpdate() {
@@ -261,7 +303,7 @@
       }
 
       function moveTo(index) {
-        if (window.innerWidth > 780) return;
+        if (!scrollable()) return;
         active = Math.max(0, Math.min(items.length - 1, index));
         var start = items[0] ? items[0].offsetLeft : 0;
         rail.scrollTo({
@@ -275,12 +317,14 @@
       next.addEventListener("click", function () { moveTo(closestIndex() + 1); });
       rail.addEventListener("scroll", requestUpdate, { passive: true });
       rail.addEventListener("keydown", function (event) {
-        if (window.innerWidth > 780) return;
+        if (!scrollable()) return;
         if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
         event.preventDefault();
         moveTo(closestIndex() + (event.key === "ArrowRight" ? 1 : -1));
       });
       window.addEventListener("resize", requestUpdate);
+      /* Lazy-loaded rail images settle after first paint and change scrollWidth. */
+      window.addEventListener("load", requestUpdate);
       update();
     });
   }

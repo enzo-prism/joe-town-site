@@ -24,8 +24,8 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
 - `index.html` — single-page product site, SEO/OG/JSON-LD inline
 - `css/style.css` — full Founding Tile design system (ink/bone palette, Plus Jakarta Sans across every type surface)
 - `js/main.js` — vanilla JS: resilient scroll reveals, accessible mobile menu,
-  swipe-rail controls, scroll progress, compact FAQ behavior, and a
-  context-aware mobile purchase bar
+  overflow-driven swipe-rail controls, scroll progress, compact FAQ behavior,
+  and a context-aware mobile purchase bar
 - `images/` — the Founding Tile SVG master, derived PNG icons/favicons, responsive
   Camp/Kingdom/Space gameplay crops, generated era icons and founder portraits,
   system captures, labeled editorial key art, and
@@ -43,6 +43,10 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
 - Mobile keeps the purchase action in the first viewport, turns the visual
   civilization journey into swipe rails, isolates modal navigation, and
   respects safe areas.
+- Carousel rails decide for themselves. `setupCarousels` measures
+  `scrollWidth > clientWidth` and drives the controls, the rail's tab stop, and
+  the carousel/slide ARIA from that, so the ten-age rail stays operable on
+  desktop and the grids that only scroll under 780px expose nothing above it.
 - The gameplay-led hero is preloaded. All below-fold images lazy-load with
   explicit dimensions.
 - Civilization cards use square desktop and 3:2 mobile `<picture>` sources so the
@@ -79,6 +83,13 @@ checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
   away reports, or rival-civilization descriptions in the game code; product
   facts, scoped "no gameplay tracking" language, and the gain-framing copy law
   are unchanged. Voice rules live in `DESIGN.md` § "Copy voice — current".
+- The 2026-07-25 carousel and markup fix pass repairs the ten-age rail's dead
+  desktop arrows, removes the phantom Origins controls above 780px, restores the
+  rail's keyboard tab stop, emits a real `aria-current="true"` on the active
+  slide, pins the counter and Next state at the end of a multi-slide rail,
+  corrects a `<figcaption>` that sat in a `<div>`, and realigns the privacy
+  page's stale CSS cache key. Asset keys are now `?v=20260725-release1` on both
+  pages. Details in `design-qa.md` § "Carousel and markup fix pass".
 - Desktop QA passed at 1440×1000 and mobile QA passed at 390×844 with no broken
   images, duplicate IDs, console errors, or horizontal overflow.
 - Responsive QA targets are `320`, `390`, `430`, `768`, and `1440` CSS pixels.

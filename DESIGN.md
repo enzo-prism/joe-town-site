@@ -65,8 +65,11 @@ art) → FAQ (seven questions) → Starfarer close.
   `key-art-captain.webp` (2:3), `key-art-egg.webp` (4:5),
   `key-art-return.webp` (16:9).
 - The ten-age rail and origin cards are `data-carousel` rails (the shared
-  carousel JS is generic); their controls stay visible on desktop via
-  `.ages-controls`.
+  carousel JS is generic). Controls are overflow-driven, not breakpoint-driven:
+  the JS measures `scrollWidth > clientWidth` and hides the controls, the
+  keyboard tab stop, and the carousel/slide ARIA on any rail that does not
+  overflow. So the ten-age rail keeps working arrows on desktop, while the
+  origin cards drop theirs above 780px where they lay out as a static grid.
 - **Age capture provenance (2026-07-21 refresh):** `age-1..10.webp` and the
   three journey card pairs (`journey-{camp,town,space}-{square,wide}.webp`,
   from ages 1/5/10) are rendered by the game's own offscreen snapshot pipeline:
@@ -125,7 +128,7 @@ The approved Founding Tile is the website's primary identity. This section super
 - **Surfaces:** flat fills, neutral bone hairlines, 8–12px radii, restrained shadows. Avoid glossy gold gradients, universal gold borders, and decorative hover lift on non-interactive cards.
 - **Motion:** retain below-fold reveals, menu transitions, scroll progress, and restrained swipe-rail movement. Avoid ambient crystal drift, marquee movement, large hero tilts, and decorative floating geometry.
 - **Page rhythm:** hero promise → three-age journey → one Joe story → four visual systems → Night Logistics key art → Archivist FAQ → Starfarer purchase close.
-- **Responsive:** compact navigation begins at 1040px; age/system rails and the contextual purchase bar begin at 780px; controls remain keyboard accessible and safe-area aware.
+- **Responsive:** compact navigation begins at 1040px; the journey/systems/origins rails and the contextual purchase bar begin at 780px; the ten-age rail scrolls at every width. Carousel controls follow actual overflow rather than a hard-coded breakpoint, and every visible rail keeps its own tab stop, arrow keys, and safe-area awareness.
 - **Mobile conversion:** keep price and the primary action in the first phone viewport, reveal a safe-area purchase bar as soon as that action scrolls away, and hide it again at the final CTA or while navigation is open.
 - **Mobile pacing:** ages and systems become labeled horizontal story rails with counters, arrow controls, keyboard navigation, snap stops, and a visible next-card peek. Joe context precedes the portrait and FAQ items behave as a compact accordion.
 

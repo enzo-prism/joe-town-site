@@ -262,3 +262,59 @@ evidence remains an explicitly documented follow-up.
   JavaScript, SVG, every new WebP, `robots.txt`, and `sitemap.xml`. The homepage
   retained exactly one GA4 loader and config call; the privacy page retained none.
 - Canonical response headers confirmed Vercel cache service and HSTS.
+
+## Carousel and markup fix pass — 2026-07-25
+
+Six defects found by reading `js/main.js` against the CSS and confirmed live at
+1440×1000 and 390×844 on a local static server.
+
+- **Ten-age rail arrows were inert on desktop.** `setupCarousels` gated
+  `moveTo()` and the arrow-key handler on `window.innerWidth <= 780`, but
+  `.ages-strip` scrolls horizontally at every width and `.ages-controls` is
+  `display: flex` at every width. Measured before the fix: clicking Next at
+  1280px left `scrollLeft` at 0 and the counter at `1 / 10`. The width guess is
+  replaced by `scrollWidth - clientWidth > 4`, so a rail is a carousel exactly
+  while it overflows.
+- **Phantom Origins controls above 780px.** `.origins-controls` inherits
+  `.ages-controls { display: flex }`, so desktop rendered "Swipe through the
+  origins", a `1 / 5` counter, and two arrows over a static five-column grid.
+  Controls now carry `hidden` when their rail does not overflow, with
+  `.carousel-controls[hidden] { display: none }` added to outrank the
+  `display: flex` rules.
+- **Ten-age rail lost its keyboard tab stop.** `rail.tabIndex` was forced to
+  `-1` above 780px on a rail that is scrollable there (WCAG 2.1.1). The tab
+  stop, the arrow keys, and the carousel/slide ARIA now all follow real overflow,
+  so static desktop grids are no longer announced as carousels.
+- **`aria-current` was never true.** `item.toggleAttribute("aria-current", …)`
+  writes `aria-current=""`, which ARIA maps to *false*, so no slide was ever
+  marked current. Now set to `"true"` on the active slide and removed elsewhere.
+- **Counter stalled and Next never disabled at the end of a wide rail.**
+  Exposed by the first fix: at 1440px the last four age tiles share one final
+  scroll offset, so at maximum scroll the rail read `7 / 10` with Next still
+  enabled. Display and disabled state now pin to the ends by scroll position,
+  while movement keeps using the raw geometric index so stepping back from the
+  end lands on a reachable offset.
+- **Invalid `<figcaption>` in a `<div>`.** The Ventures art block used a `div`
+  where every other art block uses `figure`. Changed to `figure`; all 21
+  figcaptions now sit in a `figure`.
+- **Stale cache key on the privacy page.** `privacy.html` requested
+  `style.css?v=20260721-release2` while the homepage requested `release3`, so it
+  could serve outdated CSS. Both pages and `main.js` now use
+  `?v=20260725-release1`.
+
+Verification: the ten-age rail steps 1 → 10 and back with the counter,
+`aria-current`, and both disabled states correct at each end; all four rails
+behave correctly at 390×844; the origins rail runs `1 / 5` → `5 / 5` → `1 / 5`
+on mobile; zero console messages; no horizontal page overflow; homepage, privacy
+page, versioned CSS and JS, `robots.txt`, `sitemap.xml`, and `favicon.ico` all
+return 200. Note that the automation browser used for this pass ignores
+`behavior: "smooth"` entirely (confirmed at window level), so rail movement was
+exercised with `behavior: "auto"`; the scroll targets landed on snap positions
+to the pixel.
+
+Not fixed, carried forward: `hero-kingdom-1920.webp` and `hero-kingdom-960.webp`
+are unreferenced, and the hero `<picture>` has no `<source>`, so phones download
+the full 1600×1297 crop. The orphans are a different aspect (16:10 vs the hero's
+4:3.2) and the mobile `object-position` is tuned to the current art, so wiring
+them in is an art decision rather than a bug fix. `icon.png` and `icon-512.png`
+are also unreferenced (there is no web manifest).

@@ -514,6 +514,10 @@ h2 { margin-bottom: 18px; font-size: clamp(2.9rem, 5.2vw, 5.4rem); line-height: 
 .carousel-controls button:active { transform: scale(0.94); }
 .carousel-controls button:disabled { opacity: 0.32; cursor: default; }
 
+/* Scripted: a rail that does not overflow is not a carousel, so its controls
+   are hidden. Must outrank the `display: flex` rules below. */
+.carousel-controls[hidden] { display: none; }
+
 .joes {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.95fr);
