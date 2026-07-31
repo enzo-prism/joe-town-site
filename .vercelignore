@@ -1,2 +1,12 @@
 images/raw/
 .DS_Store
+output/
+
+# Source-only design, release, and validation material.
+README.md
+DESIGN.md
+design-qa.md
+docs/
+scripts/
+.github/
+.gitignore

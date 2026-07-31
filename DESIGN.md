@@ -4,9 +4,11 @@ Static site. No build step. `index.html` + `css/style.css` + `js/main.js` + `ima
 Goal: convert Mac strategy/city-builder players into players. Charm + premium craft.
 
 > **Current direction:** **The Living Diorama** was selected on 2026-07-20 and
-> is now the production-ready design. The page is a concise visual journey:
-> gameplay-led hero → Camp/Kingdom/Space → one Joe story → four visual systems →
-> Night Logistics interlude → Archivist FAQ → Starfarer purchase close. The other two directions remain archived in
+> remains the active design. The 2026-07-30 source refresh leads with the Light
+> Update and extends the proof sequence:
+> current gameplay hero → five-hour light comparison → ten ages → physical
+> production → lasting decisions → world systems → campaign/Deep Throne/Game
+> Center value → purchase close. The other two directions remain archived in
 > [`docs/VISUAL-FIRST-REDESIGN.md`](docs/VISUAL-FIRST-REDESIGN.md).
 
 ## Living Diorama implementation — current
@@ -14,15 +16,25 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
 - **Visual hierarchy:** the town is the hero; authentic gameplay captures carry
   all gameplay claims, while generated scenes are explicitly labeled editorial
   key art and never presented as gameplay.
-- **Copy budget:** roughly 1,700 visible words after the 2026-07-21 depth
-  expansion (see "Depth expansion" below) — the page traded the old minimal
-  budget for a feature-depth showcase, still one claim per sentence and one
-  verified App Store destination. Known deviation: the purchase label has three
-  variants (`Buy for $9.99` nav, `Buy on the Mac App Store · $9.99` hero/close,
-  `Buy` mobile bar with a complete aria-label).
+- **Latest-build gallery:** `#gameplay` uses six current-build screenshots with
+  staged sample data where needed and says so in visible copy. The native dialog supports close, previous,
+  next, Escape, Left/Right, contained focus, and focus restoration.
+- **Release posture:** describe current verified mechanics, not an unverified
+  store state. Local source proves that 1.4 build 24 was submitted on 2026-07-30;
+  only live App Store Connect can prove it is public. Until that readback, do not
+  use `available now`, `out now`, `released`, or a public `1.4` badge.
+- **Light Update hero:** current build-24 dusk gameplay is the first proof.
+  Responsive sources preserve the town and warm/cool light contrast without
+  retouching. The headline can name the Light Update as a creative theme but
+  cannot claim the submitted version is on sale.
+- **Five-hour proof:** `#hour` presents the same deterministic town, camera,
+  seed, and tick family at dawn, morning, midday, dusk, and night. Tabs must
+  remain keyboard-operable, announce selection, and reduce to a static selector
+  under reduced motion.
 - **Journey:** Camp, Kingdom, and Space are semantic figures in a desktop grid and a
   touch/keyboard scroll-snap rail on mobile. Each stage has a square desktop crop
-  and a 3:2 mobile crop, with all ten shipped ages named in a compact chronology.
+  and a 3:2 mobile crop. All ten age captures use the current volume, ground,
+  distance, shadow, and daylight renderer.
 - **Character:** one editorial Joe portrait, four compact source-backed founder
   profiles with distinct generated pixel-art chickens, and a short verified flock
   quote create attachment without a long
@@ -30,23 +42,111 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
   Enzo card; evolving work states are written as examples, not permanent jobs. The
   quote rotates through verified game chatter, includes a pause control, stops in a
   hidden tab or while offscreen, and remains static when reduced motion is requested.
-- **Systems:** Roads, Technology, Named Joes, and World Map use truthful image-led
-  cards with minimal action labels. The desktop grid is two columns so shipped UI
-  remains legible instead of being forced into portrait crops.
+- **Physical production:** Corn → Flour → Bread → Food is shown as a real
+  connected supply chain. `logistics-chain.webp` must show the game’s own
+  logistics presentation; copy may explain that Joes carry goods tile by tile
+  and that a stalled route exposes its cause.
+- **Decisions:** `#decisions` uses current game UI to prove the guild’s three
+  branches and single permanent capstone, Joe perks and earned traits, and the
+  Monument’s Foundation → Frame → Facade → Crown progression. Do not imply perks
+  and traits are the same system.
+- **Campaign value:** `#campaign` names the Space Legacy campaign seal, five
+  feat-gated Deep Throne levels, and 21 Game Center achievements. This is a
+  long-form value proof, not a promise of new post-Space worlds.
+- **Other systems:** origins, petitions, diplomacy, raids, ventures, away
+  reports, and the Flock Chronicle remain part of the page’s feature-depth story.
 - **Responsive:** desktop keeps the cinematic grid while mobile and tablet use
   edge-peeking swipe rails for ages and systems. Mobile includes focus-contained
   navigation, notch-safe chrome, short-screen hero tuning, and a purchase bar
   that appears when the hero action leaves view and hides at the closing CTA.
 - **Motion:** the hero is immediate; below-fold reveal, menu, HUD, carousel, and
   FAQ motion all defer to reduced-motion preferences.
-- **Assets:** `hero-kingdom-world.webp` is an authentic gameplay crop sized for
-  the hero. Journey pairs use `journey-{camp,town,space}-{square,wide}.webp`, while
-  generated decorative emblems use `era-icon-{camp,kingdom,space}.webp`.
-  System truth comes from `system-{logistics,joes,world}.webp` plus the existing
-  technology choice capture. Generated editorial art includes the Builder, Night
-  Logistics, Archivist, and Starfarer scenes; every narrative scene is labeled.
+- **Assets:** `hero-light-update-{1920,960}.webp`,
+  `hour-{dawn,morning,midday,dusk,night}.webp`, `logistics-chain.webp`,
+  `choice-{guild,joe,monument}.webp`, `campaign-throne.webp`, refreshed
+  `age-1..10.webp`, and refreshed
+  `journey-{camp,town,space}-{square,wide}.webp` are current game-rendered
+  captures. `campaign-achievements.webp`, if used, must come from the game’s own
+  achievement-art catalog. Existing generated narrative scenes remain labeled.
 
-## Depth expansion — current (2026-07-21)
+## Light Update source refresh — current (2026-07-30)
+
+The game source at commit `3edeafc` is the verified implementation snapshot for
+this website pass. It contains 1.4 build 24, submitted for review but not proven
+public. The website may use these source-backed facts:
+
+- The town’s own deterministic clock drives five grades: dawn, morning, midday,
+  dusk, and night. A save reloads at the same hour because the renderer derives
+  daylight from the saved simulation tick, not wall-clock time.
+- At night, ordinary windows glow warm; forges, watchtowers, and the Throne carry
+  stronger authored light against a cooler board.
+- Buildings use directional form shading, height-aware contact shadows, and
+  distance atmosphere. The plateau uses directional light, layered cut-rock
+  faces, scree, hairline fissures, and lichen.
+- The close view benchmark is roughly 23% faster while using fewer drawing
+  nodes. Whole-turn simulation cost is roughly halved after supply-chain work.
+  These are measured release-note figures, not universal hardware guarantees;
+  keep them in supporting proof copy, never the primary promise.
+- Existing saves, balance, progression, and replay behavior remain compatible.
+
+### Current capture provenance
+
+Gameplay screenshots must be reproducible and attributable:
+
+- Source repository: `/Users/enzo/joe-town`, commit `3edeafc`.
+- Screenshot-only sample-town flag:
+  `--visual-age <1...10> --marketing-town`. It builds age-filtered production,
+  civic, defense, and advanced districts, connects them with deterministic
+  roads, and seeds the real Corn → Flour → Bread → Food stock model. The flag
+  does not affect live games, saves, replays, or snapshots that omit it.
+- Latest-build gallery sources:
+  `--ventures`, `--manage-joes-petitions`, `--manage-joes`,
+  `--world-map --world-auto --world-ticks 700`, and `--civ-detail pigs`, all at
+  `--size 1440x900`; the town frame uses
+  `--visual-age 7 --marketing-town --daylight dusk --no-hud`.
+- Five-hour source command:
+  `.build/release/JoeTown --snapshot <out>.png --visual-age 7 --game-seed 31337 --joes-props --monument crown --daylight <dawn|morning|midday|dusk|night> --no-hud --size 2000x1250`.
+  The fixture tick is the default `0`; the same synthetic state, seed, and camera
+  are reused, and only the daylight override changes. Each 2× PNG is cropped
+  `1700×956+875+900` and point-resized to 1600×900.
+- Hero sources use the dusk frame from the same fixture. The 2× PNG uses
+  `1800×1013+900+860` → 1920×1080 for desktop and
+  `1000×1250+1175+700` → 960×1200 for mobile.
+- Logistics source command:
+  `.build/release/JoeTown --snapshot <out>.png --visual-age 7 --game-seed 31337 --daylight dusk --overlay logistics --size 1440x900`.
+  The 2× PNG uses `2880×1620+0+0` → 1600×900.
+- Achievement source command:
+  `.build/release/JoeTown --achievement-art outputs/website-refresh/achievement-art`.
+  `campaign-achievements.webp` uses all 21 exact renderer PNGs in a centered 7×3
+  montage on a 1280×720 canvas, exported as WebP quality 90. No badge art is
+  redrawn.
+- Deep Throne source command:
+  `.build/release/JoeTown --snapshot <out>.png --visual-age 10 --game-seed 31337 --daylight midday --inspect 6,4 --size 1440x900`.
+  `campaign-throne.webp` crops `2560×1800+320+0` from the 2× PNG and resizes it
+  to 1280×900.
+- Guild source command:
+  `.build/release/JoeTown --snapshot <out>.png --visual-age 7 --game-seed 31337 --guild --size 1440x900`.
+- Joe source command:
+  `.build/release/JoeTown --snapshot <out>.png --visual-age 7 --game-seed 31337 --manage-joes-detail John --size 1440x900`.
+- Monument source command:
+  `.build/release/JoeTown --snapshot <out>.png --visual-age 7 --game-seed 31337 --joes-props --monument facade --plaza --size 1440x900`.
+  These decision captures use each full 2880×1800 Retina PNG and point-resize to
+  1280×800.
+- All website capture exports use ImageMagick point filtering, then
+  `cwebp -q 90 -sharp_yuv -m 6 -mt`.
+- Refreshed in-place screenshot URLs carry `?v=20260730-shots2`; the social
+  card uses the new `og-light-update-2026.png` path so warm browser, CDN, and
+  unfurl caches do not keep the older art.
+- Hero, journey, age, logistics, decision, Throne, and achievement proof images
+  are gameplay or game-generated UI/art. Crop and resize are allowed; invented
+  feature compositing is not.
+- Generated atmospheric scenes use their existing explicit
+  `EDITORIAL KEY ART · NOT GAMEPLAY` label.
+- Every future recapture records source commit, command, seed/tick, phase,
+  original dimensions, crop, export dimensions, and processing. Do not call an
+  offscreen synthetic town a player save.
+
+## Depth expansion — retained foundation (2026-07-21)
 
 The page grew from six chapters to twelve to showcase shipped feature depth.
 New page rhythm: hero → three-age journey + **ten-age gameplay rail**
@@ -85,14 +185,11 @@ art) → FAQ (seven questions) → Starfarer close.
   game renderer, real sprites, not staged play sessions and not editorial art,
   so they carry no editorial label but should not be captioned as a single
   player's save either.
-- Shipped-feature gating: the 1.1 App Store release notes confirm named Joes,
-  the Flock Chronicle, Workers' Council, colonies, and the visible production
-  chain; the ten-age captures and the `Manage Joes` / `Ventures` /
-  `Choose Origin` UI visible in `age-10.webp` confirm those systems in the
-  sold build. Interstellar play, difficulty modes, and manual job assignment
-  remain unclaimed. The FAQ intentionally says offline progress "is bounded"
-  with no hour figure (code says 12h base / 18h Golden Peck; older copy said
-  24h — do not reintroduce a number without re-verifying the shipped build).
+- Feature gating now uses the 2026-07-30 source snapshot above. The older 1.1
+  notes remain historical evidence, not the current ceiling. Interstellar play,
+  difficulty modes, and unrestricted manual job assignment remain unclaimed.
+  The FAQ intentionally gives no offline-progress hour figure; do not reintroduce
+  one without re-verifying the public build.
 
 ## Copy voice — current (2026-07-21 humor pass)
 
@@ -127,14 +224,19 @@ The approved Founding Tile is the website's primary identity. This section super
 - **Typography:** Plus Jakarta Sans is the single site family. Display, body, labels, HUD text, navigation, and controls use its 400–800 weight range; scale, tracking, case, and color create hierarchy without mixing typefaces.
 - **Surfaces:** flat fills, neutral bone hairlines, 8–12px radii, restrained shadows. Avoid glossy gold gradients, universal gold borders, and decorative hover lift on non-interactive cards.
 - **Motion:** retain below-fold reveals, menu transitions, scroll progress, and restrained swipe-rail movement. Avoid ambient crystal drift, marquee movement, large hero tilts, and decorative floating geometry.
-- **Page rhythm:** hero promise → three-age journey → one Joe story → four visual systems → Night Logistics key art → Archivist FAQ → Starfarer purchase close.
+- **Page rhythm:** Light Update hero → same-town five-hour proof → ten-age
+  journey → origins/Joes → physical production → lasting decisions → wider
+  world/away play → campaign crown → FAQ → purchase close.
 - **Responsive:** compact navigation begins at 1040px; the journey/systems/origins rails and the contextual purchase bar begin at 780px; the ten-age rail scrolls at every width. Carousel controls follow actual overflow rather than a hard-coded breakpoint, and every visible rail keeps its own tab stop, arrow keys, and safe-area awareness.
 - **Mobile conversion:** keep price and the primary action in the first phone viewport, reveal a safe-area purchase bar as soon as that action scrolls away, and hide it again at the final CTA or while navigation is open.
 - **Mobile pacing:** ages and systems become labeled horizontal story rails with counters, arrow controls, keyboard navigation, snap stops, and a visible next-card peek. Joe context precedes the portrait and FAQ items behave as a compact accordion.
 
 ## Product facts (verified from source — do NOT invent beyond this)
 
-> Canonical product snapshot — 2026-07-20. Older addenda below are retained as design history only; this section and the deployed copy take precedence.
+> Canonical implementation snapshot — game source commit `3edeafc`, 2026-07-30.
+> This proves the submitted 1.4 build’s contents, not its public App Store state.
+> Older addenda below are design history only; this section and deployed copy
+> take precedence.
 
 - Game: **Joe Town** — premium macOS strategy game (AppKit + SpriteKit, native, universal Apple silicon + Intel, macOS 14+, 60 fps, min window 980×640).
 - Tagline (official subtitle): "Build a chicken civilization."
@@ -142,7 +244,27 @@ The approved Founding Tile is the website's primary identity. This section super
 - Ten ages in order: **Camp, Town, Citadel, Crown, Kingdom, Empire, Ascendant, Fusion, Orbital, Space**.
 - Price: **$9.99 USD, one-time purchase**. The Mac game has no ads, no in-app purchases, and no gameplay tracking. Saves locally, plays fully offline.
 - App Store link: `https://apps.apple.com/app/id6790244910` (App ID 6790244910, bundle com.designprism.joetown). Developer brand: **Design Prism** — support `https://www.design-prism.com/contact`, privacy `https://www.design-prism.com/privacy-policy`.
-- Current source facts: 24 buildings; 18 technologies; ten ages; 13 animal civilizations; 12 named founders (John, Alex, Michael, Dawson, Max, Matt, McTavish, Enzo, Will, Brandon, Jack, and Oliver); five personalities; five skills; four career ranks; six earned traits; realm-local history and the Flock Chronicle. Roads, visible logistics, deterministic seeded worlds, autosave, offline progress summaries, VoiceOver, and Reduce Motion support are implemented. The shipped world map is the scouting/exploration map: named scout parties, a world that grows each age, landmarks, monsters, and diplomacy with the 13 animal civilizations (verified in `WorldExploration.swift` and the 1.1-era build). Difficulty modes, manually assigned jobs, and interstellar play are not shipped features.
+- Current source facts: 24 buildings; 18 technologies; ten ages; 13 animal
+  civilizations; 12 named founders (John, Alex, Michael, Dawson, Max, Matt,
+  McTavish, Enzo, Will, Brandon, Jack, and Oliver); five personalities; five
+  skills; four career ranks; six earned traits; five permanent origins; three
+  guild branches with one capstone commitment; four Monument phases; realm-local
+  history and the Flock Chronicle.
+- Physical production is Corn → Flour → Bread → Food through Corn Field, Mill,
+  Bakery, and Food Market nodes. Connected roads and individual per-building
+  stocks are simulation rules, not decorative copy.
+- The campaign seals through the Space Legacy. Its epilogue raises Throne levels
+  11–15 through five feat-gated Deep Throne steps.
+- Game Center contains 21 source-cataloged achievements: ten age charters, seven
+  permanent frontier legacies, campaign sealed, first colony, guild capstone,
+  and Deep Throne.
+- Roads, visible logistics, deterministic seeded worlds, autosave, compatible
+  save recovery, offline progress summaries, VoiceOver, and Reduce Motion are
+  implemented. The world map includes named scout parties, landmarks, monsters,
+  colonies, and diplomacy with 13 animal civilizations.
+- Difficulty modes and interstellar play are not shipped features. Avoid broad
+  claims of unrestricted manual job assignment; the source has specific
+  assignment and perk flows whose exact UI should be shown instead.
 - Flavor quotes (verbatim from game chatter — use in "flock talks back" section):
   - "The worms seem unionized."
   - "Hoarding, but civic-minded."
@@ -162,6 +284,23 @@ The approved Founding Tile is the website's primary identity. This section super
   - "It hummed at Joebert."
 - Founding copy: "The first Joes gathered beneath the mountain."
 - Positioning (verbatim from design docs): explicitly avoids energy, streak, login-reward, and FOMO systems; "The city is the hero"; "Defense is a puzzle"; "Raids are scouting problems".
+
+## Store-state wording — mandatory release gate
+
+- Repository truth on 2026-07-30: 1.4 build 24 is `VALID` and submitted for App
+  Store review with manual release. It is **not yet approved and not yet
+  released** in the checked record.
+- Fresh public storefront lookup on 2026-07-30 returns version **1.3**, price
+  **$9.99**, and minimum **macOS 14.0**. Website copy therefore makes no public
+  1.4 claim.
+- App Store Connect is the only authority for a later public state. Re-query it
+  immediately before publishing `available now`, `out now`, `released`, or a
+  public version badge.
+- A normal `Buy on the Mac App Store` action may remain because the product has
+  an existing public version. Do not imply that clicking it guarantees 1.4 until
+  the live store page proves that version is released.
+- Feature descriptions may name the Light Update as the website’s editorial
+  theme without claiming the submitted update is public.
 
 ## Website analytics and privacy — current
 
@@ -294,7 +433,7 @@ Accordion (details/summary, styled, accessible), 5 items:
 - Semantic HTML5, landmarks, skip link, focus-visible gold outlines, alt text, aria for tabs/accordion, color contrast AA (muted text ≥ #9aa4ba on dark).
 - Fully responsive: fluid clamp() type; breakpoints ~1120px and ~720px; hero stacks; ages timeline becomes horizontal scroll-snap on mobile; grids collapse to 1–2 cols. Test at 1440×900, 390×844.
 - Performance: hero image < 400KB (serve resized ~1920w PNG→ or high-quality JPEG/WebP; pixel-art UI screenshots compress well as WebP q80). Preload hero image. `loading="lazy"` below the fold, width/height attrs to avoid CLS. Fonts: only needed weights.
-- SEO/social: title "Joe Town — Chickens Build History", short product copy with restrained humor, canonical `https://gojoetown.com/`, OG/Twitter cards using `og.png` (1200×630, generated from kingdom screenshot + Founding Tile overlay), favicon from the Founding Tile SVG with ICO/PNG fallbacks (16/32/180), theme-color #05090d, JSON-LD `VideoGame` schema (name, operatingSystem macOS, applicationCategory GameApplication, genre Strategy/Simulation, offers price 9.99 USD).
+- SEO/social: title "Joe Town — Chickens Build History", short product copy with restrained humor, canonical `https://gojoetown.com/`, OG/Twitter cards using `og-light-update-2026.png` (1200×630, generated from the current staged sample-town capture + Founding Tile overlay), favicon from the Founding Tile SVG with ICO/PNG fallbacks (16/32/180), theme-color #05090d, JSON-LD `VideoGame` schema (name, operatingSystem macOS, applicationCategory GameApplication, genre Strategy/Simulation, offers price 9.99 USD).
 - Files: `index.html`, `css/style.css`, `js/main.js`, `images/*`, `favicon` assets, `README.md` (how to open/serve locally: `python3 -m http.server`).
 
 ## Legacy snapshot (v3, superseded)
@@ -326,6 +465,6 @@ Copy honesty rules: founder seating is seeded; friendships ship; work guidance a
 2. `age-1..10.webp` — current isometric board captures for all ten ages, consistently framed and visually verified.
 3. `shot-camp.webp` ~1600w from shot-camp.png (full window, for a secondary showcase if used).
 4. `shot-choice.webp` from shot-ascendant-choice.png ~1120w (could back the Modes section).
-5. `og.png` 1200×630: kingdom shot crop or board crop, darkened, with the Founding Tile + "JOE TOWN — Build a chicken civilization".
+5. `og-light-update-2026.png` 1200×630: current sample-town crop, darkened, with the Founding Tile + Light Update promise.
 6. `logo-mark.svg` is the web master; derive `icon.png` / `icon-512.png`, favicon 16/32, and apple-touch 180 from it.
 Keep `images/raw/` out of the deployed paths (reference only derived files).

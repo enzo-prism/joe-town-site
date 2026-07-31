@@ -329,6 +329,213 @@
     });
   }
 
+  function setupHourSelectors() {
+    var sections = Array.prototype.slice.call(document.querySelectorAll(".hour-section"));
+
+    sections.forEach(function (section, sectionIndex) {
+      var tabs = Array.prototype.slice.call(section.querySelectorAll("[data-hour-tab]"));
+      var image = section.querySelector("[data-hour-image]");
+      var caption = section.querySelector("[data-hour-caption-output], .hour-caption");
+      if (!tabs.length || !image) return;
+
+      var tablist = tabs[0].parentElement;
+      var active = tabs.findIndex(function (tab) {
+        return tab.getAttribute("aria-selected") === "true";
+      });
+      if (active < 0) active = 0;
+
+      if (tablist) {
+        tablist.setAttribute("role", "tablist");
+        if (!tablist.getAttribute("aria-label")) {
+          tablist.setAttribute("aria-label", "Choose a town hour");
+        }
+      }
+
+      var panel = image.closest(".hour-stage, .hour-visual, figure") || image.parentElement;
+      var panelId = panel && panel.id ? panel.id : "hour-panel-" + (sectionIndex + 1);
+      if (panel && !panel.id) panel.id = panelId;
+      if (panel) panel.setAttribute("role", "tabpanel");
+      if (caption) {
+        caption.setAttribute("aria-live", "polite");
+        caption.setAttribute("aria-atomic", "true");
+      }
+
+      function tabLabel(tab) {
+        return tab.getAttribute("data-hour-label") ||
+          tab.getAttribute("aria-label") ||
+          tab.textContent.trim() ||
+          tab.getAttribute("data-hour-key") ||
+          "Selected hour";
+      }
+
+      function preload(index) {
+        var candidate = tabs[(index + 1) % tabs.length];
+        var src = candidate && candidate.getAttribute("data-hour-src");
+        if (!src || src === image.getAttribute("src")) return;
+        var nextImage = new Image();
+        nextImage.decoding = "async";
+        nextImage.src = src;
+      }
+
+      function select(index, options) {
+        options = options || {};
+        active = (index + tabs.length) % tabs.length;
+        var tab = tabs[active];
+        var src = tab.getAttribute("data-hour-src");
+        var label = tabLabel(tab);
+        var alt = tab.getAttribute("data-hour-alt") ||
+          "The same Joe Town plateau at " + label.toLowerCase() + ", showing the changing town light";
+        var copy = tab.getAttribute("data-hour-description") ||
+          tab.getAttribute("data-hour-copy") ||
+          tab.getAttribute("data-hour-caption-text") ||
+          tab.getAttribute("data-hour-caption");
+        var key = tab.getAttribute("data-hour-key") || String(active + 1);
+
+        tabs.forEach(function (item, itemIndex) {
+          var selected = itemIndex === active;
+          item.setAttribute("role", "tab");
+          item.setAttribute("aria-selected", String(selected));
+          item.setAttribute("tabindex", selected ? "0" : "-1");
+          item.setAttribute("aria-controls", panelId);
+          item.classList.toggle("is-active", selected);
+          if (!item.id) item.id = "hour-tab-" + (sectionIndex + 1) + "-" + (itemIndex + 1);
+        });
+
+        if (panel) panel.setAttribute("aria-labelledby", tab.id);
+        if (src && image.getAttribute("src") !== src) image.setAttribute("src", src);
+        image.setAttribute("alt", alt);
+        if (caption && copy) caption.textContent = copy;
+        section.setAttribute("data-active-hour", key);
+
+        if (options.focus) tab.focus();
+        preload(active);
+      }
+
+      tabs.forEach(function (tab, index) {
+        tab.addEventListener("click", function () {
+          select(index);
+        });
+
+        tab.addEventListener("keydown", function (event) {
+          var target = null;
+          if (event.key === "ArrowLeft" || event.key === "ArrowUp") target = index - 1;
+          if (event.key === "ArrowRight" || event.key === "ArrowDown") target = index + 1;
+          if (event.key === "Home") target = 0;
+          if (event.key === "End") target = tabs.length - 1;
+          if (target === null) return;
+          event.preventDefault();
+          select(target, { focus: true });
+        });
+      });
+
+      select(active);
+    });
+  }
+
+  function setupGameplayGallery() {
+    var cards = Array.prototype.slice.call(document.querySelectorAll("[data-gameplay-card]"));
+    var dialog = document.getElementById("gameplay-dialog");
+    if (!cards.length || !dialog || typeof dialog.showModal !== "function") return;
+
+    var image = dialog.querySelector("[data-gameplay-dialog-image]");
+    var viewport = dialog.querySelector("[data-gameplay-dialog-viewport]");
+    var title = dialog.querySelector("[data-gameplay-dialog-title]");
+    var caption = dialog.querySelector("[data-gameplay-dialog-caption]");
+    var status = dialog.querySelector("[data-gameplay-dialog-status]");
+    var previous = dialog.querySelector("[data-gameplay-previous]");
+    var next = dialog.querySelector("[data-gameplay-next]");
+    var close = dialog.querySelector("[data-gameplay-close]");
+    if (!image || !title || !caption || !status || !previous || !next || !close) return;
+
+    var active = 0;
+    var activeTrigger = null;
+
+    function preload(index) {
+      var card = cards[(index + cards.length) % cards.length];
+      var src = card && card.getAttribute("data-gameplay-src");
+      if (!src) return;
+      var preloadImage = new Image();
+      preloadImage.decoding = "async";
+      preloadImage.src = src;
+    }
+
+    function render(index) {
+      active = (index + cards.length) % cards.length;
+      var card = cards[active];
+      image.setAttribute("src", card.getAttribute("data-gameplay-src"));
+      image.setAttribute("alt", card.getAttribute("data-gameplay-alt") || "");
+      title.textContent = card.getAttribute("data-gameplay-title") || "";
+      caption.textContent = card.getAttribute("data-gameplay-caption") || "";
+      status.textContent = (active + 1) + " / " + cards.length;
+      if (viewport) viewport.scrollLeft = 0;
+      preload(active + 1);
+      preload(active - 1);
+    }
+
+    function open(index, trigger) {
+      activeTrigger = trigger;
+      render(index);
+      document.body.classList.add("gameplay-dialog-open");
+      dialog.showModal();
+      close.focus();
+    }
+
+    function move(amount) {
+      render(active + amount);
+    }
+
+    function dismiss() {
+      document.body.classList.remove("gameplay-dialog-open");
+      dialog.close();
+    }
+
+    cards.forEach(function (card, index) {
+      card.addEventListener("click", function () {
+        open(index, card);
+      });
+    });
+
+    previous.addEventListener("click", function () { move(-1); });
+    next.addEventListener("click", function () { move(1); });
+    close.addEventListener("click", dismiss);
+
+    dialog.addEventListener("click", function (event) {
+      if (event.target === dialog) dismiss();
+    });
+
+    dialog.addEventListener("cancel", function () {
+      document.body.classList.remove("gameplay-dialog-open");
+    });
+
+    dialog.addEventListener("keydown", function (event) {
+      if (event.key === "Tab") {
+        var focusables = Array.prototype.slice.call(dialog.querySelectorAll(
+          "button:not([disabled]), a[href], [tabindex]:not([tabindex='-1'])"
+        ));
+        var first = focusables[0];
+        var last = focusables[focusables.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+        return;
+      }
+      if (event.metaKey || event.ctrlKey || event.altKey) return;
+      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+      event.preventDefault();
+      move(event.key === "ArrowRight" ? 1 : -1);
+    });
+
+    dialog.addEventListener("close", function () {
+      document.body.classList.remove("gameplay-dialog-open");
+      if (activeTrigger && document.contains(activeTrigger)) activeTrigger.focus();
+      activeTrigger = null;
+    });
+  }
+
   function setupMobileFaq() {
     var items = Array.prototype.slice.call(document.querySelectorAll(".faq-list details"));
     items.forEach(function (item) {
@@ -442,6 +649,8 @@
   setupMenu();
   setupMobilePurchase();
   setupCarousels();
+  setupHourSelectors();
+  setupGameplayGallery();
   setupMobileFaq();
   setupFlockChatter();
 })();

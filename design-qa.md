@@ -1,6 +1,84 @@
 # Living Diorama — Design QA
 
-## Comparison target
+## Light Update website refresh — 2026-07-30
+
+### Source and release boundary
+
+- Game implementation reviewed at `/Users/enzo/joe-town`, commit `3edeafc`.
+- The source and release record prove Joe Town 1.4 build 24 was submitted for
+  App Store review on 2026-07-30 with manual release.
+- This QA record does **not** treat submission as public availability. The page
+  must not say `available now`, `out now`, `released`, or attach a public 1.4
+  badge until App Store Connect is checked live.
+
+### New proof surfaces
+
+- **Hero:** build-24 dusk gameplay with 1920px and 960px responsive sources.
+- **Same town. Five hours (`#hour`):** dawn, morning, midday, dusk, and night
+  captures use the same deterministic town and camera. The selector must expose
+  one selected state, work by keyboard and pointer, keep useful image alt text,
+  and remain usable with reduced motion or without scripted transitions.
+- **Physical production:** a real logistics view proves Corn → Flour → Bread →
+  Food and visible connected routes.
+- **Decisions (`#decisions`):** source UI proves the three-branch guild, Joe
+  perks/earned traits, and four-phase Monument without presenting editorial art
+  as gameplay.
+- **Campaign (`#campaign`):** source capture/art proves the Space Legacy,
+  five-level Deep Throne epilogue, and 21 Game Center achievements.
+- **Refreshed progression:** all ten age frames and Camp/Kingdom/Space crops use
+  the current renderer’s daylight, volume, contact shadows, distance treatment,
+  cut-rock edge, scree, fissures, and lichen.
+- **Social image:** `og-light-update-2026.png` matches the Light Update hero and does not imply an
+  unverified public version state.
+
+### Asset truth gate
+
+- Game-rendered proof: `hero-light-update-{1920,960}.webp`,
+  `hour-{dawn,morning,midday,dusk,night}.webp`, `logistics-chain.webp`,
+  `choice-{guild,joe,monument}.webp`, `campaign-throne.webp`, `age-1..10.webp`,
+  and `journey-{camp,town,space}-{square,wide}.webp`.
+- `campaign-achievements.webp` is allowed only when derived from the game’s own
+  21-item achievement-art catalog and visually verified.
+- Existing generated narrative scenes retain the visible
+  `EDITORIAL KEY ART · NOT GAMEPLAY` label.
+- Crops and resizing are allowed. Feature invention, compositing unrelated
+  states into fake gameplay, or describing a synthetic snapshot as a player’s
+  save is not.
+
+### Required validation
+
+- [x] `python3 scripts/validate_site.py`
+- [x] `git diff --check`
+- [x] No missing local assets, duplicate IDs, or `<img>` without `alt`
+- [x] All 13 new gameplay/art exports match their declared HTML dimensions
+- [x] Exactly one GA4 loader and one `G-3XJQL5PVS1` config on the homepage
+- [x] No analytics loader on `privacy.html`
+- [x] No unqualified `no tracking` promise while website GA4 is present
+- [x] Desktop browser pass at 1440×1000
+- [x] Responsive browser passes at 320×700, 390×844, 430×932, and 768×900
+- [x] No document-level horizontal overflow
+- [x] Menu focus/inert/Escape and hour selector pointer/arrow-key/ARIA pass
+- [x] Manual keyboard spot-check: skip link, overflowing carousels, FAQ, and
+  purchase links
+- [x] Reduced-motion implementation pass
+- [ ] Real VoiceOver spot-check
+- [ ] Production readback matches the released commit and public assets
+- [x] Public storefront checked separately before public-version wording
+
+**Current result:** source validation passes: 111 HTML references, 47 IDs, image
+alts and intrinsic dimensions, CSS assets, GA singleton, tracking/release
+wording, JavaScript syntax, and clean diffs. Fresh browser QA also confirms the
+desktop/mobile layouts, no broken images or document overflow, the menu’s
+focus/inert/Escape behavior, and the hour selector’s pointer, keyboard, and ARIA
+states. Automated viewport evidence covers 320×700, 390×844, 430×932, 768×900,
+and 1440×1000 with `scrollWidth == clientWidth` and a fully visible hero CTA.
+The 1440px hero/hour/decisions/campaign and 390px hero/hour were visually
+inspected. The skip link moves focus to `main`; an overflowing rail advances by
+keyboard and updates its current slide; FAQ disclosure and purchase links remain
+keyboard-reachable. VoiceOver and production readback remain separate;
+the historical passes below do not prove this refresh.
+
+## Historical Living Diorama comparison target — 2026-07-20
 
 - Source visual truth: `/Users/enzo/.codex/generated_images/019f6d46-9c86-7522-b34a-4f68d3c27f03/exec-addf4155-cfda-4adc-87c1-7ac6e7053532.png`
 - Desktop implementation tour: `/Users/enzo/Documents/Codex/2026-07-16/let-s-update-and-improve-my/work/joe-town-site-qa/living-diorama-implementation-tour.png`
@@ -17,7 +95,7 @@ to the same height. The focused comparison normalizes both hero regions to 620px
 high. Section screenshots overlap slightly by design so each chapter can be read
 at full viewport scale.
 
-## Findings
+## Historical baseline findings
 
 No actionable P0, P1, or P2 mismatch remains from the source-comparison pass.
 The current mobile release follow-up is tracked below.
@@ -31,7 +109,7 @@ The current mobile release follow-up is tracked below.
 - [P3] A real VoiceOver pass and live OS reduced-motion toggle remain useful final
   release checks. Semantic browser output and reduced-motion CSS were reviewed.
 
-## Required fidelity surfaces
+## Historical baseline fidelity surfaces
 
 - **Fonts and typography:** Plus Jakarta Sans now owns every display, body, label,
   HUD, navigation, and control surface. Weight, scale, tracking, and color preserve
@@ -57,7 +135,7 @@ The current mobile release follow-up is tracked below.
   scroll-snap rails with edge peeks, 44px controls, and no document-level overflow.
   Short-screen rules keep the price and primary CTA in the first phone viewport.
 
-## Interaction and accessibility evidence
+## Historical interaction and accessibility evidence
 
 - Skip link and semantic heading order are present.
 - Mobile menu moves focus to the first link, traps Tab with the menu button, sets
@@ -123,7 +201,7 @@ The post-fix hero comparison, mobile capture, Joe section, systems section, and
 responsive metrics show no remaining P0/P1/P2 issue. The P3 differences above are
 intentional or release-polish follow-ups.
 
-## Implementation checklist
+## Historical implementation checklist
 
 - [x] Selected visual hierarchy implemented
 - [x] All target image slots filled with authentic gameplay or labeled key art
@@ -132,8 +210,8 @@ intentional or release-polish follow-ups.
 - [ ] Post-release browser console recheck for the current mobile pass
 - [x] Documentation updated
 
-**Current result:** source QA passed; production release authorized; fresh visual
-evidence remains an explicitly documented follow-up.
+**Historical result (2026-07-20):** source QA passed and production release was
+authorized for that baseline. This does not clear the 2026-07-30 refresh gates.
 
 ## Mobile UX polish pass — 2026-07-20
 
@@ -300,7 +378,7 @@ Six defects found by reading `js/main.js` against the CSS and confirmed live at
 - **Stale cache key on the privacy page.** `privacy.html` requested
   `style.css?v=20260721-release2` while the homepage requested `release3`, so it
   could serve outdated CSS. Both pages and `main.js` now use
-  `?v=20260725-release1`.
+  `?v=20260730-light1`.
 
 Verification: the ten-age rail steps 1 → 10 and back with the counter,
 `aria-current`, and both disabled states correct at each end; all four rails
@@ -318,3 +396,25 @@ the full 1600×1297 crop. The orphans are a different aspect (16:10 vs the hero'
 4:3.2) and the mobile `object-position` is tuned to the current art, so wiring
 them in is an art decision rather than a bug fix. `icon.png` and `icon-512.png`
 are also unreferenced (there is no web manifest).
+
+## Current-build screenshot refresh — 2026-07-30
+
+- Added a screenshot-only `--marketing-town` fixture in the game repository.
+  It creates a spacious, age-filtered town with connected districts and a real
+  Corn → Flour → Bread → Food stock chain. It cannot affect live play or saves.
+- Replaced the hero, five-hour sequence, ten-age rail, three journey stages,
+  logistics proof, technology choice, named-Joe roster, world map, and campaign
+  achievement montage with current-build captures.
+- Added six expandable product frames for town, petitions, ventures,
+  exploration, diplomacy, and the Joe roster. Sample data is disclosed in the
+  visible introduction; gameplay pixels were not generated or retouched.
+- The lightbox uses a native dialog, contains focus, restores the launching
+  card, closes with Escape, wraps with Left/Right or visible controls, and uses
+  a horizontally pannable detail image on small screens.
+- The achievement montage now contains all 21 exact game-rendered badge images
+  in a 7×3 layout.
+- Stable screenshot paths use the `20260730-shots2` query key, while the social
+  card moved to `og-light-update-2026.png` to invalidate earlier unfurl caches.
+- Release build, smoke test, the 15-test progression suite, source validation,
+  JavaScript syntax, image decoding, keyboard behavior, and responsive browser
+  checks are required before handoff.

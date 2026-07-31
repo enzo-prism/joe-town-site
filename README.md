@@ -1,111 +1,135 @@
 # Joe Town — Marketing Site
 
-Static marketing site for **Joe Town**, a premium macOS strategy game.
-The selected **Living Diorama** direction puts authentic gameplay in every major
-chapter, supported by the monochrome Founding Tile and modern geometric type — no
-build step or dependencies. The Mac game has no ads, in-app purchases, or gameplay
-tracking. The marketing site uses Google Analytics 4 for aggregate website usage.
+Dependency-free marketing site for **Joe Town**, a premium native macOS strategy
+game. The selected **Living Diorama** direction uses current game-rendered
+captures for feature proof, labeled editorial art for atmosphere, and the
+monochrome Founding Tile as the website identity.
 
 ## Run locally
-
-From this folder:
 
 ```sh
 python3 -m http.server 8123
 ```
 
-Then open <http://localhost:8123>.
+Open <http://localhost:8123>. A local server is required to check root-relative
+favicons, `robots.txt`, and `sitemap.xml`.
 
-Any static file server works (`npx serve`, etc.). Use a local server when
-checking root-relative favicons, `robots.txt`, and `sitemap.xml`.
+## Validate
+
+```sh
+python3 scripts/validate_site.py
+```
+
+The dependency-free validator checks local HTML and CSS asset references,
+duplicate IDs, image alt attributes and raster dimensions, the single GA4
+loader/config pair, qualified tracking language, unverified public-release
+wording, and JavaScript syntax. The same check runs in GitHub Actions.
 
 ## Structure
 
-- `index.html` — single-page product site, SEO/OG/JSON-LD inline
-- `css/style.css` — full Founding Tile design system (ink/bone palette, Plus Jakarta Sans across every type surface)
-- `js/main.js` — vanilla JS: resilient scroll reveals, accessible mobile menu,
-  overflow-driven swipe-rail controls, scroll progress, compact FAQ behavior,
-  and a context-aware mobile purchase bar
-- `images/` — the Founding Tile SVG master, derived PNG icons/favicons, responsive
-  Camp/Kingdom/Space gameplay crops, generated era icons and founder portraits,
-  system captures, labeled editorial key art, and
-  `og.png`
-- `privacy.html` — Joe Town-specific privacy notice separating the offline game
-  from website analytics
-- `favicon.ico`, `robots.txt`, `sitemap.xml` — crawler and legacy browser fallbacks
-- `images/raw/` — original Retina captures, kept out of the deployed markup
-- `design-qa.md` — visual comparison history, interaction checks, and the final
-  Product Design QA result
+- `index.html` — single-page product story, SEO, Open Graph, and JSON-LD
+- `css/style.css` — responsive Founding Tile design system
+- `js/main.js` — menu, reveals, carousels, hour selector, FAQ, chatter, and
+  contextual purchase bar
+- `images/` — current game captures, responsive crops, icons, and labeled
+  editorial key art
+- `privacy.html` — separates the offline Mac game from website analytics
+- `favicon.ico`, `robots.txt`, `sitemap.xml` — public browser/crawler surfaces
+- `DESIGN.md` — current product truth, copy rules, visual system, and provenance
+- `design-qa.md` — implementation and release QA record
 
-## Notes
+Design documents, validation source, workflows, and raw capture inputs are
+excluded from Vercel through `.vercelignore`. Public HTML, CSS, JavaScript,
+favicons, crawler files, and referenced images remain deployable.
 
-- All motion respects `prefers-reduced-motion`.
-- Mobile keeps the purchase action in the first viewport, turns the visual
-  civilization journey into swipe rails, isolates modal navigation, and
-  respects safe areas.
-- Carousel rails decide for themselves. `setupCarousels` measures
-  `scrollWidth > clientWidth` and drives the controls, the rail's tab stop, and
-  the carousel/slide ARIA from that, so the ten-age rail stays operable on
-  desktop and the grids that only scroll under 780px expose nothing above it.
-- The gameplay-led hero is preloaded. All below-fold images lazy-load with
-  explicit dimensions.
-- Civilization cards use square desktop and 3:2 mobile `<picture>` sources so the
-  Camp, Kingdom, and Space stages remain clearly different at each breakpoint.
-- Generated scenes are labeled `EDITORIAL KEY ART · NOT GAMEPLAY`. The active art
-  family includes the Builder, Night Logistics, Archivist, and Starfarer images.
-- The founder section rotates through verified in-game Joe chatter every few
-  seconds, with pause and reduced-motion safeguards.
-- The homepage loads Google Analytics 4 once with measurement ID
-  `G-3XJQL5PVS1`. The privacy page intentionally does not load the analytics tag.
-- Copy and palette follow `DESIGN.md`.
+## Current page story
 
-## Release state
+The 2026-07-30 source update brings the website in line with the game’s submitted
+1.4 build:
 
-- Production follows the selected Living Diorama redesign, verified Joe Town 1.1
-  product facts, the mobile swipe-rail UX pass, a unified Plus Jakarta Sans type
-  system, and source-backed founder profiles for John, Alex, Dawson, and Matt.
-- The 2026-07-21 visual release replaces the repetitive journey boards with a
-  distinct Camp → Kingdom → Space sequence, uses truthful Logistics/Named Joes/World
-  Map system screens, and places three additional labeled editorial scenes in the
-  Systems, FAQ, and final purchase chapters.
-- The 2026-07-21 enhancement release adds generated Camp/Kingdom/Space emblems, distinct founder
-  chicken portraits, a cleaner Mac App Store hero action, and rotating verified
-  Joe chatter with pause and reduced-motion support.
-- The 2026-07-21 depth expansion grows the page from six chapters to twelve:
-  a ten-age real-gameplay rail, Origins, Petitions, World & diplomacy, Raids,
-  Ventures, and Chronicle/away-play sections, each built from verbatim game
-  strings, plus six new labeled editorial key-art scenes generated in the
-  established cavern voxel style (Higgsfield `nano_banana_pro`, style-referenced
-  to the Archivist and Builder scenes). Section inventory and gating rules live
-  in `DESIGN.md` § "Depth expansion — current".
-- The 2026-07-21 copy release rewrites all visible prose in the game's own voice
-  (deadpan municipal absurdity): every joke is sourced from shipped chatter,
-  away reports, or rival-civilization descriptions in the game code; product
-  facts, scoped "no gameplay tracking" language, and the gain-framing copy law
-  are unchanged. Voice rules live in `DESIGN.md` § "Copy voice — current".
-- The 2026-07-25 carousel and markup fix pass repairs the ten-age rail's dead
-  desktop arrows, removes the phantom Origins controls above 780px, restores the
-  rail's keyboard tab stop, emits a real `aria-current="true"` on the active
-  slide, pins the counter and Next state at the end of a multi-slide rail,
-  corrects a `<figcaption>` that sat in a `<div>`, and realigns the privacy
-  page's stale CSS cache key. Asset keys are now `?v=20260725-release1` on both
-  pages. Details in `design-qa.md` § "Carousel and markup fix pass".
-- Desktop QA passed at 1440×1000 and mobile QA passed at 390×844 with no broken
-  images, duplicate IDs, console errors, or horizontal overflow.
-- Responsive QA targets are `320`, `390`, `430`, `768`, and `1440` CSS pixels.
-  Source and interaction checks are complete; the latest device capture is tracked
-  transparently in `design-qa.md` as a post-release follow-up.
-- Direction 1, **The Living Diorama**, is selected and implemented. See
-  [`docs/VISUAL-FIRST-REDESIGN.md`](docs/VISUAL-FIRST-REDESIGN.md) for the
-  decision record and archived alternatives.
+1. **The Light Update hero** — current dusk gameplay, responsive sources, and
+   release-safe wording.
+2. **Same town. Five hours.** — `#hour` compares dawn, morning, midday, dusk, and
+   night at the same camera and town state.
+3. **Inside the latest build** — six expandable current-build captures show the
+   town, petitions, ventures, exploration, diplomacy, and named-Joe roster.
+4. **Ten ages** — refreshed build-24 game-rendered captures, plus the
+   Camp/Kingdom/Space journey.
+5. **Origins and named Joes** — five permanent origins and a flock whose skills,
+   perks, relationships, and traits evolve.
+6. **Physical production** — Corn → Flour → Bread → Food, carried along visible
+   roads, with a real logistics proof image.
+7. **Decisions that remain visible** — `#decisions` covers the three-branch guild
+   tree, Joe perks and earned traits, and the four Monument phases.
+8. **World, raids, ventures, and away play** — the wider simulation and its
+   consequence-driven systems.
+9. **A campaign with a crown** — `#campaign` proves the Space Legacy, five-level
+   Deep Throne epilogue, and 21 Game Center achievements.
+10. **FAQ and purchase close** — one purchase, local saves, offline play, no ads,
+   no in-app purchases, and no gameplay tracking.
+
+## Asset provenance
+
+- `hero-light-update-{1920,960}.webp`, `hour-{dawn,morning,midday,dusk,night}.webp`,
+  `gameplay-{town,petitions,ventures,world,diplomacy,joes}.webp`,
+  `system-{logistics,technology,joes,world}-2026.webp`,
+  `logistics-chain.webp`, `choice-{guild,joe,monument}.webp`,
+  `campaign-throne.webp`, refreshed `age-1..10.webp`, and refreshed
+  `journey-{camp,town,space}-{square,wide}.webp` are captures made by the game’s
+  deterministic snapshot renderer from the build-24 source.
+- Current gameplay captures may be cropped and resized, but must not be
+  retouched into a feature the game does not render.
+- Generated narrative images remain labeled
+  `EDITORIAL KEY ART · NOT GAMEPLAY`.
+- `campaign-achievements.webp`, when present, must be generated from the game’s
+  own 21 achievement-art catalog and verified against the source identifiers.
+- `og-light-update-2026.png` uses a new URL for reliable social-card refreshes
+  and follows the current Light Update hero and page promise.
+- Exact commands, source commit, seed/tick, daylight phase, crop, dimensions,
+  and any processing belong in the capture provenance record in `DESIGN.md`.
+
+## Implementation notes
+
+- Motion respects `prefers-reduced-motion`; hour comparison remains usable as a
+  static selector.
+- The gameplay gallery uses a native dialog, traps focus while open, restores
+  the launching card on close, supports Escape plus Left/Right navigation, and
+  provides a horizontally pannable detail view on small screens.
+- Carousel behavior follows measured overflow, not viewport guesses. Scrollable
+  rails retain keyboard access, current-slide state, and correct end controls.
+- Mobile keeps price and the primary purchase action in the first viewport,
+  uses safe-area-aware navigation and purchase chrome, and avoids page-level
+  horizontal overflow.
+- The hero is preloaded. Below-fold images lazy-load with explicit dimensions.
+- Google Analytics 4 loads once on the homepage with measurement ID
+  `G-3XJQL5PVS1`. The privacy page intentionally loads no analytics script.
+- Product privacy language says **no gameplay tracking** or explicitly names the
+  Mac game. The website itself uses GA4 for aggregate usage.
+
+## Release wording gate
+
+The game repository proves that **Joe Town 1.4 build 24 was submitted for App
+Store review on 2026-07-30**. It does not prove that 1.4 is publicly available.
+The live public storefront lookup on 2026-07-30 still reports **version 1.3** at
+**$9.99**, with **macOS 14.0** as the minimum.
+Until App Store Connect is checked live and shows the version released:
+
+- Do not say “available now,” “out now,” “released,” or “play the 1.4 update.”
+- Present the new visuals and mechanics as game features without a public 1.4
+  badge.
+- Keep the App Store purchase link and current public price, but do not tie the
+  purchase action to an unverified version number.
 
 ## Production
 
 - Canonical site: <https://gojoetown.com/>
 - Production branch: `main`
 - Hosting: Vercel project `joe-town-site`
-- GitHub-connected updates to `main` deploy automatically. Do not also run a
+- GitHub-connected changes to `main` deploy automatically. Do not also run a
   manual production deploy unless the Git deployment fails.
-- Verify the released title, HTML hash, JavaScript, CSS, social image, favicons,
-  `privacy.html`, `robots.txt`, and `sitemap.xml` on the canonical domain after
-  every release. Confirm exactly one GA loader and one `G-3XJQL5PVS1` config call.
+
+After release, verify the expected Git commit reached production; compare the
+canonical HTML, CSS, JavaScript, social image, favicons, privacy page, crawler
+files, and referenced media with source; confirm exactly one GA loader and one
+matching config call; then run browser checks at 320, 390, 430, 768, and 1440 CSS
+pixels.

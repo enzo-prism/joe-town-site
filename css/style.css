@@ -1230,3 +1230,1147 @@ blockquote::after { content: "”"; color: var(--gold); }
   .venture-list { grid-template-columns: 1fr; }
   .chronicle-art img { aspect-ratio: 16 / 10; }
 }
+
+/* ============================================================
+   The Light Update — interactive hours, decisions, campaign
+   ============================================================ */
+
+.hero-update-badge,
+.hero-update,
+.update-badge,
+.release-badge {
+  width: max-content;
+  max-width: 100%;
+  margin: 0 0 22px;
+  padding: 7px 11px;
+  border: 1px solid rgba(243, 183, 75, 0.46);
+  border-radius: 999px;
+  background: rgba(5, 9, 13, 0.74);
+  color: #ffd37b;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  line-height: 1.3;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
+.hero-performance,
+.performance-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 20px 0 0;
+  color: #aeb6be;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.hero-performance::before,
+.performance-note::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 0 4px rgba(73, 216, 199, 0.1);
+}
+
+.hour-section {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  padding-inline: max(24px, calc((100% - var(--max)) / 2));
+  overflow: clip;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 82% 18%, rgba(243, 183, 75, 0.08), transparent 30%),
+    radial-gradient(circle at 14% 84%, rgba(73, 216, 199, 0.055), transparent 32%),
+    var(--ink-soft);
+}
+
+.hour-section .section-intro {
+  position: relative;
+  z-index: 1;
+  margin-bottom: clamp(36px, 5vw, 64px);
+}
+
+.hour-experience,
+.hour-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(250px, 0.34fr) minmax(0, 0.66fr);
+  gap: clamp(22px, 4vw, 54px);
+  align-items: center;
+}
+
+.hour-copy { min-width: 0; }
+.hour-copy > p:not(.eyebrow) { max-width: 540px; color: var(--muted); }
+
+.hour-stage,
+.hour-visual {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line-gold);
+  border-radius: 14px;
+  background: #080d12;
+  box-shadow: 0 32px 100px rgba(0, 0, 0, 0.46);
+}
+
+.hour-stage::after,
+.hour-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(245, 239, 229, 0.05);
+}
+
+[data-hour-image] {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  image-rendering: auto;
+}
+
+.hour-caption,
+[data-hour-caption-output] {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  left: 14px;
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(245, 239, 229, 0.16);
+  border-radius: 9px;
+  background: rgba(5, 9, 13, 0.84);
+  color: #dce0e3;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  backdrop-filter: blur(12px);
+}
+
+.hour-tabs,
+.hour-selector,
+.hour-section [role="tablist"] {
+  display: grid;
+  align-content: end;
+  gap: 8px;
+}
+
+[data-hour-tab] {
+  position: relative;
+  width: 100%;
+  min-height: 60px;
+  padding: 12px 44px 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(13, 20, 27, 0.76);
+  color: #aeb6be;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.83rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: border-color 180ms ease, background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+[data-hour-tab]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 17px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+[data-hour-tab]:hover {
+  border-color: rgba(243, 183, 75, 0.58);
+  color: var(--bone);
+  transform: translateX(-3px);
+}
+
+[data-hour-tab][aria-selected="true"] {
+  border-color: var(--gold);
+  background: linear-gradient(90deg, rgba(243, 183, 75, 0.14), rgba(13, 20, 27, 0.9));
+  color: var(--bone);
+}
+
+[data-hour-tab][aria-selected="true"]::after {
+  border-color: var(--gold);
+  background: var(--gold);
+  box-shadow: 0 0 14px rgba(243, 183, 75, 0.56);
+}
+
+[data-hour-tab]:focus-visible {
+  z-index: 2;
+  outline-color: var(--teal);
+  outline-offset: 2px;
+}
+
+.decisions {
+  position: relative;
+  border-top: 1px solid var(--line);
+}
+
+.decisions .section-intro { max-width: 850px; }
+.decisions-lede { max-width: 720px; color: var(--muted); font-size: 1.04rem; }
+
+.decision-gallery,
+.decisions-grid,
+.decision-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.decision-card {
+  min-width: 0;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: var(--panel);
+  box-shadow: 0 22px 62px rgba(0, 0, 0, 0.24);
+}
+
+.decision-card img,
+.decision-card picture {
+  width: 100%;
+}
+
+.decision-card img {
+  height: clamp(220px, 21vw, 310px);
+  object-fit: cover;
+}
+
+.decision-card > div,
+.decision-card figcaption {
+  padding: 22px 24px 24px;
+}
+
+.decision-card figcaption {
+  min-height: 150px;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+}
+
+.decision-card h3 {
+  margin: 0 0 8px;
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  letter-spacing: -0.03em;
+}
+
+.decision-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.decision-card figcaption strong {
+  color: var(--bone);
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.decision-card figcaption span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.decision-card p strong,
+.decision-kicker {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.campaign {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  padding-inline: max(24px, calc((100% - var(--max)) / 2));
+  overflow: clip;
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(380px, 1.12fr);
+  align-items: center;
+  gap: clamp(44px, 7vw, 96px);
+  border-top: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(243, 183, 75, 0.065), transparent 34%),
+    linear-gradient(315deg, rgba(73, 216, 199, 0.045), transparent 36%),
+    var(--ink-soft);
+}
+
+.campaign .section-intro { max-width: 860px; }
+.campaign-copy > p:not(.eyebrow):not(.campaign-note) { max-width: 610px; color: var(--muted); font-size: 1.04rem; }
+
+.campaign-grid,
+.campaign-values,
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.campaign-values {
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.campaign-card,
+.campaign-value,
+.value-card,
+.campaign-values li {
+  min-width: 0;
+  min-height: 142px;
+  padding: 20px;
+  display: grid;
+  align-content: start;
+  gap: 7px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(13, 20, 27, 0.8);
+}
+
+.campaign-values strong {
+  color: var(--bone);
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.campaign-values span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.campaign-card::before,
+.campaign-value::before,
+.value-card::before {
+  content: attr(data-value);
+  width: max-content;
+  min-width: 32px;
+  height: 32px;
+  padding-inline: 8px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid var(--line-gold);
+  border-radius: 8px;
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.campaign-card h3,
+.campaign-value h3,
+.value-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.campaign-card p,
+.campaign-value p,
+.value-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.campaign-proof,
+.campaign-note {
+  margin: clamp(32px, 5vw, 52px) 0 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: #c4c9ce;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.campaign-media {
+  position: relative;
+  min-width: 0;
+  padding: 0 0 clamp(36px, 5vw, 62px) clamp(28px, 4vw, 54px);
+}
+
+.campaign-media figure {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--line-gold);
+  border-radius: 13px;
+  background: var(--panel);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.46);
+}
+
+.campaign-media img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.campaign-media figcaption,
+.logistics-chain figcaption {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  padding: 8px 10px;
+  border: 1px solid rgba(245, 239, 229, 0.15);
+  border-radius: 7px;
+  background: rgba(5, 9, 13, 0.84);
+  color: #d5d9dd;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
+.campaign-throne img { aspect-ratio: 16 / 11; }
+
+.campaign-media .campaign-achievements {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(64%, 430px);
+}
+
+.campaign-achievements img { aspect-ratio: 16 / 9; }
+
+.logistics-proof {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.42fr) minmax(0, 0.58fr);
+  gap: clamp(28px, 5vw, 68px);
+  align-items: center;
+  margin-bottom: clamp(52px, 7vw, 88px);
+  padding: clamp(24px, 4vw, 48px);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(243, 183, 75, 0.075), transparent 42%),
+    var(--ink-soft);
+  text-align: left;
+}
+
+.logistics-copy h3 {
+  margin: 0 0 16px;
+  font-size: clamp(1.8rem, 3.2vw, 3.1rem);
+  line-height: 1.06;
+}
+
+.logistics-copy > p:not(.eyebrow) { color: var(--muted); }
+
+.chain-steps {
+  margin: 28px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  list-style: none;
+}
+
+.chain-steps li {
+  position: relative;
+  min-width: 0;
+  padding: 13px 10px;
+  display: grid;
+  gap: 2px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: rgba(13, 20, 27, 0.84);
+}
+
+.chain-steps li:not(:last-child)::after {
+  content: "›";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: -7px;
+  width: 14px;
+  height: 14px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 800;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.chain-steps span { color: var(--gold); font-size: 0.58rem; letter-spacing: 0.08em; }
+.chain-steps strong { font-size: 0.78rem; }
+.chain-steps small { color: var(--muted); font-size: 0.64rem; }
+
+.logistics-chain {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--line-gold);
+  border-radius: 12px;
+  background: var(--panel);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
+}
+
+.logistics-chain img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+@media (max-width: 1040px) {
+  .hour-experience,
+  .hour-layout {
+    grid-template-columns: minmax(220px, 0.39fr) minmax(0, 0.61fr);
+    gap: 22px;
+  }
+
+  .campaign { grid-template-columns: minmax(0, 0.95fr) minmax(330px, 1.05fr); gap: 34px; }
+  .logistics-proof { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 780px) {
+  .hour-section,
+  .campaign {
+    padding-inline: 16px;
+  }
+
+  .hour-experience,
+  .hour-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hour-stage,
+  .hour-visual {
+    border-radius: 12px;
+  }
+
+  [data-hour-image] {
+    min-height: 240px;
+    aspect-ratio: 4 / 3;
+  }
+
+  .hour-tabs,
+  .hour-selector,
+  .hour-section [role="tablist"] {
+    grid-template-columns: repeat(5, minmax(88px, 1fr));
+    width: calc(100% + 32px);
+    margin-inline: -16px;
+    padding: 2px 16px 12px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-padding-inline: 16px;
+    scrollbar-width: none;
+  }
+
+  .hour-tabs::-webkit-scrollbar,
+  .hour-selector::-webkit-scrollbar,
+  .hour-section [role="tablist"]::-webkit-scrollbar {
+    display: none;
+  }
+
+  [data-hour-tab] {
+    min-height: 50px;
+    padding: 11px 13px;
+    text-align: center;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    scroll-snap-align: start;
+  }
+
+  [data-hour-tab]::after { display: none; }
+  [data-hour-tab]:hover { transform: none; }
+
+  .decision-gallery,
+  .decisions-grid,
+  .decision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .decision-card:first-child { grid-row: auto; }
+  .decision-card img,
+  .decision-card:first-child img {
+    height: clamp(230px, 67vw, 390px);
+  }
+
+  .campaign-grid,
+  .campaign-values,
+  .value-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .campaign {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .campaign-media { width: min(100%, 690px); padding-left: 24px; }
+
+  .campaign-card,
+  .campaign-value,
+  .value-card,
+  .campaign-card:nth-child(n+4),
+  .campaign-value:nth-child(n+4),
+  .value-card:nth-child(n+4) {
+    min-height: 180px;
+  }
+
+  .logistics-proof { padding: 22px; }
+}
+
+@media (max-width: 560px) {
+  .hero-update-badge,
+  .update-badge,
+  .release-badge { margin-bottom: 14px; }
+
+  [data-hour-image] {
+    min-height: 228px;
+    object-position: center;
+  }
+
+  .hour-caption,
+  [data-hour-caption-output] {
+    right: 8px;
+    bottom: 8px;
+    left: 8px;
+    padding: 9px 10px;
+    font-size: 0.7rem;
+  }
+
+  .decision-card > div,
+  .decision-card figcaption {
+    padding: 18px;
+  }
+
+  .campaign-grid,
+  .campaign-values,
+  .value-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .campaign-card,
+  .campaign-value,
+  .value-card,
+  .campaign-card:nth-child(n+4),
+  .campaign-value:nth-child(n+4),
+  .value-card:nth-child(n+4) {
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .campaign-values li { min-height: 0; padding: 16px; }
+  .campaign-media { padding: 0 0 30px 12px; }
+  .campaign-media .campaign-achievements { width: 72%; }
+
+  .logistics-proof {
+    margin-inline: -1px;
+    padding: 17px;
+    border-radius: 12px;
+  }
+
+  .chain-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+  .chain-steps li:nth-child(2)::after { display: none; }
+}
+
+@media (max-width: 360px) {
+  .hour-section,
+  .campaign {
+    padding-inline: 12px;
+  }
+
+  .hero-actions .button {
+    padding-inline: 12px;
+    font-size: 0.78rem;
+  }
+
+  .hero-actions .button-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hour-tabs,
+  .hour-selector,
+  .hour-section [role="tablist"] {
+    width: calc(100% + 24px);
+    margin-inline: -12px;
+    padding-inline: 12px;
+  }
+
+  [data-hour-image] { min-height: 210px; }
+  .hour-caption,
+  [data-hour-caption-output] { line-height: 1.35; }
+}
+
+@media (max-width: 560px) and (max-height: 700px) {
+  .hero-update-badge,
+  .update-badge,
+  .release-badge { margin-bottom: 10px; padding-block: 5px; }
+  .hero-performance,
+  .performance-note { margin-top: 12px; }
+}
+
+@media (hover: none) {
+  [data-hour-tab]:hover { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-hour-tab]:hover { transform: none; }
+}
+
+/* ============================================================
+   Latest-build gameplay gallery and native lightbox
+   ============================================================ */
+
+body.gameplay-dialog-open { overflow: hidden; }
+
+.gameplay {
+  border-bottom: 1px solid var(--line);
+}
+
+.gameplay .section-intro {
+  max-width: 900px;
+}
+
+.gameplay-lede {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.04rem;
+}
+
+.gameplay-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.gameplay-item {
+  min-width: 0;
+  grid-column: span 3;
+}
+
+.gameplay-item:nth-child(1) { grid-column: span 7; }
+.gameplay-item:nth-child(2) { grid-column: span 5; }
+
+.gameplay-card {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  min-height: 260px;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: var(--panel);
+  color: var(--bone);
+  cursor: zoom-in;
+  text-align: left;
+  box-shadow: 0 22px 62px rgba(0, 0, 0, 0.25);
+  isolation: isolate;
+}
+
+.gameplay-item:nth-child(-n+2) .gameplay-card {
+  min-height: 390px;
+  border-color: var(--line-gold);
+}
+
+.gameplay-card::after {
+  content: "+";
+  position: absolute;
+  z-index: 3;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(245, 239, 229, 0.28);
+  border-radius: 50%;
+  background: rgba(5, 9, 13, 0.76);
+  color: var(--bone);
+  font-size: 1.1rem;
+  font-weight: 400;
+  backdrop-filter: blur(10px);
+  transition: border-color 180ms ease, background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.gameplay-card img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  filter: brightness(0.84) saturate(0.94);
+  transition: transform 420ms ease, filter 420ms ease;
+}
+
+.gameplay-card > span {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 104px;
+  padding: 46px 20px 18px;
+  display: grid;
+  align-content: end;
+  gap: 5px;
+  background: linear-gradient(to top, rgba(5, 9, 13, 0.98), rgba(5, 9, 13, 0.78) 62%, transparent);
+}
+
+.gameplay-card strong {
+  font-size: clamp(1.05rem, 1.65vw, 1.42rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.gameplay-card small {
+  color: #b7bec5;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.gameplay-card:hover img {
+  transform: scale(1.022);
+  filter: brightness(0.98) saturate(1);
+}
+
+.gameplay-card:hover::after {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--ink);
+  transform: rotate(90deg);
+}
+
+.gameplay-card:focus-visible {
+  z-index: 2;
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
+}
+
+.gameplay-hint {
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.gameplay-dialog {
+  width: min(1180px, calc(100% - 32px));
+  max-width: none;
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  color: var(--bone);
+}
+
+.gameplay-dialog::backdrop {
+  background: rgba(2, 5, 8, 0.9);
+  backdrop-filter: blur(12px);
+}
+
+.gameplay-dialog-shell {
+  position: relative;
+  max-height: calc(100dvh - 32px);
+  padding: 12px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px 12px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border: 1px solid rgba(245, 239, 229, 0.2);
+  border-radius: 16px;
+  background: #080d12;
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.72);
+}
+
+.gameplay-dialog figure {
+  min-width: 0;
+  margin: 0;
+  grid-column: 1 / -1;
+  overflow: hidden;
+  border: 1px solid var(--line-gold);
+  border-radius: 11px;
+  background: var(--ink);
+}
+
+.gameplay-dialog-viewport {
+  overflow: hidden;
+  background: #030609;
+}
+
+.gameplay-dialog-viewport > img {
+  width: 100%;
+  height: auto;
+  max-height: calc(100dvh - 250px);
+  display: block;
+  object-fit: contain;
+}
+
+.gameplay-dialog figcaption {
+  min-height: 90px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.gameplay-dialog figcaption > div {
+  display: grid;
+  gap: 5px;
+}
+
+.gameplay-dialog figcaption strong {
+  font-size: clamp(1.12rem, 2vw, 1.55rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.gameplay-dialog figcaption span:not(.gameplay-dialog-status) {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.gameplay-dialog-status {
+  flex: 0 0 auto;
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.gameplay-dialog-zoom-hint {
+  display: none;
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.gameplay-dialog-close,
+.gameplay-dialog-controls button {
+  min-height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--bone);
+  cursor: pointer;
+}
+
+.gameplay-dialog-close {
+  position: absolute;
+  z-index: 5;
+  top: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(5, 9, 13, 0.88);
+  font-size: 1.6rem;
+  line-height: 1;
+  backdrop-filter: blur(10px);
+}
+
+.gameplay-dialog-controls {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.gameplay-dialog-controls button {
+  min-width: 132px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.gameplay-dialog-close:hover,
+.gameplay-dialog-controls button:hover {
+  border-color: var(--gold);
+  background: rgba(243, 183, 75, 0.12);
+}
+
+.gameplay-dialog-close:focus-visible,
+.gameplay-dialog-controls button:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1040px) {
+  .gameplay-item,
+  .gameplay-item:nth-child(1),
+  .gameplay-item:nth-child(2) {
+    grid-column: span 6;
+  }
+
+  .gameplay-card,
+  .gameplay-item:nth-child(-n+2) .gameplay-card {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 780px) {
+  .gameplay-grid {
+    width: calc(100% + 32px);
+    margin-inline: -16px;
+    padding: 4px 16px 18px;
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: min(84vw, 430px);
+    gap: 12px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-padding-inline: 16px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .gameplay-grid::-webkit-scrollbar { display: none; }
+
+  .gameplay-item,
+  .gameplay-item:nth-child(1),
+  .gameplay-item:nth-child(2) {
+    grid-column: auto;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .gameplay-card,
+  .gameplay-item:nth-child(-n+2) .gameplay-card {
+    min-height: min(64vw, 330px);
+  }
+
+  .gameplay-card > span {
+    min-height: 94px;
+    padding: 42px 18px 16px;
+  }
+
+  .gameplay-hint::after {
+    content: " Swipe for more.";
+    color: var(--gold);
+  }
+
+  .gameplay-dialog {
+    width: calc(100% - 16px);
+    max-height: calc(100dvh - 16px);
+  }
+
+  .gameplay-dialog-shell {
+    max-height: calc(100dvh - 16px);
+    padding: 8px;
+    border-radius: 13px;
+  }
+
+  .gameplay-dialog-viewport {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: thin;
+    touch-action: pan-x;
+  }
+
+  .gameplay-dialog-viewport > img {
+    width: max(100%, 720px);
+    max-width: none;
+    max-height: none;
+  }
+
+  .gameplay-dialog figcaption {
+    min-height: 108px;
+    padding: 14px;
+    display: grid;
+    gap: 10px;
+  }
+
+  .gameplay-dialog-status { justify-self: start; }
+  .gameplay-dialog-zoom-hint { display: block; }
+
+  .gameplay-dialog-close {
+    top: 18px;
+    right: 18px;
+    width: 46px;
+    height: 46px;
+  }
+}
+
+@media (max-width: 560px) {
+  .gameplay-card,
+  .gameplay-item:nth-child(-n+2) .gameplay-card {
+    min-height: 250px;
+  }
+
+  .gameplay-card strong { font-size: 1.08rem; }
+  .gameplay-dialog-controls button { min-width: 0; flex: 1; padding-inline: 12px; }
+  .gameplay-dialog-viewport > img { width: 680px; }
+}
+
+@media (max-width: 360px) {
+  .gameplay-grid {
+    width: calc(100% + 32px);
+    grid-auto-columns: 86vw;
+  }
+
+  .gameplay-card,
+  .gameplay-item:nth-child(-n+2) .gameplay-card {
+    min-height: 232px;
+  }
+
+  .gameplay-dialog-controls button { font-size: 0.72rem; }
+}
+
+@media (hover: none) {
+  .gameplay-card:hover img { transform: none; filter: brightness(0.84) saturate(0.94); }
+  .gameplay-card:hover::after { background: rgba(5, 9, 13, 0.76); color: var(--bone); transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gameplay-card:hover img,
+  .gameplay-card:hover::after { transform: none; }
+}

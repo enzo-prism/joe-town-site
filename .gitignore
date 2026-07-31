@@ -1,3 +1,4 @@
 images/raw/
 .DS_Store
 .vercel
+output/
