@@ -1,5 +1,44 @@
 # Living Diorama — Design QA
 
+## Joe Town Foundry gallery — 2026-08-02
+
+### Scope and truth boundary
+
+- `#foundry` appears between Decisions and World.
+- The section carries a visible `PRODUCTION ART · NOT GAMEPLAY` disclosure and
+  explains that the final SpriteKit assets remain pixel art.
+- The Watchtower is presented in eight 45-degree views. Each rail thumbnail
+  expects a 640×640 WebP and its dialog view expects a 1600×1600 WebP.
+
+### Interaction and accessibility
+
+- [x] Eight-view rail uses measured overflow, scroll snapping, previous/next
+  controls, Left/Right keys, current-slide state, and reduced-motion-safe scroll.
+- [x] Every tile is a labeled button that opens a separate native square dialog.
+- [x] Dialog has a programmatic title and description, useful image alt text,
+  visible production-art disclosure, close/previous/next controls, Left/Right
+  keys, native Escape, contained focus, backdrop dismissal, and trigger focus
+  restoration.
+- [x] Mobile rail has a visible next-card peek and no document-width expansion.
+- [x] Desktop and 390×844 browser pass after the final images landed; dialog,
+  Escape, focus restoration, and the enlarged square art crop were inspected.
+- [ ] Real VoiceOver spot-check.
+
+### Source validation
+
+- [x] `node --check js/main.js`
+- [x] `git diff --check`
+- [x] `python3 scripts/validate_site.py` — all 16 responsive Watchtower WebPs,
+  HTML references, IDs, intrinsic dimensions, alts, CSS assets, analytics, and
+  JavaScript syntax pass.
+- [x] Scoped WCAG 2 A/AA audit reports zero violations. Its remaining incomplete
+  items are scope artifacts: the controlled dialog is outside `#foundry`, and
+  axe cannot measure a labeled arrow containing no visible word characters.
+
+**Current result:** final images, gallery layout, interaction, responsive crop,
+source validation, and scoped automated accessibility pass. VoiceOver remains a
+separate human release check.
+
 ## Light Update website refresh — 2026-07-30
 
 ### Source and release boundary

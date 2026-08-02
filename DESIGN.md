@@ -7,7 +7,8 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
 > remains the active design. The 2026-07-30 source refresh leads with the Light
 > Update and extends the proof sequence:
 > current gameplay hero → five-hour light comparison → ten ages → physical
-> production → lasting decisions → world systems → campaign/Deep Throne/Game
+> production → lasting decisions → labeled Foundry production art → world
+> systems → campaign/Deep Throne/Game
 > Center value → purchase close. The other two directions remain archived in
 > [`docs/VISUAL-FIRST-REDESIGN.md`](docs/VISUAL-FIRST-REDESIGN.md).
 
@@ -50,6 +51,12 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
   branches and single permanent capstone, Joe perks and earned traits, and the
   Monument’s Foundation → Frame → Facade → Crown progression. Do not imply perks
   and traits are the same system.
+- **Foundry:** `#foundry` sits between Decisions and World as a production-art
+  proof surface. Its Watchtower turntable is always labeled
+  `PRODUCTION ART · NOT GAMEPLAY`; it must never be described as a screenshot,
+  a shipped sprite, or an interactive 3D feature. The eight-view rail follows
+  measured overflow and opens a separate square native dialog with keyboard
+  navigation, contained focus, Escape, and focus restoration.
 - **Campaign value:** `#campaign` names the Space Legacy campaign seal, five
   feat-gated Deep Throne levels, and 21 Game Center achievements. This is a
   long-form value proof, not a promise of new post-Space worlds.
@@ -68,6 +75,19 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
   `journey-{camp,town,space}-{square,wide}.webp` are current game-rendered
   captures. `campaign-achievements.webp`, if used, must come from the game’s own
   achievement-art catalog. Existing generated narrative scenes remain labeled.
+  `foundry/watchtower/watchtower-{000,045,090,135,180,225,270,315}-{640,1600}.webp`
+  are square Joe Town Foundry production-art renders, not gameplay.
+
+### Foundry production-art provenance — 2026-08-02
+
+- Subject: Watchtower, reconstructed as the runtime-aligned stage-4 production
+  master for the Joe Town art pipeline.
+- Views: 0°, 45°, 90°, 135°, 180°, 225°, 270°, and 315°.
+- Delivery: a 640×640 WebP rail image and a 1600×1600 WebP inspection image for
+  each angle under `images/foundry/watchtower/`.
+- Truth boundary: these renders are design and bake references. They are not
+  captured from the Mac game, do not prove a runtime 3D feature, and do not
+  replace the separately approved pixel-art sprites used by SpriteKit.
 
 ## Light Update source refresh — current (2026-07-30)
 

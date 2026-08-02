@@ -232,15 +232,20 @@
         if (on) rail.setAttribute("aria-roledescription", "carousel");
         else rail.removeAttribute("aria-roledescription");
         items.forEach(function (item, index) {
-          if (on) {
+          var interactive = item.matches("button, a[href], input, select, textarea");
+          if (on && !interactive) {
             item.setAttribute("role", "group");
             item.setAttribute("aria-roledescription", "slide");
             item.setAttribute("aria-label", (index + 1) + " of " + items.length);
+            item.setAttribute("data-carousel-slide-semantics", "true");
           } else {
-            item.removeAttribute("role");
-            item.removeAttribute("aria-roledescription");
-            item.removeAttribute("aria-label");
-            item.removeAttribute("aria-current");
+            if (item.hasAttribute("data-carousel-slide-semantics")) {
+              item.removeAttribute("role");
+              item.removeAttribute("aria-roledescription");
+              item.removeAttribute("aria-label");
+              item.removeAttribute("data-carousel-slide-semantics");
+            }
+            if (!on) item.removeAttribute("aria-current");
           }
         });
         if (!on) announced = -1;
@@ -536,6 +541,102 @@
     });
   }
 
+  function setupFoundryGallery() {
+    var cards = Array.prototype.slice.call(document.querySelectorAll("[data-foundry-card]"));
+    var dialog = document.getElementById("foundry-dialog");
+    if (!cards.length || !dialog || typeof dialog.showModal !== "function") return;
+
+    var image = dialog.querySelector("[data-foundry-dialog-image]");
+    var title = dialog.querySelector("[data-foundry-dialog-title]");
+    var caption = dialog.querySelector("[data-foundry-dialog-caption]");
+    var status = dialog.querySelector("[data-foundry-dialog-status]");
+    var previous = dialog.querySelector("[data-foundry-previous]");
+    var next = dialog.querySelector("[data-foundry-next]");
+    var close = dialog.querySelector("[data-foundry-close]");
+    if (!image || !title || !caption || !status || !previous || !next || !close) return;
+
+    var active = 0;
+    var activeTrigger = null;
+
+    function preload(index) {
+      var card = cards[(index + cards.length) % cards.length];
+      var src = card && card.getAttribute("data-foundry-src");
+      if (!src) return;
+      var preloadImage = new Image();
+      preloadImage.decoding = "async";
+      preloadImage.src = src;
+    }
+
+    function render(index) {
+      active = (index + cards.length) % cards.length;
+      var card = cards[active];
+      image.setAttribute("src", card.getAttribute("data-foundry-src"));
+      image.setAttribute("alt", card.getAttribute("data-foundry-alt") || "");
+      title.textContent = card.getAttribute("data-foundry-title") || "";
+      caption.textContent = card.getAttribute("data-foundry-caption") || "";
+      status.textContent = (active + 1) + " / " + cards.length;
+      preload(active + 1);
+      preload(active - 1);
+    }
+
+    function open(index, trigger) {
+      activeTrigger = trigger;
+      render(index);
+      document.body.classList.add("foundry-dialog-open");
+      dialog.showModal();
+      close.focus();
+    }
+
+    function dismiss() {
+      document.body.classList.remove("foundry-dialog-open");
+      dialog.close();
+    }
+
+    cards.forEach(function (card, index) {
+      card.addEventListener("click", function () { open(index, card); });
+    });
+
+    previous.addEventListener("click", function () { render(active - 1); });
+    next.addEventListener("click", function () { render(active + 1); });
+    close.addEventListener("click", dismiss);
+
+    dialog.addEventListener("click", function (event) {
+      if (event.target === dialog) dismiss();
+    });
+
+    dialog.addEventListener("cancel", function () {
+      document.body.classList.remove("foundry-dialog-open");
+    });
+
+    dialog.addEventListener("keydown", function (event) {
+      if (event.key === "Tab") {
+        var focusables = Array.prototype.slice.call(dialog.querySelectorAll(
+          "button:not([disabled]), a[href], [tabindex]:not([tabindex='-1'])"
+        ));
+        var first = focusables[0];
+        var last = focusables[focusables.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+        return;
+      }
+      if (event.metaKey || event.ctrlKey || event.altKey) return;
+      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+      event.preventDefault();
+      render(active + (event.key === "ArrowRight" ? 1 : -1));
+    });
+
+    dialog.addEventListener("close", function () {
+      document.body.classList.remove("foundry-dialog-open");
+      if (activeTrigger && document.contains(activeTrigger)) activeTrigger.focus();
+      activeTrigger = null;
+    });
+  }
+
   function setupMobileFaq() {
     var items = Array.prototype.slice.call(document.querySelectorAll(".faq-list details"));
     items.forEach(function (item) {
@@ -651,6 +752,7 @@
   setupCarousels();
   setupHourSelectors();
   setupGameplayGallery();
+  setupFoundryGallery();
   setupMobileFaq();
   setupFlockChatter();
 })();

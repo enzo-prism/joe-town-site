@@ -61,11 +61,13 @@ The 2026-07-30 source update brings the website in line with the game’s submit
    roads, with a real logistics proof image.
 7. **Decisions that remain visible** — `#decisions` covers the three-branch guild
    tree, Joe perks and earned traits, and the four Monument phases.
-8. **World, raids, ventures, and away play** — the wider simulation and its
+8. **Joe Town Foundry** — a clearly labeled production-art study shows the
+   Watchtower from eight consistent angles before its final pixel-art bake.
+9. **World, raids, ventures, and away play** — the wider simulation and its
    consequence-driven systems.
-9. **A campaign with a crown** — `#campaign` proves the Space Legacy, five-level
+10. **A campaign with a crown** — `#campaign` proves the Space Legacy, five-level
    Deep Throne epilogue, and 21 Game Center achievements.
-10. **FAQ and purchase close** — one purchase, local saves, offline play, no ads,
+11. **FAQ and purchase close** — one purchase, local saves, offline play, no ads,
    no in-app purchases, and no gameplay tracking.
 
 ## Asset provenance
@@ -81,6 +83,10 @@ The 2026-07-30 source update brings the website in line with the game’s submit
   retouched into a feature the game does not render.
 - Generated narrative images remain labeled
   `EDITORIAL KEY ART · NOT GAMEPLAY`.
+- `images/foundry/watchtower/watchtower-{000,045,090,135,180,225,270,315}-{640,1600}.webp`
+  are Joe Town Foundry production-art renders of the runtime-aligned stage-4
+  master. They are pipeline studies, not screenshots or shipped game assets,
+  and the page labels them accordingly.
 - `campaign-achievements.webp`, when present, must be generated from the game’s
   own 21 achievement-art catalog and verified against the source identifiers.
 - `og-light-update-2026.png` uses a new URL for reliable social-card refreshes
@@ -95,6 +101,9 @@ The 2026-07-30 source update brings the website in line with the game’s submit
 - The gameplay gallery uses a native dialog, traps focus while open, restores
   the launching card on close, supports Escape plus Left/Right navigation, and
   provides a horizontally pannable detail view on small screens.
+- The Foundry rail is overflow-driven at every viewport and uses the shared
+  carousel keyboard controls. Its separate square native dialog supports
+  Escape, Left/Right, contained focus, and focus restoration.
 - Carousel behavior follows measured overflow, not viewport guesses. Scrollable
   rails retain keyboard access, current-slide state, and correct end controls.
 - Mobile keeps price and the primary purchase action in the first viewport,

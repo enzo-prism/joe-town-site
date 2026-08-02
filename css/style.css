@@ -2374,3 +2374,252 @@ body.gameplay-dialog-open { overflow: hidden; }
   .gameplay-card:hover img,
   .gameplay-card:hover::after { transform: none; }
 }
+
+/* ============================================================
+   Joe Town Foundry — production-art turntable
+   ============================================================ */
+
+body.foundry-dialog-open { overflow: hidden; }
+
+.foundry {
+  border-block: 1px solid var(--line);
+}
+
+.foundry-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.7fr);
+  gap: clamp(32px, 7vw, 96px);
+  align-items: end;
+}
+
+.foundry-intro h2 { margin-bottom: 0; }
+
+.foundry-lede {
+  margin: 0 0 8px;
+  color: #d8dde2;
+  font-size: 1.04rem;
+}
+
+.foundry-disclosure {
+  width: max-content;
+  max-width: 100%;
+  margin: clamp(30px, 4vw, 48px) 0 18px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--line-gold);
+  border-radius: 999px;
+  background: rgba(243, 183, 75, 0.08);
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.foundry-disclosure strong,
+.foundry-dialog-disclosure {
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.foundry-rail {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(320px, 78vw);
+  gap: 14px;
+  padding: 4px 4px 18px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-padding-inline: 4px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(243, 183, 75, 0.42) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+.foundry-card {
+  position: relative;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: var(--panel);
+  color: var(--bone);
+  cursor: zoom-in;
+  text-align: left;
+}
+
+.foundry-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: transform 320ms ease, filter 320ms ease;
+}
+
+.foundry-card > span {
+  min-height: 64px;
+  padding: 13px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.foundry-card strong { font-size: 0.92rem; }
+.foundry-card small { color: #ffd36a; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; }
+.foundry-card:hover img { transform: scale(1.025); filter: brightness(1.05); }
+.foundry-card:focus-visible { outline: 3px solid var(--teal); outline-offset: -3px; }
+
+.foundry-controls { display: flex; }
+
+.foundry-note {
+  max-width: 700px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.foundry-dialog {
+  width: min(780px, calc(100% - 32px));
+  max-width: none;
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  color: var(--bone);
+}
+
+.foundry-dialog::backdrop {
+  background: rgba(2, 5, 8, 0.92);
+  backdrop-filter: blur(12px);
+}
+
+.foundry-dialog-shell {
+  position: relative;
+  max-height: calc(100dvh - 32px);
+  padding: 12px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border: 1px solid rgba(245, 239, 229, 0.2);
+  border-radius: 16px;
+  background: #080d12;
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.72);
+}
+
+.foundry-dialog figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line-gold);
+  border-radius: 11px;
+  background: var(--ink);
+}
+
+.foundry-dialog figure > img {
+  width: 100%;
+  height: auto;
+  max-height: calc(100dvh - 245px);
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.foundry-dialog figcaption {
+  min-height: 84px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.foundry-dialog figcaption > div { display: grid; gap: 4px; }
+.foundry-dialog figcaption strong { font-size: 1.1rem; }
+.foundry-dialog figcaption span:not(.foundry-dialog-status) { color: var(--muted); font-size: 0.82rem; }
+.foundry-dialog-status { flex: 0 0 auto; color: var(--gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; }
+
+.foundry-dialog-disclosure { margin: 12px 4px 0; }
+
+.foundry-dialog-close,
+.foundry-dialog-controls button {
+  min-height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--bone);
+  cursor: pointer;
+}
+
+.foundry-dialog-close {
+  position: absolute;
+  z-index: 2;
+  top: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(5, 9, 13, 0.88);
+  font-size: 1.6rem;
+}
+
+.foundry-dialog-controls {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.foundry-dialog-controls button {
+  min-width: 132px;
+  padding-inline: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.foundry-dialog-close:hover,
+.foundry-dialog-controls button:hover { border-color: var(--gold); background: rgba(243, 183, 75, 0.12); }
+
+@media (max-width: 780px) {
+  .foundry-intro { grid-template-columns: 1fr; gap: 20px; }
+  .foundry-disclosure { width: 100%; align-items: flex-start; border-radius: 11px; }
+  .foundry-disclosure span { flex: 1; }
+  .foundry-rail {
+    width: calc(100% + 32px);
+    margin-inline: -16px;
+    padding-inline: 16px;
+    grid-auto-columns: min(78vw, 360px);
+    scroll-padding-inline: 16px;
+  }
+  .foundry-dialog { width: calc(100% - 16px); max-height: calc(100dvh - 16px); }
+  .foundry-dialog-shell { max-height: calc(100dvh - 16px); padding: 8px; border-radius: 13px; }
+  .foundry-dialog figure > img { max-height: calc(100dvh - 270px); }
+  .foundry-dialog figcaption { min-height: 98px; display: grid; gap: 8px; }
+  .foundry-dialog-status { justify-self: start; }
+  .foundry-dialog-close { top: 18px; right: 18px; width: 46px; height: 46px; }
+}
+
+@media (max-width: 560px) {
+  .foundry-disclosure { display: grid; gap: 3px; }
+  .foundry-dialog-controls button { min-width: 0; flex: 1; padding-inline: 12px; }
+}
+
+@media (hover: none) {
+  .foundry-card:hover img { transform: none; filter: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .foundry-card:hover img { transform: none; }
+}
