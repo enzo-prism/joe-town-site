@@ -457,3 +457,47 @@ are also unreferenced (there is no web manifest).
 - Release build, smoke test, the 15-test progression suite, source validation,
   JavaScript syntax, image decoding, keyboard behavior, and responsive browser
   checks are required before handoff.
+
+## Editorial cavern redesign release pass — 2026-08-03
+
+### Scope
+
+Full visual rebuild of `index.html`, `css/style.css`, and `js/main.js` on top
+of the 2026-07-30 source refresh. The page became fifteen numbered editorial
+chapters (hero, ticker, hour switcher, bento gallery, journey trio, ten-age
+rail, origins, named Joes, petitions sticky split, production chain + systems
+tabs, decisions tri-grid, world civ grid, story rows, campaign, FAQ, purchase
+close). The 2026-08-02 Watchtower Foundry gallery from the intervening
+upstream commit was ported into the new system as chapter 09 between
+Decisions and World, with later chapters renumbered. Story content, product
+facts, provenance labels, analytics, and the release-wording gate are
+unchanged.
+
+### Validation
+
+- `python3 scripts/validate_site.py` passes: 119 HTML references, 53 IDs,
+  image alts and declared raster dimensions, single GA4 loader/config pair,
+  tracking language, unverified release wording, CSS assets, and JavaScript
+  syntax.
+- axe-core WCAG A/AA per section at 1440×900: zero violations across header,
+  #hour, #gameplay, #ages, #origins, #joes, #petitions, #systems, #decisions,
+  #world, #stories, #campaign, #faq, and footer. Fixes made en route: heading
+  order in founder/civ cards, focusable age rail, and small-text contrast for
+  the faint label color.
+- Interaction sweep at 1440×900 and 390×844: hour tablist (all five hours,
+  clock 05:40→23:00), systems tablist (one visible panel per tab), age rail
+  arrows and counter, lightbox open/next/Escape with focus restore, FAQ
+  accordion, quote pause toggle, mobile menu open/navigate/close, and the
+  sticky buy bar show/hide — all pass with no console errors, no failed
+  images, and no broken anchors.
+- Visual pass at 1440×900 and 390×844 against an independent design critique:
+  mobile menu moved outside the blurred header (fixed-inset containing block
+  bug), night hour frame brightened so the town reads at 23:00, bento orphan
+  card promoted to a full-width row, world-map crop desaturated to the
+  palette, founder cards rebuilt as avatar grids, world key art made sticky,
+  section rhythm tightened, chain connectors strengthened, and the egg key
+  art cropped past its light beam.
+- Release wording gate re-checked on the rebuilt copy: no “available now”,
+  “released”, or 1.4-public claims; editorial art carries
+  “Editorial key art · not gameplay” labels; one $9.99 purchase path with the
+  current public price.

@@ -1,9 +1,11 @@
 # Joe Town — Marketing Site
 
 Dependency-free marketing site for **Joe Town**, a premium native macOS strategy
-game. The selected **Living Diorama** direction uses current game-rendered
-captures for feature proof, labeled editorial art for atmosphere, and the
-monochrome Founding Tile as the website identity.
+game. The 2026-08-03 **editorial cavern** redesign presents the Living Diorama
+story as numbered magazine chapters: current game-rendered captures for feature
+proof, labeled editorial art for atmosphere, Fraunces + Plus Jakarta Sans type,
+and a dark gold-on-ink palette. The monochrome Founding Tile remains the brand
+mark.
 
 ## Run locally
 
@@ -28,9 +30,10 @@ wording, and JavaScript syntax. The same check runs in GitHub Actions.
 ## Structure
 
 - `index.html` — single-page product story, SEO, Open Graph, and JSON-LD
-- `css/style.css` — responsive Founding Tile design system
-- `js/main.js` — menu, reveals, carousels, hour selector, FAQ, chatter, and
-  contextual purchase bar
+- `css/style.css` — responsive editorial cavern design system
+- `js/main.js` — scroll progress, reveals, mobile menu, hour tablist, age
+  rail, systems tabs, quote rotator, lightbox dialog, FAQ, and contextual
+  purchase bar
 - `images/` — current game captures, responsive crops, icons, and labeled
   editorial key art
 - `privacy.html` — separates the offline Mac game from website analytics
@@ -44,8 +47,9 @@ favicons, crawler files, and referenced images remain deployable.
 
 ## Current page story
 
-The 2026-07-30 source update brings the website in line with the game’s submitted
-1.4 build:
+The 2026-08-03 redesign rebuilds the page as fifteen numbered chapters over
+the same verified story. The 2026-07-30 source update keeps the website in line
+with the game’s submitted 1.4 build:
 
 1. **The Light Update hero** — current dusk gameplay, responsive sources, and
    release-safe wording.
@@ -66,9 +70,9 @@ The 2026-07-30 source update brings the website in line with the game’s submit
 9. **World, raids, ventures, and away play** — the wider simulation and its
    consequence-driven systems.
 10. **A campaign with a crown** — `#campaign` proves the Space Legacy, five-level
-   Deep Throne epilogue, and 21 Game Center achievements.
+    Deep Throne epilogue, and 21 Game Center achievements.
 11. **FAQ and purchase close** — one purchase, local saves, offline play, no ads,
-   no in-app purchases, and no gameplay tracking.
+    no in-app purchases, and no gameplay tracking.
 
 ## Asset provenance
 
@@ -101,11 +105,13 @@ The 2026-07-30 source update brings the website in line with the game’s submit
 - The gameplay gallery uses a native dialog, traps focus while open, restores
   the launching card on close, supports Escape plus Left/Right navigation, and
   provides a horizontally pannable detail view on small screens.
-- The Foundry rail is overflow-driven at every viewport and uses the shared
-  carousel keyboard controls. Its separate square native dialog supports
-  Escape, Left/Right, contained focus, and focus restoration.
-- Carousel behavior follows measured overflow, not viewport guesses. Scrollable
-  rails retain keyboard access, current-slide state, and correct end controls.
+- The ten-age rail and the Foundry turntable follow measured overflow, not
+  viewport guesses, and keep keyboard access (tab stop plus arrow controls),
+  a live counter, and correct end controls. The Foundry opens a separate
+  square native dialog with Escape, Left/Right, contained focus, and focus
+  restoration.
+- The mobile menu lives outside the blurred header element so its fixed
+  positioning resolves against the viewport.
 - Mobile keeps price and the primary purchase action in the first viewport,
   uses safe-area-aware navigation and purchase chrome, and avoids page-level
   horizontal overflow.

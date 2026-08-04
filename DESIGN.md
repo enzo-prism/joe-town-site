@@ -234,7 +234,37 @@ style-bible definition). Rules for future copy edits:
 - **Facts are fixed:** all claims must match "Product facts" below; humor rides
   on top of verified claims, never replaces them.
 
-## Founding Tile visual system — current
+## Editorial cavern system — current (2026-08-03)
+
+The 2026-08-03 visual-first redesign replaces the Founding Tile visual details
+where they conflict. Product facts, copy voice, provenance, and the
+release-wording gate above remain canonical.
+
+- **Foundation:** ink `#08080b`, raised panel near `#101014`, bone `#f2ede2`,
+  muted `#9aa0ac`, faint `#8b919c`; all body and label colors sit at or above
+  WCAG AA on their surfaces.
+- **Accents:** corn gold `#e9b44c` reserved for purchase, advancement, and
+  selected states; teal `#4fd6c0` marks logistics and production information.
+- **Typography:** Fraunces display serif (italic gold emphasis) paired with
+  Plus Jakarta Sans for body/UI. Numbered editorial eyebrows (`01`–`14`)
+  order the page like magazine chapters.
+- **Surfaces:** neutral hairlines, 12–20px radii, dark framed panels around
+  every capture, subtle grain overlay, and a scroll-progress hairline.
+- **Page rhythm:** hero → ticker → hour switcher → bento gallery → journey
+  trio → ten-age rail → origins → named Joes → petitions sticky split →
+  production chain + systems tabs → decisions tri-grid → labeled Foundry
+  turntable → world civ grid → raid/venture/away story rows → campaign
+  crown → FAQ → purchase close.
+- **Interaction inventory:** hour tablist and systems tablist with roving
+  tabindex; age rail with arrows, counter, keyboard scroll, and snap stops;
+  lightbox as a native dialog with focus trap and prev/next/Escape; FAQ
+  details accordion; quote rotator with pause; mobile menu rendered outside
+  the blurred header so its fixed inset resolves against the viewport;
+  sticky mobile buy bar hidden at the top and at the final CTA.
+- **Motion:** scroll reveals, hour cross-fades, animated chain connectors;
+  everything collapses under `prefers-reduced-motion`.
+
+## Founding Tile visual system — archived (2026-07-21)
 
 The approved Founding Tile is the website's primary identity. This section supersedes older decorative guidance below where the two conflict.
 
