@@ -1,5 +1,52 @@
 # Living Diorama — Design QA
 
+## Lightbox framing, mobile zoom lock, and hero readability — 2026-08-05
+
+Follow-up pass by Qwen on the editorial cavern redesign (picking up K3's
+audit). Reproduced live in a real browser at 1440×900, 1280×577, and
+390×844, then fixed and re-tested. Four design defects:
+
+- **Lightbox framed images in a broken, off-center way.** The dialog forced
+  `width: 100%`, which collapsed the modal's auto-centering margins to zero —
+  the dialog rendered pinned to the top-left (x:0, y:0) instead of centered.
+  The image inside used `width: 100%` + `max-height` + `object-fit: contain`,
+  so height-clamped images letterboxed inside an oversized 1200px frame with
+  dark side bars. Now the dialog is `width: fit-content; margin: auto`
+  (shrink-wraps and centers) and the image uses `width/height: auto` with
+  `max-width`/`max-height`, so the frame always equals the picture at its
+  natural aspect ratio. Verified centered (dialog center == viewport center)
+  with zero letterbox at 1440×900, a short 1280×577 viewport (dialog shrank
+  1200→749px to match the height-clamped image), and 390×844.
+- **Lightbox caption collided with the prev/next arrows on mobile.** The
+  absolutely-positioned nav (two 42px buttons at `right: 18px`) overlapped the
+  wrapped caption text at 390px. The caption now reserves right padding equal
+  to the nav footprint so text always clears the arrows; harmless on desktop
+  where captions are short. Verified no text/nav overlap at 390px and 1280px.
+- **Mobile browsers could pinch-zoom the page.** Added
+  `maximum-scale=1.0, user-scalable=no` to the viewport meta and
+  `touch-action: manipulation` on links, buttons, and the tap-to-zoom cards,
+  so the only zoom is the designed lightbox/foundry viewers. (Tradeoff: this
+  trips axe's `meta-viewport` WCAG 1.4.4 rule — an intentional product
+  decision, flagged in the PR.)
+- **Hero headline/subtitle were hard to read over the bright game board.**
+  The scrim's mid-band (where the title sits) was nearly transparent
+  (0.05–0.12 alpha). Rebuilt the scrim with a left-weighted gradient behind
+  the text column plus a stronger bottom-up gradient, and deepened the
+  title/subtitle text-shadows and subtitle weight. Verified legible at
+  1440×900 and 390×844 with the art still visible on the right.
+
+### Validation
+
+- `python3 scripts/validate_site.py` passes (144 HTML references, 61 IDs,
+  alts/dimensions, GA singleton, tracking language, CSS assets, JS syntax);
+  `node --check js/main.js` clean.
+- axe-core WCAG 2 A/AA at 1440×900: the only violation is the intentional
+  `meta-viewport` zoom lock (WCAG 1.4.4); remaining items are axe
+  "incomplete" false-positives (text-over-image contrast it cannot compute,
+  and `aria-controls` on the existing Foundry dialog).
+- Foundry turntable dialog re-tested after the change: opens, centers, and
+  pages 1/8 — the designed zoom path is intact.
+
 ## Editorial cavern interaction audit — 2026-08-05
 
 Independent design audit of the editorial cavern redesign (`d0b6f92`) by K3.
