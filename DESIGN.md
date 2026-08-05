@@ -256,11 +256,15 @@ release-wording gate above remain canonical.
   turntable → world civ grid → raid/venture/away story rows → campaign
   crown → FAQ → purchase close.
 - **Interaction inventory:** hour tablist and systems tablist with roving
-  tabindex; age rail with arrows, counter, keyboard scroll, and snap stops;
-  lightbox as a native dialog with focus trap and prev/next/Escape; FAQ
-  details accordion; quote rotator with pause; mobile menu rendered outside
-  the blurred header so its fixed inset resolves against the viewport;
-  sticky mobile buy bar hidden at the top and at the final CTA.
+  tabindex; age rail with arrows, counter, keyboard scroll, and snap stops,
+  with snap-aware start/end disabled states and an end-pinned counter;
+  lightbox as a native dialog with focus trap and prev/next/Escape, restoring
+  focus on the dialog `close` event so button, backdrop, and Escape paths
+  all behave alike; FAQ details accordion; quote rotator with pause; mobile
+  menu rendered outside the blurred header so its fixed inset resolves
+  against the viewport, with `#main` and the footer `inert` while open and
+  automatic close when the viewport leaves the burger range; sticky mobile
+  buy bar hidden at the top and at the final CTA.
 - **Motion:** scroll reveals, hour cross-fades, animated chain connectors;
   everything collapses under `prefers-reduced-motion`.
 

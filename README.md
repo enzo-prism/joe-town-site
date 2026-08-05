@@ -107,15 +107,21 @@ with the game’s submitted 1.4 build:
   provides a horizontally pannable detail view on small screens.
 - The ten-age rail and the Foundry turntable follow measured overflow, not
   viewport guesses, and keep keyboard access (tab stop plus arrow controls),
-  a live counter, and correct end controls. The Foundry opens a separate
-  square native dialog with Escape, Left/Right, contained focus, and focus
-  restoration.
+  a live counter, and correct end controls. Start/end disabled states are
+  snap-aware and the counter pins to the last slide at maximum scroll. The
+  Foundry opens a separate square native dialog with Escape, Left/Right,
+  contained focus, and focus restoration.
 - The mobile menu lives outside the blurred header element so its fixed
-  positioning resolves against the viewport.
+  positioning resolves against the viewport. While it is open, `#main` and
+  the footer are `inert` so Tab cannot escape into the page; a `matchMedia`
+  listener closes the menu automatically when the viewport leaves the burger
+  range.
 - Mobile keeps price and the primary purchase action in the first viewport,
   uses safe-area-aware navigation and purchase chrome, and avoids page-level
   horizontal overflow.
-- The hero is preloaded. Below-fold images lazy-load with explicit dimensions.
+- The hero is preloaded, split by `media` to mirror the `<picture>` sources,
+  so each viewport fetches only its own hero variant. Below-fold images
+  lazy-load with explicit dimensions.
 - Google Analytics 4 loads once on the homepage with measurement ID
   `G-3XJQL5PVS1`. The privacy page intentionally loads no analytics script.
 - Product privacy language says **no gameplay tracking** or explicitly names the
