@@ -34,10 +34,14 @@
   /* ---------- mobile menu ---------- */
   const burger = document.getElementById("navBurger");
   const menu = document.getElementById("mobileMenu");
+  const pageMain = document.getElementById("main");
+  const pageFooter = document.querySelector(".footer");
   const setMenu = (open) => {
     burger.setAttribute("aria-expanded", String(open));
     burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     menu.hidden = !open;
+    pageMain.inert = open;
+    if (pageFooter) pageFooter.inert = open;
     document.body.style.overflow = open ? "hidden" : "";
     updateBuybar();
   };
@@ -45,6 +49,10 @@
   menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !menu.hidden) setMenu(false);
+  });
+  /* the burger hides above 1040px; never leave the overlay stuck open there */
+  window.matchMedia("(min-width: 1041px)").addEventListener("change", (e) => {
+    if (e.matches && !menu.hidden) setMenu(false);
   });
 
   /* ---------- hour switcher ---------- */
@@ -101,13 +109,19 @@
     return ageCards[0].getBoundingClientRect().width + 18;
   }
   function updateRail() {
-    const idx = Math.min(
-      ageCards.length - 1,
-      Math.round(rail.scrollLeft / railStep())
-    );
+    const maxScroll = rail.scrollWidth - rail.clientWidth;
+    /* the mandatory snap parks the rail one padding-left past 0, so treat
+       anything within half a card of the start as the first position */
+    const atStart = rail.scrollLeft <= railStep() / 2;
+    const atEnd = rail.scrollLeft >= maxScroll - 4;
+    const idx = atStart
+      ? 0
+      : atEnd
+        ? ageCards.length - 1
+        : Math.min(ageCards.length - 1, Math.round(rail.scrollLeft / railStep()));
     counter.textContent = `${idx + 1} / ${ageCards.length}`;
-    prevBtn.disabled = rail.scrollLeft <= 4;
-    nextBtn.disabled = rail.scrollLeft >= rail.scrollWidth - rail.clientWidth - 4;
+    prevBtn.disabled = atStart;
+    nextBtn.disabled = atEnd;
   }
   prevBtn.addEventListener("click", () => rail.scrollBy({ left: -railStep(), behavior: reducedMotion ? "auto" : "smooth" }));
   nextBtn.addEventListener("click", () => rail.scrollBy({ left: railStep(), behavior: reducedMotion ? "auto" : "smooth" }));
@@ -241,8 +255,14 @@
   }
   function closeLb() {
     lightbox.close();
-    if (lastFocus) lastFocus.focus();
   }
+  /* fires for the button, backdrop click, and native Escape alike */
+  lightbox.addEventListener("close", () => {
+    if (lastFocus) {
+      lastFocus.focus();
+      lastFocus = null;
+    }
+  });
 
   document.querySelectorAll("[data-lightbox]").forEach((fig, i) => {
     fig.setAttribute("tabindex", "0");
@@ -281,13 +301,17 @@
       return card ? card.getBoundingClientRect().width + 14 : 334;
     };
     const fUpdate = () => {
-      const index = Math.min(
-        fCards.length,
-        Math.round(fRail.scrollLeft / fStep()) + 1
-      );
+      const maxScroll = fRail.scrollWidth - fRail.clientWidth;
+      const atEnd = fRail.scrollLeft >= maxScroll - 8;
+      const index = atEnd
+        ? fCards.length
+        : Math.min(
+            fCards.length,
+            Math.round(fRail.scrollLeft / fStep()) + 1
+          );
       fCounter.textContent = `${index} / ${fCards.length}`;
       fPrev.disabled = fRail.scrollLeft < 8;
-      fNext.disabled = fRail.scrollLeft > fRail.scrollWidth - fRail.clientWidth - 8;
+      fNext.disabled = atEnd;
     };
     fPrev.addEventListener("click", () => fRail.scrollBy({ left: -fStep(), behavior: reducedMotion ? "auto" : "smooth" }));
     fNext.addEventListener("click", () => fRail.scrollBy({ left: fStep(), behavior: reducedMotion ? "auto" : "smooth" }));

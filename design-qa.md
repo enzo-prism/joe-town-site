@@ -1,5 +1,49 @@
 # Living Diorama — Design QA
 
+## Editorial cavern interaction audit — 2026-08-05
+
+Independent design audit of the editorial cavern redesign (`d0b6f92`) by K3.
+Browser-driven at 1440×1000, 390×844, and 320px checks on a local static
+server, plus axe-core WCAG 2 A/AA, the repo validator, and network-log
+verification. Seven defects found and fixed:
+
+- **Age rail dead Prev at rest.** The mandatory scroll snap parks the rail one
+  padding-left (48px) past zero, so `scrollLeft <= 4` never held and Prev
+  rendered enabled at the first card with nowhere to go. Start/end state now
+  derives from snap-aware thresholds: Prev is disabled within half a card of
+  the start.
+- **Age rail counter stalled at `8 / 10`.** At maximum scroll the geometric
+  index reads 8 while Next is disabled and the last card is visible. The
+  counter now pins to `10 / 10` at the end (the fix recorded 2026-07-25 for
+  the previous design, re-applied to the redesign).
+- **Foundry rail counter stalled at `6 / 8`** at maximum scroll for the same
+  reason; now pins to `8 / 8` at the end.
+- **Lightbox Escape skipped focus restoration.** The native cancel path closed
+  the dialog without running `closeLb`, leaving focus stranded on a control
+  inside the closed dialog. Restoration moved to the dialog `close` event,
+  which covers button, backdrop, and Escape alike (the pattern the Foundry
+  dialog already used).
+- **Mobile menu let Tab escape into the page.** With the overlay open, Tab
+  reached background controls (e.g. the chatter pause button). `#main` and
+  the footer are now `inert` while the menu is open.
+- **Mobile menu survived resize to desktop.** Open at 390px, resize past
+  1040px: the burger disappears while the overlay and scroll lock stayed,
+  stranding desktop users. A `matchMedia` listener now closes the menu when
+  the viewport leaves the burger range.
+- **Hero preload ignored the responsive switch.** The unconditional 1920px
+  preload made phones download both hero sources (~117 KB waste on the
+  critical path). The preload is now split by `media` to mirror the
+  `<picture>` sources; network logs confirm 390px fetches only the 960 and
+  1440px fetches only the 1920.
+- **`.chain` carried `aria-label` on a role-less `div`** (axe
+  `aria-prohibited-attr`); now `role="group"`.
+
+Verification: `python3 scripts/validate_site.py` passes; `node --check` and
+`git diff --check` clean; axe reports 0 violations (remaining incompletes are
+the documented Foundry `aria-controls` and background-image contrast
+artifacts); every fix re-tested live in the browser at both widths; desktop
+and mobile visual sweeps show no layout regression.
+
 ## Joe Town Foundry gallery — 2026-08-02
 
 ### Scope and truth boundary

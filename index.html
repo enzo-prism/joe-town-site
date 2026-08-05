@@ -45,7 +45,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&amp;family=Plus+Jakarta+Sans:wght@400..800&amp;display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="images/hero-light-update-1920.webp?v=redesign1" fetchpriority="high">
+  <link rel="preload" as="image" href="images/hero-light-update-1920.webp?v=redesign1" media="(min-width: 781px)" fetchpriority="high">
+  <link rel="preload" as="image" href="images/hero-light-update-960.webp?v=redesign1" media="(max-width: 780px)" fetchpriority="high">
   <link rel="stylesheet" href="css/style.css?v=redesign1">
 
   <script type="application/ld+json">
@@ -423,7 +424,7 @@
           <p class="sec-sub">A physical production chain. Roads are supply lines, not decoration. Named Joes carry each resource tile by tile, and the Logistics view shows exactly where a stalled route needs your attention.</p>
         </header>
 
-        <div class="chain reveal" aria-label="Production chain: corn becomes flour, flour becomes bread, bread becomes food">
+        <div class="chain reveal" role="group" aria-label="Production chain: corn becomes flour, flour becomes bread, bread becomes food">
           <div class="chain-node"><span class="chain-step">01</span><strong>Corn</strong><span>Farm</span></div>
           <div class="chain-link" aria-hidden="true"></div>
           <div class="chain-node"><span class="chain-step">02</span><strong>Flour</strong><span>Mill</span></div>
