@@ -1,6 +1,8 @@
 (() => {
   "use strict";
 
+  document.documentElement.classList.add("js");
+
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------- scroll progress ---------- */
@@ -287,101 +289,6 @@
     if (e.key === "ArrowRight") { e.preventDefault(); showLb(lbIndex + 1); }
   });
 
-  /* ---------- foundry turntable ---------- */
-  const fRail = document.getElementById("foundryRail");
-  const fCards = Array.from(document.querySelectorAll("[data-foundry-card]"));
-  const fDialog = document.getElementById("foundryDialog");
-
-  if (fRail && fCards.length) {
-    const fPrev = document.getElementById("foundryPrev");
-    const fNext = document.getElementById("foundryNext");
-    const fCounter = document.getElementById("foundryCounter");
-    const fStep = () => {
-      const card = fRail.querySelector(".foundry-card");
-      return card ? card.getBoundingClientRect().width + 14 : 334;
-    };
-    const fUpdate = () => {
-      const maxScroll = fRail.scrollWidth - fRail.clientWidth;
-      const atEnd = fRail.scrollLeft >= maxScroll - 8;
-      const index = atEnd
-        ? fCards.length
-        : Math.min(
-            fCards.length,
-            Math.round(fRail.scrollLeft / fStep()) + 1
-          );
-      fCounter.textContent = `${index} / ${fCards.length}`;
-      fPrev.disabled = fRail.scrollLeft < 8;
-      fNext.disabled = atEnd;
-    };
-    fPrev.addEventListener("click", () => fRail.scrollBy({ left: -fStep(), behavior: reducedMotion ? "auto" : "smooth" }));
-    fNext.addEventListener("click", () => fRail.scrollBy({ left: fStep(), behavior: reducedMotion ? "auto" : "smooth" }));
-    fRail.addEventListener("scroll", fUpdate, { passive: true });
-    window.addEventListener("resize", fUpdate);
-    fUpdate();
-  }
-
-  if (fCards.length && fDialog && typeof fDialog.showModal === "function") {
-    const image = fDialog.querySelector("[data-foundry-dialog-image]");
-    const title = fDialog.querySelector("[data-foundry-dialog-title]");
-    const caption = fDialog.querySelector("[data-foundry-dialog-caption]");
-    const status = fDialog.querySelector("[data-foundry-dialog-status]");
-    const previous = fDialog.querySelector("[data-foundry-previous]");
-    const next = fDialog.querySelector("[data-foundry-next]");
-    const close = fDialog.querySelector("[data-foundry-close]");
-
-    let active = 0;
-    let activeTrigger = null;
-
-    const preload = (index) => {
-      const card = fCards[(index + fCards.length) % fCards.length];
-      const src = card && card.getAttribute("data-foundry-src");
-      if (!src) return;
-      const pre = new Image();
-      pre.decoding = "async";
-      pre.src = src;
-    };
-
-    const render = (index) => {
-      active = (index + fCards.length) % fCards.length;
-      const card = fCards[active];
-      image.setAttribute("src", card.getAttribute("data-foundry-src"));
-      image.setAttribute("alt", card.getAttribute("data-foundry-alt") || "");
-      title.textContent = card.getAttribute("data-foundry-title") || "";
-      caption.textContent = card.getAttribute("data-foundry-caption") || "";
-      status.textContent = `${active + 1} / ${fCards.length}`;
-      preload(active + 1);
-      preload(active - 1);
-    };
-
-    const dismiss = () => fDialog.close();
-
-    fCards.forEach((card, index) => {
-      card.addEventListener("click", () => {
-        activeTrigger = card;
-        render(index);
-        document.body.classList.add("foundry-dialog-open");
-        fDialog.showModal();
-        close.focus();
-      });
-    });
-
-    previous.addEventListener("click", () => render(active - 1));
-    next.addEventListener("click", () => render(active + 1));
-    close.addEventListener("click", dismiss);
-    fDialog.addEventListener("click", (e) => { if (e.target === fDialog) dismiss(); });
-    fDialog.addEventListener("keydown", (e) => {
-      if (e.metaKey || e.ctrlKey || e.altKey) return;
-      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
-      e.preventDefault();
-      render(active + (e.key === "ArrowRight" ? 1 : -1));
-    });
-    fDialog.addEventListener("close", () => {
-      document.body.classList.remove("foundry-dialog-open");
-      if (activeTrigger && document.contains(activeTrigger)) activeTrigger.focus();
-      activeTrigger = null;
-    });
-  }
-
   /* ---------- mobile buy bar ---------- */
   const buybar = document.getElementById("buybar");
   const heroActions = document.getElementById("heroActions");
@@ -404,4 +311,16 @@
   window.addEventListener("resize", updateBuybar);
   mqMobile.addEventListener("change", updateBuybar);
   updateBuybar();
+
+  /* ---------- App Store conversion tracking ---------- */
+  document.querySelectorAll('a[href^="https://apps.apple.com/app/id6790244910"]').forEach((link) => {
+    link.addEventListener("click", () => {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "app_store_click", {
+          link_url: link.href,
+          link_text: link.textContent.trim()
+        });
+      }
+    });
+  });
 })();

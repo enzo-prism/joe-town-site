@@ -4,11 +4,11 @@ Static site. No build step. `index.html` + `css/style.css` + `js/main.js` + `ima
 Goal: convert Mac strategy/city-builder players into players. Charm + premium craft.
 
 > **Current direction:** **The Living Diorama** was selected on 2026-07-20 and
-> remains the active design. The 2026-07-30 source refresh leads with the Light
-> Update and extends the proof sequence:
-> current gameplay hero → five-hour light comparison → ten ages → physical
-> production → lasting decisions → labeled Foundry production art → world
-> systems → campaign/Deep Throne/Game
+> remains the active design. The 2026-08-10 conversion pass leads with the game
+> itself and tightens the proof sequence:
+> gameplay-first hero → five-hour light comparison → ten ages → named Joes and
+> petitions → physical production + lasting decisions → world systems →
+> campaign/Deep Throne/Game
 > Center value → purchase close. The other two directions remain archived in
 > [`docs/VISUAL-FIRST-REDESIGN.md`](docs/VISUAL-FIRST-REDESIGN.md).
 
@@ -44,19 +44,14 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
   quote rotates through verified game chatter, includes a pause control, stops in a
   hidden tab or while offscreen, and remains static when reduced motion is requested.
 - **Physical production:** Corn → Flour → Bread → Food is shown as a real
-  connected supply chain. `logistics-chain.webp` must show the game’s own
-  logistics presentation; copy may explain that Joes carry goods tile by tile
-  and that a stalled route exposes its cause.
-- **Decisions:** `#decisions` uses current game UI to prove the guild’s three
+  connected supply chain. The Roads tab provides the single logistics proof;
+  copy may explain that Joes carry goods tile by tile and that a stalled route
+  exposes its cause.
+- **Decisions:** the decision tri-grid lives inside `#systems` and uses current
+  game UI to prove the guild’s three
   branches and single permanent capstone, Joe perks and earned traits, and the
   Monument’s Foundation → Frame → Facade → Crown progression. Do not imply perks
   and traits are the same system.
-- **Foundry:** `#foundry` sits between Decisions and World as a production-art
-  proof surface. Its Watchtower turntable is always labeled
-  `PRODUCTION ART · NOT GAMEPLAY`; it must never be described as a screenshot,
-  a shipped sprite, or an interactive 3D feature. The eight-view rail follows
-  measured overflow and opens a separate square native dialog with keyboard
-  navigation, contained focus, Escape, and focus restoration.
 - **Campaign value:** `#campaign` names the Space Legacy campaign seal, five
   feat-gated Deep Throne levels, and 21 Game Center achievements. This is a
   long-form value proof, not a promise of new post-Space worlds.
@@ -67,18 +62,17 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
   navigation, notch-safe chrome, short-screen hero tuning, and a purchase bar
   that appears when the hero action leaves view and hides at the closing CTA.
 - **Motion:** the hero is immediate; below-fold reveal, menu, HUD, carousel, and
-  FAQ motion all defer to reduced-motion preferences.
+  FAQ motion all defer to reduced-motion preferences. Reveal hiding is gated by
+  `html.js`, so the complete page remains visible if JavaScript does not run.
 - **Assets:** `hero-light-update-{1920,960}.webp`,
-  `hour-{dawn,morning,midday,dusk,night}.webp`, `logistics-chain.webp`,
+  `hour-{dawn,morning,midday,dusk,night}.webp`,
   `choice-{guild,joe,monument}.webp`, `campaign-throne.webp`, refreshed
   `age-1..10.webp`, and refreshed
   `journey-{camp,town,space}-{square,wide}.webp` are current game-rendered
   captures. `campaign-achievements.webp`, if used, must come from the game’s own
   achievement-art catalog. Existing generated narrative scenes remain labeled.
-  `foundry/watchtower/watchtower-{000,045,090,135,180,225,270,315}-{640,1600}.webp`
-  are square Joe Town Foundry production-art renders, not gameplay.
 
-### Foundry production-art provenance — 2026-08-02
+### Foundry production-art provenance — archived 2026-08-10
 
 - Subject: Watchtower, reconstructed as the runtime-aligned stage-4 production
   master for the Joe Town art pipeline.
@@ -88,6 +82,8 @@ Goal: convert Mac strategy/city-builder players into players. Charm + premium cr
 - Truth boundary: these renders are design and bake references. They are not
   captured from the Mac game, do not prove a runtime 3D feature, and do not
   replace the separately approved pixel-art sprites used by SpriteKit.
+- Buyer-page status: removed from the marketing sequence on 2026-08-10. Assets
+  remain as historical production provenance only.
 
 ## Light Update source refresh — current (2026-07-30)
 
@@ -211,12 +207,17 @@ art) → FAQ (seven questions) → Starfarer close.
   The FAQ intentionally gives no offline-progress hour figure; do not reintroduce
   one without re-verifying the public build.
 
-## Copy voice — current (2026-07-21 humor pass)
+## Copy voice — current (2026-08-10 gameplay-first pass)
 
 All visible prose was rewritten in the game's own house voice: **deadpan
 municipal absurdity, affectionate sarcasm, chicken physicality** (the game's
 style-bible definition). Rules for future copy edits:
 
+- **Mechanic first, joke second.** Every section explains a real gameplay
+  system before it earns one laugh. Sarcasm points at the chickens and genre
+  conventions, never the player or the game's quality.
+- **Lead with the game.** The hero and section titles answer what Joe Town is
+  and how it plays before they sell atmosphere.
 - **Every joke is sourced.** Quoted lines are verbatim from shipped game strings
   ("The worms seem unionized." — farm chatter; "Everything grew; nothing
   exploded. Probably." and "Productivity occurred without supervision." — away
@@ -234,26 +235,30 @@ style-bible definition). Rules for future copy edits:
 - **Facts are fixed:** all claims must match "Product facts" below; humor rides
   on top of verified claims, never replaces them.
 
-## Editorial cavern system — current (2026-08-03)
+## Editorial cavern system — current (2026-08-10)
 
 The 2026-08-03 visual-first redesign replaces the Founding Tile visual details
 where they conflict. Product facts, copy voice, provenance, and the
 release-wording gate above remain canonical.
 
-- **Foundation:** ink `#08080b`, raised panel near `#101014`, bone `#f2ede2`,
-  muted `#9aa0ac`, faint `#8b919c`; all body and label colors sit at or above
-  WCAG AA on their surfaces.
+- **Foundation:** ink `#08080b`, coal `#101218`, panel `#161822`, bone
+  `#f2ede2`, muted `#9aa0ac`, faint `#8b919c`; alternating sections use the
+  stronger line token, and body copy never uses the faint token below 14px.
 - **Accents:** corn gold `#e9b44c` reserved for purchase, advancement, and
   selected states; teal `#4fd6c0` marks logistics and production information.
 - **Typography:** Fraunces display serif (italic gold emphasis) paired with
-  Plus Jakarta Sans for body/UI. Numbered editorial eyebrows (`01`–`14`)
+  Plus Jakarta Sans for body/UI. Numbered editorial eyebrows (`01`–`13`)
   order the page like magazine chapters.
 - **Surfaces:** neutral hairlines, 12–20px radii, dark framed panels around
   every capture, subtle grain overlay, and a scroll-progress hairline.
+- **Spacing:** desktop sections use `clamp(44px, 5vw, 50px)`, mobile sections
+  use `clamp(56px, 12vw, 72px)`, section headers use
+  `clamp(28px, 4vw, 44px)`, and the age rail uses
+  `clamp(40px, 5vw, 64px)` top spacing.
 - **Page rhythm:** hero → ticker → hour switcher → bento gallery → journey
   trio → ten-age rail → origins → named Joes → petitions sticky split →
-  production chain + systems tabs → decisions tri-grid → labeled Foundry
-  turntable → world civ grid → raid/venture/away story rows → campaign
+  production chain + systems tabs + decisions tri-grid → world civ grid →
+  raid/venture/away story rows → campaign
   crown → FAQ → purchase close.
 - **Interaction inventory:** hour tablist and systems tablist with roving
   tabindex; age rail with arrows, counter, keyboard scroll, and snap stops,

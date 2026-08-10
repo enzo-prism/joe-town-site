@@ -1,7 +1,7 @@
 # Joe Town — Marketing Site
 
 Dependency-free marketing site for **Joe Town**, a premium native macOS strategy
-game. The 2026-08-03 **editorial cavern** redesign presents the Living Diorama
+game. The 2026-08-10 **editorial cavern** update presents the Living Diorama
 story as numbered magazine chapters: current game-rendered captures for feature
 proof, labeled editorial art for atmosphere, Fraunces + Plus Jakarta Sans type,
 and a dark gold-on-ink palette. The monochrome Founding Tile remains the brand
@@ -47,7 +47,7 @@ favicons, crawler files, and referenced images remain deployable.
 
 ## Current page story
 
-The 2026-08-03 redesign rebuilds the page as fifteen numbered chapters over
+The 2026-08-10 redesign tightens the page to thirteen numbered chapters over
 the same verified story. The 2026-07-30 source update keeps the website in line
 with the game’s submitted 1.4 build:
 
@@ -61,17 +61,14 @@ with the game’s submitted 1.4 build:
    Camp/Kingdom/Space journey.
 5. **Origins and named Joes** — five permanent origins and a flock whose skills,
    perks, relationships, and traits evolve.
-6. **Physical production** — Corn → Flour → Bread → Food, carried along visible
-   roads, with a real logistics proof image.
-7. **Decisions that remain visible** — `#decisions` covers the three-branch guild
+6. **Physical production and permanent decisions** — `#systems` combines
+   Corn → Flour → Bread → Food, the four system tabs, the three-branch guild
    tree, Joe perks and earned traits, and the four Monument phases.
-8. **Joe Town Foundry** — a clearly labeled production-art study shows the
-   Watchtower from eight consistent angles before its final pixel-art bake.
-9. **World, raids, ventures, and away play** — the wider simulation and its
+7. **World, raids, ventures, and away play** — the wider simulation and its
    consequence-driven systems.
-10. **A campaign with a crown** — `#campaign` proves the Space Legacy, five-level
+8. **A campaign with a crown** — `#campaign` proves the Space Legacy, five-level
     Deep Throne epilogue, and 21 Game Center achievements.
-11. **FAQ and purchase close** — one purchase, local saves, offline play, no ads,
+9. **FAQ and purchase close** — one purchase, local saves, offline play, no ads,
     no in-app purchases, and no gameplay tracking.
 
 ## Asset provenance
@@ -87,10 +84,8 @@ with the game’s submitted 1.4 build:
   retouched into a feature the game does not render.
 - Generated narrative images remain labeled
   `EDITORIAL KEY ART · NOT GAMEPLAY`.
-- `images/foundry/watchtower/watchtower-{000,045,090,135,180,225,270,315}-{640,1600}.webp`
-  are Joe Town Foundry production-art renders of the runtime-aligned stage-4
-  master. They are pipeline studies, not screenshots or shipped game assets,
-  and the page labels them accordingly.
+- Historical Foundry production studies remain in `images/foundry/` for source
+  provenance, but they are not part of the buyer-facing page.
 - `campaign-achievements.webp`, when present, must be generated from the game’s
   own 21 achievement-art catalog and verified against the source identifiers.
 - `og-light-update-2026.png` uses a new URL for reliable social-card refreshes
@@ -105,12 +100,10 @@ with the game’s submitted 1.4 build:
 - The gameplay gallery uses a native dialog, traps focus while open, restores
   the launching card on close, supports Escape plus Left/Right navigation, and
   provides a horizontally pannable detail view on small screens.
-- The ten-age rail and the Foundry turntable follow measured overflow, not
-  viewport guesses, and keep keyboard access (tab stop plus arrow controls),
-  a live counter, and correct end controls. Start/end disabled states are
-  snap-aware and the counter pins to the last slide at maximum scroll. The
-  Foundry opens a separate square native dialog with Escape, Left/Right,
-  contained focus, and focus restoration.
+- The ten-age rail follows measured overflow, not viewport guesses, and keeps
+  keyboard access (tab stop plus arrow controls), a live counter, and correct
+  end controls. Start/end disabled states are snap-aware and the counter pins
+  to the last slide at maximum scroll.
 - The mobile menu lives outside the blurred header element so its fixed
   positioning resolves against the viewport. While it is open, `#main` and
   the footer are `inert` so Tab cannot escape into the page; a `matchMedia`
@@ -123,7 +116,8 @@ with the game’s submitted 1.4 build:
   so each viewport fetches only its own hero variant. Below-fold images
   lazy-load with explicit dimensions.
 - Google Analytics 4 loads once on the homepage with measurement ID
-  `G-3XJQL5PVS1`. The privacy page intentionally loads no analytics script.
+  `G-3XJQL5PVS1`; App Store links emit `app_store_click`. The privacy page
+  intentionally loads no analytics script.
 - Product privacy language says **no gameplay tracking** or explicitly names the
   Mac game. The website itself uses GA4 for aggregate usage.
 

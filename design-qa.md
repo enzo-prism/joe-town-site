@@ -1,5 +1,50 @@
 # Living Diorama — Design QA
 
+## Gameplay-first conversion and accessibility pass — 2026-08-10
+
+Implemented the Fable design/copy audit against `main` and verified the result
+in Chrome at 1440×900 and 390×844.
+
+### Design and content changes
+
+- Replaced the atmospheric-first hero with a gameplay-first description and
+  rewrote every chapter around one verified mechanic before one joke.
+- Removed the buyer-irrelevant Foundry chapter and dialog, folded the three
+  permanent-decision cards into `#systems`, and removed the duplicate standalone
+  logistics capture.
+- Lifted coal/panel surfaces, strengthened section and inactive-control borders,
+  established a 14px body-copy floor, brightened the dark world capture, and
+  rebuilt the desktop gameplay gallery as a compact two-row proof grid.
+- Tightened section, heading, rail, story-row, campaign, and final-CTA spacing.
+  The fully loaded desktop page fell from **20,350 px** on production to
+  **14,963 px** locally at 1440×900, a **26.5% reduction**.
+
+### Correctness and accessibility
+
+- Removed the viewport zoom lock. Pinch zoom is no longer disabled.
+- Gated reveal hiding behind `html.js`. With `js/main.js` deliberately aborted,
+  all 92 `.reveal` elements remained visible, none computed to opacity 0, and a
+  direct `#systems` load rendered normally.
+- Added `pointer-events: none` to the decorative scroll-progress layer after
+  mobile hit-testing showed it could intercept the menu button.
+- Mobile at 390×844 has zero horizontal overflow. The menu makes `main` and the
+  footer inert, the hour and systems tablists switch correctly, the image dialog
+  closes on Escape and restores focus, FAQ disclosure works, and the contextual
+  purchase bar appears after the hero.
+- axe-core 4.12.1 at 1440×900 and 390×844 reports 0 WCAG 2 A/AA violations.
+  Its only incomplete result is the expected inability to compute contrast for
+  text over image and gradient surfaces; those surfaces were visually inspected.
+
+### Release checks and evidence
+
+- `python3 scripts/validate_site.py`, `node --check js/main.js`, and
+  `git diff --check` pass.
+- Release-wording gate remains intact: no public 1.4 badge or unverified
+  “available now,” “out now,” or “released” copy was introduced.
+- Before/after full-page desktop, mobile hero/menu/lightbox, and no-script
+  screenshots are recorded in
+  `OUTBOX/JOE_TOWN_SITE_REDESIGN_2026-08-10/screenshots/`.
+
 ## Lightbox framing, mobile zoom lock, and hero readability — 2026-08-05
 
 Follow-up pass by Qwen on the editorial cavern redesign (picking up K3's
