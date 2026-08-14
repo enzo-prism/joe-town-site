@@ -47,29 +47,20 @@ favicons, crawler files, and referenced images remain deployable.
 
 ## Current page story
 
-The 2026-08-10 redesign tightens the page to thirteen numbered chapters over
-the same verified story. The 2026-07-30 source update keeps the website in line
-with the game’s submitted 1.4 build:
+The 2026-08-14 conversion pass keeps the verified story and shortens the
+buyer path to five chapters. The 2026-07-30 source update still governs
+product facts:
 
-1. **The Light Update hero** — current dusk gameplay, responsive sources, and
-   release-safe wording.
-2. **Same town. Five hours.** — `#hour` compares dawn, morning, midday, dusk, and
-   night at the same camera and town state.
-3. **Inside the latest build** — six expandable current-build captures show the
-   town, petitions, ventures, exploration, diplomacy, and named-Joe roster.
-4. **Ten ages** — refreshed build-24 game-rendered captures, plus the
-   Camp/Kingdom/Space journey.
-5. **Origins and named Joes** — five permanent origins and a flock whose skills,
-   perks, relationships, and traits evolve.
-6. **Physical production and permanent decisions** — `#systems` combines
-   Corn → Flour → Bread → Food, the four system tabs, the three-branch guild
-   tree, Joe perks and earned traits, and the four Monument phases.
-7. **World, raids, ventures, and away play** — the wider simulation and its
-   consequence-driven systems.
-8. **A campaign with a crown** — `#campaign` proves the Space Legacy, five-level
-    Deep Throne epilogue, and 21 Game Center achievements.
-9. **FAQ and purchase close** — one purchase, local saves, offline play, no ads,
-    no in-app purchases, and no gameplay tracking.
+1. **Hero** — dusk gameplay, official tagline, one purchase action, and a
+   lighter scrim so the town stays visible.
+2. **Play (`#play`)** — four Mac-window captures (town, roads, petitions, Joes)
+   and the same-town five-hour clock.
+3. **Ages (`#ages`)** — Camp/Kingdom/Space chapters plus one interactive
+   ten-age board with mechanic-first captions.
+4. **Systems (`#systems`)** — Corn → Flour → Bread → Food, guild/Joe/Monument
+   decisions, four founders, and compact world/raid/away facts.
+5. **FAQ and dusk-town close** — one purchase, local saves, offline play, no ads,
+   no in-app purchases, and no gameplay tracking.
 
 ## Asset provenance
 

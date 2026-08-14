@@ -4,12 +4,12 @@ Static site. No build step. `index.html` + `css/style.css` + `js/main.js` + `ima
 Goal: convert Mac strategy/city-builder players into players. Charm + premium craft.
 
 > **Current direction:** **The Living Diorama** was selected on 2026-07-20 and
-> remains the active design. The 2026-08-10 conversion pass leads with the game
-> itself and tightens the proof sequence:
-> gameplay-first hero → five-hour light comparison → ten ages → named Joes and
-> petitions → physical production + lasting decisions → world systems →
-> campaign/Deep Throne/Game
-> Center value → purchase close. The other two directions remain archived in
+> remains the active design. The 2026-08-14 conversion pass shortens the buyer
+> path: gameplay-first hero → current-build Mac-window captures → five-hour
+> clock on the same town → Camp/Kingdom/Space plus one ten-age board →
+> production + lasting decisions → compact world/raid/away facts → FAQ →
+> dusk-town purchase close. Editorial key art is no longer part of the primary
+> journey. The other two directions remain archived in
 > [`docs/VISUAL-FIRST-REDESIGN.md`](docs/VISUAL-FIRST-REDESIGN.md).
 
 ## Living Diorama implementation — current
@@ -255,11 +255,10 @@ release-wording gate above remain canonical.
   use `clamp(56px, 12vw, 72px)`, section headers use
   `clamp(28px, 4vw, 44px)`, and the age rail uses
   `clamp(40px, 5vw, 64px)` top spacing.
-- **Page rhythm:** hero → ticker → hour switcher → bento gallery → journey
-  trio → ten-age rail → origins → named Joes → petitions sticky split →
-  production chain + systems tabs + decisions tri-grid → world civ grid →
-  raid/venture/away story rows → campaign
-  crown → FAQ → purchase close.
+- **Page rhythm:** hero → current-build Mac-window gallery → five-hour clock →
+  Camp/Kingdom/Space chapters + one ten-age board → production chain +
+  decision captures + founder row + world/raid/away facts → FAQ → dusk-town
+  purchase close.
 - **Interaction inventory:** hour tablist and systems tablist with roving
   tabindex; age rail with arrows, counter, keyboard scroll, and snap stops,
   with snap-aware start/end disabled states and an end-pinned counter;

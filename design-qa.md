@@ -1,5 +1,27 @@
 # Living Diorama — Design QA
 
+## Conversion redesign — 2026-08-14
+
+Implemented the ten design opportunities from the conversion audit:
+
+- Shortened the homepage from thirteen magazine chapters to five buyer chapters.
+- Rebuilt the hero around the official tagline, one gold purchase action, and a
+  lighter scrim so the dusk town remains visible.
+- Led with current-build play captures in Mac window frames at native 16:10,
+  then the five-hour clock (auto-advances in view; user choice stops it).
+- Replaced the joke-first age rail with one Kingdom-default board and
+  mechanic-first captions. Camp/Kingdom/Space use square desktop / wide mobile
+  crops and jump to the matching age.
+- Collapsed origins, petitions, world, raids, ventures, campaign, and editorial
+  key-art chapters into one systems block and the FAQ.
+- Closed on the dusk town, not the Starfarer poster. Privacy now shares the
+  current type, wordmark, and stylesheet.
+- Type floor is 14px. Gold is reserved for purchase, selected pills, and
+  italic emphasis. Hover lift remains on real controls only.
+- Tablet/phone keep edge-peeking rails for play, eras, and decisions.
+
+Release-wording and tracking gates are unchanged.
+
 ## Gameplay-first conversion and accessibility pass — 2026-08-10
 
 Implemented the Fable design/copy audit against `main` and verified the result
