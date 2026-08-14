@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Joe Town — Chicken Civilization Strategy for Mac</title>
-  <meta name="description" content="A strategy game where twelve named chickens build a civilization across ten ages — roads, petitions, permanent tech, raids, and a space program. Native Mac. $9.99 once.">
+  <meta name="description" content="A native Mac strategy city-builder. Twelve named chickens, ten ages, real supply chains, and permanent tech choices. $9.99 once. Plays offline.">
   <link rel="canonical" href="https://gojoetown.com/">
   <meta name="theme-color" content="#070708">
   <meta name="apple-mobile-web-app-title" content="Joe Town">
@@ -21,8 +21,8 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Joe Town">
-  <meta property="og:title" content="Joe Town — Civilization, but everyone's a chicken.">
-  <meta property="og:description" content="Ten ages, named Joes, physical supply chains, and a suggestion box with legal standing. Native Mac strategy, $9.99 once.">
+  <meta property="og:title" content="Joe Town — Build a chicken civilization.">
+  <meta property="og:description" content="Twelve named Joes. Ten ages. Real roads. Native Mac strategy, $9.99 once.">
   <meta property="og:url" content="https://gojoetown.com/">
   <meta property="og:image" content="https://gojoetown.com/images/og-light-update-2026.png">
   <meta property="og:image:secure_url" content="https://gojoetown.com/images/og-light-update-2026.png">
@@ -31,8 +31,8 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="A living Joe Town glowing beneath the cavern at dusk.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Joe Town — Civilization, but everyone's a chicken.">
-  <meta name="twitter:description" content="Ten ages, named Joes, physical supply chains, and a suggestion box with legal standing. Native Mac strategy, $9.99 once.">
+  <meta name="twitter:title" content="Joe Town — Build a chicken civilization.">
+  <meta name="twitter:description" content="Twelve named Joes. Ten ages. Real roads. Native Mac strategy, $9.99 once.">
   <meta name="twitter:image" content="https://gojoetown.com/images/og-light-update-2026.png">
   <meta name="twitter:image:alt" content="A living Joe Town glowing beneath the cavern at dusk.">
 
@@ -44,17 +44,17 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&amp;family=Plus+Jakarta+Sans:wght@400..800&amp;display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="images/hero-light-update-1920.webp?v=20260810-redesign" media="(min-width: 781px)" fetchpriority="high">
-  <link rel="preload" as="image" href="images/hero-light-update-960.webp?v=20260810-redesign" media="(max-width: 780px)" fetchpriority="high">
-  <link rel="stylesheet" href="css/style.css?v=20260810-redesign">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/hero-light-update-1920.webp?v=20260814-conversion" media="(min-width: 781px)" fetchpriority="high">
+  <link rel="preload" as="image" href="images/hero-light-update-960.webp?v=20260814-conversion" media="(max-width: 780px)" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css?v=20260814-conversion">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "VideoGame",
     "name": "Joe Town",
-    "description": "A strategy game where twelve named chickens build a civilization across ten ages with physical supply chains, permanent technology choices, petitions, raids, and a space program.",
+    "description": "A native Mac strategy city-builder where twelve named chickens build a civilization across ten ages with physical supply chains, permanent technology choices, petitions, raids, and a space program.",
     "operatingSystem": "macOS 14 or later",
     "applicationCategory": "GameApplication",
     "genre": ["Strategy", "Simulation"],
@@ -92,7 +92,6 @@
   <div class="grain" aria-hidden="true"></div>
   <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
 
-  <!-- ============ NAV ============ -->
   <header class="nav" id="top">
     <div class="nav-inner">
       <a class="brand" href="#top" aria-label="Joe Town home">
@@ -100,10 +99,10 @@
         <span class="brand-name">Joe Town</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#gameplay">Gameplay</a>
+        <a href="#play">Play</a>
         <a href="#ages">Ages</a>
-        <a href="#joes">Joes</a>
-        <a href="#world">World</a>
+        <a href="#systems">Systems</a>
+        <a href="#faq">FAQ</a>
         <a href="#buy">Buy</a>
       </nav>
       <div class="nav-cta">
@@ -119,10 +118,10 @@
 
   <div class="mobile-menu" id="mobileMenu" hidden>
     <nav aria-label="Mobile">
-      <a href="#gameplay">Gameplay</a>
+      <a href="#play">Play</a>
       <a href="#ages">Ages</a>
-      <a href="#joes">Joes</a>
-      <a href="#world">World</a>
+      <a href="#systems">Systems</a>
+      <a href="#faq">FAQ</a>
       <a href="#buy">Buy</a>
     </nav>
     <a class="btn btn-gold" href="https://apps.apple.com/app/id6790244910" target="_blank" rel="noopener">Buy on the Mac App Store · $9.99</a>
@@ -130,310 +129,207 @@
 
   <main id="main">
 
-    <!-- ============ HERO ============ -->
-    <section class="hero" aria-label="Joe Town — the Light Update">
+    <section class="hero" aria-label="Joe Town">
       <picture class="hero-media">
-        <source media="(max-width: 780px)" srcset="images/hero-light-update-960.webp?v=20260810-redesign" width="960" height="1200">
-        <img src="images/hero-light-update-1920.webp?v=20260810-redesign" alt="A Joe Town plateau at dusk, warm windows glowing across layered stone" width="1920" height="1080" fetchpriority="high">
+        <source media="(max-width: 780px)" srcset="images/hero-light-update-960.webp?v=20260814-conversion" width="960" height="1200">
+        <img src="images/hero-light-update-1920.webp?v=20260814-conversion" alt="A Joe Town plateau at dusk, warm windows glowing across layered stone" width="1920" height="1080" fetchpriority="high">
       </picture>
       <div class="hero-scrim" aria-hidden="true"></div>
 
       <div class="hero-content">
-        <p class="hero-eyebrow reveal">
-          <span class="pulse-dot" aria-hidden="true"></span>
-          The Light Update · Native Mac · Ten ages
-        </p>
+        <p class="hero-eyebrow reveal">Native Mac strategy · Ten ages · $9.99 once</p>
         <h1 class="hero-title reveal" style="--d:.08s">
-          Civilization, but<br><em>everyone's a chicken.</em>
+          Build a <em>chicken</em><br> civilization.
         </h1>
         <p class="hero-sub reveal" style="--d:.16s">
-          Joe Town is a strategy city-builder where twelve named chickens found an empire: real supply chains, permanent tech choices, nosy neighbors, and eventually a space program. You bring the plan. They bring the pecking.
+          Twelve named Joes. Real roads. Permanent tech. You bring the plan. They bring the pecking.
         </p>
         <div class="hero-actions reveal" style="--d:.24s" id="heroActions">
           <a class="btn btn-gold btn-lg" href="https://apps.apple.com/app/id6790244910" target="_blank" rel="noopener">
             <img src="images/apple-mark.svg" alt="" width="17" height="20">
             Buy on the Mac App Store · $9.99
           </a>
-          <a class="btn btn-ghost btn-lg" href="#gameplay">See the actual gameplay</a>
+          <a class="btn btn-ghost btn-lg" href="#play">See how it plays</a>
         </div>
         <p class="hero-trust reveal" style="--d:.32s">
-          $9.99 once · No ads · No in-app purchases · Plays offline
+          No ads · No in-app purchases · Plays offline · macOS 14+
         </p>
       </div>
-
-      <a class="hero-scroll" href="#hour" aria-label="Scroll to the hour section">
-        <span class="hero-scroll-line" aria-hidden="true"></span>
-      </a>
     </section>
 
-    <!-- ============ TICKER ============ -->
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>Ten ages</span><i>✦</i><span>Named Joes</span><i>✦</i><span>13 civilizations</span><i>✦</i><span>24 buildings</span><i>✦</i><span>18 technologies</span><i>✦</i><span>One purchase</span><i>✦</i><span>Plays offline</span><i>✦</i><span>Chickens</span><i>✦</i>
-        <span>Ten ages</span><i>✦</i><span>Named Joes</span><i>✦</i><span>13 civilizations</span><i>✦</i><span>24 buildings</span><i>✦</i><span>18 technologies</span><i>✦</i><span>One purchase</span><i>✦</i><span>Plays offline</span><i>✦</i><span>Chickens</span><i>✦</i>
-      </div>
-    </div>
-
-    <!-- ============ THE HOUR ============ -->
-    <section class="section" id="hour">
+    <section class="section" id="play">
       <div class="container">
         <header class="sec-head reveal">
-          <p class="sec-eyebrow"><span class="sec-index">01</span> Same town · five hours</p>
-          <h2 class="sec-title">The town runs on <em>its own clock.</em></h2>
-          <p class="sec-sub">Light crosses the plateau in real time — dawn cools the stone, dusk warms the windows, and a saved town reloads at the exact hour you left it. We built a working day-night cycle for poultry. It felt necessary.</p>
+          <p class="sec-eyebrow"><span class="sec-index">01</span> The actual game</p>
+          <h2 class="sec-title">Paint the roads. <em>The town does the rest.</em></h2>
+          <p class="sec-sub">Every frame is the current Mac build — a living board, a petition desk, visible cargo, and a roster of chickens with documented personality flaws. Staged sample data where needed, and labeled as such.</p>
         </header>
       </div>
 
-      <div class="hour-stage reveal" data-reveal>
-        <div class="hour-frames" id="hourFrames">
-          <img class="hour-frame is-active" data-hour="dawn" src="images/hour-dawn.webp?v=20260810-redesign" alt="The Joe Town plateau at dawn, cool directional light" width="1600" height="900" loading="lazy">
-          <img class="hour-frame" data-hour="morning" src="images/hour-morning.webp?v=20260810-redesign" alt="The same plateau in morning light" width="1600" height="900" loading="lazy">
-          <img class="hour-frame" data-hour="midday" src="images/hour-midday.webp?v=20260810-redesign" alt="The same plateau at midday" width="1600" height="900" loading="lazy">
-          <img class="hour-frame" data-hour="dusk" src="images/hour-dusk.webp?v=20260810-redesign" alt="The same plateau at dusk, windows warming" width="1600" height="900" loading="lazy">
-          <img class="hour-frame" data-hour="night" src="images/hour-night.webp?v=20260810-redesign" alt="The same plateau at night, windows glowing" width="1600" height="900" loading="lazy">
-        </div>
-        <div class="hour-clock" aria-hidden="true"><span id="hourClock">05:40</span></div>
-      </div>
-
-      <div class="container">
-        <div class="hour-controls reveal" role="tablist" aria-label="Choose an hour of the town’s day">
-          <button class="hour-tab is-active" role="tab" aria-selected="true" data-hour="dawn" id="hourTabDawn" tabindex="0">Dawn</button>
-          <button class="hour-tab" role="tab" aria-selected="false" data-hour="morning" id="hourTabMorning" tabindex="-1">Morning</button>
-          <button class="hour-tab" role="tab" aria-selected="false" data-hour="midday" id="hourTabMidday" tabindex="-1">Midday</button>
-          <button class="hour-tab" role="tab" aria-selected="false" data-hour="dusk" id="hourTabDusk" tabindex="-1">Dusk</button>
-          <button class="hour-tab" role="tab" aria-selected="false" data-hour="night" id="hourTabNight" tabindex="-1">Night</button>
-        </div>
-        <p class="hour-caption" id="hourCaption" aria-live="polite">Dawn · Cool light reaches the plateau.</p>
-      </div>
-    </section>
-
-    <!-- ============ GAMEPLAY GALLERY ============ -->
-    <section class="section section-alt" id="gameplay">
-      <div class="container">
-        <header class="sec-head reveal">
-          <p class="sec-eyebrow"><span class="sec-index">02</span> Inside the latest build</p>
-          <h2 class="sec-title">This is the game. <em>No concept-art bluffing.</em></h2>
-          <p class="sec-sub">Every frame below is the current Mac build: the living town, the petition desk, twelve ventures, the world past the fog, and a roster of chickens with documented personality flaws. Staged sample data where needed — and it says so on the label.</p>
-        </header>
-
-        <div class="bento">
-          <figure class="bento-card bento-wide reveal" data-lightbox>
-            <img src="images/gameplay-town.webp?v=20260810-redesign" alt="A living Joe Town board with buildings, roads, and working production" width="1600" height="1000" loading="lazy">
-            <figcaption><strong>The town, alive</strong><span>Build, route, keep the lights on</span></figcaption>
-          </figure>
-          <figure class="bento-card reveal" style="--d:.06s" data-lightbox>
-            <img src="images/gameplay-petitions.webp?v=20260810-redesign" alt="The petitions panel, where the flock puts requests in writing" width="1600" height="1000" loading="lazy">
-            <figcaption><strong>Petitions with consequences</strong><span>The flock puts it in writing</span></figcaption>
-          </figure>
-          <figure class="bento-card reveal" style="--d:.12s" data-lightbox>
-            <img src="images/gameplay-ventures.webp?v=20260810-redesign" alt="The ventures screen showing the coopconomy" width="1600" height="1000" loading="lazy">
-            <figcaption><strong>The coopconomy</strong><span>Twelve ventures, one proud egg</span></figcaption>
-          </figure>
-          <figure class="bento-card reveal" style="--d:.06s" data-lightbox>
-            <img src="images/gameplay-world.webp?v=20260810-redesign" alt="The world map beyond the cavern" width="1600" height="1000" loading="lazy" class="img-calm">
-            <figcaption><strong>Beyond the cavern</strong><span>Scout what waits past the fog</span></figcaption>
-          </figure>
-          <figure class="bento-card reveal" style="--d:.12s" data-lightbox>
-            <img src="images/gameplay-diplomacy.webp?v=20260810-redesign" alt="Diplomacy with another animal civilization" width="1600" height="1000" loading="lazy">
-            <figcaption><strong>Talk before the honking starts</strong><span>Trade, charm, or make demands</span></figcaption>
-          </figure>
-          <figure class="bento-card bento-full reveal" style="--d:.18s" data-lightbox>
-            <img src="images/gameplay-joes.webp?v=20260810-redesign" alt="The Joe roster, where every Joe has a history" width="1600" height="1000" loading="lazy">
-            <figcaption><strong>Every Joe has a history</strong><span>Perks are chosen; traits are earned</span></figcaption>
-          </figure>
-        </div>
-        <p class="fine-note reveal">Select any frame to inspect it full size.</p>
-      </div>
-    </section>
-
-    <!-- ============ JOURNEY ============ -->
-    <section class="section" id="journey">
-      <div class="container">
-        <header class="sec-head reveal">
-          <p class="sec-eyebrow"><span class="sec-index">03</span> Ten ages · one cavern</p>
-          <h2 class="sec-title">Campfire to starport, in ten<br class="br-desktop"> entirely reasonable steps.</h2>
-        </header>
-
-        <div class="journey-grid">
-          <article class="journey-card reveal">
-            <div class="journey-media">
-              <img src="images/journey-camp-wide.webp?v=20260810-redesign" alt="An early settlement with a founding hall, farm, and short road" width="1200" height="800" loading="lazy">
-              <img class="journey-icon" src="images/era-icon-camp.webp?v=20260810-redesign" alt="" width="576" height="576" loading="lazy">
-            </div>
-            <h3>Camp</h3>
-            <p>Twelve founders, one campfire, and a suggestion box that is technically a hole. Corn first. Civilization shortly after.</p>
-          </article>
-          <article class="journey-card reveal" style="--d:.08s">
-            <div class="journey-media">
-              <img src="images/journey-town-wide.webp?v=20260810-redesign" alt="A Kingdom-age town linked by glowing roads" width="1200" height="800" loading="lazy">
-              <img class="journey-icon" src="images/era-icon-kingdom.webp?v=20260810-redesign" alt="" width="576" height="576" loading="lazy">
-            </div>
-            <h3>Kingdom</h3>
-            <p>Roads hum, granaries fill, and a banquet is just snacks with witnesses. The cavern starts looking like a capital.</p>
-          </article>
-          <article class="journey-card reveal" style="--d:.16s">
-            <div class="journey-media">
-              <img src="images/journey-space-wide.webp?v=20260810-redesign" alt="A Space Age town with a starport and luminous towers" width="1200" height="800" loading="lazy">
-              <img class="journey-icon" src="images/era-icon-space.webp?v=20260810-redesign" alt="" width="576" height="576" loading="lazy">
-            </div>
-            <h3>Space</h3>
-            <p>Sixteen sunrises a day and the rooster has filed a grievance. The first cavern stays home — the stars are just the commute.</p>
-          </article>
-        </div>
-      </div>
-
-      <!-- Ten ages rail -->
-      <div class="rail-wrap" id="ages">
+      <div class="rail-wrap">
         <div class="container rail-head-row">
-          <p class="rail-label reveal">Every age, captured in-game</p>
-          <div class="rail-nav reveal">
-            <span class="rail-counter" id="ageCounter" aria-hidden="true">1 / 10</span>
-            <button class="rail-btn" id="agePrev" aria-label="Previous age">←</button>
-            <button class="rail-btn" id="ageNext" aria-label="Next age">→</button>
+          <p class="rail-label reveal">Current-build captures</p>
+          <div class="rail-nav reveal" data-rail-controls="playRail">
+            <span class="rail-counter" data-rail-counter>1 / 4</span>
+            <button class="rail-btn" data-rail-prev aria-label="Previous capture">←</button>
+            <button class="rail-btn" data-rail-next aria-label="Next capture">→</button>
           </div>
         </div>
-        <ul class="rail" id="ageRail" aria-label="The ten ages of Joe Town" tabindex="0">
-          <li class="age-card"><span class="age-num">01</span><img src="images/age-1.webp?v=20260810-redesign" alt="A Camp Age settlement around its first buildings" width="1400" height="933" loading="lazy"><h4>Camp</h4><p>Twelve chickens and a plan.</p></li>
-          <li class="age-card"><span class="age-num">02</span><img src="images/age-2.webp?v=20260810-redesign" alt="A Town Age settlement with early roads and workshops" width="1400" height="933" loading="lazy"><h4>Town</h4><p>The pothole has tenure and a name.</p></li>
-          <li class="age-card"><span class="age-num">03</span><img src="images/age-3.webp?v=20260810-redesign" alt="A fortified Citadel Age town with walls and watchtowers" width="1400" height="933" loading="lazy"><h4>Citadel</h4><p>The moat remains conceptually damp.</p></li>
-          <li class="age-card"><span class="age-num">04</span><img src="images/age-4.webp?v=20260810-redesign" alt="A Crown Age town with banners and richer rooftops" width="1400" height="933" loading="lazy"><h4>Crown</h4><p>Nobility is poultry with accessories.</p></li>
-          <li class="age-card"><span class="age-num">05</span><img src="images/age-5.webp?v=20260810-redesign" alt="A Kingdom Age capital with arches and granaries" width="1400" height="933" loading="lazy"><h4>Kingdom</h4><p>Granaries fit for royalty.</p></li>
-          <li class="age-card"><span class="age-num">06</span><img src="images/age-6.webp?v=20260810-redesign" alt="An Empire Age town of steel, rivets, and clockwork" width="1400" height="933" loading="lazy"><h4>Empire</h4><p>Goggles optional. Ambition mandatory.</p></li>
-          <li class="age-card"><span class="age-num">07</span><img src="images/age-7.webp?v=20260810-redesign" alt="An Ascendant Age town of obsidian and radiant crystal" width="1400" height="933" loading="lazy"><h4>Ascendant</h4><p>Worms reached enlightenment first. Typical.</p></li>
-          <li class="age-card"><span class="age-num">08</span><img src="images/age-8.webp?v=20260810-redesign" alt="A Fusion Age town glowing around its reactor" width="1400" height="933" loading="lazy"><h4>Fusion</h4><p>The corn near the core popped itself.</p></li>
-          <li class="age-card"><span class="age-num">09</span><img src="images/age-9.webp?v=20260810-redesign" alt="An Orbital Age town building the infrastructure to reach orbit" width="1400" height="933" loading="lazy"><h4>Orbital</h4><p>Zero-g roosting is technically hovering.</p></li>
-          <li class="age-card"><span class="age-num">10</span><img src="images/age-10.webp?v=20260810-redesign" alt="A Space Age town of luminous towers" width="1400" height="933" loading="lazy"><h4>Space</h4><p>Lore drop: the universe hatched from an egg.</p></li>
+        <ul class="shot-rail" id="playRail" data-rail aria-label="Joe Town gameplay captures">
+          <li>
+            <figure class="mac-window" data-lightbox>
+              <div class="mac-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+              <img src="images/gameplay-town.webp?v=20260814-conversion" alt="A living Joe Town board with buildings, roads, and working production" width="1600" height="1000" loading="lazy">
+              <figcaption><strong>The town, alive</strong><span>Build, route, keep the lights on</span></figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="mac-window" data-lightbox>
+              <div class="mac-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+              <img src="images/system-logistics-2026.webp?v=20260814-conversion" alt="The logistics overlay tracing supplied roads between working buildings" width="1600" height="1000" loading="lazy">
+              <figcaption><strong>Roads are supply lines</strong><span>Watch real cargo roll, tile by tile</span></figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="mac-window" data-lightbox>
+              <div class="mac-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+              <img src="images/gameplay-petitions.webp?v=20260814-conversion" alt="The petitions panel, where the flock puts requests in writing" width="1600" height="1000" loading="lazy">
+              <figcaption><strong>Petitions with consequences</strong><span>Approve a spa, a dig, or a feud supper</span></figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="mac-window" data-lightbox>
+              <div class="mac-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+              <img src="images/gameplay-joes.webp?v=20260814-conversion" alt="The Joe roster, where every Joe has a history" width="1600" height="1000" loading="lazy">
+              <figcaption><strong>Every Joe has a history</strong><span>Perks are chosen; traits are earned</span></figcaption>
+            </figure>
+          </li>
         </ul>
-        <p class="rail-timeline" aria-hidden="true">Camp · Town · Citadel · Crown · Kingdom · Empire · Ascendant · Fusion · Orbital · Space</p>
       </div>
-    </section>
 
-    <!-- ============ ORIGINS ============ -->
-    <section class="section section-alt" id="origins">
-      <div class="container">
+      <div class="container hour-block" id="hour">
         <header class="sec-head reveal">
-          <p class="sec-eyebrow"><span class="sec-index">04</span> Five flocks, five paths</p>
-          <h2 class="sec-title">Pick an origin. <em>Own its consequences.</em></h2>
+          <p class="sec-eyebrow"><span class="sec-index">02</span> Same town · five hours</p>
+          <h2 class="sec-title">It keeps its <em>own clock.</em></h2>
+          <p class="sec-sub">Dawn cools the stone, dusk warms the windows, and a saved town reloads at the hour you left it. Watch the day turn, or pick a time.</p>
         </header>
 
-        <figure class="keyart-banner reveal">
-          <img src="images/key-art-origins.webp?v=20260810-redesign" alt="Five chickens standing beneath five faction banners" width="1774" height="998" loading="lazy">
-          <figcaption class="keyart-label">Editorial key art · not gameplay</figcaption>
+        <figure class="board-stage reveal" data-lightbox-stage="hourFrames">
+          <div class="board-frames ratio-16x9" id="hourFrames">
+            <img class="board-frame is-active" data-hour="dawn" src="images/hour-dawn.webp?v=20260814-conversion" alt="The Joe Town plateau at dawn, cool directional light" width="1600" height="900" loading="lazy">
+            <img class="board-frame" data-hour="morning" src="images/hour-morning.webp?v=20260814-conversion" alt="The same plateau in morning light" width="1600" height="900" loading="lazy">
+            <img class="board-frame" data-hour="midday" src="images/hour-midday.webp?v=20260814-conversion" alt="The same plateau at midday" width="1600" height="900" loading="lazy">
+            <img class="board-frame" data-hour="dusk" src="images/hour-dusk.webp?v=20260814-conversion" alt="The same plateau at dusk, windows warming" width="1600" height="900" loading="lazy">
+            <img class="board-frame" data-hour="night" src="images/hour-night.webp?v=20260814-conversion" alt="The same plateau at night, windows glowing" width="1600" height="900" loading="lazy">
+          </div>
+          <div class="board-clock" aria-hidden="true"><span id="hourClock">05:40</span></div>
         </figure>
 
-        <div class="origins-grid">
-          <article class="origin-card reveal" style="--origin:#d98f4f">
-            <h3>Talon Banner</h3>
-            <p class="origin-motto">“Peace through pecking order.”</p>
-            <p>The military option. Cheaper soldiers, richer raids, and diplomats famous for entering with a banner and leaving with the grain.</p>
-          </article>
-          <article class="origin-card reveal" style="--d:.06s;--origin:#9db4d6">
-            <h3>Moonmolt Covenant</h3>
-            <p class="origin-motto">“Read the omens in every molted feather.”</p>
-            <p>The mystics. They consult the moon before breakfast, and the moon has surprisingly firm opinions about zoning.</p>
-          </article>
-          <article class="origin-card reveal" style="--d:.12s;--origin:#6fd0c0">
-            <h3>Cogwing Guild</h3>
-            <p class="origin-motto">“Measure twice, cluck once.”</p>
-            <p>The engineers. Machines that run beautifully, provided nobody asks which gear is load-bearing.</p>
-          </article>
-          <article class="origin-card reveal" style="--d:.18s;--origin:#e8c05a">
-            <h3>Golden Peck Consortium</h3>
-            <p class="origin-motto">“Every sunrise is a market opening.”</p>
-            <p>The economists. They discovered grain left alone becomes more grain, and now they nap professionally. The ledger keeps counting.</p>
-          </article>
-          <article class="origin-card reveal" style="--d:.24s;--origin:#c3a4e2">
-            <h3>Featherlight Communion</h3>
-            <p class="origin-motto">“A calm roost weathers every storm.”</p>
-            <p>The pacifists. They hold that most wars end when somebody finally shares the snacks. Their enemies leave confused and faintly blessed.</p>
-          </article>
+        <div class="pill-row reveal" role="tablist" aria-label="Choose an hour of the town’s day" id="hourTabs">
+          <button class="pill is-active" role="tab" aria-selected="true" data-hour="dawn" id="hourTabDawn" tabindex="0">Dawn</button>
+          <button class="pill" role="tab" aria-selected="false" data-hour="morning" id="hourTabMorning" tabindex="-1">Morning</button>
+          <button class="pill" role="tab" aria-selected="false" data-hour="midday" id="hourTabMidday" tabindex="-1">Midday</button>
+          <button class="pill" role="tab" aria-selected="false" data-hour="dusk" id="hourTabDusk" tabindex="-1">Dusk</button>
+          <button class="pill" role="tab" aria-selected="false" data-hour="night" id="hourTabNight" tabindex="-1">Night</button>
         </div>
-        <p class="fine-note reveal">Each origin owns one core system and one unique building, and you choose once per town. The town spends the rest of history being that town — so choose like it's permanent, because it is.</p>
+        <p class="board-caption" id="hourCaption" aria-live="polite">Dawn · Cool light reaches the plateau.</p>
       </div>
     </section>
 
-    <!-- ============ JOES ============ -->
-    <section class="section" id="joes">
+    <section class="section section-alt" id="ages">
       <div class="container">
-        <div class="split">
-          <div class="split-copy">
-            <header class="sec-head reveal">
-              <p class="sec-eyebrow"><span class="sec-index">05</span> The flock has names</p>
-              <h2 class="sec-title">The town grows. <em>So do its Joes.</em></h2>
-              <p class="sec-sub">John, Alex, Dawson, and Matt are four of the twelve founders. Assign them, promote them, watch them collect skills, friendships, moods, and grudges — no two saves agree on who ends up in charge.</p>
-            </header>
-            <ul class="check-list reveal">
-              <li><strong>Four ranks, honestly earned.</strong> Worker, Foreman, Steward, Elder — promotions are paid in corn and stone, and an Elder lifts the whole town.</li>
-              <li><strong>Perks are chosen. Traits are earned.</strong> You can respec what you picked for a Joe. You can never respec what they did.</li>
-              <li><strong>Moods with consequences.</strong> An Inspired Joe outworks a Weary one, and the ledger will happily show you the difference.</li>
-            </ul>
-            <div class="quote-box reveal">
-              <p id="flockQuote">“Our spreadsheet has feathers.”</p>
-              <button class="quote-pause" id="quotePause" aria-pressed="false">Pause Joe chatter</button>
-            </div>
-          </div>
-          <div class="split-media">
-            <figure class="portrait-frame reveal">
-              <img src="images/joe-builder-key-art.webp?v=20260810-redesign" alt="A Joe builder looking out over the cavern" width="1120" height="1400" loading="lazy">
-              <figcaption class="keyart-label">Editorial key art · not gameplay</figcaption>
-            </figure>
-            <div class="founders">
-              <div class="founder reveal"><img src="images/joe-avatar-john.webp?v=20260810-redesign" alt="John, a bold pixel-art chicken" width="256" height="256" loading="lazy"><h3>John</h3><p><strong>Bold</strong> · Farming today, audibly</p></div>
-              <div class="founder reveal" style="--d:.06s"><img src="images/joe-avatar-alex.webp?v=20260810-redesign" alt="Alex, a dreamy pixel-art chicken" width="256" height="256" loading="lazy"><h3>Alex</h3><p><strong>Dreamy</strong> · Out scouting a promising rock</p></div>
-              <div class="founder reveal" style="--d:.12s"><img src="images/joe-avatar-dawson.webp?v=20260810-redesign" alt="Dawson, a crafty pixel-art chicken" width="256" height="256" loading="lazy"><h3>Dawson</h3><p><strong>Crafty</strong> · Studying; the footnotes have footnotes</p></div>
-              <div class="founder reveal" style="--d:.18s"><img src="images/joe-avatar-matt.webp?v=20260810-redesign" alt="Matt, an earnest pixel-art chicken" width="256" height="256" loading="lazy"><h3>Matt</h3><p><strong>Earnest</strong> · Newly promoted; everyone has heard</p></div>
-            </div>
+        <header class="sec-head reveal">
+          <p class="sec-eyebrow"><span class="sec-index">03</span> Campfire to starport</p>
+          <h2 class="sec-title">Ten ages. <em>One cavern.</em></h2>
+          <p class="sec-sub">Each age redraws the capital — new materials, new machines, same chickens. Jump to a chapter, or walk the whole ladder.</p>
+        </header>
+      </div>
+
+      <div class="rail-wrap">
+        <div class="container rail-head-row">
+          <p class="rail-label reveal">Three chapters</p>
+          <div class="rail-nav reveal" data-rail-controls="eraRail">
+            <span class="rail-counter" data-rail-counter>1 / 3</span>
+            <button class="rail-btn" data-rail-prev aria-label="Previous chapter">←</button>
+            <button class="rail-btn" data-rail-next aria-label="Next chapter">→</button>
           </div>
         </div>
+        <ul class="era-rail" id="eraRail" data-rail aria-label="Camp, Kingdom, and Space">
+          <li>
+            <button class="era-card" type="button" data-jump-age="camp">
+              <picture>
+                <source media="(max-width: 780px)" srcset="images/journey-camp-wide.webp?v=20260814-conversion" width="1200" height="800">
+                <img src="images/journey-camp-square.webp?v=20260814-conversion" alt="An early settlement with a founding hall, farm, and short road" width="960" height="960" loading="lazy">
+              </picture>
+              <span class="era-kicker">01 · Camp</span>
+              <strong>Twelve founders, one campfire.</strong>
+              <span>Corn first. Civilization shortly after.</span>
+            </button>
+          </li>
+          <li>
+            <button class="era-card" type="button" data-jump-age="kingdom">
+              <picture>
+                <source media="(max-width: 780px)" srcset="images/journey-town-wide.webp?v=20260814-conversion" width="1200" height="800">
+                <img src="images/journey-town-square.webp?v=20260814-conversion" alt="A Kingdom-age town linked by glowing roads" width="960" height="960" loading="lazy">
+              </picture>
+              <span class="era-kicker">05 · Kingdom</span>
+              <strong>Roads hum. Granaries fill.</strong>
+              <span>The cavern starts looking like a capital.</span>
+            </button>
+          </li>
+          <li>
+            <button class="era-card" type="button" data-jump-age="space">
+              <picture>
+                <source media="(max-width: 780px)" srcset="images/journey-space-wide.webp?v=20260814-conversion" width="1200" height="800">
+                <img src="images/journey-space-square.webp?v=20260814-conversion" alt="A Space Age town with a starport and luminous towers" width="960" height="960" loading="lazy">
+              </picture>
+              <span class="era-kicker">10 · Space</span>
+              <strong>The first cavern stays home.</strong>
+              <span>The stars are just the commute.</span>
+            </button>
+          </li>
+        </ul>
       </div>
-    </section>
 
-    <!-- ============ PETITIONS ============ -->
-    <section class="section section-alt" id="petitions">
       <div class="container">
-        <div class="sticky-split">
-          <div class="sticky-col">
-            <header class="sec-head reveal">
-              <p class="sec-eyebrow"><span class="sec-index">06</span> The suggestion box got an upgrade</p>
-              <h2 class="sec-title">The flock files <em>petitions.</em></h2>
-              <p class="sec-sub">Named Joes bring the town's business to your desk — specific, sincere, and slightly unhinged. Approve one and the town actually builds the spa, funds the dig, or settles the feud over a shared meal.</p>
-              <p class="sec-sub">Declining costs nothing. Joe Town never punishes you for saying "not yet." The chicken will simply remember.</p>
-            </header>
-            <figure class="portrait-frame reveal">
-              <img src="images/key-art-petition.webp?v=20260810-redesign" alt="A chicken presenting a glowing petition scroll from a stone podium" width="1000" height="1333" loading="lazy">
-              <figcaption class="keyart-label">Editorial key art · not gameplay</figcaption>
-            </figure>
+        <figure class="board-stage reveal" data-lightbox-stage="ageFrames">
+          <div class="board-frames ratio-3x2" id="ageFrames">
+            <img class="board-frame" data-age="camp" src="images/age-1.webp?v=20260814-conversion" alt="A Camp Age settlement around its first buildings" width="1400" height="933" loading="lazy">
+            <img class="board-frame" data-age="town" src="images/age-2.webp?v=20260814-conversion" alt="A Town Age settlement with early roads and workshops" width="1400" height="933" loading="lazy">
+            <img class="board-frame" data-age="citadel" src="images/age-3.webp?v=20260814-conversion" alt="A fortified Citadel Age town with walls and watchtowers" width="1400" height="933" loading="lazy">
+            <img class="board-frame" data-age="crown" src="images/age-4.webp?v=20260814-conversion" alt="A Crown Age town with banners and richer rooftops" width="1400" height="933" loading="lazy">
+            <img class="board-frame is-active" data-age="kingdom" src="images/age-5.webp?v=20260814-conversion" alt="A Kingdom Age capital with arches and granaries" width="1400" height="933">
+            <img class="board-frame" data-age="empire" src="images/age-6.webp?v=20260814-conversion" alt="An Empire Age town of steel, rivets, and clockwork" width="1400" height="933" loading="lazy">
+            <img class="board-frame" data-age="ascendant" src="images/age-7.webp?v=20260814-conversion" alt="An Ascendant Age town of obsidian and radiant crystal" width="1400" height="933" loading="lazy">
+            <img class="board-frame" data-age="fusion" src="images/age-8.webp?v=20260814-conversion" alt="A Fusion Age town glowing around its reactor" width="1400" height="933" loading="lazy">
+            <img class="board-frame" data-age="orbital" src="images/age-9.webp?v=20260814-conversion" alt="An Orbital Age town building the infrastructure to reach orbit" width="1400" height="933" loading="lazy">
+            <img class="board-frame" data-age="space" src="images/age-10.webp?v=20260814-conversion" alt="A Space Age town of luminous towers" width="1400" height="933" loading="lazy">
           </div>
-          <div class="scroll-col">
-            <blockquote class="petition reveal">
-              <p>“Six worms run the entire under-soil trade. We buy in now, or we buy in later at their price.”</p>
-              <cite>— the Worm Cartel</cite>
-            </blockquote>
-            <blockquote class="petition reveal">
-              <p>“There’s a hole behind the quarry. It was not there yesterday. I want it on the record.”</p>
-              <cite>— the Suspicious Hole</cite>
-            </blockquote>
-            <blockquote class="petition reveal">
-              <p>“The wind is right there, doing nothing at all. Let’s put it on the payroll.”</p>
-              <cite>— the Windmill Proposal</cite>
-            </blockquote>
-            <blockquote class="petition reveal">
-              <p>“Small wooden chickens, enormous wooden feelings. The roost is ready for a theatre.”</p>
-              <cite>— the Puppet Theatre</cite>
-            </blockquote>
-            <p class="fine-note reveal">26 petition archetypes — statues, spas, bell towers, libraries — and one Monument raised in four phases across the ages.</p>
-          </div>
+        </figure>
+
+        <div class="pill-row pill-scroll reveal" role="tablist" aria-label="The ten ages of Joe Town" id="ageTabs">
+          <button class="pill" role="tab" aria-selected="false" data-age="camp" id="ageTabCamp" tabindex="-1">Camp</button>
+          <button class="pill" role="tab" aria-selected="false" data-age="town" id="ageTabTown" tabindex="-1">Town</button>
+          <button class="pill" role="tab" aria-selected="false" data-age="citadel" id="ageTabCitadel" tabindex="-1">Citadel</button>
+          <button class="pill" role="tab" aria-selected="false" data-age="crown" id="ageTabCrown" tabindex="-1">Crown</button>
+          <button class="pill is-active" role="tab" aria-selected="true" data-age="kingdom" id="ageTabKingdom" tabindex="0">Kingdom</button>
+          <button class="pill" role="tab" aria-selected="false" data-age="empire" id="ageTabEmpire" tabindex="-1">Empire</button>
+          <button class="pill" role="tab" aria-selected="false" data-age="ascendant" id="ageTabAscendant" tabindex="-1">Ascendant</button>
+          <button class="pill" role="tab" aria-selected="false" data-age="fusion" id="ageTabFusion" tabindex="-1">Fusion</button>
+          <button class="pill" role="tab" aria-selected="false" data-age="orbital" id="ageTabOrbital" tabindex="-1">Orbital</button>
+          <button class="pill" role="tab" aria-selected="false" data-age="space" id="ageTabSpace" tabindex="-1">Space</button>
         </div>
+        <p class="age-meta" id="ageMeta">Royal Granaries · Standing Guard</p>
+        <p class="board-caption" id="ageCaption" aria-live="polite">Brick arches and glass. A capital, still run by poultry.</p>
       </div>
     </section>
 
-    <!-- ============ PRODUCTION / SYSTEMS ============ -->
     <section class="section" id="systems">
       <div class="container">
         <header class="sec-head reveal">
-          <p class="sec-eyebrow"><span class="sec-index">07</span> The city is the hero</p>
-          <h2 class="sec-title">Roads are supply lines, <em>not decoration.</em></h2>
-          <p class="sec-sub">Corn leaves the farm, becomes flour at the mill, bread at the bakery, food at the market — carried tile by tile by actual named chickens. When a route stalls, the Logistics view points at the exact tile where your empire is quietly failing.</p>
+          <p class="sec-eyebrow"><span class="sec-index">04</span> The city is the hero</p>
+          <h2 class="sec-title">Decisions stay <em>on the board.</em></h2>
+          <p class="sec-sub">Corn leaves the farm, becomes flour, bread, then food — carried by named chickens. Choose a guild branch, shape a Joe, raise one Monument. Those choices do not reset.</p>
         </header>
 
         <div class="chain reveal" role="group" aria-label="Production chain: corn becomes flour, flour becomes bread, bread becomes food">
@@ -445,229 +341,112 @@
           <div class="chain-link" aria-hidden="true"></div>
           <div class="chain-node"><span class="chain-step">04</span><strong>Food</strong><span>Market</span></div>
         </div>
+      </div>
 
-        <div class="systems-tabs reveal">
-          <div class="sys-tablist" role="tablist" aria-label="Town systems">
-            <button class="sys-tab is-active" role="tab" aria-selected="true" data-sys="logistics" id="sysTabLogistics" tabindex="0">Roads</button>
-            <button class="sys-tab" role="tab" aria-selected="false" data-sys="technology" id="sysTabTechnology" tabindex="-1">Technology</button>
-            <button class="sys-tab" role="tab" aria-selected="false" data-sys="joes" id="sysTabJoes" tabindex="-1">Named Joes</button>
-            <button class="sys-tab" role="tab" aria-selected="false" data-sys="world" id="sysTabWorld" tabindex="-1">World map</button>
-          </div>
-          <div class="sys-panels">
-            <figure class="sys-panel is-active" role="tabpanel" id="sysPanelLogistics" aria-labelledby="sysTabLogistics" data-lightbox>
-              <img src="images/system-logistics-2026.webp?v=20260810-redesign" alt="The logistics overlay tracing supplied roads between working buildings" width="1600" height="1000" loading="lazy">
-              <figcaption>Watch real cargo roll.</figcaption>
-            </figure>
-            <figure class="sys-panel" role="tabpanel" id="sysPanelTechnology" aria-labelledby="sysTabTechnology" data-lightbox hidden>
-              <img src="images/system-technology-2026.webp?v=20260810-redesign" alt="A civilization choice between two technologies" width="1600" height="1000" loading="lazy">
-              <figcaption>Choose once, live with it.</figcaption>
-            </figure>
-            <figure class="sys-panel" role="tabpanel" id="sysPanelJoes" aria-labelledby="sysTabJoes" data-lightbox hidden>
-              <img src="images/system-joes-2026.webp?v=20260810-redesign" alt="The Manage Joes roster showing named flock members, traits, and assignments" width="1600" height="1000" loading="lazy">
-              <figcaption>A flock with opinions.</figcaption>
-            </figure>
-            <figure class="sys-panel" role="tabpanel" id="sysPanelWorld" aria-labelledby="sysTabWorld" data-lightbox hidden>
-              <img src="images/system-world-2026.webp?v=20260810-redesign" alt="The world map with a scout route and another animal civilization" width="1600" height="1000" loading="lazy">
-              <figcaption>See what the geese are up to.</figcaption>
-            </figure>
+      <div class="rail-wrap">
+        <div class="container rail-head-row">
+          <p class="rail-label reveal">Lasting decisions</p>
+          <div class="rail-nav reveal" data-rail-controls="choiceRail">
+            <span class="rail-counter" data-rail-counter>1 / 3</span>
+            <button class="rail-btn" data-rail-prev aria-label="Previous decision">←</button>
+            <button class="rail-btn" data-rail-next aria-label="Next decision">→</button>
           </div>
         </div>
+        <ul class="choice-rail" id="choiceRail" data-rail aria-label="Guild, Joe, and Monument decisions">
+          <li>
+            <figure class="mac-window" data-lightbox>
+              <div class="mac-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+              <img src="images/choice-guild.webp?v=20260814-conversion" alt="The guild tree showing Commerce, Labor, and Frontier branches" width="1280" height="800" loading="lazy">
+              <figcaption><strong>Choose a guild branch</strong><span>Commerce, Labor, or Frontier — one capstone for life.</span></figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="mac-window" data-lightbox>
+              <div class="mac-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+              <img src="images/choice-joe.webp?v=20260814-conversion" alt="A named Joe’s detail card showing perks and earned traits" width="1280" height="800" loading="lazy">
+              <figcaption><strong>Shape the flock</strong><span>Perks you can retrain. Traits each Joe earns by living here.</span></figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="mac-window" data-lightbox>
+              <div class="mac-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+              <img src="images/choice-monument.webp?v=20260814-conversion" alt="The plaza showing the Monument progressing toward its Crown phase" width="1280" height="800" loading="lazy">
+              <figcaption><strong>Raise one Monument</strong><span>Foundation, Frame, Facade, Crown — one phase at a time.</span></figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
 
-        <h3 class="crosshead reveal">Your decisions stay on the board</h3>
-        <div class="tri-grid">
-          <figure class="tri-card reveal" data-lightbox>
-            <img src="images/choice-guild.webp?v=20260810-redesign" alt="The guild tree showing Commerce, Labor, and Frontier branches" width="1280" height="800" loading="lazy">
-            <figcaption><strong>Choose a guild branch</strong><span>Every node lifts a real restriction, and each realm commits to one capstone for life.</span></figcaption>
-          </figure>
-          <figure class="tri-card reveal" style="--d:.08s" data-lightbox>
-            <img src="images/choice-joe.webp?v=20260810-redesign" alt="A named Joe’s detail card showing perks and earned traits" width="1280" height="800" loading="lazy">
-            <figcaption><strong>Shape the flock</strong><span>Perks you can retrain, traits each Joe earns by living here.</span></figcaption>
-          </figure>
-          <figure class="tri-card reveal" style="--d:.16s" data-lightbox>
-            <img src="images/choice-monument.webp?v=20260810-redesign" alt="The plaza showing the Monument progressing toward its Crown phase" width="1280" height="800" loading="lazy">
-            <figcaption><strong>Raise one Monument</strong><span>Foundation, Frame, Facade, Crown. One lasting phase at a time, across the ages.</span></figcaption>
-          </figure>
+      <div class="container">
+        <div class="founders" id="joes">
+          <div class="founder reveal"><img src="images/joe-avatar-john.webp?v=20260814-conversion" alt="John, a bold pixel-art chicken" width="256" height="256" loading="lazy"><h3>John</h3><p><strong>Bold</strong> · Farming today, audibly</p></div>
+          <div class="founder reveal" style="--d:.06s"><img src="images/joe-avatar-alex.webp?v=20260814-conversion" alt="Alex, a dreamy pixel-art chicken" width="256" height="256" loading="lazy"><h3>Alex</h3><p><strong>Dreamy</strong> · Out scouting a promising rock</p></div>
+          <div class="founder reveal" style="--d:.12s"><img src="images/joe-avatar-dawson.webp?v=20260814-conversion" alt="Dawson, a crafty pixel-art chicken" width="256" height="256" loading="lazy"><h3>Dawson</h3><p><strong>Crafty</strong> · Studying; the footnotes have footnotes</p></div>
+          <div class="founder reveal" style="--d:.18s"><img src="images/joe-avatar-matt.webp?v=20260814-conversion" alt="Matt, an earnest pixel-art chicken" width="256" height="256" loading="lazy"><h3>Matt</h3><p><strong>Earnest</strong> · Newly promoted; everyone has heard</p></div>
         </div>
-        <p class="fine-note reveal">24 buildings, 18 permanent technologies, and a town that keeps working while you're away — then files a report. A recent one: “Everything grew; nothing exploded. Probably.”</p>
+
+        <ul class="fact-grid" id="world">
+          <li class="reveal">
+            <h3>13 civilizations</h3>
+            <p>Ducks keep a parliament. Geese treat volume as diplomacy. Send envoys, sign pacts, or demand tribute — temperament decides the rest.</p>
+          </li>
+          <li class="reveal" style="--d:.08s">
+            <h3>Raids are planning</h3>
+            <p>Scout first. Pick a gate, an objective, and how much army to risk. Named captains earn renown. A failed raid comes home as a tactical learning vacation.</p>
+          </li>
+          <li class="reveal" style="--d:.16s">
+            <h3>Leave. It’s fine.</h3>
+            <p>The flock keeps working. You get a Welcome Back report. No streaks, no energy meters, no guilt. Raids wait until you answer.</p>
+          </li>
+        </ul>
+        <p class="fine-note reveal">24 buildings, 18 permanent technologies, five origins, and a Space Legacy that can still raise a Deep Throne. One town can become a very long story.</p>
       </div>
     </section>
 
-    <!-- ============ WORLD ============ -->
-    <section class="section section-alt" id="world">
-      <div class="container">
-        <div class="split split-flip">
-          <div class="split-copy">
-            <header class="sec-head reveal">
-              <p class="sec-eyebrow"><span class="sec-index">08</span> Beyond the cavern</p>
-              <h2 class="sec-title">The neighbors have <em>institutions.</em></h2>
-              <p class="sec-sub">Send named scouts into the dark and chart a world that grows with every age: landmarks that pay rent forever, monsters with territorial opinions, and thirteen animal civilizations that would like to discuss terms. In writing. Through a lawyer, if you're a goose.</p>
-            </header>
-            <div class="civ-grid">
-              <div class="civ reveal"><h3>The Puddle Parliament</h3><p class="civ-species">Ducks</p><p>“Cheerful navigators with suspiciously strong opinions.”</p></div>
-              <div class="civ reveal" style="--d:.05s"><h3>The Honking Directorate</h3><p class="civ-species">Geese</p><p>“Fearless diplomats who consider volume a negotiating skill.”</p></div>
-              <div class="civ reveal" style="--d:.1s"><h3>The Truffle Republic</h3><p class="civ-species">Pigs</p><p>“Inventive traders who prize clever bargains.”</p></div>
-              <div class="civ reveal" style="--d:.15s"><h3>The Warren Synod</h3><p class="civ-species">Rabbits</p><p>“Fast-growing scholars with an excellent tunnel network.”</p></div>
-              <div class="civ reveal" style="--d:.2s"><h3>The Grand Gobble</h3><p class="civ-species">Turkeys</p><p>“Ceremonial strategists who never enter a room quietly.”</p></div>
-              <div class="civ reveal" style="--d:.25s"><h3>The Starweave Compact</h3><p class="civ-species">Llamas</p><p>“Starward weavers with calm manners and improbable engines.”</p></div>
-            </div>
-            <p class="fine-note reveal">Send envoys, sign trade pacts, host festivals, or demand tribute — each civilization has a temperament, and a Proud one goes to war over an insult a Gentle one shrugs off. Seven more nations wait past the fog, each with a capital, a favored resource, and a price.</p>
-          </div>
-          <figure class="split-media portrait-frame reveal">
-            <img src="images/key-art-envoy.webp?v=20260810-redesign" alt="A chicken envoy negotiating with a honking goose diplomat across a stone table" width="1400" height="933" loading="lazy">
-            <figcaption class="keyart-label">Editorial key art · not gameplay</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ RAID / VENTURES / AWAY — editorial rows ============ -->
-    <section class="section" id="stories">
-      <div class="container">
-
-        <div class="story-row">
-          <figure class="story-media portrait-tall reveal">
-            <img src="images/key-art-captain.webp?v=20260810-redesign" alt="An armored chicken captain holding a tattered banner on a rampart" width="1000" height="1500" loading="lazy">
-            <figcaption class="keyart-label">Editorial key art · not gameplay</figcaption>
-          </figure>
-          <div class="story-copy">
-            <header class="sec-head reveal">
-              <p class="sec-eyebrow"><span class="sec-index">09</span> Defense is a puzzle</p>
-              <h2 class="sec-title">Battles are won <em>in the planning.</em></h2>
-              <p class="sec-sub">Scout a rival and the report writes your battle plan: which gate is weak, which is guarded, what's worth carrying home. Pick an entry, an objective, and how much of the army to risk — then watch it play out on seeded dice you can't sweet-talk.</p>
-            </header>
-            <ul class="check-list reveal">
-              <li><strong>Named captains earn renown.</strong> Captains like Sir Peckard and Henrietta Boldwing get better with every campaign, and it shows on the field.</li>
-              <li><strong>Three gates, three objectives.</strong> Rams love the Main Gate. Archers prefer the Cliff Path. Choose accordingly.</li>
-              <li><strong>Defeat is survivable.</strong> A failed raid comes home as “a tactical learning vacation.” The flock recovers. The story continues.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="story-row story-flip">
-          <figure class="story-media portrait-tall reveal">
-            <img src="images/key-art-egg.webp?v=20260810-redesign" alt="Two chickens admiring a plain egg displayed on a museum pedestal" width="1100" height="1375" loading="lazy">
-            <figcaption class="keyart-label">Editorial key art · not gameplay</figcaption>
-          </figure>
-          <div class="story-copy">
-            <header class="sec-head reveal">
-              <p class="sec-eyebrow"><span class="sec-index">10</span> The coopconomy</p>
-              <h2 class="sec-title">Twelve businesses. <em>One very proud egg.</em></h2>
-              <p class="sec-sub">Found ventures that run themselves and pay in full whether you visit or not — the Market Stall fills in about twenty minutes, the Starship Prospectors in two days. Check in hourly or weekly; the game refuses to care. Everything banks at full value and stays yours. Forever.</p>
-            </header>
-            <ul class="venture-list reveal">
-              <li><strong>Worm Farm</strong> — “Worms in, worms out. Mostly out.”</li>
-              <li><strong>Market Stall</strong> — “Two crates and an opinion about prices.”</li>
-              <li><strong>Quarry Consortium</strong> — “Several hens agree about a rock.”</li>
-              <li><strong>Courier Run</strong> — “Nothing travels faster than a chicken with a parcel.”</li>
-              <li><strong>Shipping Fleet</strong> — “Bulk. Simply bulk.”</li>
-              <li><strong>Starship Prospectors</strong> — “Somewhere out there is a very rich rock.”</li>
-            </ul>
-            <p class="fine-note reveal">A traveling merchant rotates one-of-a-kind artifacts through town. Most do something remarkable. One is the Unremarkable Egg: “It is an egg. Nothing happens. The flock is very proud of it.” It still costs 120 food and 60 wood.</p>
-          </div>
-        </div>
-
-        <div class="story-row">
-          <figure class="story-media reveal">
-            <img src="images/key-art-return.webp?v=20260810-redesign" alt="A chicken with a glowing ledger waiting at the town gate at evening" width="1774" height="998" loading="lazy">
-            <figcaption class="keyart-label">Editorial key art · not gameplay</figcaption>
-          </figure>
-          <div class="story-copy">
-            <header class="sec-head reveal">
-              <p class="sec-eyebrow"><span class="sec-index">11</span> Leave. It's fine.</p>
-              <h2 class="sec-title">The town takes notes <em>while you're gone.</em></h2>
-              <p class="sec-sub">Close the lid mid-shift and the flock keeps working. Come back in an hour or a week and you get a Welcome Back report — production, arrivals, anything waiting at the gate. Raids never resolve without you: the walls hold until you're ready to answer.</p>
-              <p class="sec-sub">No streaks. No energy meters. No login rewards. No guilt. The only thing that accumulates while you're away is corn, and the Chronicle — the running history of a town that remembers whose idea the hole was.</p>
-            </header>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ============ CAMPAIGN ============ -->
-    <section class="section section-alt" id="campaign">
-      <div class="container">
+    <section class="section section-alt" id="faq">
+      <div class="container faq-wrap">
         <header class="sec-head reveal">
-          <p class="sec-eyebrow"><span class="sec-index">12</span> A campaign with a crown</p>
-          <h2 class="sec-title">Reach the stars. Then earn the <em>Deep Throne.</em></h2>
-          <p class="sec-sub">Completing the Space Legacy seals the campaign — but it doesn't end the town. Five feat-gated Deep Throne levels turn the epilogue into a record of everything your empire actually mastered, not just survived.</p>
+          <p class="sec-eyebrow"><span class="sec-index">05</span> The practical matters</p>
+          <h2 class="sec-title">Buy it once. <em>Keep the whole game.</em></h2>
         </header>
 
-        <div class="campaign-grid">
-          <div class="stat-stack">
-            <div class="stat-tile reveal"><span class="stat-num">10</span><span class="stat-label">ages · Camp Charter to Space Legacy</span></div>
-            <div class="stat-tile reveal" style="--d:.06s"><span class="stat-num">5</span><span class="stat-label">throne levels, each tied to an empire-wide feat</span></div>
-            <div class="stat-tile reveal" style="--d:.12s"><span class="stat-num">21</span><span class="stat-label">Game Center achievements across the campaign</span></div>
-            <div class="stat-tile reveal" style="--d:.18s"><span class="stat-num">∞</span><span class="stat-label">your town, preserved — existing saves stay compatible</span></div>
-          </div>
-          <figure class="frame-wide reveal" data-lightbox>
-            <img src="images/campaign-throne.webp?v=20260810-redesign" alt="The in-game Deep Throne standing complete in a Space Age Joe Town" width="1280" height="900" loading="lazy">
-            <figcaption class="keyart-label">The Deep Throne · staged in-engine capture</figcaption>
-          </figure>
-        </div>
-
-        <figure class="frame-wide reveal" data-lightbox>
-          <img src="images/campaign-achievements.webp?v=20260810-redesign" alt="All 21 pieces of Joe Town’s Game Center achievement art" width="1280" height="720" loading="lazy">
-          <figcaption class="keyart-label">21 Game Center achievements</figcaption>
-        </figure>
-
-        <p class="fine-note reveal">Play completely offline. No ads. No in-app purchases. One town can become a very long story.</p>
-      </div>
-    </section>
-
-    <!-- ============ FAQ ============ -->
-    <section class="section" id="faq">
-      <div class="container">
-        <div class="split">
-          <div class="split-copy">
-            <header class="sec-head reveal">
-              <p class="sec-eyebrow"><span class="sec-index">13</span> The practical matters</p>
-              <h2 class="sec-title">Buy it once. <em>Keep the whole game.</em></h2>
-            </header>
-
-            <div class="faq">
-              <details class="faq-item reveal">
-                <summary>What kind of strategy game is Joe Town?<span class="faq-x" aria-hidden="true"></span></summary>
-                <p>A native Mac city-builder and simulation. Paint roads, tune production chains, make permanent technology choices, and keep an eye on the neighbors — the ducks have a parliament, and the geese consider volume a negotiating skill.</p>
-              </details>
-              <details class="faq-item reveal">
-                <summary>Is $9.99 the full game?<span class="faq-x" aria-hidden="true"></span></summary>
-                <p>Yes. One purchase, all ten ages, 24 buildings, 18 technologies, every named Joe, local saves. No ads, no in-app purchases, no gameplay tracking. As the flock puts it: “Hoarding, but civic-minded.”</p>
-              </details>
-              <details class="faq-item reveal">
-                <summary>Is Joe Town an idle game?<span class="faq-x" aria-hidden="true"></span></summary>
-                <p>No — it respects your absence without demanding it. Town-defining choices wait for you; offline progress is bounded and arrives as a tidy report. No streaks, no energy meters, no guilt. The chickens simply kept busy.</p>
-              </details>
-              <details class="faq-item reveal">
-                <summary>Does it play offline?<span class="faq-x" aria-hidden="true"></span></summary>
-                <p>Entirely. Joe Town saves locally and runs with the internet off. On your return the town reports in — usually something like “Productivity occurred without supervision.”</p>
-              </details>
-              <details class="faq-item reveal">
-                <summary>Which Macs are supported?<span class="faq-x" aria-hidden="true"></span></summary>
-                <p>macOS 14 or later, Apple silicon or Intel, one native universal app. The chickens cannot tell which chip you have and are at peace with that.</p>
-              </details>
-              <details class="faq-item reveal">
-                <summary>Is every town the same?<span class="faq-x" aria-hidden="true"></span></summary>
-                <p>No two are. Worlds are seeded, the twelve founders arrive in a different order every game, and towns diverge by what their Joes asked for. Two towns at the same age can disagree about nearly everything, including the theatre.</p>
-              </details>
-              <details class="faq-item reveal">
-                <summary>Does Joe Town collect data?<span class="faq-x" aria-hidden="true"></span></summary>
-                <p>The Mac game collects nothing — no gameplay data, no accounts. This website uses Google Analytics for aggregate visits; see the <a href="/privacy.html">privacy notice</a>. The only census in Joe Town counts chickens, and it lists eggs as residents, pending.</p>
-              </details>
-            </div>
-          </div>
-          <figure class="split-media portrait-frame reveal">
-            <img src="images/key-art-archivist.webp?v=20260810-redesign" alt="An Archivist Joe reading the town chronicle" width="1003" height="1568" loading="lazy">
-            <figcaption class="keyart-label">Editorial key art · not gameplay</figcaption>
-          </figure>
+        <div class="faq">
+          <details class="faq-item reveal">
+            <summary>What kind of strategy game is Joe Town?<span class="faq-x" aria-hidden="true"></span></summary>
+            <p>A native Mac city-builder and simulation. Paint roads, tune production chains, make permanent technology choices, and keep an eye on the neighbors — the ducks have a parliament, and the geese consider volume a negotiating skill.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Is $9.99 the full game?<span class="faq-x" aria-hidden="true"></span></summary>
+            <p>Yes. One purchase, all ten ages, 24 buildings, 18 technologies, every named Joe, local saves. No ads, no in-app purchases, no gameplay tracking. As the flock puts it: “Hoarding, but civic-minded.”</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Is Joe Town an idle game?<span class="faq-x" aria-hidden="true"></span></summary>
+            <p>No — it respects your absence without demanding it. Town-defining choices wait for you; offline progress is bounded and arrives as a tidy report. No streaks, no energy meters, no guilt.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Does it play offline?<span class="faq-x" aria-hidden="true"></span></summary>
+            <p>Entirely. Joe Town saves locally and runs with the internet off. On your return the town reports in — usually something like “Productivity occurred without supervision.”</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Which Macs are supported?<span class="faq-x" aria-hidden="true"></span></summary>
+            <p>macOS 14 or later, Apple silicon or Intel, one native universal AppKit app. Menubar, VoiceOver, and Reduce Motion are built in. The chickens cannot tell which chip you have and are at peace with that.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Is every town the same?<span class="faq-x" aria-hidden="true"></span></summary>
+            <p>No two are. Worlds are seeded, the twelve founders arrive in a different order every game, and towns diverge by what their Joes asked for.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Does Joe Town collect data?<span class="faq-x" aria-hidden="true"></span></summary>
+            <p>The Mac game collects nothing — no gameplay data, no accounts. This website uses Google Analytics for aggregate visits; see the <a href="/privacy.html">privacy notice</a>.</p>
+          </details>
         </div>
       </div>
     </section>
 
-    <!-- ============ FINAL CTA ============ -->
     <section class="cta-final" id="buy" aria-label="Buy Joe Town">
       <picture class="cta-media">
-        <img src="images/key-art-starfarer.webp?v=20260810-redesign" alt="A starfarer chicken gazing toward the stars" width="1672" height="941" loading="lazy">
+        <source media="(max-width: 780px)" srcset="images/hero-light-update-960.webp?v=20260814-conversion" width="960" height="1200">
+        <img src="images/hour-dusk.webp?v=20260814-conversion" alt="The same Joe Town plateau at dusk, windows warming" width="1600" height="900" loading="lazy">
       </picture>
       <div class="cta-scrim" aria-hidden="true"></div>
       <div class="cta-content">
@@ -677,12 +456,11 @@
           <img src="images/apple-mark.svg" alt="" width="17" height="20">
           Buy on the Mac App Store · $9.99
         </a>
-        <p class="cta-trust reveal" style="--d:.24s">Play offline · No ads · No in-app purchases · No gameplay tracking</p>
+        <p class="cta-trust reveal" style="--d:.24s">Ten ages · Local saves · No ads · No gameplay tracking</p>
       </div>
     </section>
   </main>
 
-  <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container footer-inner">
       <a class="brand" href="#top" aria-label="Back to top">
@@ -698,7 +476,6 @@
     </div>
   </footer>
 
-  <!-- ============ MOBILE BUY BAR ============ -->
   <div class="buybar" id="buybar" hidden>
     <div class="buybar-info">
       <strong>Joe Town</strong>
@@ -707,7 +484,6 @@
     <a class="btn btn-gold btn-sm" href="https://apps.apple.com/app/id6790244910" target="_blank" rel="noopener">Buy</a>
   </div>
 
-  <!-- ============ LIGHTBOX ============ -->
   <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
     <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">×</button>
     <figure class="lightbox-figure">
@@ -720,6 +496,6 @@
     </div>
   </dialog>
 
-  <script src="js/main.js?v=20260810-redesign" defer></script>
+  <script src="js/main.js?v=20260814-conversion" defer></script>
 </body>
 </html>
