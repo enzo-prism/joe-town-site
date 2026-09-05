@@ -1,0 +1,451 @@
+[
+  {
+    "file": "images/refresh/corn.svg",
+    "source": "ArtPipeline/PixelFoundry/generated/grids/cargo-corn-cob.json",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "transform": "Exact grid cells to SVG; no art changes"
+  },
+  {
+    "file": "images/refresh/flour.svg",
+    "source": "ArtPipeline/PixelFoundry/generated/grids/cargo-flour-sack.json",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "transform": "Exact grid cells to SVG; no art changes"
+  },
+  {
+    "file": "images/refresh/bread.svg",
+    "source": "ArtPipeline/PixelFoundry/generated/grids/cargo-bread-loaf.json",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "transform": "Exact grid cells to SVG; no art changes"
+  },
+  {
+    "file": "images/refresh/food.svg",
+    "source": "ArtPipeline/PixelFoundry/generated/grids/resource-food-mushroom.json",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "transform": "Exact grid cells to SVG; no art changes"
+  },
+  {
+    "file": "images/refresh/hero-day.webp",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "publicVersion": "1.6",
+    "fixture": [
+      "--size",
+      "1440x900",
+      "--origin",
+      "goldenPeck",
+      "--game-seed",
+      "2659",
+      "--visual-age",
+      "5",
+      "--marketing-town",
+      "--no-hud",
+      "--panel-collapsed",
+      "--daylight",
+      "midday"
+    ],
+    "pixelDimensions": [
+      2880,
+      1800
+    ],
+    "transform": "WebP encoding q88 m6 at original dimensions; no crop, resize or retouch",
+    "rawSHA256": "e2602e181a74d07424c8711835b71faadaa32464f776ea93cc22206be1476abe",
+    "sha256": "d9f77801f0ce72666d4c1b296101d27273d93f23ef836438616919539ff9c8ee"
+  },
+  {
+    "file": "images/refresh/hero-night.webp",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "publicVersion": "1.6",
+    "fixture": [
+      "--size",
+      "1440x900",
+      "--origin",
+      "goldenPeck",
+      "--game-seed",
+      "2659",
+      "--visual-age",
+      "5",
+      "--marketing-town",
+      "--no-hud",
+      "--panel-collapsed",
+      "--daylight",
+      "night"
+    ],
+    "pixelDimensions": [
+      2880,
+      1800
+    ],
+    "transform": "WebP encoding q88 m6 at original dimensions; no crop, resize or retouch",
+    "rawSHA256": "7b886acdb06712d566c47f10f3503b0173b0711cc06b8a0e858137a4dd7e5311",
+    "sha256": "3d8325933b2be66250dd4976a85e562dd4e97cbe2424a64f034a7de8c6980d04"
+  },
+  {
+    "file": "images/refresh/age-camp.webp",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "publicVersion": "1.6",
+    "fixture": [
+      "--size",
+      "1440x900",
+      "--origin",
+      "goldenPeck",
+      "--game-seed",
+      "2659",
+      "--visual-age",
+      "1",
+      "--marketing-town",
+      "--no-hud",
+      "--panel-collapsed",
+      "--daylight",
+      "morning"
+    ],
+    "pixelDimensions": [
+      2880,
+      1800
+    ],
+    "transform": "WebP encoding q88 m6 at original dimensions; no crop, resize or retouch",
+    "rawSHA256": "d7d2629bff539fdcf6213d23771c68c5a4ecde9e860b234a5e7e779a49fed2f0",
+    "sha256": "91bf445d74b07406dc0d07f3e7ce439bc7c45c3e126f0260effde2f2f329187f"
+  },
+  {
+    "file": "images/refresh/age-kingdom.webp",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "publicVersion": "1.6",
+    "fixture": [
+      "--size",
+      "1440x900",
+      "--origin",
+      "goldenPeck",
+      "--game-seed",
+      "2659",
+      "--visual-age",
+      "5",
+      "--marketing-town",
+      "--no-hud",
+      "--panel-collapsed",
+      "--daylight",
+      "dusk"
+    ],
+    "pixelDimensions": [
+      2880,
+      1800
+    ],
+    "transform": "WebP encoding q88 m6 at original dimensions; no crop, resize or retouch",
+    "rawSHA256": "ddbeb4d67914614744456abf79a6ea4d0b1819a2ffbcbba10f56c92dce48c1e4",
+    "sha256": "6961aab3ca0dd50f8f28b6eac0f54ddc11030dd681b6dc2de214712017ef2fa8"
+  },
+  {
+    "file": "images/refresh/age-space.webp",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "publicVersion": "1.6",
+    "fixture": [
+      "--size",
+      "1440x900",
+      "--origin",
+      "goldenPeck",
+      "--game-seed",
+      "2659",
+      "--visual-age",
+      "10",
+      "--marketing-town",
+      "--no-hud",
+      "--panel-collapsed",
+      "--daylight",
+      "night"
+    ],
+    "pixelDimensions": [
+      2880,
+      1800
+    ],
+    "transform": "WebP encoding q88 m6 at original dimensions; no crop, resize or retouch",
+    "rawSHA256": "9914ba4076a0c6e6fc45dd176c39d919381bd6ea82e5245d2e1880272944573f",
+    "sha256": "c195cdfb00f148eb08ab771b6966216e497a9b8dda19818e1e3515a035a05ad9"
+  },
+  {
+    "file": "images/refresh/town-ui.webp",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "publicVersion": "1.6",
+    "fixture": [
+      "--size",
+      "1440x900",
+      "--origin",
+      "goldenPeck",
+      "--game-seed",
+      "2659",
+      "--visual-age",
+      "5",
+      "--marketing-town",
+      "--overlay",
+      "logistics"
+    ],
+    "pixelDimensions": [
+      2880,
+      1800
+    ],
+    "transform": "WebP encoding q88 m6 at original dimensions; no crop, resize or retouch",
+    "rawSHA256": "efd42a4f220b2cdc9da964bb0f67cbe58b53c69a2b1b463c9a73751e4f923d2c",
+    "sha256": "c8ea80a1820cc6277780b043b889e34a5565ba636cc31296f3c73f517dfcaf99"
+  },
+  {
+    "file": "images/refresh/joes.webp",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "publicVersion": "1.6",
+    "fixture": [
+      "--size",
+      "1440x900",
+      "--origin",
+      "goldenPeck",
+      "--game-seed",
+      "2659",
+      "--manage-joes"
+    ],
+    "pixelDimensions": [
+      2880,
+      1800
+    ],
+    "transform": "WebP encoding q88 m6 at original dimensions; no crop, resize or retouch",
+    "rawSHA256": "a100fe74faa2732ecfcf93737509c0140f80794abc448f827d688e001d0e86fc",
+    "sha256": "a1a3b3fc920e1041a106adf6ef14cef0036979def2319274fa90b90377654c7b"
+  },
+  {
+    "file": "images/refresh/world.webp",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "publicVersion": "1.6",
+    "fixture": [
+      "--size",
+      "1440x900",
+      "--origin",
+      "goldenPeck",
+      "--game-seed",
+      "2659",
+      "--civ-detail",
+      "pigs"
+    ],
+    "pixelDimensions": [
+      2880,
+      1800
+    ],
+    "transform": "WebP encoding q88 m6 at original dimensions; no crop, resize or retouch",
+    "rawSHA256": "46f22051dead880574d410e524a729e548c5def96dfdb086cad19c63c9b8af42",
+    "sha256": "b1cae49f7d40dce6f215c0a877c52ea972e4b7e036ff9a19fc0d29fc4827a467"
+  },
+  {
+    "file": "images/refresh/preview-inspect.webp",
+    "sourceCommit": "dbc1eddb5a02e0ae7b0621e7743e0af25b2569e3",
+    "version": "1.7 (32) internal TestFlight preview, NOT public",
+    "fixture": [
+      "--size",
+      "1440x900",
+      "--origin",
+      "goldenPeck",
+      "--visual-age",
+      "5",
+      "--marketing-town",
+      "--inspect-tile",
+      "6,4"
+    ],
+    "pixelDimensions": [
+      2880,
+      1800
+    ],
+    "transform": "WebP encoding q88 m6 at original dimensions; no crop, resize or retouch",
+    "rawSHA256": "eda926eb478ce92de29349b9fd7efa19c74efaf4f31397935df3196de7c7dd66",
+    "sha256": "eb9fa6f11b502e6d56bc4eec2c79c02ae344b0a67ace247acde50f79b6eaca16"
+  },
+  {
+    "file": "images/refresh/age-town.webp",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "publicVersion": "1.6",
+    "fixture": [
+      "--size",
+      "1440x900",
+      "--origin",
+      "goldenPeck",
+      "--game-seed",
+      "2659",
+      "--visual-age",
+      "2",
+      "--marketing-town",
+      "--no-hud",
+      "--panel-collapsed",
+      "--daylight",
+      "midday"
+    ],
+    "pixelDimensions": [
+      2880,
+      1800
+    ],
+    "transform": "WebP encoding q88 m6 at original dimensions; no crop, resize or retouch",
+    "rawSHA256": "008d7b9edded8d8385208cc0c9f2ae3e6f8103776534cd56a4731f3f4c9f4c7c",
+    "sha256": "c898a44609be0ee335013b031ad647cc7cabf1578ec14d87a9acefe7f4b332ea"
+  },
+  {
+    "file": "images/refresh/age-citadel.webp",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "publicVersion": "1.6",
+    "fixture": [
+      "--size",
+      "1440x900",
+      "--origin",
+      "goldenPeck",
+      "--game-seed",
+      "2659",
+      "--visual-age",
+      "3",
+      "--marketing-town",
+      "--no-hud",
+      "--panel-collapsed",
+      "--daylight",
+      "midday"
+    ],
+    "pixelDimensions": [
+      2880,
+      1800
+    ],
+    "transform": "WebP encoding q88 m6 at original dimensions; no crop, resize or retouch",
+    "rawSHA256": "d3ff6cf11d97bbc57e8d27f5f66591133b0b3f9a35a5d106967352207652a6bb",
+    "sha256": "ca7bfa3ef59d0b15b3edc9652c1cacc7c2c0fb7d9136fa5e64cf7c75a490e2b2"
+  },
+  {
+    "file": "images/refresh/age-crown.webp",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "publicVersion": "1.6",
+    "fixture": [
+      "--size",
+      "1440x900",
+      "--origin",
+      "goldenPeck",
+      "--game-seed",
+      "2659",
+      "--visual-age",
+      "4",
+      "--marketing-town",
+      "--no-hud",
+      "--panel-collapsed",
+      "--daylight",
+      "midday"
+    ],
+    "pixelDimensions": [
+      2880,
+      1800
+    ],
+    "transform": "WebP encoding q88 m6 at original dimensions; no crop, resize or retouch",
+    "rawSHA256": "bf67aa8fc8c0bbffc2710da74f4b3ddbf16cc5821aa666bf18392287ba886892",
+    "sha256": "cffeb86b5733236d1e10af576759dfc00ef39ca56f78785cc1e791d26065b1fd"
+  },
+  {
+    "file": "images/refresh/age-empire.webp",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "publicVersion": "1.6",
+    "fixture": [
+      "--size",
+      "1440x900",
+      "--origin",
+      "goldenPeck",
+      "--game-seed",
+      "2659",
+      "--visual-age",
+      "6",
+      "--marketing-town",
+      "--no-hud",
+      "--panel-collapsed",
+      "--daylight",
+      "midday"
+    ],
+    "pixelDimensions": [
+      2880,
+      1800
+    ],
+    "transform": "WebP encoding q88 m6 at original dimensions; no crop, resize or retouch",
+    "rawSHA256": "6e5b6975a834a774bdf31b2d202d1c334a2c5ec48af5b9fa5e6ad994f157376c",
+    "sha256": "a6ba33bb36f753169cbd214a1f281e3ebf8c69c3665281154034e7e97dfdc53a"
+  },
+  {
+    "file": "images/refresh/age-ascendant.webp",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "publicVersion": "1.6",
+    "fixture": [
+      "--size",
+      "1440x900",
+      "--origin",
+      "goldenPeck",
+      "--game-seed",
+      "2659",
+      "--visual-age",
+      "7",
+      "--marketing-town",
+      "--no-hud",
+      "--panel-collapsed",
+      "--daylight",
+      "midday"
+    ],
+    "pixelDimensions": [
+      2880,
+      1800
+    ],
+    "transform": "WebP encoding q88 m6 at original dimensions; no crop, resize or retouch",
+    "rawSHA256": "9f1265e465e49413208f6901f393b81d177c58ef483c32dfd963e4390965ce1c",
+    "sha256": "b60102008890143e7c3b7c3b076ead1b02cfc6afa97ea378a8265c5fd3d23a89"
+  },
+  {
+    "file": "images/refresh/age-fusion.webp",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "publicVersion": "1.6",
+    "fixture": [
+      "--size",
+      "1440x900",
+      "--origin",
+      "goldenPeck",
+      "--game-seed",
+      "2659",
+      "--visual-age",
+      "8",
+      "--marketing-town",
+      "--no-hud",
+      "--panel-collapsed",
+      "--daylight",
+      "midday"
+    ],
+    "pixelDimensions": [
+      2880,
+      1800
+    ],
+    "transform": "WebP encoding q88 m6 at original dimensions; no crop, resize or retouch",
+    "rawSHA256": "622f151ab59317bb36f9080f902f9c3ea474eb4d9ba4b7019737e301c67b37b7",
+    "sha256": "9cab9e5df7f585bbe8c683332967ab2c7b09848f9381363703e433d9ffb77c84"
+  },
+  {
+    "file": "images/refresh/age-orbital.webp",
+    "sourceCommit": "7128ad06f139627de67c48db1251350b59f3f152",
+    "publicVersion": "1.6",
+    "fixture": [
+      "--size",
+      "1440x900",
+      "--origin",
+      "goldenPeck",
+      "--game-seed",
+      "2659",
+      "--visual-age",
+      "9",
+      "--marketing-town",
+      "--no-hud",
+      "--panel-collapsed",
+      "--daylight",
+      "midday"
+    ],
+    "pixelDimensions": [
+      2880,
+      1800
+    ],
+    "transform": "WebP encoding q88 m6 at original dimensions; no crop, resize or retouch",
+    "rawSHA256": "92672e01047b9872e380f77e09fddaff0b1dc5aa017f8a86d956d7e038c0288f",
+    "sha256": "564de0d92ba0fb65f67047376491b7ceaaf2d32850574030cad52fed28f415f0"
+  },
+  {
+    "file": "images/refresh/social.png",
+    "dimensions": [
+      1200,
+      630
+    ],
+    "source": "HTML/CSS browser-rendered editorial social card using hero-day.webp and existing brand icon",
+    "transform": "Public gameplay scaled and framed within editorial composition; no game features added",
+    "sha256": "7165fc87ce4150e2e1f3c4b32f88bbc7078a765dce57b272507ce9581890e4f8"
+  }
+]
