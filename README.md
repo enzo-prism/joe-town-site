@@ -114,17 +114,21 @@ product facts:
 
 ## Release wording gate
 
-The game repository proves that **Joe Town 1.4 build 24 was submitted for App
-Store review on 2026-07-30**. It does not prove that 1.4 is publicly available.
-The live public storefront lookup on 2026-07-30 still reports **version 1.3** at
-**$9.99**, with **macOS 14.0** as the minimum.
-Until App Store Connect is checked live and shows the version released:
+The US App Store lookup on 2026-09-04 reports **version 1.6** at **$9.99**,
+with **macOS 14.0** as the minimum. The game repository's
+[release record](https://github.com/enzo-prism/joe-town/blob/e9b64ae96e1a69e6a3b868c2f9d81da592546506/docs/APP_STORE_RELEASE.md)
+documents public build 29 as Apple-silicon-only. Version 1.5 was universal,
+but availability of that older version to Intel customers has not been verified.
 
-- Do not say “available now,” “out now,” “released,” or “play the 1.4 update.”
-- Present the new visuals and mechanics as game features without a public 1.4
-  badge.
-- Keep the App Store purchase link and current public price, but do not tie the
-  purchase action to an unverified version number.
+The [1.7 build 30 record](https://github.com/enzo-prism/joe-town/blob/e9b64ae96e1a69e6a3b868c2f9d81da592546506/docs/RELEASE_1_7.md)
+documents both architectures in its signed package and internal TestFlight
+distribution. This does not establish public availability or successful Intel launch.
+
+- Keep the visible compatibility FAQ and its JSON-LD answer consistent.
+- Restore the universal compatibility claim only after verifying Intel installation
+  and launch, and confirming that the tested release is publicly available.
+- Recheck App Store Connect and the public storefront before updating version,
+  price, or release claims.
 
 ## Production
 
