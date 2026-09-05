@@ -22,3 +22,7 @@ Public 1.6 build-29 imagery is separated from the explicitly labeled internal 1.
 - A separate reviewer independently checked desktop, 320px mobile, keyboard tabs, preview dialog, and menu resize; no actionable issues.
 
 These are browser and source checks, not a claim of exhaustive device certification. Production release must be verified against its exact Git commit and canonical-domain assets after main is pushed.
+
+## Initial production receipt
+
+Implementation commit `085a3cc17f8ba33e971d4bf7f9b69e04be93fc71` was pushed to main. Its Git-triggered Vercel deployment `joe-town-site-rimwjrkgk-enzo-design-prisms-projects.vercel.app` reached READY for production, and the canonical site rendered the new design. The follow-up records this receipt and refreshes the sitemap modification date.
