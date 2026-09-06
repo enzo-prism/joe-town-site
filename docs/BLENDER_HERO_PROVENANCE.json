@@ -1,0 +1,33 @@
+{
+  "created": "2026-09-05",
+  "kind": "original Blender editorial illustration, not gameplay",
+  "blender": "5.2.0 LTS",
+  "mcp": "official Blender Lab 1.0.0",
+  "geometry_objects": 547,
+  "frames": 192,
+  "fps": 24,
+  "duration_seconds": 8,
+  "source_base_commit": "2c9da45",
+  "files": {
+    "art/joe-town-hero.blend": {
+      "bytes": 431003,
+      "sha256": "35c0286cbc00779d18ed8ce7d149db19af3b17d3972ca24eff4138e7c3f8e1bf"
+    },
+    "art/build_diorama.py": {
+      "bytes": 13956,
+      "sha256": "bd1bd6f00759f5aac9c86631aafe9e2c72ff3052d3fadeeb8d59eb8d1ed939c1"
+    },
+    "images/refresh/hero-diorama.webp": {
+      "bytes": 71238,
+      "sha256": "6c92b1abc60088686edbc91ce92b154896ee7c50921ed8fe70e3433490f0f932"
+    },
+    "media/joe-town-diorama.mp4": {
+      "bytes": 836113,
+      "sha256": "514df7acbada4f3b48619e0d60cd23d04444479bad7e9653d6254315672e3e8e"
+    },
+    "media/joe-town-diorama-mobile.mp4": {
+      "bytes": 336550,
+      "sha256": "c3382837c06f98b161ad568c1adcfc86661cb9506d3a03a8994e27e5f1995172"
+    }
+  }
+}

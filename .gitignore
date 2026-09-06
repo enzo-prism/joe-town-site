@@ -2,3 +2,5 @@ images/raw/
 .DS_Store
 .vercel
 output/
+
+__pycache__/

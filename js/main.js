@@ -26,6 +26,102 @@
     if (event.matches) closeMenu();
   });
 
+  // Keep the poster visible until a decoded video frame is actually playing.
+  // A source is selected once, at first playback, so resizing never downloads both.
+  const lightbox = document.getElementById('lightbox');
+  const dioramaVideo = document.getElementById('diorama-video');
+  const dioramaButton = document.getElementById('diorama-toggle');
+  const connection = navigator.connection;
+  let animationWanted = !reducedMotion.matches && !connection?.saveData;
+  let explicitPlayback = false;
+  let userPaused = false;
+  let dioramaVisible = false;
+  let playPending = false;
+  let playRequest = 0;
+  const dioramaCanPlay = () => animationWanted && dioramaVisible && !document.hidden && menu.hidden && !lightbox.open;
+  const updateDioramaButton = () => {
+    const active = dioramaCanPlay() && (!dioramaVideo.paused || playPending);
+    const label = active ? 'Pause town animation' : 'Play town animation';
+    dioramaButton.setAttribute('aria-label', label);
+    dioramaButton.querySelector('.diorama-toggle-icon').textContent = active ? 'Ⅱ' : '▶';
+    dioramaButton.querySelector('.diorama-toggle-text').textContent = active ? 'Pause animation' : 'Play animation';
+  };
+  const syncDiorama = () => {
+    if (!dioramaCanPlay()) {
+      playRequest += 1;
+      playPending = false;
+      dioramaVideo.pause();
+      updateDioramaButton();
+      return;
+    }
+    if (playPending || !dioramaVideo.paused) return;
+    if (!dioramaVideo.getAttribute('src')) {
+      dioramaVideo.src = window.matchMedia('(max-width: 780px)').matches
+        ? dioramaVideo.dataset.mobileSrc : dioramaVideo.dataset.desktopSrc;
+    }
+    dioramaVideo.muted = true;
+    playPending = true;
+    const request = ++playRequest;
+    updateDioramaButton();
+    const playback = dioramaVideo.play();
+    if (playback) playback.then(() => {
+      if (request !== playRequest) return;
+      playPending = false;
+      if (!dioramaCanPlay()) dioramaVideo.pause();
+      updateDioramaButton();
+    }).catch(() => {
+      if (request !== playRequest) return;
+      playPending = false;
+      animationWanted = false;
+      dioramaVideo.classList.remove('is-ready');
+      updateDioramaButton();
+    });
+  };
+  dioramaButton.hidden = false;
+  dioramaButton.addEventListener('click', () => {
+    animationWanted = !(dioramaCanPlay() && (!dioramaVideo.paused || playPending));
+    explicitPlayback = animationWanted;
+    userPaused = !animationWanted;
+    if (animationWanted && dioramaVideo.error) dioramaVideo.load();
+    syncDiorama();
+  });
+  dioramaVideo.addEventListener('playing', () => {
+    if (dioramaCanPlay()) dioramaVideo.classList.add('is-ready');
+    else dioramaVideo.pause();
+    updateDioramaButton();
+  });
+  dioramaVideo.addEventListener('pause', updateDioramaButton);
+  dioramaVideo.addEventListener('error', () => {
+    playRequest += 1;
+    playPending = false;
+    animationWanted = false;
+    dioramaVideo.classList.remove('is-ready');
+    updateDioramaButton();
+  });
+  document.addEventListener('visibilitychange', syncDiorama);
+  new MutationObserver(syncDiorama).observe(menu, { attributes:true, attributeFilter:['hidden'] });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => {
+      dioramaVisible = entries[0].isIntersecting;
+      syncDiorama();
+    }, { threshold:0 }).observe(document.querySelector('.diorama-stage'));
+  } else {
+    dioramaVisible = true;
+    syncDiorama();
+  }
+  reducedMotion.addEventListener('change', () => {
+    explicitPlayback = false;
+    animationWanted = !userPaused && !reducedMotion.matches && !connection?.saveData;
+    if (reducedMotion.matches) dioramaVideo.classList.remove('is-ready');
+    syncDiorama();
+  });
+  connection?.addEventListener('change', () => {
+    if (!explicitPlayback) {
+      animationWanted = !userPaused && !reducedMotion.matches && !connection.saveData;
+      syncDiorama();
+    }
+  });
+
   const heroImage = document.getElementById('hero-image');
   document.querySelectorAll('[data-day]').forEach(button => {
     button.addEventListener('click', () => {
@@ -81,7 +177,6 @@
   });
   selectAge(0);
 
-  const lightbox = document.getElementById('lightbox');
   const image = document.getElementById('lightbox-image');
   const caption = document.getElementById('lightbox-caption');
   const imageWrap = lightbox.querySelector('.lightbox-image-wrap');
@@ -107,6 +202,7 @@
       caption.textContent = source.alt;
       resetZoom();
       lightbox.showModal();
+      syncDiorama();
       document.getElementById('lightbox-close').focus();
     });
   });
@@ -117,7 +213,7 @@
   });
   document.getElementById('lightbox-close').addEventListener('click', () => lightbox.close());
   lightbox.addEventListener('click', event => { if (event.target === lightbox) lightbox.close(); });
-  lightbox.addEventListener('close', () => { resetZoom(); opener?.focus(); });
+  lightbox.addEventListener('close', () => { resetZoom(); opener?.focus(); syncDiorama(); });
 
   document.querySelectorAll('a[href^="https://apps.apple.com/app/id6790244910"]').forEach(link => {
     link.addEventListener('click', () => {

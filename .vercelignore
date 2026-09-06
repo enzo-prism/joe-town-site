@@ -10,3 +10,6 @@ docs/
 scripts/
 .github/
 .gitignore
+
+# Editable Blender production source; media exports are shipped.
+art/

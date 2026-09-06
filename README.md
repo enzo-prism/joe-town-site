@@ -22,6 +22,12 @@ The validator checks assets, image dimensions and alt text, IDs, privacy/release
 
 Public gameplay imagery comes from the exact version 1.6 build-29 source. The inspection image is explicitly labeled version 1.7 internal build 32, including in its enlarged view. Portrait illustrations retain existing assets. Raw capture inputs and design documents are excluded from Vercel.
 
+## Blender hero
+
+The September 5 hero is an original Blender miniature, explicitly labeled as a 3D illustration, with the authentic day/night game captures directly below it. The eight-second H.264 loop uses 192 frames at 24 fps and has separate desktop/mobile exports. The 70 KB transparent WebP poster renders immediately. Reduced motion, data saver, and no-JavaScript visits start static. Playback pauses offscreen, in hidden tabs, while navigation is open, or behind a screenshot dialog.
+
+Editable source and the procedural build script are in `art/` and excluded from deployment. See `art/README.md` for reproduction and `docs/BLENDER_HERO_QA.md` for validation.
+
 ## Product truth
 
 Verified US storefront on September 4, 2026: **1.6, $9.99 once, macOS 14+, Apple silicon**. Version 1.7 build 32 is internal TestFlight, not the public download. Do not advertise public Intel support without a newly verified public release. The game saves locally and has no gameplay tracking; this website uses GA4. The privacy page does not load analytics.

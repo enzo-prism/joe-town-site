@@ -10,7 +10,7 @@ Forest ink (#10271f family), warm parchment, wheat gold, and sage accents. Fraun
 
 ## Narrative
 
-1. Civilization with chickens: concise promise, visible price/compatibility, day/night view.
+1. Civilization with chickens: concise promise, visible price/compatibility, an original Blender miniature with a quiet loop; authentic day/night gameplay immediately follows.
 2. Lay roads: real public interface and corn → flour → bread → food illustration using exact game pixels.
 3. Ten ages: keyboard-operable tabs, real captures, short progression descriptions.
 4. Named Joes and neighbors: varied split layouts explain individual and world decisions.
@@ -28,3 +28,7 @@ Public captures: native source 7128ad06f139627de67c48db1251350b59f3f152 (1.6 bui
 Public-source `BuildingType` has 24 cases; `CivilizationTechnology` has 18. Storefront price and requirements were checked September 4, 2026. Reverify before changing them. No external playtest is required: the owner tests releases.
 
 Historical design material is archived in `docs/DESIGN_HISTORY_PRE_FIELDGUIDE.md`; it is not current product truth.
+
+## Blender hero illustration
+
+The editorial miniature uses the game’s chunky plateau, teal road links, crowned hall, working mill, terracotta roofs, corn plot, and cream chickens. It is clearly labeled as illustration, never gameplay. Keep the model uncropped and text/purchase actions outside the animation. Use a transparent poster and lightweight locally hosted video instead of a runtime 3D framework. Model, camera, and wheel return exactly to their initial transforms after eight seconds.

@@ -53,7 +53,7 @@ class SiteHTMLParser(HTMLParser):
                     self.getpos()[0],
                 )
             )
-        for attribute in ("src", "href", "poster"):
+        for attribute in ("src", "href", "poster", "data-desktop-src", "data-mobile-src"):
             value = values.get(attribute)
             if value:
                 self.references.append((attribute, value, self.getpos()[0]))
