@@ -16,11 +16,21 @@ The current mobile revision uses asset version `20260930-mobile-r1`. Observed ch
 - Reduced motion yields zero active animations and disables the motion controls; CSS stillness and runtime preference behavior were checked.
 - Data-saver first load stays static and does not assign a video source. Explicit resume animates only visible scenes. The no-IntersectionObserver fallback stays static.
 - Offscreen, hidden-tab, expanded-menu, and screenshot-dialog states pause continuous motion.
-- Independent axe WCAG 2 A/AA checks reported zero violations; browser error and console checks were clear. Gradient/overlay contrast received manual review. These checks are not exhaustive device or accessibility certification.
+- Independent axe WCAG 2 A/AA checks reported zero violations; browser error and console checks were clear. Four gradient/overlay checks measured 11.21:1, 11.61:1, 9.00:1, and 8.64:1, all above 4.5:1; evidence is in `docs/verification/mobile-website-20260930/contrast-check.json`. These checks are not exhaustive device or accessibility certification.
 - All 41 dynamically or locally referenced assets returned HTTP 200 from the local server and matched their source hashes.
 - Public Mac build-36 and current-source counts agree: 24 buildings, 18 civilization technology choices, and 15 guild choices. The final pre-push Apple readback still reported iOS `WAITING_FOR_REVIEW` with manual release.
 
-Runtime evidence is recorded in `docs/verification/mobile-website-20260930/motion-runtime.md`. Detailed release facts, provenance, and source counts are in the corresponding mobile JSON manifests. Earlier checks below remain historical receipts. The September 30 production deployment and canonical-domain verification are **pending** until the exact pushed revision is observed live. The detailed release record is `docs/MOBILE_WEBSITE_2026_09_30.md`.
+Runtime evidence is recorded in `docs/verification/mobile-website-20260930/motion-runtime.md`. Detailed release facts, provenance, and source counts are in the corresponding mobile JSON manifests. Earlier checks below remain historical receipts. The detailed release record is `docs/MOBILE_WEBSITE_2026_09_30.md`.
+
+### September 30 production receipt
+
+Implementation `18baa9a9c579b39418e815276ad67cddeff349ed` was atomically pushed to main and a new prod source mirror. Vercel's existing main Git integration produced deployment `dpl_CdhQRGcv6MWG6k2xngqSYHrLeADG`, which reached READY with production target at `joe-town-site-n2kbott3a-enzo-design-prisms-projects.vercel.app`. The canonical domain https://gojoetown.com/ resolves to that deployment. GitHub deployment `6768482682` reports success for the exact implementation SHA.
+
+GitHub Actions run `36767260261` completed successfully: the actual validation job ran its checks with Node 22 and Python. Canonical-domain verification found all 41 checked files HTTP 200 and byte-identical to source, including index, CSS, JavaScript, privacy, social image, icons, crawler files, day/night captures, and media.
+
+Independent production smoke checks at 390px phone and 1440px desktop passed with no page-level overflow. The updated title and mobile imagery were present, and enlargement used the full 2622-pixel image. The Mobile menu anchor closed the menu correctly. Screenshot zoom focused the image region; ArrowRight scrolled 40 pixels and Escape restored opener focus. Page motion pause yielded zero running and 11 paused animations. Reduced motion yielded zero animations and a disabled motion button. Production axe checks reported zero violations, with empty browser error and console results in normal and reduced-motion visits. The report is `docs/verification/mobile-website-20260930/production-audit.md`.
+
+These production results are separate from the broader pre-push responsive matrix above. A subsequent docs-only commit records the receipts; the implementation deployment identity remains the exact source SHA listed above.
 
 ## Historical field-guide redesign — September 4, 2026
 

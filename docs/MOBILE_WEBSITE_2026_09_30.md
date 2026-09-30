@@ -39,7 +39,7 @@ The checked mobile revision uses asset version `20260930-mobile-r1`:
 - No-JavaScript navigation, FAQ, all ten ages, and original screenshot links remain usable.
 - Reduced motion produces zero active animations and disables motion controls. Data-saver first load stays static with no video source; explicit resume activates visible scenes only. Missing IntersectionObserver gives a static fallback.
 - Continuous animation pauses offscreen, in hidden tabs, under expanded navigation, and behind the screenshot dialog.
-- Independent axe WCAG 2 A/AA checks found zero violations, with clear browser error/console checks. Gradient and overlay contrast was manually reviewed. This is observed browser evidence, not exhaustive accessibility or physical-device certification.
+- Independent axe WCAG 2 A/AA checks found zero violations, with clear browser error/console checks. Four gradient and overlay checks measured 11.21:1, 11.61:1, 9.00:1, and 8.64:1, all above 4.5:1; the measurements are recorded in `docs/verification/mobile-website-20260930/contrast-check.json`. This is observed browser evidence, not exhaustive accessibility or physical-device certification.
 - All 41 dynamically or locally referenced assets returned HTTP 200 and matched source hashes on the local server.
 - Source checks confirm 24 buildings, 18 civilization technology choices, and 15 guild choices in both public Mac build 36 and current source. A repeated Apple readback immediately before push still reported iOS awaiting review with manual release.
 
@@ -47,6 +47,28 @@ Runtime evidence is in `docs/verification/mobile-website-20260930/motion-runtime
 
 ## Production receipt
 
-**Pending:** the September 30 implementation has not yet been confirmed live. No production completion is implied by the successful local checks above.
+Implementation commit `18baa9a9c579b39418e815276ad67cddeff349ed` was atomically pushed to main and the newly created prod source mirror.
 
-Production uses the existing Vercel project `joe-town-site`, with main as its configured production branch. The requested prod branch is a source mirror. A successful push must be followed by exact-commit READY verification and canonical-domain asset/content and browser checks. Record hosted CI independently from local validation and deployment status.
+| Receipt | Observed result |
+| --- | --- |
+| Vercel deployment | `dpl_CdhQRGcv6MWG6k2xngqSYHrLeADG`; READY; production target; existing project/main integration |
+| Deployment URL | `joe-town-site-n2kbott3a-enzo-design-prisms-projects.vercel.app` |
+| Canonical domain | https://gojoetown.com/ resolves to the deployment above |
+| GitHub deployment | `6768482682`; success for exact source SHA `18baa9a9c579b39418e815276ad67cddeff349ed` |
+| Hosted CI | Run `36767260261`; completed successfully; actual validation job ran with Node 22 and Python |
+| Canonical files | All 41 checked assets returned HTTP 200 and matched source bytes/hashes |
+
+The canonical checks include HTML, CSS, JavaScript, privacy, social imagery, icons, crawler files, day/night captures, and locally hosted media. Portable machine-readable receipts are `docs/verification/mobile-website-20260930/production-assets.json` and `docs/verification/mobile-website-20260930/production-release.json`.
+
+Independent production smoke checks passed at 390px phone and 1440px desktop:
+
+- No page-level horizontal overflow; updated page title, mobile imagery, and full 2622-pixel screenshot source verified.
+- Mobile navigation followed its anchor and closed correctly.
+- Screenshot zoom focused the image region, ArrowRight scrolled 40 pixels, and Escape restored opener focus.
+- The page motion control produced zero running and 11 paused animations.
+- Reduced motion produced zero animations and a disabled motion control.
+- Axe reported zero violations; browser error and console results were empty in normal and reduced-motion visits.
+
+The independent report is `docs/verification/mobile-website-20260930/production-audit.md`. These are production browser checks, distinct from the broader pre-push matrix and canonical file/hash checks. A subsequent docs-only commit records the release receipts; the implementation deployment identity remains the source SHA above.
+
+Production uses the existing Vercel project `joe-town-site`, with main as its configured production branch. The prod branch is a source mirror; Vercel production follows main. A successful push must be followed by exact-commit READY verification and canonical-domain asset/content and browser checks. Record hosted CI independently from local validation and deployment status.

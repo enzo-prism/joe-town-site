@@ -27,7 +27,7 @@ Every continuous effect, including the existing Blender video, follows one page 
 
 ## Interaction and accessibility
 
-Native anchors work without JavaScript. All age panels remain visible without JavaScript; enhanced tabs use roving focus, arrows, Home/End. Native dialog provides modal screenshot viewing, Escape, zoom, scrolling, and focus restoration. Mobile navigation is an inline expanding disclosure, closes on Escape and desktop resize, and does not make the page inert. Use visible focus states, comfortable touch targets, clear button names, and decorative SVGs excluded from the accessibility tree. Maintain contrast on image overlays. Keep one visible page-level motion control understandable on phone and desktop.
+Native anchors work without JavaScript. All age panels remain visible without JavaScript; enhanced tabs use roving focus, arrows, Home/End. Native dialog provides modal screenshot viewing, Escape, zoom, scrolling, and focus restoration. Mobile navigation is an inline expanding disclosure, closes on Escape and desktop resize, and does not make the page inert. Use visible focus states, comfortable touch targets, clear button names, and decorative SVGs excluded from the accessibility tree. Maintain at least 4.5:1 contrast for text on image overlays. September 30 measured checks range from 8.64:1 to 11.61:1; evidence is in `docs/verification/mobile-website-20260930/contrast-check.json`. Keep one visible page-level motion control understandable on phone and desktop.
 
 ## Evidence and honesty
 

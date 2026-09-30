@@ -53,3 +53,9 @@ Canonical: https://gojoetown.com/ • GitHub: enzo-prism/joe-town-site • Verce
 The existing Vercel Git integration deploys **main** to production. A `prod` branch, when present, mirrors the released source; it does not change the configured Vercel production branch. Do not manually deploy unless the existing integration fails. Never create a replacement Vercel project for routine release work.
 
 Before promotion, recheck mobile release state and the public Apple listing. After pushing, verify the deployment is READY for the exact main commit, then verify canonical HTML, CSS, JavaScript, social image, favicons, privacy, crawler files, referenced media hashes, and rendered desktop/mobile interactions. A Git push alone is not release confirmation. Record deployment receipts separately from local checks and hosted CI outcomes.
+
+### September 30 release receipt
+
+Implementation `18baa9a9c579b39418e815276ad67cddeff349ed` was atomically pushed to main and the new prod source mirror. The existing main-triggered Vercel deployment `dpl_CdhQRGcv6MWG6k2xngqSYHrLeADG` reached READY for production, and https://gojoetown.com/ resolves to it. GitHub deployment `6768482682` reports success for the same source commit. Hosted CI run `36767260261` passed the actual validation job with Node 22 and Python.
+
+All 41 checked canonical-domain files returned HTTP 200 and were byte-identical to the released source, including HTML, CSS, JavaScript, privacy, social imagery, icons, crawler files, gameplay imagery, and video. Full receipts are in `docs/MOBILE_WEBSITE_2026_09_30.md`. Independent production smoke checks at 390px and 1440px passed: navigation, screenshot zoom/focus, motion pause, reduced motion, and accessibility/error checks. See `docs/verification/mobile-website-20260930/production-audit.md`; local browser evidence remains recorded separately.

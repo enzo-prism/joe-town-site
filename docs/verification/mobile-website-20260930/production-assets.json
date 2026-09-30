@@ -1,0 +1,297 @@
+{
+  "checkedAtUTC": "2026-09-30T19:51:52.657882+00:00",
+  "sourceCommit": "18baa9a9c579b39418e815276ad67cddeff349ed",
+  "url": "https://gojoetown.com",
+  "gaLoaders": 1,
+  "gaPrivacyLoaders": 0,
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 31591,
+      "sha256": "997b80181f79b16e0161259c82318dbb2a15772ed97b762f5cd512cc6a66f2e7",
+      "matchesSource": true
+    },
+    {
+      "path": "/privacy.html",
+      "status": 200,
+      "bytes": 4258,
+      "sha256": "19210348e9093d742ae14b3b093cdf9865098529b90abab8d4884f01146439f9",
+      "matchesSource": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "bytes": 67,
+      "sha256": "3b7d3660380146fd47e76fa50e73b56bef4bf31086b8e5b57f9bafd448766607",
+      "matchesSource": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "bytes": 266,
+      "sha256": "9000cd5823117a4d1c723bcc537026f369277d7c2b351ef765ca5f13df88c42e",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/mobile/social.png",
+      "status": 200,
+      "bytes": 410175,
+      "sha256": "51a38bb56ae14576a87018ff2976b1ce275f67b40db3170c58b3961488055186",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/logo-mark.svg",
+      "status": 200,
+      "bytes": 1077,
+      "sha256": "8403cbb83a7838de9bf5a33a393d08536c17e1264c0cf2a9bf7dbc6e3b595875",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/favicon-32.png",
+      "status": 200,
+      "bytes": 1617,
+      "sha256": "dc2231b1460cfc9a8a2f1471be6ed5e3625b4de05ab98b4a9237e23385523b20",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/favicon-16.png",
+      "status": 200,
+      "bytes": 1116,
+      "sha256": "1253c9cbd53ee8191fb89d3b46cc94a5242f25d5243216a61b989b156c795150",
+      "matchesSource": true
+    },
+    {
+      "path": "/favicon.ico",
+      "status": 200,
+      "bytes": 4414,
+      "sha256": "51d5c5c197103f582e8a791c686eed05ca6ff57692b73ab73846038bd07065ac",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/apple-touch-icon.png",
+      "status": 200,
+      "bytes": 6889,
+      "sha256": "b4c8aaa03d467b3c735a3bcda1ca16f306dbbf57575c4291ba406d343a049145",
+      "matchesSource": true
+    },
+    {
+      "path": "/css/style.css?v=20260930-mobile-r1",
+      "status": 200,
+      "bytes": 37527,
+      "sha256": "202a2e634a12321522b75abd4980badc5467415a89579d6e4e7e17d14394c1dc",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/apple-mark.svg",
+      "status": 200,
+      "bytes": 658,
+      "sha256": "db73d7c62df82a82a452d40db883285d15a8330105b0746b0ef722f982e925a5",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/hero-diorama.webp",
+      "status": 200,
+      "bytes": 71238,
+      "sha256": "6c92b1abc60088686edbc91ce92b154896ee7c50921ed8fe70e3433490f0f932",
+      "matchesSource": true
+    },
+    {
+      "path": "/media/joe-town-diorama.mp4",
+      "status": 200,
+      "bytes": 836113,
+      "sha256": "514df7acbada4f3b48619e0d60cd23d04444479bad7e9653d6254315672e3e8e",
+      "matchesSource": true
+    },
+    {
+      "path": "/media/joe-town-diorama-mobile.mp4",
+      "status": 200,
+      "bytes": 336550,
+      "sha256": "c3382837c06f98b161ad568c1adcfc86661cb9506d3a03a8994e27e5f1995172",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/joe-avatar-john.webp",
+      "status": 200,
+      "bytes": 50118,
+      "sha256": "5ef53f050a2709ed074de776ac0f97e44bffb3bd96a69730abc7ed2f6e3d7871",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/mobile/iphone-road.webp",
+      "status": 200,
+      "bytes": 135584,
+      "sha256": "ef402ae8c5f3275cbc456e7fbdab736987a0bbaae6e7cc3d63abdd275d26c87b",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/mobile/ipad-town.webp",
+      "status": 200,
+      "bytes": 136244,
+      "sha256": "05606a30725d8aba5c167666d3992d5bb88f8ecd19fb6e3972f90168c3aa2b5d",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/mobile/iphone-inspect.webp",
+      "status": 200,
+      "bytes": 134870,
+      "sha256": "ec7dd4eee1707add63f96873eacca4ce7435e5447121a19ac0049a88bf240b1d",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/hero-day.webp",
+      "status": 200,
+      "bytes": 182168,
+      "sha256": "d9f77801f0ce72666d4c1b296101d27273d93f23ef836438616919539ff9c8ee",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/town-ui.webp",
+      "status": 200,
+      "bytes": 305488,
+      "sha256": "c8ea80a1820cc6277780b043b889e34a5565ba636cc31296f3c73f517dfcaf99",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/corn.svg",
+      "status": 200,
+      "bytes": 1884,
+      "sha256": "1254b742f78e71c49f30730eca97d4aafad6c4607af8aa3e69b11f954fd31b23",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/flour.svg",
+      "status": 200,
+      "bytes": 1929,
+      "sha256": "6f092b830155a9fd8df40591ec5cd1442b8b3ccb2c41e659dc778919e46121cb",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/bread.svg",
+      "status": 200,
+      "bytes": 2382,
+      "sha256": "237919d545ae67e6c66dfa2e87aa98917e4aa59ccc95be0c797decd920dc2150",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/food.svg",
+      "status": 200,
+      "bytes": 5956,
+      "sha256": "949eae8554a62d46f4cc155ae47193110b7bd9bc34fc742587d2242c85d5918e",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/age-camp.webp",
+      "status": 200,
+      "bytes": 111912,
+      "sha256": "91bf445d74b07406dc0d07f3e7ce439bc7c45c3e126f0260effde2f2f329187f",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/age-town.webp",
+      "status": 200,
+      "bytes": 151400,
+      "sha256": "c898a44609be0ee335013b031ad647cc7cabf1578ec14d87a9acefe7f4b332ea",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/age-citadel.webp",
+      "status": 200,
+      "bytes": 166836,
+      "sha256": "ca7bfa3ef59d0b15b3edc9652c1cacc7c2c0fb7d9136fa5e64cf7c75a490e2b2",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/age-crown.webp",
+      "status": 200,
+      "bytes": 174038,
+      "sha256": "cffeb86b5733236d1e10af576759dfc00ef39ca56f78785cc1e791d26065b1fd",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/age-kingdom.webp",
+      "status": 200,
+      "bytes": 184838,
+      "sha256": "6961aab3ca0dd50f8f28b6eac0f54ddc11030dd681b6dc2de214712017ef2fa8",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/age-empire.webp",
+      "status": 200,
+      "bytes": 178960,
+      "sha256": "a6ba33bb36f753169cbd214a1f281e3ebf8c69c3665281154034e7e97dfdc53a",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/age-ascendant.webp",
+      "status": 200,
+      "bytes": 185368,
+      "sha256": "b60102008890143e7c3b7c3b076ead1b02cfc6afa97ea378a8265c5fd3d23a89",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/age-fusion.webp",
+      "status": 200,
+      "bytes": 195134,
+      "sha256": "9cab9e5df7f585bbe8c683332967ab2c7b09848f9381363703e433d9ffb77c84",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/age-orbital.webp",
+      "status": 200,
+      "bytes": 192708,
+      "sha256": "564de0d92ba0fb65f67047376491b7ceaaf2d32850574030cad52fed28f415f0",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/age-space.webp",
+      "status": 200,
+      "bytes": 186106,
+      "sha256": "c195cdfb00f148eb08ab771b6966216e497a9b8dda19818e1e3515a035a05ad9",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/joe-avatar-alex.webp",
+      "status": 200,
+      "bytes": 50232,
+      "sha256": "51d0ee072228e6a809476d73f92b9553f7d9d4866776265eaadd32744b309d5e",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/joe-avatar-matt.webp",
+      "status": 200,
+      "bytes": 41524,
+      "sha256": "464d74e8ac02e1df68ea4e8b61ff3bf3766b29b38add385285b1d84f33e8dc9e",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/joes.webp",
+      "status": 200,
+      "bytes": 182074,
+      "sha256": "a1a3b3fc920e1041a106adf6ef14cef0036979def2319274fa90b90377654c7b",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/world.webp",
+      "status": 200,
+      "bytes": 207000,
+      "sha256": "b1cae49f7d40dce6f215c0a877c52ea972e4b7e036ff9a19fc0d29fc4827a467",
+      "matchesSource": true
+    },
+    {
+      "path": "/js/main.js?v=20260930-mobile-r1",
+      "status": 200,
+      "bytes": 14575,
+      "sha256": "88aae20f57b28a503bb7e0767206fc7f38709d7ec9ad04c9e8505fad78966f9b",
+      "matchesSource": true
+    },
+    {
+      "path": "/images/refresh/hero-night.webp",
+      "status": 200,
+      "bytes": 175332,
+      "sha256": "3d8325933b2be66250dd4976a85e562dd4e97cbe2424a64f034a7de8c6980d04",
+      "matchesSource": true
+    }
+  ],
+  "passed": true
+}

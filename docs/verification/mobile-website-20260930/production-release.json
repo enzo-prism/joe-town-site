@@ -1,0 +1,36 @@
+{
+  "sourceCommit": "18baa9a9c579b39418e815276ad67cddeff349ed",
+  "deploymentId": "dpl_CdhQRGcv6MWG6k2xngqSYHrLeADG",
+  "readyState": "READY",
+  "target": "production",
+  "url": "https://gojoetown.com",
+  "deploymentUrl": "https://joe-town-site-n2kbott3a-enzo-design-prisms-projects.vercel.app",
+  "githubDeploymentId": 6768482682,
+  "githubActionsRun": 36767260261,
+  "ciConclusion": "success",
+  "branches": [
+    "main",
+    "prod"
+  ],
+  "labVitals": {
+    "url": "https://gojoetown.com/",
+    "ttfb": 24.7,
+    "fcp": 688.0,
+    "lcp": {
+      "element": "h1",
+      "size": 29505,
+      "startTime": 688,
+      "url": null
+    },
+    "cls": {
+      "entries": [
+        {
+          "startTime": 838.9,
+          "value": 0.0003
+        }
+      ],
+      "score": 0.0
+    }
+  },
+  "vitalsScope": "One Chromium 320px laboratory navigation; no throttling; not field or physical device performance."
+}
