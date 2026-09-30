@@ -1,0 +1,42 @@
+{
+  "label": "Mobile preview, in development",
+  "sourceCommit": "241c27d0a26860e8e5f63fad00fc09ac113b5687",
+  "capturedAt": "2026-09-30",
+  "captureMethod": "Real UIWindow/SKView simulator rendering with synthetic town fixtures. No retouch, no crop.",
+  "publicRelease": false,
+  "uploadedBuild38ContainsUX": false,
+  "assets": [
+    {
+      "path": "images/mobile/iphone-road.webp",
+      "source": "work/mobile-implementation/native-current/iphone-17-pro-l/road-ended.png",
+      "width": 2622,
+      "height": 1206,
+      "sha256": "ef402ae8c5f3275cbc456e7fbdab736987a0bbaae6e7cc3d63abdd275d26c87b",
+      "bytes": 135584
+    },
+    {
+      "path": "images/mobile/iphone-inspect.webp",
+      "source": "work/mobile-implementation/native-current/iphone-17-pro-l/inspector.png",
+      "width": 2622,
+      "height": 1206,
+      "sha256": "ec7dd4eee1707add63f96873eacca4ce7435e5447121a19ac0049a88bf240b1d",
+      "bytes": 134870
+    },
+    {
+      "path": "images/mobile/ipad-town.webp",
+      "source": "work/mobile-implementation/native-current/ipad-mini-p/inspector.png",
+      "width": 1488,
+      "height": 2266,
+      "sha256": "05606a30725d8aba5c167666d3992d5bb88f8ecd19fb6e3972f90168c3aa2b5d",
+      "bytes": 136244
+    },
+    {
+      "path": "images/mobile/social.png",
+      "source": "art/mobile-social.html; editorial composition using labeled mobile previews",
+      "width": 1200,
+      "height": 630,
+      "sha256": "51a38bb56ae14576a87018ff2976b1ce275f67b40db3170c58b3961488055186",
+      "bytes": 410175
+    }
+  ]
+}

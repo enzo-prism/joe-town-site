@@ -1,0 +1,26 @@
+[
+  {
+    "check": "Device enlargement arrow over brightest possible screenshot",
+    "contrastRatio": 11.21,
+    "minimum": 4.5,
+    "passed": true
+  },
+  {
+    "check": "Legacy enlargement label over brightest possible screenshot",
+    "contrastRatio": 11.61,
+    "minimum": 4.5,
+    "passed": true
+  },
+  {
+    "check": "Image and diorama captions",
+    "contrastRatio": 9.0,
+    "minimum": 4.5,
+    "passed": true
+  },
+  {
+    "check": "Mobile device caption",
+    "contrastRatio": 8.64,
+    "minimum": 4.5,
+    "passed": true
+  }
+]

@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import re
+import json
+import hashlib
 import subprocess
 import sys
 from html.parser import HTMLParser
@@ -217,13 +219,29 @@ def main() -> int:
                 'as "no gameplay tracking" or explicitly name the Mac game',
             )
 
-    for phrase in ("available now", "out now", "play the 1.4 update"):
-        if re.search(rf"\b{re.escape(phrase)}\b", index, re.IGNORECASE):
-            fail(
-                errors,
-                f"index.html: remove unverified public-release wording {phrase!r}; "
-                "check App Store Connect live first",
-            )
+    # A downloadable offer must describe the verified public Mac edition.
+    # Mobile is a coming-soon preview until the release record is refreshed.
+    schemas = [json.loads(value) for value in re.findall(
+        r'<script type="application/ld\+json">(.*?)</script>', index, re.DOTALL)]
+    game = next((value for value in schemas if value.get("@type") == "VideoGame"), {})
+    if game.get("gamePlatform") != "Mac" or game.get("operatingSystem") != "macOS 14 or later":
+        fail(errors, "index.html: downloadable schema must remain Mac-only while mobile is pending")
+    if game.get("softwareVersion") != "1.7.1":
+        fail(errors, "index.html: public Mac softwareVersion must match verified 1.7.1")
+    if not re.search(r"Coming to iPhone(?: \+| and) iPad", index):
+        fail(errors, "index.html: pending mobile release must be explicitly labeled coming")
+    for phrase in ("now on iPhone", "download for iPhone", "play the 1.4 update"):
+        if phrase.lower() in index.lower():
+            fail(errors, f"index.html: unverified public mobile release wording {phrase!r}")
+    index_ids = {value for value, _ in parsers[ROOT / "index.html"].ids}
+    for attribute, reference, line in parsers[ROOT / "index.html"].references:
+        if reference.startswith("#") and reference[1:] not in index_ids:
+            fail(errors, f"index.html:{line}: broken fragment {reference!r}")
+    provenance = json.loads((ROOT / "docs/MOBILE_ASSET_PROVENANCE.json").read_text())
+    for asset in provenance["assets"]:
+        path = ROOT / asset["path"]
+        if hashlib.sha256(path.read_bytes()).hexdigest() != asset["sha256"]:
+            fail(errors, f"{asset['path']}: differs from recorded preview provenance")
 
     for path in JS_FILES:
         result = subprocess.run(

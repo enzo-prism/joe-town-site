@@ -1,0 +1,79 @@
+[
+  {
+    "w": 1440,
+    "h": 900,
+    "sw": 1440,
+    "root": "js",
+    "roadImage": {
+      "complete": true,
+      "width": 2622
+    },
+    "overflowText": []
+  },
+  {
+    "w": 320,
+    "h": 740,
+    "sw": 320,
+    "root": "js",
+    "roadImage": {
+      "complete": true,
+      "width": 2622
+    },
+    "overflowText": []
+  },
+  {
+    "w": 375,
+    "h": 812,
+    "sw": 375,
+    "root": "js",
+    "roadImage": {
+      "complete": true,
+      "width": 2622
+    },
+    "overflowText": []
+  },
+  {
+    "w": 390,
+    "h": 844,
+    "sw": 390,
+    "root": "js",
+    "roadImage": {
+      "complete": true,
+      "width": 2622
+    },
+    "overflowText": []
+  },
+  {
+    "w": 430,
+    "h": 932,
+    "sw": 430,
+    "root": "js",
+    "roadImage": {
+      "complete": true,
+      "width": 2622
+    },
+    "overflowText": []
+  },
+  {
+    "w": 768,
+    "h": 1024,
+    "sw": 768,
+    "root": "js",
+    "roadImage": {
+      "complete": true,
+      "width": 2622
+    },
+    "overflowText": []
+  },
+  {
+    "w": 844,
+    "h": 390,
+    "sw": 844,
+    "root": "js",
+    "roadImage": {
+      "complete": true,
+      "width": 2622
+    },
+    "overflowText": []
+  }
+]

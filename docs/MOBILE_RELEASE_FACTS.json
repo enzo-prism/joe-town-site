@@ -1,0 +1,342 @@
+{
+  "checkedAtUTC": "2026-09-30T19:10:28.178142+00:00",
+  "appId": "6790244910",
+  "bundleId": "com.designprism.joetown",
+  "ios": {
+    "version": "1.8",
+    "state": "WAITING_FOR_REVIEW",
+    "versionState": "WAITING_FOR_REVIEW",
+    "releaseType": "MANUAL",
+    "versionId": "1ba5d84c-afc9-4b6b-8ae4-3c3de9b6ceab",
+    "build": "38",
+    "buildId": "138d28a7-ee07-4bab-bebb-c344c69dbc94",
+    "uploadedDate": "2026-09-28T19:13:58-07:00",
+    "minOs": "17.0"
+  },
+  "mac": {
+    "version": "1.7.1",
+    "state": "READY_FOR_SALE",
+    "versionState": "READY_FOR_DISTRIBUTION",
+    "releaseType": "AFTER_APPROVAL",
+    "versionId": "bff5a1b4-1593-4497-8939-3cca0e748f76",
+    "build": "36",
+    "buildId": "7e76d6f1-0a74-40c4-9010-95dda65827cc",
+    "uploadedDate": "2026-09-24T07:20:29-07:00",
+    "minOs": "14.0"
+  },
+  "publicUS": {
+    "appId": 6790244910,
+    "name": "Joe Town",
+    "bundleId": "com.designprism.joetown",
+    "country": "US",
+    "countryName": "United States",
+    "url": "https://apps.apple.com/us/app/joe-town/id6790244910?mt=12&uo=4",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/99/3e/b0/993eb0be-3750-a0e3-88f6-9cd28a8baf4d/AppIcon-0-0-85-220-0-5-0-2x.png/512x512bb.png",
+    "sellerName": "Lorenzo Quaid Sison",
+    "primaryGenreName": "Games",
+    "genres": [
+      "Games",
+      "Strategy",
+      "Simulation"
+    ],
+    "version": "1.7.1",
+    "description": "Joe Town is a cozy pixel-art strategy game about a civilization of chickens, and the ten ages they cross to get from a mud camp to the stars.\n\nYou lay the roads. They do the rest \u2014 and you will know them by name.\n\nA LIVING TOWN, NOT A SPREADSHEET\nEvery chicken on the board is a real citizen. The twelve founders are hand-drawn individuals; every Joe after them is unique. They take jobs, learn skills, make friends, remember what happened to them, and come to your throne room with requests in their own voice. Grant them, refuse them, or find the third answer nobody asked for.\n\nA TOWN THAT KEEPS AN HOUR\nLight moves across the plateau through dawn, midday, dusk and night. After dark every roof lights its windows, forges glow, and the throne burns gold against a cold board. Ground you have not built on reads as real stone, and the plateau's cut edge shows the rock it stands on.\n\nBUILD SOMETHING PHYSICAL\nRoads are supply lines, not decoration. Corn becomes flour becomes bread becomes food, carried tile by tile by chickens who actually walk the route. When a chain stalls, you can see exactly where and why.\n\nTEN AGES OF TRANSFORMATION\nCamp timber gives way to cut stone, brick arches, clockwork, radiant crystal, fusion alloy, orbital domes and void hulls. Buildings do not just get bigger \u2014 they change silhouette, material and machinery, and your chickens change wardrobe with them.\n\nA WORLD BEYOND THE WALLS\nSend scouts into the fog. Meet thirteen animal civilizations, each with their own architecture, temperament and emissary. Trade, ally, hold festivals, or take what you want and live with it.\n\nCHOOSE WHO YOU ARE\nFive permanent origins, a branching guild tree where every node lifts a real restriction, ventures that earn while you are away, perks your Joes choose and traits they earn instead, and a monument you raise one phase at a time.\n\nRESPECTFUL BY DESIGN\nNothing decays. Nothing withers if you leave. No upkeep, no timers punishing absence, no daily-login guilt. Your town keeps working while you are gone and tells you what happened when you return. Play for four hours or four minutes.\n\nJoe Town has no ads, no in-app purchases, and no tracking. It saves locally and plays completely offline.",
+    "price": 9.99,
+    "formattedPrice": "$9.99",
+    "currency": "USD",
+    "averageRating": 0,
+    "ratingCount": 0,
+    "currentVersionRating": 0,
+    "currentVersionCount": 0
+  },
+  "publicSchema": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Joe Town",
+    "description": "Joe Town is a cozy pixel-art strategy game about a civilization of chickens, and the ten ages they cross to get from a mud camp to the stars.\n\nYou lay the roads. They do the rest \u2014 and you will know them by name.\n\nA LIVING TOWN, NOT A SPREADSHEET\nEvery chicken on the board is a real citizen. The twelve founders are hand-drawn individuals; every Joe after them is unique. They take jobs, learn skills, make friends, remember what happened to them, and come to your throne room with requests in their own voice. Grant them, refuse them, or find the third answer nobody asked for.\n\nA TOWN THAT KEEPS AN HOUR\nLight moves across the plateau through dawn, midday, dusk and night. After dark every roof lights its windows, forges glow, and the throne burns gold against a cold board. Ground you have not built on reads as real stone, and the plateau's cut edge shows the rock it stands on.\n\nBUILD SOMETHING PHYSICAL\nRoads are supply lines, not decoration. Corn becomes flour becomes bread becomes food, carried tile by tile by chickens who actually walk the route. When a chain stalls, you can see exactly where and why.\n\nTEN AGES OF TRANSFORMATION\nCamp timber gives way to cut stone, brick arches, clockwork, radiant crystal, fusion alloy, orbital domes and void hulls. Buildings do not just get bigger \u2014 they change silhouette, material and machinery, and your chickens change wardrobe with them.\n\nA WORLD BEYOND THE WALLS\nSend scouts into the fog. Meet thirteen animal civilizations, each with their own architecture, temperament and emissary. Trade, ally, hold festivals, or take what you want and live with it.\n\nCHOOSE WHO YOU ARE\nFive permanent origins, a branching guild tree where every node lifts a real restriction, ventures that earn while you are away, perks your Joes choose and traits they earn instead, and a monument you raise one phase at a time.\n\nRESPECTFUL BY DESIGN\nNothing decays. Nothing withers if you leave. No upkeep, no timers punishing absence, no daily-login guilt. Your town keeps working while you are gone and tells you what happened when you return. Play for four hours or four minutes.\n\nJoe Town has no ads, no in-app purchases, and no tracking. It saves locally and plays completely offline.",
+    "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/99/3e/b0/993eb0be-3750-a0e3-88f6-9cd28a8baf4d/AppIcon-0-0-85-220-0-5-0-2x.png/1200x630bb.png",
+    "availableOnDevice": "Mac",
+    "operatingSystem": "macOS 14.0 or later",
+    "offers": {
+      "@type": "Offer",
+      "price": 9.99,
+      "priceCurrency": "USD"
+    },
+    "applicationCategory": "GameApplication",
+    "applicationSubCategory": "Strategy",
+    "keywords": [
+      "Games",
+      "Strategy",
+      "Simulation"
+    ],
+    "genre": [
+      "Strategy",
+      "Simulation"
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "Lorenzo Quaid Sison",
+      "url": "https://apps.apple.com/us/developer/lorenzo-quaid-sison/id1821002361"
+    }
+  },
+  "publicMacScreenshotAssets": [
+    {
+      "$kind": "Artwork",
+      "backgroundColor": {
+        "red": 0.12156862745098039,
+        "green": 0.12549019607843137,
+        "blue": 0.13725490196078433,
+        "type": "rgb"
+      },
+      "textColor": {
+        "red": 0.8274509803921568,
+        "green": 0.7294117647058823,
+        "blue": 0.5058823529411764,
+        "type": "rgb"
+      },
+      "style": null,
+      "crop": "bb",
+      "contentMode": null,
+      "imageScale": null,
+      "template": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a5/ec/39/a5ec391f-0082-1665-1f8d-049a1461ed45/01-founders.png/{w}x{h}{c}.{f}",
+      "width": 2880,
+      "height": 1800,
+      "variants": [
+        {
+          "$kind": "ArtworkVariant",
+          "format": "jpeg",
+          "quality": 70,
+          "supportsWideGamut": false
+        }
+      ]
+    },
+    {
+      "$kind": "Artwork",
+      "backgroundColor": {
+        "red": 0.12156862745098039,
+        "green": 0.12549019607843137,
+        "blue": 0.13725490196078433,
+        "type": "rgb"
+      },
+      "textColor": {
+        "red": 0.8549019607843137,
+        "green": 0.7450980392156863,
+        "blue": 0.6470588235294118,
+        "type": "rgb"
+      },
+      "style": null,
+      "crop": "bb",
+      "contentMode": null,
+      "imageScale": null,
+      "template": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3a/dc/af/3adcaf4e-855a-89a4-ab37-8f9addcda8a7/02-town.png/{w}x{h}{c}.{f}",
+      "width": 2880,
+      "height": 1800,
+      "variants": [
+        {
+          "$kind": "ArtworkVariant",
+          "format": "jpeg",
+          "quality": 70,
+          "supportsWideGamut": false
+        }
+      ]
+    },
+    {
+      "$kind": "Artwork",
+      "backgroundColor": {
+        "red": 0.10196078431372549,
+        "green": 0.09019607843137255,
+        "blue": 0.11372549019607843,
+        "type": "rgb"
+      },
+      "textColor": {
+        "red": 0.796078431372549,
+        "green": 0.8156862745098039,
+        "blue": 0.8,
+        "type": "rgb"
+      },
+      "style": null,
+      "crop": "bb",
+      "contentMode": null,
+      "imageScale": null,
+      "template": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/40/40/e8/4040e882-d426-4eb5-8cb0-957736789c3d/03-space.png/{w}x{h}{c}.{f}",
+      "width": 2880,
+      "height": 1800,
+      "variants": [
+        {
+          "$kind": "ArtworkVariant",
+          "format": "jpeg",
+          "quality": 70,
+          "supportsWideGamut": false
+        }
+      ]
+    },
+    {
+      "$kind": "Artwork",
+      "backgroundColor": {
+        "red": 0.11764705882352941,
+        "green": 0.12549019607843137,
+        "blue": 0.12941176470588237,
+        "type": "rgb"
+      },
+      "textColor": {
+        "red": 0.6784313725490196,
+        "green": 0.9490196078431372,
+        "blue": 0.6549019607843137,
+        "type": "rgb"
+      },
+      "style": null,
+      "crop": "bb",
+      "contentMode": null,
+      "imageScale": null,
+      "template": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/6c/14/56/6c145636-d534-3ce7-f5db-4fd53f77a23c/04-world.png/{w}x{h}{c}.{f}",
+      "width": 2880,
+      "height": 1800,
+      "variants": [
+        {
+          "$kind": "ArtworkVariant",
+          "format": "jpeg",
+          "quality": 70,
+          "supportsWideGamut": false
+        }
+      ]
+    },
+    {
+      "$kind": "Artwork",
+      "backgroundColor": {
+        "red": 0.043137254901960784,
+        "green": 0.0392156862745098,
+        "blue": 0.06666666666666667,
+        "type": "rgb"
+      },
+      "textColor": {
+        "red": 0.9372549019607843,
+        "green": 0.8784313725490196,
+        "blue": 0.7098039215686275,
+        "type": "rgb"
+      },
+      "style": null,
+      "crop": "bb",
+      "contentMode": null,
+      "imageScale": null,
+      "template": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1e/79/c7/1e79c73d-1c67-7a77-cf57-51bd0527f6e2/05-joes.png/{w}x{h}{c}.{f}",
+      "width": 2880,
+      "height": 1800,
+      "variants": [
+        {
+          "$kind": "ArtworkVariant",
+          "format": "jpeg",
+          "quality": 70,
+          "supportsWideGamut": false
+        }
+      ]
+    },
+    {
+      "$kind": "Artwork",
+      "backgroundColor": {
+        "red": 0.043137254901960784,
+        "green": 0.043137254901960784,
+        "blue": 0.06666666666666667,
+        "type": "rgb"
+      },
+      "textColor": {
+        "red": 0.9333333333333333,
+        "green": 0.8823529411764706,
+        "blue": 0.6431372549019608,
+        "type": "rgb"
+      },
+      "style": null,
+      "crop": "bb",
+      "contentMode": null,
+      "imageScale": null,
+      "template": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/39/2b/cc/392bccd6-a1a4-53e5-fc5d-46c2dac23851/06-ventures.png/{w}x{h}{c}.{f}",
+      "width": 2880,
+      "height": 1800,
+      "variants": [
+        {
+          "$kind": "ArtworkVariant",
+          "format": "jpeg",
+          "quality": 70,
+          "supportsWideGamut": false
+        }
+      ]
+    },
+    {
+      "$kind": "Artwork",
+      "backgroundColor": {
+        "red": 0.10196078431372549,
+        "green": 0.09019607843137255,
+        "blue": 0.11372549019607843,
+        "type": "rgb"
+      },
+      "textColor": {
+        "red": 0.792156862745098,
+        "green": 0.8196078431372549,
+        "blue": 0.803921568627451,
+        "type": "rgb"
+      },
+      "style": null,
+      "crop": "bb",
+      "contentMode": null,
+      "imageScale": null,
+      "template": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/36/d3/30/36d3303d-ad87-ef24-c47e-bba912c8f9ba/07-battle.png/{w}x{h}{c}.{f}",
+      "width": 2880,
+      "height": 1800,
+      "variants": [
+        {
+          "$kind": "ArtworkVariant",
+          "format": "jpeg",
+          "quality": 70,
+          "supportsWideGamut": false
+        }
+      ]
+    }
+  ],
+  "publicMobileAvailable": false,
+  "universalPurchase": {
+    "sameRecord": true,
+    "publicToday": false,
+    "marketing": "One purchase includes iPhone and iPad when the mobile version is released.",
+    "reference": "https://developer.apple.com/help/app-store-connect/create-an-app-record/add-platforms/"
+  },
+  "sourceFacts": {
+    "sourceRepository": "/Users/enzo/joe-town",
+    "mobileMinOs": "iOS/iPadOS 17.0",
+    "mobileChipFloor": "A12",
+    "iPhoneOrientation": "landscape",
+    "iPadOrientation": "portrait and landscape",
+    "ads": false,
+    "inAppPurchases": false,
+    "tracking": false,
+    "offlineGameplay": true,
+    "saveSync": false,
+    "saveStorage": "local on each device",
+    "mobileTownFileTransfer": "manual .joetown export/import between mobile devices; no public Mac-transfer promise",
+    "macPublicTransfer": false,
+    "mobileNewUXInUploadedBuild38": false,
+    "privacySource": "AppStore/PrivacyInfo.xcprivacy",
+    "publicMacSourceTag": "v1.7.1-build36 (0008db5)",
+    "mobileUploadedSource": "2d3ddacec0d8cb19ac41d0a86df55f4fb0d8eb4d",
+    "newUXSource": "241c27d0a26860e8e5f63fad00fc09ac113b5687"
+  },
+  "allowedCopy": {
+    "heroEyebrow": "Coming to iPhone + iPad",
+    "releaseDetail": "The first mobile release is awaiting App Store approval.",
+    "macCTA": "Get Joe Town for Mac",
+    "mobileCTA": "Explore the mobile preview",
+    "previewLabel": "Mobile preview",
+    "schemaOperatingSystem": "macOS 14 or later",
+    "schemaVersion": "1.7.1",
+    "schemaOfferPriceUSD": 9.99
+  },
+  "forbiddenUntilReleased": [
+    "Now on iPhone and iPad",
+    "Available on iPhone + iPad",
+    "Download for iPhone/iPad",
+    "Live mobile App Store offer",
+    "Mobile operatingSystem offered as downloadable schema",
+    "Cross-device automatic save sync",
+    "Pick up the same town on Mac and mobile",
+    "Sept30 improved UX available in uploaded38"
+  ],
+  "prePushRecheckedAtUTC": "2026-09-30T19:37:18.504841+00:00"
+}

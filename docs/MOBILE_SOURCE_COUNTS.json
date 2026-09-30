@@ -1,0 +1,168 @@
+{
+  "checkedAtUTC": "2026-09-30T19:20:50.105709+00:00",
+  "method": "Parse case declarations before the first enum member declaration from git show exact revision.",
+  "versions": {
+    "main": {
+      "revision": "b7c93f562dbd7888359f7eaf4e548cced4b0eddc",
+      "enums": {
+        "BuildingType": {
+          "count": 24,
+          "cases": [
+            "throne",
+            "farm",
+            "lumberYard",
+            "quarry",
+            "mine",
+            "barracks",
+            "wall",
+            "watchtower",
+            "workshop",
+            "storehouse",
+            "fusionReactor",
+            "researchLab",
+            "habitatDome",
+            "launchComplex",
+            "starport",
+            "warTotem",
+            "ritualCircle",
+            "tinkersFoundry",
+            "tradeBazaar",
+            "sanctuary",
+            "cornField",
+            "mill",
+            "bakery",
+            "market"
+          ],
+          "path": "Sources/GameCore/Model.swift"
+        },
+        "CivilizationTechnology": {
+          "count": 18,
+          "cases": [
+            "fertileCommons",
+            "masterMasons",
+            "caravanNetwork",
+            "shieldDoctrine",
+            "clockworkTools",
+            "bastionDesign",
+            "royalGranaries",
+            "standingGuard",
+            "imperialFoundries",
+            "grandRamparts",
+            "harmonicIndustry",
+            "eternalVigil",
+            "fusionGrid",
+            "adaptiveHatcheries",
+            "autonomousLogistics",
+            "orbitalAegis",
+            "stellarSynthesis",
+            "guardianConstellation"
+          ],
+          "path": "Sources/GameCore/Model.swift"
+        },
+        "GuildTechnology": {
+          "count": 15,
+          "cases": [
+            "openCharter",
+            "deepReservoirs",
+            "briskRounds",
+            "secondLedger",
+            "chartersOfIncorporation",
+            "apprenticeBoard",
+            "unionHall",
+            "shiftRotation",
+            "guildSchool",
+            "workersCouncil",
+            "pathfinders",
+            "outriders",
+            "freeCompany",
+            "deepDelve",
+            "charteredExpeditions"
+          ],
+          "path": "Sources/GameCore/Guilds.swift"
+        }
+      }
+    },
+    "publicMacBuild36": {
+      "revision": "0008db5",
+      "enums": {
+        "BuildingType": {
+          "count": 24,
+          "cases": [
+            "throne",
+            "farm",
+            "lumberYard",
+            "quarry",
+            "mine",
+            "barracks",
+            "wall",
+            "watchtower",
+            "workshop",
+            "storehouse",
+            "fusionReactor",
+            "researchLab",
+            "habitatDome",
+            "launchComplex",
+            "starport",
+            "warTotem",
+            "ritualCircle",
+            "tinkersFoundry",
+            "tradeBazaar",
+            "sanctuary",
+            "cornField",
+            "mill",
+            "bakery",
+            "market"
+          ],
+          "path": "Sources/GameCore/Model.swift"
+        },
+        "CivilizationTechnology": {
+          "count": 18,
+          "cases": [
+            "fertileCommons",
+            "masterMasons",
+            "caravanNetwork",
+            "shieldDoctrine",
+            "clockworkTools",
+            "bastionDesign",
+            "royalGranaries",
+            "standingGuard",
+            "imperialFoundries",
+            "grandRamparts",
+            "harmonicIndustry",
+            "eternalVigil",
+            "fusionGrid",
+            "adaptiveHatcheries",
+            "autonomousLogistics",
+            "orbitalAegis",
+            "stellarSynthesis",
+            "guardianConstellation"
+          ],
+          "path": "Sources/GameCore/Model.swift"
+        },
+        "GuildTechnology": {
+          "count": 15,
+          "cases": [
+            "openCharter",
+            "deepReservoirs",
+            "briskRounds",
+            "secondLedger",
+            "chartersOfIncorporation",
+            "apprenticeBoard",
+            "unionHall",
+            "shiftRotation",
+            "guildSchool",
+            "workersCouncil",
+            "pathfinders",
+            "outriders",
+            "freeCompany",
+            "deepDelve",
+            "charteredExpeditions"
+          ],
+          "path": "Sources/GameCore/Guilds.swift"
+        }
+      }
+    }
+  },
+  "websiteCopy": "24 building types and 18 civilization technology choices across ten ages. Guild technologies are an additional, separate branching system.",
+  "important": "18 counts civilization technology choices, not all technologies: there are also 15 guild technology choices. Do not say the game has only 18 technologies or that every run adopts all 18."
+}
